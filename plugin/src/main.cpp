@@ -29,7 +29,8 @@ using FnOpNew = void* (*)(size_t);
 using FnOpDelete = void (*)(void*, size_t);
 using FnReadPackAsset = bool (*)(void* pack, const GameStr* key, GameStr* out);
 using FnDrawFooterText = void (*)(const char* text);
-using FnDrawSectionLabel = void (*)(const char* text);
+using FnPushId = void (*)(const char* str_id);
+using FnPopId = void (*)();
 using FnNextWidgetId = int (*)();
 using FnDrawToggleBtn = bool (*)(const char* label, int id, int active, float scale, void* extra);
 using FnSameLine = void (*)(float offset_x, float spacing);
@@ -41,7 +42,8 @@ constexpr uint32_t kOpDeleteRva = 0x145E3B0;
 
 constexpr uint32_t kSettingsFooterCallRva = 0x0CB8C88;
 constexpr uint32_t kSettingsFooterOrigRva = 0x0CBA150;
-constexpr uint32_t kDrawSectionLabelRva = 0x116A430;
+constexpr uint32_t kPushIdRva = 0x116A430;
+constexpr uint32_t kPopIdRva = 0x11798F0;
 constexpr uint32_t kNextWidgetIdRva = 0x0CD86C0;
 constexpr uint32_t kDrawToggleBtnRva = 0x0CDAD80;
 constexpr uint32_t kSameLineRva = 0x114E600;
@@ -50,7 +52,8 @@ FnOpNew g_op_new = nullptr;
 FnOpDelete g_op_delete = nullptr;
 FnReadPackAsset g_orig_read_pack_asset = nullptr;
 FnDrawFooterText g_orig_draw_footer = nullptr;
-FnDrawSectionLabel g_draw_section_label = nullptr;
+FnPushId g_push_id = nullptr;
+FnPopId g_pop_id = nullptr;
 FnNextWidgetId g_next_widget_id = nullptr;
 FnDrawToggleBtn g_draw_toggle_btn = nullptr;
 FnSameLine g_same_line = nullptr;
@@ -737,11 +740,8 @@ void SwitchLocaleLive(size_t new_index) {
 // ============================================================================
 
 void HookDrawSettingsFooter(const char* version_str) {
-    if (!g_available_langs.empty() && g_draw_section_label && g_next_widget_id && g_draw_toggle_btn && g_same_line) {
-        const char* hdr = (g_active_lang == "en")
-            ? "Language"
-            : "\xD0\xAF\xD0\xB7\xD1\x8B\xD0\xBA / Language";  // Язык / Language
-        g_draw_section_label(hdr);
+    if (!g_available_langs.empty() && g_push_id && g_pop_id && g_next_widget_id && g_draw_toggle_btn && g_same_line) {
+        g_push_id("dt_locale_sel");
 
         size_t n = g_available_langs.size();
         const std::string& cur_label = g_available_langs[g_active_index % n].display_name;
@@ -756,6 +756,8 @@ void HookDrawSettingsFooter(const char* version_str) {
         g_same_line(0.0f, -1.0f);
         int id_next = g_next_widget_id();
         bool next_clicked = g_draw_toggle_btn(">", id_next, 0, 1.1f, nullptr);
+
+        g_pop_id();
 
         if (n > 1) {
             if (prev_clicked) {
@@ -815,7 +817,8 @@ void InstallPermanentHooks() {
 
     if (has_settings) {
         g_orig_draw_footer = reinterpret_cast<FnDrawFooterText>(base + kSettingsFooterOrigRva);
-        g_draw_section_label = reinterpret_cast<FnDrawSectionLabel>(base + kDrawSectionLabelRva);
+        g_push_id = reinterpret_cast<FnPushId>(base + kPushIdRva);
+        g_pop_id = reinterpret_cast<FnPopId>(base + kPopIdRva);
         g_next_widget_id = reinterpret_cast<FnNextWidgetId>(base + kNextWidgetIdRva);
         g_draw_toggle_btn = reinterpret_cast<FnDrawToggleBtn>(base + kDrawToggleBtnRva);
         g_same_line = reinterpret_cast<FnSameLine>(base + kSameLineRva);
