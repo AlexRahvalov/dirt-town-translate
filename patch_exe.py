@@ -427,6 +427,16 @@ patch_imm_at(0x140c90d18, 0x0a, slen(0x1415660b1), 4)
 patch_imm_at(0x140c96e40, 0x41, slen(0x1415670d0), 4)
 patch_imm_at(0x140ca18cd, 6, slen(0x1415679c7), 4)
 
+# Fix HUD machine title bar byte-by-byte UTF-8 splitting (0x140cb329b..0x140cb33de)
+for patch_va, orig_b, new_b in [
+    (0x140cb329b, b"\x48\x83\xea\x01", b"\x31\xd2\x90\x90"),
+    (0x140cb33be, b"\x48\x89\x74\x24\x28", b"\x48\x89\x5c\x24\x28"),
+    (0x140cb33d9, b"\xe9\xe2\xfe\xff\xff", b"\x90\x90\x90\x90\x90"),
+]:
+    r_p = va_to_raw(patch_va)
+    assert data[r_p:r_p + len(orig_b)] == orig_b
+    data[r_p:r_p + len(orig_b)] = new_b
+
 # Shop availability strings (all >= 16B!)
 for va_s, imm_r13, imm_ecx, old_l in [
     (0x14156ae4c, 0x140cc923b, 0x140cc9236, 0x14),

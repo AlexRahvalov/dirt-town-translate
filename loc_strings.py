@@ -577,6 +577,7 @@ STRING_PATCHES = {
     0x141568672: ("hydraulics", "гидравлика", GP_UI),
     0x14156867d: ("camera", "камера", GP_UI),
     0x141568687: ("%.1f m/s", "%.1f м/с", GP_UI),
+    0x1415686aa: ("pick", "выбор", GP_UI),
     0x1415686b7: ("RANGE", "ПЕРЕД.", GP_UI),
     0x1415686bd: ("on/off", "вкл/выкл", GP_UI),
     0x1415686c4: ("FLOAT", "ПЛАВ.", GP_UI),
