@@ -448,6 +448,8 @@ def build_plugin_data(game_dir: Path, locale: str = "ru") -> None:
             dtpk.extend(nb)
 
     (loc_dir / "pack_patches.dtpk").write_bytes(bytes(dtpk))
+    display_name = doc.get("meta", {}).get("name", locale.upper())
+    (loc_dir / "meta.ini").write_text(f"name={display_name}\n", encoding="utf-8")
     ini = ROOT_DIR / "locales" / "lang.ini"
     if not ini.exists():
         ini.write_text(f"active={locale}\n", encoding="utf-8")

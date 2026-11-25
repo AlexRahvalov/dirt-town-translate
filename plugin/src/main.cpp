@@ -13,7 +13,7 @@ namespace fs = std::filesystem;
 namespace {
 
 // ============================================================================
-// Game ABI structs & function pointers
+// Game ABI structs & function pointers (Dirt Town Demo 0.1.0 ed45b4be7fc6)
 // ============================================================================
 
 struct GameStr {
@@ -34,6 +34,18 @@ using FnNextWidgetId = int (*)();
 using FnDrawToggleBtn = bool (*)(const char* label, int id, int active, float scale, void* extra);
 using FnSameLine = void (*)(float offset_x, float spacing);
 
+constexpr uint32_t kPackHookCallRva = 0x0D1B087;
+constexpr uint32_t kPackReadOrigRva = 0x0D16D30;
+constexpr uint32_t kOpNewRva = 0x145E400;
+constexpr uint32_t kOpDeleteRva = 0x145E3B0;
+
+constexpr uint32_t kSettingsFooterCallRva = 0x0CB8C88;
+constexpr uint32_t kSettingsFooterOrigRva = 0x0CBA150;
+constexpr uint32_t kDrawSectionLabelRva = 0x116A430;
+constexpr uint32_t kNextWidgetIdRva = 0x0CD86C0;
+constexpr uint32_t kDrawToggleBtnRva = 0x0CDAD80;
+constexpr uint32_t kSameLineRva = 0x114E600;
+
 FnOpNew g_op_new = nullptr;
 FnOpDelete g_op_delete = nullptr;
 FnReadPackAsset g_orig_read_pack_asset = nullptr;
@@ -44,20 +56,8 @@ FnDrawToggleBtn g_draw_toggle_btn = nullptr;
 FnSameLine g_same_line = nullptr;
 
 // ============================================================================
-// Plugin configuration & loaded override tables
+// Plugin configuration, hot-swap state & pack override tables
 // ============================================================================
-
-struct LocaleEntry {
-    std::string code;
-    std::string label;
-};
-
-constexpr uint32_t kSettingsFooterCallRva = 0x0CB8C88;
-constexpr uint32_t kSettingsFooterOrigRva = 0x0CBA150;
-constexpr uint32_t kDrawSectionLabelRva = 0x116A430;
-constexpr uint32_t kNextWidgetIdRva = 0x0CD86C0;
-constexpr uint32_t kDrawToggleBtnRva = 0x0CDAD80;
-constexpr uint32_t kSameLineRva = 0x114E600;
 
 enum class FontKind : uint8_t {
     Pack = 0,
@@ -74,16 +74,34 @@ struct TomlRule {
     std::string new_text;
 };
 
+struct LocaleEntry {
+    std::string code;
+    std::string display_name;
+};
+
+struct SavedPatchSlice {
+    uint32_t rva;
+    std::vector<uint8_t> orig_bytes;
+};
+
 fs::path g_game_dir;
 fs::path g_locales_root;
-fs::path g_locale_dir;
 fs::path g_override_dir;
 fs::path g_log_path;
+
+std::string g_startup_lang = "en";
 std::string g_active_lang = "en";
-std::string g_selected_lang = "en";
+size_t g_active_index = 0;
 std::vector<LocaleEntry> g_available_langs;
+
+SRWLOCK g_pack_lock = SRWLOCK_INIT;
 std::unordered_map<std::string, FontRedirect> g_font_redirects;
 std::unordered_map<std::string, std::vector<TomlRule>> g_toml_rules;
+
+// Saved original .text/.rdata bytes so we can cleanly revert & hot-swap locales in RAM
+std::vector<SavedPatchSlice> g_saved_orig;
+// Keep previous loc_mem buffers alive until process exit so in-flight frame pointers stay valid
+std::vector<uint8_t*> g_alloc_loc_mems;
 
 void LogMsg(const std::string& msg) {
     if (g_log_path.empty()) return;
@@ -153,7 +171,7 @@ fs::path Utf8ToPath(std::string_view sv) {
     return fs::path(Utf8ToWide(sv));
 }
 
-std::string ReadActiveLocale(const fs::path& ini_path) {
+std::string ReadIniKey(const fs::path& ini_path, std::string_view key) {
     std::vector<uint8_t> raw;
     if (!ReadFileBytes(ini_path, raw)) return "";
     std::string_view text(reinterpret_cast<const char*>(raw.data()), raw.size());
@@ -166,7 +184,7 @@ std::string ReadActiveLocale(const fs::path& ini_path) {
         if (line.empty() || line[0] == '#' || line[0] == ';') continue;
         size_t eq = line.find('=');
         if (eq == std::string::npos) continue;
-        if (Trim(std::string_view(line).substr(0, eq)) == "active") {
+        if (Trim(std::string_view(line).substr(0, eq)) == key) {
             return Trim(std::string_view(line).substr(eq + 1));
         }
     }
@@ -192,7 +210,7 @@ bool WriteActiveLocale(const fs::path& ini_path, const std::string& code) {
 
 void DiscoverAvailableLocales() {
     g_available_langs.clear();
-    g_available_langs.push_back(LocaleEntry{"en", "EN"});
+    g_available_langs.push_back(LocaleEntry{"en", "English"});
     std::error_code ec;
     std::vector<LocaleEntry> extra;
     for (const auto& entry : fs::directory_iterator(g_locales_root, ec)) {
@@ -200,11 +218,23 @@ void DiscoverAvailableLocales() {
         std::string code = entry.path().filename().string();
         if (code == "en" || code.empty() || code.size() > 15) continue;
         if (!fs::exists(entry.path() / L"exe_patch.dtloc", ec)) continue;
-        std::string label = code;
-        for (char& ch : label) {
-            if (ch >= 'a' && ch <= 'z') ch = static_cast<char>(ch - 'a' + 'A');
+
+        std::string disp = ReadIniKey(entry.path() / L"meta.ini", "name");
+        if (disp.empty()) {
+            if (code == "ru") {
+                disp = "\xD0\xA0\xD1\x83\xD1\x81\xD1\x81\xD0\xBA\xD0\xB8\xD0\xB9";  // Русский
+            } else {
+                disp = code;
+                for (char& ch : disp) {
+                    if (ch >= 'a' && ch <= 'z') ch = static_cast<char>(ch - 'a' + 'A');
+                }
+            }
         }
-        extra.push_back(LocaleEntry{std::move(code), std::move(label)});
+        // Keep button label safely under 31 UTF-8 bytes
+        if (disp.size() > 30) {
+            disp = code;
+        }
+        extra.push_back(LocaleEntry{std::move(code), std::move(disp)});
     }
     std::sort(extra.begin(), extra.end(), [](const LocaleEntry& a, const LocaleEntry& b) {
         return a.code < b.code;
@@ -214,29 +244,13 @@ void DiscoverAvailableLocales() {
     }
 }
 
-void HookDrawSettingsFooter(const char* version_str) {
-    if (!g_available_langs.empty() && g_draw_section_label && g_next_widget_id && g_draw_toggle_btn && g_same_line) {
-        const char* hdr = (g_active_lang == "en") ? "Language" : "Язык / Language";
-        g_draw_section_label(hdr);
-        for (size_t i = 0; i < g_available_langs.size(); ++i) {
-            if (i > 0) g_same_line(0.0f, -1.0f);
-            int id = g_next_widget_id();
-            int selected = (g_available_langs[i].code == g_selected_lang) ? 1 : 0;
-            if (g_draw_toggle_btn(g_available_langs[i].label.c_str(), id, selected, 1.1f, nullptr)) {
-                g_selected_lang = g_available_langs[i].code;
-                WriteActiveLocale(g_locales_root / L"lang.ini", g_selected_lang);
-            }
-        }
-        if (g_selected_lang != g_active_lang && g_orig_draw_footer) {
-            const char* note = (g_active_lang == "en")
-                ? "Restart the game to apply language."
-                : "Перезапустите игру для применения языка.";
-            g_orig_draw_footer(note);
-        }
-    }
-    if (g_orig_draw_footer) {
-        g_orig_draw_footer(version_str);
-    }
+void InitDefaultUnicodeFonts() {
+    // Always preload Unicode/Cyrillic-capable font redirects so live EN <-> RU switching
+    // renders properly without needing to rebuild the font atlas on restart.
+    g_font_redirects["fonts/Roboto-Medium.ttf"] = FontRedirect{FontKind::Pack, "fonts/Roboto-Regular.ttf"};
+    g_font_redirects["fonts/Roboto-Black.ttf"] = FontRedirect{FontKind::Pack, "fonts/Roboto-Bold.ttf"};
+    g_font_redirects["fonts/CourierPrime-Regular.ttf"] = FontRedirect{FontKind::WinFont, "cour.ttf"};
+    g_font_redirects["fonts/CourierPrime-Bold.ttf"] = FontRedirect{FontKind::WinFont, "courbd.ttf"};
 }
 
 // ============================================================================
@@ -297,9 +311,25 @@ bool HookReadPackAsset(void* pack, const GameStr* key, GameStr* out) {
 
     std::string norm_key = NormalizePackKey(std::string_view(key->ptr, key->size));
 
+    fs::path ov_dir;
+    bool has_font = false;
+    FontRedirect font_redir{};
+    std::vector<TomlRule> rules;
+
+    AcquireSRWLockShared(&g_pack_lock);
+    ov_dir = g_override_dir;
+    if (auto it = g_font_redirects.find(norm_key); it != g_font_redirects.end()) {
+        has_font = true;
+        font_redir = it->second;
+    }
+    if (auto it = g_toml_rules.find(norm_key); it != g_toml_rules.end()) {
+        rules = it->second;
+    }
+    ReleaseSRWLockShared(&g_pack_lock);
+
     // 1. Loose file override in locales/<lang>/override/<key>
-    if (!g_override_dir.empty()) {
-        fs::path ov_path = g_override_dir / Utf8ToPath(norm_key);
+    if (!ov_dir.empty()) {
+        fs::path ov_path = ov_dir / Utf8ToPath(norm_key);
         std::vector<uint8_t> bytes;
         if (ReadFileBytes(ov_path, bytes)) {
             GameStrAssign(out, reinterpret_cast<const char*>(bytes.data()), bytes.size());
@@ -308,20 +338,20 @@ bool HookReadPackAsset(void* pack, const GameStr* key, GameStr* out) {
     }
 
     // 2. Font redirect (pack entry redirect or system Windows font)
-    if (auto it = g_font_redirects.find(norm_key); it != g_font_redirects.end()) {
-        if (it->second.kind == FontKind::WinFont) {
+    if (has_font) {
+        if (font_redir.kind == FontKind::WinFont) {
             wchar_t win_dir[MAX_PATH]{};
             if (GetWindowsDirectoryW(win_dir, MAX_PATH) > 0) {
-                fs::path font_path = fs::path(win_dir) / L"Fonts" / Utf8ToPath(it->second.target);
+                fs::path font_path = fs::path(win_dir) / L"Fonts" / Utf8ToPath(font_redir.target);
                 std::vector<uint8_t> bytes;
                 if (ReadFileBytes(font_path, bytes)) {
                     GameStrAssign(out, reinterpret_cast<const char*>(bytes.data()), bytes.size());
                     return true;
                 }
             }
-        } else if (it->second.kind == FontKind::Pack) {
+        } else if (font_redir.kind == FontKind::Pack) {
             GameStr alt_key{};
-            GameStrInitFrom(&alt_key, it->second.target);
+            GameStrInitFrom(&alt_key, font_redir.target);
             bool ok = g_orig_read_pack_asset(pack, &alt_key, out);
             GameStrFree(&alt_key);
             if (ok) return true;
@@ -332,10 +362,10 @@ bool HookReadPackAsset(void* pack, const GameStr* key, GameStr* out) {
     bool ok = g_orig_read_pack_asset(pack, key, out);
     if (!ok || !out->ptr) return ok;
 
-    if (auto it = g_toml_rules.find(norm_key); it != g_toml_rules.end()) {
+    if (!rules.empty()) {
         std::string text(out->ptr, out->size);
         bool modified = false;
-        for (const auto& rule : it->second) {
+        for (const auto& rule : rules) {
             size_t pos = 0;
             while ((pos = text.find(rule.old_text, pos)) != std::string::npos) {
                 text.replace(pos, rule.old_text.size(), rule.new_text);
@@ -352,7 +382,7 @@ bool HookReadPackAsset(void* pack, const GameStr* key, GameStr* out) {
 }
 
 // ============================================================================
-// Binary reader & runtime PE memory patcher
+// Binary reader & runtime PE memory patcher (with live hot-swap!)
 // ============================================================================
 
 class BinReader {
@@ -380,8 +410,6 @@ public:
         pos_ += n;
         return true;
     }
-
-    size_t Remaining() const { return buf_.size() - pos_; }
 
 private:
     const std::vector<uint8_t>& buf_;
@@ -450,45 +478,6 @@ uint8_t* AllocNearModule(uintptr_t base, size_t size) {
     return nullptr;
 }
 
-bool LoadPackPatches(const fs::path& dtpk_path) {
-    std::vector<uint8_t> buf;
-    if (!ReadFileBytes(dtpk_path, buf)) {
-        LogMsg("No pack_patches.dtpk found (TOML/font patches skipped).");
-        return true;
-    }
-    BinReader r(buf);
-    char magic[4]{};
-    uint32_t ver = 0, font_cnt = 0, rule_cnt = 0;
-    if (!r.ReadBytes(magic, 4) || std::memcmp(magic, "DTPK", 4) != 0 ||
-        !r.Read(ver) || ver != 1 || !r.Read(font_cnt) || !r.Read(rule_cnt)) {
-        LogMsg("Invalid DTPK header.");
-        return false;
-    }
-    for (uint32_t i = 0; i < font_cnt; ++i) {
-        uint16_t klen = 0, vlen = 0;
-        uint8_t kind = 0;
-        std::string k, v;
-        if (!r.Read(klen) || !r.ReadStr(klen, k) || !r.Read(kind) || !r.Read(vlen) || !r.ReadStr(vlen, v)) {
-            LogMsg("Truncated DTPK font entry.");
-            return false;
-        }
-        g_font_redirects[k] = FontRedirect{static_cast<FontKind>(kind), std::move(v)};
-    }
-    for (uint32_t i = 0; i < rule_cnt; ++i) {
-        uint16_t fklen = 0;
-        uint32_t olen = 0, nlen = 0;
-        std::string fk, old_s, new_s;
-        if (!r.Read(fklen) || !r.ReadStr(fklen, fk) ||
-            !r.Read(olen) || !r.ReadStr(olen, old_s) ||
-            !r.Read(nlen) || !r.ReadStr(nlen, new_s)) {
-            LogMsg("Truncated DTPK rule entry.");
-            return false;
-        }
-        g_toml_rules[fk].push_back(TomlRule{std::move(old_s), std::move(new_s)});
-    }
-    return true;
-}
-
 void WriteAbsJumpStub(uint8_t* stub, uint64_t fn_addr) {
     stub[0] = 0xFF;
     stub[1] = 0x25;
@@ -513,7 +502,72 @@ bool CanHookCallSite(uintptr_t base, size_t img_size, uint32_t call_rva, uint32_
     return op == 0xE8 && static_cast<int64_t>(call_rva + 5) + rel == orig_rva;
 }
 
-bool InstallStandaloneSettingsHook() {
+void RevertExePatches(uintptr_t base, size_t img_size) {
+    if (g_saved_orig.empty()) return;
+    for (auto it = g_saved_orig.rbegin(); it != g_saved_orig.rend(); ++it) {
+        PatchMemBytes(base + it->rva, it->orig_bytes.data(), it->orig_bytes.size());
+    }
+    g_saved_orig.clear();
+    FlushInstructionCache(GetCurrentProcess(), reinterpret_cast<void*>(base), img_size);
+}
+
+bool LoadPackPatchesForLocale(const std::string& code) {
+    std::unordered_map<std::string, FontRedirect> new_fonts;
+    std::unordered_map<std::string, std::vector<TomlRule>> new_rules;
+    fs::path new_ov_dir;
+
+    // Always keep base Unicode fonts so switching EN <-> RU/etc. works live
+    new_fonts["fonts/Roboto-Medium.ttf"] = FontRedirect{FontKind::Pack, "fonts/Roboto-Regular.ttf"};
+    new_fonts["fonts/Roboto-Black.ttf"] = FontRedirect{FontKind::Pack, "fonts/Roboto-Bold.ttf"};
+    new_fonts["fonts/CourierPrime-Regular.ttf"] = FontRedirect{FontKind::WinFont, "cour.ttf"};
+    new_fonts["fonts/CourierPrime-Bold.ttf"] = FontRedirect{FontKind::WinFont, "courbd.ttf"};
+
+    if (code != "en" && code != "none") {
+        fs::path loc_dir = g_locales_root / Utf8ToPath(code);
+        new_ov_dir = loc_dir / L"override";
+        std::vector<uint8_t> buf;
+        if (ReadFileBytes(loc_dir / L"pack_patches.dtpk", buf)) {
+            BinReader r(buf);
+            char magic[4]{};
+            uint32_t ver = 0, font_cnt = 0, rule_cnt = 0;
+            if (r.ReadBytes(magic, 4) && std::memcmp(magic, "DTPK", 4) == 0 &&
+                r.Read(ver) && ver == 1 && r.Read(font_cnt) && r.Read(rule_cnt)) {
+                bool ok = true;
+                for (uint32_t i = 0; i < font_cnt && ok; ++i) {
+                    uint16_t klen = 0, vlen = 0;
+                    uint8_t kind = 0;
+                    std::string k, v;
+                    if (!r.Read(klen) || !r.ReadStr(klen, k) || !r.Read(kind) || !r.Read(vlen) || !r.ReadStr(vlen, v)) {
+                        ok = false;
+                        break;
+                    }
+                    new_fonts[k] = FontRedirect{static_cast<FontKind>(kind), std::move(v)};
+                }
+                for (uint32_t i = 0; i < rule_cnt && ok; ++i) {
+                    uint16_t fklen = 0;
+                    uint32_t olen = 0, nlen = 0;
+                    std::string fk, old_s, new_s;
+                    if (!r.Read(fklen) || !r.ReadStr(fklen, fk) ||
+                        !r.Read(olen) || !r.ReadStr(olen, old_s) ||
+                        !r.Read(nlen) || !r.ReadStr(nlen, new_s)) {
+                        ok = false;
+                        break;
+                    }
+                    new_rules[fk].push_back(TomlRule{std::move(old_s), std::move(new_s)});
+                }
+            }
+        }
+    }
+
+    AcquireSRWLockExclusive(&g_pack_lock);
+    g_override_dir = std::move(new_ov_dir);
+    g_font_redirects = std::move(new_fonts);
+    g_toml_rules = std::move(new_rules);
+    ReleaseSRWLockExclusive(&g_pack_lock);
+    return true;
+}
+
+bool ApplyExePatchesForLocale(const std::string& code) {
     uintptr_t base = reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
     auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(base);
     if (dos->e_magic != IMAGE_DOS_SIGNATURE) return false;
@@ -521,35 +575,18 @@ bool InstallStandaloneSettingsHook() {
     if (nt->Signature != IMAGE_NT_SIGNATURE) return false;
     size_t img_size = nt->OptionalHeader.SizeOfImage;
 
-    if (!CanHookCallSite(base, img_size, kSettingsFooterCallRva, kSettingsFooterOrigRva)) {
-        LogMsg("Settings footer call site mismatch; language UI skipped.");
-        return false;
+    // Always revert previous language patches back to pristine original bytes first
+    RevertExePatches(base, img_size);
+
+    if (code == "en" || code == "none") {
+        LogMsg("Switched to English (original bytes restored).");
+        return true;
     }
 
-    uint8_t* stub = AllocNearModule(base, 16);
-    if (!stub) return false;
-    WriteAbsJumpStub(stub, reinterpret_cast<uint64_t>(&HookDrawSettingsFooter));
-    DWORD oldp = 0;
-    VirtualProtect(stub, 16, PAGE_EXECUTE_READ, &oldp);
-    FlushInstructionCache(GetCurrentProcess(), stub, 16);
-
-    g_orig_draw_footer = reinterpret_cast<FnDrawFooterText>(base + kSettingsFooterOrigRva);
-    g_draw_section_label = reinterpret_cast<FnDrawSectionLabel>(base + kDrawSectionLabelRva);
-    g_next_widget_id = reinterpret_cast<FnNextWidgetId>(base + kNextWidgetIdRva);
-    g_draw_toggle_btn = reinterpret_cast<FnDrawToggleBtn>(base + kDrawToggleBtnRva);
-    g_same_line = reinterpret_cast<FnSameLine>(base + kSameLineRva);
-
-    int64_t next_ip = static_cast<int64_t>(base + kSettingsFooterCallRva + 5);
-    int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(stub) - next_ip);
-    PatchMemBytes(base + kSettingsFooterCallRva + 1, &new_rel, 4);
-    FlushInstructionCache(GetCurrentProcess(), reinterpret_cast<void*>(base + kSettingsFooterCallRva), 5);
-    return true;
-}
-
-bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
+    fs::path dtlp_path = g_locales_root / Utf8ToPath(code) / L"exe_patch.dtloc";
     std::vector<uint8_t> buf;
     if (!ReadFileBytes(dtlp_path, buf)) {
-        LogMsg("Failed to read exe_patch.dtloc");
+        LogMsg("Failed to read exe_patch.dtloc for " + code);
         return false;
     }
 
@@ -576,40 +613,24 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
 
     for (uint32_t i = 0; i < hdr.raw_count; ++i) {
         uint16_t sz = 0;
-        if (!r.Read(raws[i].rva) || !r.Read(sz)) {
-            LogMsg("Truncated DTLP raw header.");
-            return false;
-        }
+        if (!r.Read(raws[i].rva) || !r.Read(sz)) return false;
         raws[i].expected_orig.resize(sz);
         raws[i].new_bytes.resize(sz);
         if (!r.ReadBytes(raws[i].expected_orig.data(), sz) ||
             !r.ReadBytes(raws[i].new_bytes.data(), sz)) {
-            LogMsg("Truncated DTLP raw payload.");
             return false;
         }
     }
 
-    uintptr_t base = reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
-    auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(base);
-    auto* nt = reinterpret_cast<IMAGE_NT_HEADERS64*>(base + dos->e_lfanew);
-    size_t img_size = nt->OptionalHeader.SizeOfImage;
-
-    // Allocate .loc + two 16-byte trampoline stubs within +-1 GB of dirttown.exe
-    size_t stub_pack_off = (hdr.loc_blob_size + 15ULL) & ~15ULL;
-    size_t stub_settings_off = stub_pack_off + 16ULL;
-    size_t alloc_size = stub_settings_off + 16ULL;
-    uint8_t* loc_mem = AllocNearModule(base, alloc_size);
+    uint8_t* loc_mem = AllocNearModule(base, hdr.loc_blob_size);
     if (!loc_mem) {
         LogMsg("VirtualAlloc near module failed.");
         return false;
     }
-
     std::memcpy(loc_mem, loc_blob.data(), loc_blob.size());
 
-    // Pre-validate every target in RAM before patching ANY byte (build-mismatch safety)
     for (const auto& lp : loc_ptrs) {
         if (lp.dst_loc_off + 8 > hdr.loc_blob_size || lp.target_loc_off >= hdr.loc_blob_size) {
-            LogMsg("Out-of-bounds loc_ptr offset.");
             VirtualFree(loc_mem, 0, MEM_RELEASE);
             return false;
         }
@@ -617,23 +638,22 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
         std::memcpy(loc_mem + lp.dst_loc_off, &val, sizeof(val));
     }
 
+    // Validate all targets against pristine original bytes BEFORE modifying anything
     for (const auto& rp : rip32s) {
         if (rp.insn_rva + rp.insn_size > img_size || rp.target_loc_off >= hdr.loc_blob_size) {
-            LogMsg("Out-of-bounds rip32 record.");
             VirtualFree(loc_mem, 0, MEM_RELEASE);
             return false;
         }
         int32_t cur_disp = 0;
         std::memcpy(&cur_disp, reinterpret_cast<void*>(base + rp.insn_rva + rp.insn_size - 4), 4);
         if (cur_disp != rp.expected_orig_disp) {
-            LogMsg("Build mismatch at RIP32 insn RVA " + std::to_string(rp.insn_rva));
+            LogMsg("Build mismatch at RIP32 RVA " + std::to_string(rp.insn_rva));
             VirtualFree(loc_mem, 0, MEM_RELEASE);
             return false;
         }
         int64_t next_ip = static_cast<int64_t>(base + rp.insn_rva + rp.insn_size);
         int64_t new_disp = static_cast<int64_t>(reinterpret_cast<uintptr_t>(loc_mem + rp.target_loc_off)) - next_ip;
         if (new_disp < INT32_MIN || new_disp > INT32_MAX) {
-            LogMsg("RIP32 disp out of range.");
             VirtualFree(loc_mem, 0, MEM_RELEASE);
             return false;
         }
@@ -641,7 +661,6 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
 
     for (const auto& pp : ptr64s) {
         if (pp.ptr_rva + 8 > img_size || pp.target_loc_off >= hdr.loc_blob_size) {
-            LogMsg("Out-of-bounds ptr64 record.");
             VirtualFree(loc_mem, 0, MEM_RELEASE);
             return false;
         }
@@ -656,7 +675,6 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
 
     for (const auto& rr : raws) {
         if (rr.rva + rr.expected_orig.size() > img_size) {
-            LogMsg("Out-of-bounds raw record.");
             VirtualFree(loc_mem, 0, MEM_RELEASE);
             return false;
         }
@@ -667,52 +685,135 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
         }
     }
 
-    bool has_pack_hook = CanHookCallSite(base, img_size, hdr.pack_hook_call_rva, hdr.pack_read_orig_rva);
-    if (!has_pack_hook) {
-        LogMsg("Pack call site mismatch; skipping DIGP hook.");
-    }
-    bool has_settings_hook = CanHookCallSite(base, img_size, kSettingsFooterCallRva, kSettingsFooterOrigRva);
-    if (!has_settings_hook) {
-        LogMsg("Settings footer call site mismatch; skipping language UI.");
-    }
-
-    if (has_pack_hook) {
-        WriteAbsJumpStub(loc_mem + stub_pack_off, reinterpret_cast<uint64_t>(&HookReadPackAsset));
-    }
-    if (has_settings_hook) {
-        WriteAbsJumpStub(loc_mem + stub_settings_off, reinterpret_cast<uint64_t>(&HookDrawSettingsFooter));
-    }
-
     DWORD old_loc_prot = 0;
-    VirtualProtect(loc_mem, alloc_size, PAGE_EXECUTE_READ, &old_loc_prot);
-    FlushInstructionCache(GetCurrentProcess(), loc_mem, alloc_size);
+    VirtualProtect(loc_mem, hdr.loc_blob_size, PAGE_READONLY, &old_loc_prot);
+    g_alloc_loc_mems.push_back(loc_mem);
+
+    g_saved_orig.reserve(rip32s.size() + ptr64s.size() + raws.size());
+    auto SaveAndPatch = [&](uint32_t rva, const void* new_src, size_t sz) {
+        SavedPatchSlice slice;
+        slice.rva = rva;
+        slice.orig_bytes.resize(sz);
+        std::memcpy(slice.orig_bytes.data(), reinterpret_cast<void*>(base + rva), sz);
+        g_saved_orig.push_back(std::move(slice));
+        PatchMemBytes(base + rva, new_src, sz);
+    };
 
     for (const auto& rp : rip32s) {
+        uint32_t disp_rva = rp.insn_rva + rp.insn_size - 4;
         int64_t next_ip = static_cast<int64_t>(base + rp.insn_rva + rp.insn_size);
         int32_t new_disp = static_cast<int32_t>(reinterpret_cast<uintptr_t>(loc_mem + rp.target_loc_off) - next_ip);
-        PatchMemBytes(base + rp.insn_rva + rp.insn_size - 4, &new_disp, 4);
+        SaveAndPatch(disp_rva, &new_disp, 4);
     }
 
     for (const auto& pp : ptr64s) {
         uint64_t val = reinterpret_cast<uint64_t>(loc_mem + pp.target_loc_off);
-        PatchMemBytes(base + pp.ptr_rva, &val, 8);
+        SaveAndPatch(pp.ptr_rva, &val, 8);
     }
 
     for (const auto& rr : raws) {
-        PatchMemBytes(base + rr.rva, rr.new_bytes.data(), rr.new_bytes.size());
+        SaveAndPatch(rr.rva, rr.new_bytes.data(), rr.new_bytes.size());
     }
 
-    if (has_pack_hook && (!g_font_redirects.empty() || !g_toml_rules.empty() || fs::exists(g_override_dir))) {
-        g_op_new = reinterpret_cast<FnOpNew>(base + hdr.op_new_rva);
-        g_op_delete = reinterpret_cast<FnOpDelete>(base + hdr.op_delete_rva);
-        g_orig_read_pack_asset = reinterpret_cast<FnReadPackAsset>(base + hdr.pack_read_orig_rva);
+    FlushInstructionCache(GetCurrentProcess(), reinterpret_cast<void*>(base), img_size);
+    LogMsg("Applied runtime locale cleanly: " + code);
+    return true;
+}
 
-        int64_t next_ip = static_cast<int64_t>(base + hdr.pack_hook_call_rva + 5);
-        int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(loc_mem + stub_pack_off) - next_ip);
-        PatchMemBytes(base + hdr.pack_hook_call_rva + 1, &new_rel, 4);
+void SwitchLocaleLive(size_t new_index) {
+    if (g_available_langs.empty()) return;
+    new_index %= g_available_langs.size();
+    const std::string& code = g_available_langs[new_index].code;
+    g_active_index = new_index;
+    g_active_lang = code;
+
+    LoadPackPatchesForLocale(code);
+    ApplyExePatchesForLocale(code);
+    WriteActiveLocale(g_locales_root / L"lang.ini", code);
+}
+
+// ============================================================================
+// In-game Settings carousel:  [ < ]  [ Русский ]  [ > ]
+// ============================================================================
+
+void HookDrawSettingsFooter(const char* version_str) {
+    if (!g_available_langs.empty() && g_draw_section_label && g_next_widget_id && g_draw_toggle_btn && g_same_line) {
+        const char* hdr = (g_active_lang == "en")
+            ? "Language"
+            : "\xD0\xAF\xD0\xB7\xD1\x8B\xD0\xBA / Language";  // Язык / Language
+        g_draw_section_label(hdr);
+
+        size_t n = g_available_langs.size();
+        const std::string& cur_label = g_available_langs[g_active_index % n].display_name;
+
+        int id_prev = g_next_widget_id();
+        bool prev_clicked = g_draw_toggle_btn("<", id_prev, 0, 1.1f, nullptr);
+
+        g_same_line(0.0f, -1.0f);
+        int id_cur = g_next_widget_id();
+        bool cur_clicked = g_draw_toggle_btn(cur_label.c_str(), id_cur, 1, 1.1f, nullptr);
+
+        g_same_line(0.0f, -1.0f);
+        int id_next = g_next_widget_id();
+        bool next_clicked = g_draw_toggle_btn(">", id_next, 0, 1.1f, nullptr);
+
+        if (n > 1) {
+            if (prev_clicked) {
+                SwitchLocaleLive((g_active_index + n - 1) % n);
+            } else if (next_clicked || cur_clicked) {
+                SwitchLocaleLive((g_active_index + 1) % n);
+            }
+        }
+
+        if (g_active_lang != g_startup_lang && g_orig_draw_footer) {
+            const char* note = (g_active_lang == "en")
+                ? "Shop/map descriptions update on restart."
+                : "\xD0\x9E\xD0\xBF\xD0\xB8\xD1\x81\xD0\xB0\xD0\xBD\xD0\xB8\xD1\x8F \xD1\x82\xD0\xB5\xD1\x85\xD0\xBD\xD0\xB8\xD0\xBA\xD0\xB8 \xD0\xBE\xD0\xB1\xD0\xBD\xD0\xBE\xD0\xB2\xD1\x8F\xD1\x82\xD1\x81\xD1\x8F \xD0\xBF\xD0\xBE\xD1\x81\xD0\xBB\xD0\xB5 \xD0\xBF\xD0\xB5\xD1\x80\xD0\xB5\xD0\xB7\xD0\xB0\xD0\xBF\xD1\x83\xD1\x81\xD0\xBA\xD0\xB0.";
+            g_orig_draw_footer(note);
+        }
+    }
+    if (g_orig_draw_footer) {
+        g_orig_draw_footer(version_str);
+    }
+}
+
+void InstallPermanentHooks() {
+    uintptr_t base = reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
+    auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(base);
+    if (dos->e_magic != IMAGE_DOS_SIGNATURE) return;
+    auto* nt = reinterpret_cast<IMAGE_NT_HEADERS64*>(base + dos->e_lfanew);
+    if (nt->Signature != IMAGE_NT_SIGNATURE) return;
+    size_t img_size = nt->OptionalHeader.SizeOfImage;
+
+    bool has_pack = CanHookCallSite(base, img_size, kPackHookCallRva, kPackReadOrigRva);
+    bool has_settings = CanHookCallSite(base, img_size, kSettingsFooterCallRva, kSettingsFooterOrigRva);
+    if (!has_pack && !has_settings) return;
+
+    uint8_t* stubs = AllocNearModule(base, 32);
+    if (!stubs) return;
+
+    if (has_pack) {
+        WriteAbsJumpStub(stubs, reinterpret_cast<uint64_t>(&HookReadPackAsset));
+    }
+    if (has_settings) {
+        WriteAbsJumpStub(stubs + 16, reinterpret_cast<uint64_t>(&HookDrawSettingsFooter));
     }
 
-    if (has_settings_hook) {
+    DWORD oldp = 0;
+    VirtualProtect(stubs, 32, PAGE_EXECUTE_READ, &oldp);
+    FlushInstructionCache(GetCurrentProcess(), stubs, 32);
+
+    if (has_pack) {
+        g_op_new = reinterpret_cast<FnOpNew>(base + kOpNewRva);
+        g_op_delete = reinterpret_cast<FnOpDelete>(base + kOpDeleteRva);
+        g_orig_read_pack_asset = reinterpret_cast<FnReadPackAsset>(base + kPackReadOrigRva);
+
+        int64_t next_ip = static_cast<int64_t>(base + kPackHookCallRva + 5);
+        int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(stubs) - next_ip);
+        PatchMemBytes(base + kPackHookCallRva + 1, &new_rel, 4);
+    }
+
+    if (has_settings) {
         g_orig_draw_footer = reinterpret_cast<FnDrawFooterText>(base + kSettingsFooterOrigRva);
         g_draw_section_label = reinterpret_cast<FnDrawSectionLabel>(base + kDrawSectionLabelRva);
         g_next_widget_id = reinterpret_cast<FnNextWidgetId>(base + kNextWidgetIdRva);
@@ -720,13 +821,11 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
         g_same_line = reinterpret_cast<FnSameLine>(base + kSameLineRva);
 
         int64_t next_ip = static_cast<int64_t>(base + kSettingsFooterCallRva + 5);
-        int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(loc_mem + stub_settings_off) - next_ip);
+        int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(stubs + 16) - next_ip);
         PatchMemBytes(base + kSettingsFooterCallRva + 1, &new_rel, 4);
     }
 
     FlushInstructionCache(GetCurrentProcess(), reinterpret_cast<void*>(base), img_size);
-    LogMsg("Applied runtime plugin cleanly.");
-    return true;
 }
 
 void InitPlugin(HMODULE self_mod) {
@@ -741,32 +840,23 @@ void InitPlugin(HMODULE self_mod) {
     DeleteFileW(g_log_path.c_str());
 
     DiscoverAvailableLocales();
-    std::string active = ReadActiveLocale(g_locales_root / L"lang.ini");
-    if (active.empty()) active = "en";
-    g_active_lang = active;
-    g_selected_lang = active;
+    std::string active = ReadIniKey(g_locales_root / L"lang.ini", "active");
+    if (active.empty() || active == "none") active = "en";
 
-    if (active == "en" || active == "none") {
-        LogMsg("Plugin in English mode (active=" + active + ").");
-        InstallStandaloneSettingsHook();
-        return;
+    g_active_index = 0;
+    for (size_t i = 0; i < g_available_langs.size(); ++i) {
+        if (g_available_langs[i].code == active) {
+            g_active_index = i;
+            break;
+        }
     }
+    g_active_lang = g_available_langs[g_active_index].code;
+    g_startup_lang = g_active_lang;
 
-    g_locale_dir = g_locales_root / Utf8ToPath(active);
-    g_override_dir = g_locale_dir / L"override";
-    if (!fs::exists(g_locale_dir)) {
-        LogMsg("Locale folder missing: " + active);
-        g_active_lang = "en";
-        InstallStandaloneSettingsHook();
-        return;
-    }
-
-    LogMsg("Initializing locale: " + active);
-    LoadPackPatches(g_locale_dir / L"pack_patches.dtpk");
-    if (!ApplyRuntimeExePatch(g_locale_dir / L"exe_patch.dtloc")) {
-        g_active_lang = "en";
-        InstallStandaloneSettingsHook();
-    }
+    InitDefaultUnicodeFonts();
+    InstallPermanentHooks();
+    LoadPackPatchesForLocale(g_active_lang);
+    ApplyExePatchesForLocale(g_active_lang);
 }
 
 // ============================================================================
@@ -883,6 +973,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID) {
         DisableThreadLibraryCalls(hModule);
         InitPlugin(hModule);
     } else if (ul_reason_for_call == DLL_PROCESS_DETACH) {
+        for (uint8_t* p : g_alloc_loc_mems) {
+            VirtualFree(p, 0, MEM_RELEASE);
+        }
+        g_alloc_loc_mems.clear();
         if (g_real_version) {
             FreeLibrary(g_real_version);
             g_real_version = nullptr;
