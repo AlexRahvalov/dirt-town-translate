@@ -1,0 +1,8 @@
+work/
+__pycache__/
+*.pyc
+*.exe
+*.pack
+*.save
+ui_catalog.json
+backup_en/
