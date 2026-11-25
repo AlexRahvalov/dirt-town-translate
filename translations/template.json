@@ -1,0 +1,4068 @@
+{
+  "meta": {
+    "code": "template",
+    "name": "English (Template)",
+    "game_build": "ed45b4be7fc6",
+    "version": 1
+  },
+  "inline_literals": {
+    "yes": {
+      "en": "yes",
+      "text": "yes",
+      "max_bytes": 7
+    },
+    "no": {
+      "en": "no",
+      "text": "no",
+      "max_bytes": 7
+    }
+  },
+  "simd_strings": {
+    "clear_pad_26b": {
+      "en": "clear the pad for the crew",
+      "text": "clear the pad for the crew",
+      "max_bytes": 26
+    },
+    "seat_37b": {
+      "en": "step out of the seat to take delivery",
+      "text": "step out of the seat to take delivery",
+      "max_bytes": 37
+    },
+    "flat_51b": {
+      "en": "there is no flat ground nearby for the delivery.",
+      "text": "there is no flat ground nearby for the delivery.",
+      "max_bytes": 51
+    },
+    "dealer_46b": {
+      "en": "the dealer has none of those left on the lot",
+      "text": "the dealer has none of those left on the lot",
+      "max_bytes": 46
+    },
+    "item_31b": {
+      "en": "the item is no longer installed",
+      "text": "the item is no longer installed",
+      "max_bytes": 31
+    }
+  },
+  "font_redirects": [
+    {
+      "pack_key": "fonts/Roboto-Medium.ttf",
+      "kind": "pack",
+      "target": "fonts/Roboto-Regular.ttf"
+    },
+    {
+      "pack_key": "fonts/Roboto-Black.ttf",
+      "kind": "pack",
+      "target": "fonts/Roboto-Bold.ttf"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Regular.ttf",
+      "kind": "winfont",
+      "target": "cour.ttf"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Bold.ttf",
+      "kind": "winfont",
+      "target": "courbd.ttf"
+    }
+  ],
+  "graphics_presets": [
+    "low",
+    "medium",
+    "high",
+    "ultra"
+  ],
+  "shop_sections": [
+    "Loaders",
+    "Earthmoving",
+    "Haulage",
+    "Farm",
+    "Getting about"
+  ],
+  "exe_strings": {
+    "0x14149b5ba": {
+      "en": "the account is short",
+      "text": "the account is short"
+    },
+    "0x14149b5fc": {
+      "en": ", delivered in front of you",
+      "text": ", delivered in front of you"
+    },
+    "0x14149b698": {
+      "en": "grade grid on",
+      "text": "grade grid on"
+    },
+    "0x14149b6a6": {
+      "en": "grade grid auto",
+      "text": "grade grid auto"
+    },
+    "0x14149b6c1": {
+      "en": "too close to another stick",
+      "text": "too close to another stick"
+    },
+    "0x14149b6dc": {
+      "en": "range %d of %d, %.1f m/s",
+      "text": "range %d of %d, %.1f m/s"
+    },
+    "0x14149b6f8": {
+      "en": "arm lock: bring the arm home first",
+      "text": "arm lock: bring the arm home first"
+    },
+    "0x14149bd1a": {
+      "en": "blade level, %.2f m%s",
+      "text": "blade level, %.2f m%s"
+    },
+    "0x14149bd30": {
+      "en": "blade on the sticks, %.2f m%s",
+      "text": "blade on the sticks, %.2f m%s"
+    },
+    "0x14149bd50": {
+      "en": "blade tilt locked to the grade",
+      "text": "blade tilt locked to the grade"
+    },
+    "0x14149bd6f": {
+      "en": "blade tilt free",
+      "text": "blade tilt free"
+    },
+    "0x14149be27": {
+      "en": " This session is not saved.",
+      "text": " This session is not saved."
+    },
+    "0x14149be43": {
+      "en": "the host is gone",
+      "text": "the host is gone"
+    },
+    "0x14149beeb": {
+      "en": "receiving the site, ",
+      "text": "receiving the site, "
+    },
+    "0x14149bf02": {
+      "en": "reconnected to host",
+      "text": "reconnected to host"
+    },
+    "0x14149bf59": {
+      "en": "connecting, attempt ",
+      "text": "connecting, attempt "
+    },
+    "0x14149bf6e": {
+      "en": ", trying again",
+      "text": ", trying again"
+    },
+    "0x14149bf7d": {
+      "en": "receiving the site, 0%",
+      "text": "receiving the site, 0%"
+    },
+    "0x14149bf98": {
+      "en": " plugged in · not used. Settings › Controls › Devices assigns it.",
+      "text": " plugged in · not used. Settings › Controls › Devices assigns it."
+    },
+    "0x14149c0af": {
+      "en": "Use",
+      "text": "Use"
+    },
+    "0x14149c0b3": {
+      "en": "LMB",
+      "text": "LMB"
+    },
+    "0x14149c0b7": {
+      "en": "Click",
+      "text": "Click"
+    },
+    "0x14149c0bd": {
+      "en": "Press ",
+      "text": "Press "
+    },
+    "0x14149c0c4": {
+      "en": "Bind Hold grade in Controls",
+      "text": "Bind Hold grade in Controls"
+    },
+    "0x14149c0e0": {
+      "en": "Bind Grade sticks in Controls",
+      "text": "Bind Grade sticks in Controls"
+    },
+    "0x14149c0fe": {
+      "en": " for the grade sticks",
+      "text": " for the grade sticks"
+    },
+    "0x14149c114": {
+      "en": "the host has left",
+      "text": "the host has left"
+    },
+    "0x14149c126": {
+      "en": ", %+.2f m",
+      "text": ", %+.2f m"
+    },
+    "0x14149c130": {
+      "en": "blade free",
+      "text": "blade free"
+    },
+    "0x14149c13b": {
+      "en": "blade hold at grade",
+      "text": "blade hold at grade"
+    },
+    "0x14149c14f": {
+      "en": "blade hold %+.2f m",
+      "text": "blade hold %+.2f m"
+    },
+    "0x14149c162": {
+      "en": ", %.0f s",
+      "text": ", %.0f s"
+    },
+    "0x14149c16b": {
+      "en": "leave game",
+      "text": "leave game"
+    },
+    "0x14149c178": {
+      "en": "CONNECTION LOST. RECONNECTING...",
+      "text": "CONNECTION LOST. RECONNECTING..."
+    },
+    "0x14149c199": {
+      "en": "back to menu",
+      "text": "back to menu"
+    },
+    "0x14149c1a6": {
+      "en": "COULD NOT JOIN",
+      "text": "COULD NOT JOIN"
+    },
+    "0x14149c1b5": {
+      "en": "ok",
+      "text": "ok"
+    },
+    "0x14149c1b8": {
+      "en": "OUT OF ORDER",
+      "text": "OUT OF ORDER"
+    },
+    "0x14149c1c5": {
+      "en": "Stick removed",
+      "text": "Stick removed"
+    },
+    "0x14149c1d3": {
+      "en": "All ",
+      "text": "All "
+    },
+    "0x14149c1d8": {
+      "en": " sticks removed",
+      "text": " sticks removed"
+    },
+    "0x14149c1e8": {
+      "en": "join link copied",
+      "text": "join link copied"
+    },
+    "0x14149c338": {
+      "en": "updated",
+      "text": "updated"
+    },
+    "0x14149c340": {
+      "en": "published",
+      "text": "published"
+    },
+    "0x14149c350": {
+      "en": "accept the Workshop agreement on the page Steam opened",
+      "text": "accept the Workshop agreement on the page Steam opened"
+    },
+    "0x14149c598": {
+      "en": "the item is no longer installed",
+      "text": "the item is no longer installed"
+    },
+    "0x14149c5b8": {
+      "en": "the author's update could not be taken",
+      "text": "the author's update could not be taken"
+    },
+    "0x14149c630": {
+      "en": "A Dirt Town site made in the game's editor.",
+      "text": "A Dirt Town site made in the game's editor."
+    },
+    "0x14149c65c": {
+      "en": "could not write ",
+      "text": "could not write "
+    },
+    "0x14149c68a": {
+      "en": "could not start the session",
+      "text": "could not start the session"
+    },
+    "0x1414d3ba0": {
+      "en": "Pause",
+      "text": "Pause"
+    },
+    "0x1414d3ba6": {
+      "en": "Esc menu",
+      "text": "Esc menu"
+    },
+    "0x1414d3baf": {
+      "en": "Map",
+      "text": "Map"
+    },
+    "0x1414d3bb3": {
+      "en": "Minimap zoom",
+      "text": "Minimap zoom"
+    },
+    "0x1414d3bc0": {
+      "en": "Hide or show jobs",
+      "text": "Hide or show jobs"
+    },
+    "0x1414d3bd2": {
+      "en": "Get in or out",
+      "text": "Get in or out"
+    },
+    "0x1414d3be0": {
+      "en": "Interact",
+      "text": "Interact"
+    },
+    "0x1414d3be9": {
+      "en": "Fire the charges",
+      "text": "Fire the charges"
+    },
+    "0x1414d3bfa": {
+      "en": "Tool belt",
+      "text": "Tool belt"
+    },
+    "0x1414d3c04": {
+      "en": "No tool",
+      "text": "No tool"
+    },
+    "0x1414d3c0c": {
+      "en": "Grade sticks",
+      "text": "Grade sticks"
+    },
+    "0x1414d3c19": {
+      "en": "Drill",
+      "text": "Drill"
+    },
+    "0x1414d3c1f": {
+      "en": "Dynamite",
+      "text": "Dynamite"
+    },
+    "0x1414d3c28": {
+      "en": "Detonator",
+      "text": "Detonator"
+    },
+    "0x1414d3c32": {
+      "en": "Use",
+      "text": "Use"
+    },
+    "0x1414d3c36": {
+      "en": "Talk",
+      "text": "Talk"
+    },
+    "0x1414d3c3b": {
+      "en": "Stick",
+      "text": "Stick"
+    },
+    "0x1414d3c41": {
+      "en": "Call the bike",
+      "text": "Call the bike"
+    },
+    "0x1414d3c4f": {
+      "en": "Attachment",
+      "text": "Attachment"
+    },
+    "0x1414d3c5a": {
+      "en": "Change view",
+      "text": "Change view"
+    },
+    "0x1414d3c66": {
+      "en": "Float",
+      "text": "Float"
+    },
+    "0x1414d3c6c": {
+      "en": "Hold grade",
+      "text": "Hold grade"
+    },
+    "0x1414d3c77": {
+      "en": "Tilt lock",
+      "text": "Tilt lock"
+    },
+    "0x1414d3c81": {
+      "en": "Hold offset",
+      "text": "Hold offset"
+    },
+    "0x1414d3c8d": {
+      "en": "Grade grid",
+      "text": "Grade grid"
+    },
+    "0x1414d3c98": {
+      "en": "Range",
+      "text": "Range"
+    },
+    "0x1414d3c9e": {
+      "en": "Speed range",
+      "text": "Speed range"
+    },
+    "0x1414d3caa": {
+      "en": "Warning light",
+      "text": "Warning light"
+    },
+    "0x1414d3cb8": {
+      "en": "Rear hydraulics",
+      "text": "Rear hydraulics"
+    },
+    "0x1414d3cc8": {
+      "en": "Hitch up/down",
+      "text": "Hitch up/down"
+    },
+    "0x1414d3cd6": {
+      "en": "Diff lock",
+      "text": "Diff lock"
+    },
+    "0x1414d3ce0": {
+      "en": "Attachment lock",
+      "text": "Attachment lock"
+    },
+    "0x1414d3cf0": {
+      "en": "Tailgate lock",
+      "text": "Tailgate lock"
+    },
+    "0x1414d3cfe": {
+      "en": "Lift axle",
+      "text": "Lift axle"
+    },
+    "0x1414d3d08": {
+      "en": "Respawn",
+      "text": "Respawn"
+    },
+    "0x1414d3d10": {
+      "en": "Tuning",
+      "text": "Tuning"
+    },
+    "0x1414d3d17": {
+      "en": "Mark",
+      "text": "Mark"
+    },
+    "0x1414d3d1c": {
+      "en": "Replay",
+      "text": "Replay"
+    },
+    "0x1414d3d23": {
+      "en": "Record take",
+      "text": "Record take"
+    },
+    "0x1414d411d": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x1414d4124": {
+      "en": "N",
+      "text": "N"
+    },
+    "0x141548bc6": {
+      "en": "Off the map. ",
+      "text": "Off the map. "
+    },
+    "0x141548bd4": {
+      "en": "Engine flooded. ",
+      "text": "Engine flooded. "
+    },
+    "0x141548c2b": {
+      "en": "Use ",
+      "text": "Use "
+    },
+    "0x141548c30": {
+      "en": " to push",
+      "text": " to push"
+    },
+    "0x141548c67": {
+      "en": "this site has no dealer",
+      "text": "this site has no dealer"
+    },
+    "0x141548c80": {
+      "en": "step out of the seat to take delivery",
+      "text": "step out of the seat to take delivery"
+    },
+    "0x141548ca8": {
+      "en": "only the host takes delivery in a session yet",
+      "text": "only the host takes delivery in a session yet"
+    },
+    "0x141548cd8": {
+      "en": "the dealer has none of these left on this site",
+      "text": "the dealer has none of these left on this site"
+    },
+    "0x141548d08": {
+      "en": "there is no flat, dry, clear ground near you for it",
+      "text": "there is no flat, dry, clear ground near you for it"
+    },
+    "0x141548d67": {
+      "en": " is free",
+      "text": " is free"
+    },
+    "0x141548d70": {
+      "en": "sled",
+      "text": "sled"
+    },
+    "0x141548d75": {
+      "en": "dirt bike",
+      "text": "dirt bike"
+    },
+    "0x141548d7f": {
+      "en": " on this site",
+      "text": " on this site"
+    },
+    "0x14154a31a": {
+      "en": "  put the chain away",
+      "text": "  put the chain away"
+    },
+    "0x14154a330": {
+      "en": "  set the chain's end down  ·  look at an eye or a bucket to hook it",
+      "text": "  set the chain's end down  ·  look at an eye or a bucket to hook it"
+    },
+    "0x14154a376": {
+      "en": "  pick the chain's end up",
+      "text": "  pick the chain's end up"
+    },
+    "0x14154a390": {
+      "en": "  unhook the chain",
+      "text": "  unhook the chain"
+    },
+    "0x14154f495": {
+      "en": "Click",
+      "text": "Click"
+    },
+    "0x14154f49b": {
+      "en": "Press J",
+      "text": "Press J"
+    },
+    "0x14154f4a3": {
+      "en": "Press 2 for the grade sticks",
+      "text": "Press 2 for the grade sticks"
+    },
+    "0x14154f4c0": {
+      "en": "Press Backspace to respawn",
+      "text": "Press Backspace to respawn"
+    },
+    "0x14155a3d9": {
+      "en": "  set its height  ·  hold ",
+      "text": "  set its height  ·  hold "
+    },
+    "0x14155a3f5": {
+      "en": "  take out the grade sticks",
+      "text": "  take out the grade sticks"
+    },
+    "0x14156063a": {
+      "en": "limit exceeded",
+      "text": "limit exceeded"
+    },
+    "0x141560650": {
+      "en": "insufficient privilege: a limited account cannot publish",
+      "text": "insufficient privilege: a limited account cannot publish"
+    },
+    "0x141560689": {
+      "en": "access denied",
+      "text": "access denied"
+    },
+    "0x141560697": {
+      "en": "timeout",
+      "text": "timeout"
+    },
+    "0x14156069f": {
+      "en": "banned",
+      "text": "banned"
+    },
+    "0x1415606a6": {
+      "en": "not logged on",
+      "text": "not logged on"
+    },
+    "0x1415606b4": {
+      "en": "fail",
+      "text": "fail"
+    },
+    "0x1415606b9": {
+      "en": "invalid parameter",
+      "text": "invalid parameter"
+    },
+    "0x1415606cb": {
+      "en": "file not found",
+      "text": "file not found"
+    },
+    "0x1415606da": {
+      "en": "service unavailable",
+      "text": "service unavailable"
+    },
+    "0x141560ba0": {
+      "en": ", the Workshop agreement is not yet accepted",
+      "text": ", the Workshop agreement is not yet accepted"
+    },
+    "0x141561200": {
+      "en": "B  skip",
+      "text": "B  skip"
+    },
+    "0x141561208": {
+      "en": "A",
+      "text": "A"
+    },
+    "0x14156120a": {
+      "en": "Esc  skip",
+      "text": "Esc  skip"
+    },
+    "0x141561214": {
+      "en": "Enter",
+      "text": "Enter"
+    },
+    "0x141561220": {
+      "en": "OK",
+      "text": "OK"
+    },
+    "0x141561228": {
+      "en": "Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand",
+      "text": "Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand"
+    },
+    "0x14156135e": {
+      "en": "LOCKED",
+      "text": "LOCKED"
+    },
+    "0x141561365": {
+      "en": "NO STICKS",
+      "text": "NO STICKS"
+    },
+    "0x14156136f": {
+      "en": "FREE",
+      "text": "FREE"
+    },
+    "0x141561374": {
+      "en": "AUTO",
+      "text": "AUTO"
+    },
+    "0x141561379": {
+      "en": "MAN",
+      "text": "MAN"
+    },
+    "0x14156137d": {
+      "en": "WAIT",
+      "text": "WAIT"
+    },
+    "0x141561382": {
+      "en": "NO GRADE",
+      "text": "NO GRADE"
+    },
+    "0x14156138b": {
+      "en": "TO GRADE",
+      "text": "TO GRADE"
+    },
+    "0x14156139a": {
+      "en": "OFS",
+      "text": "OFS"
+    },
+    "0x1415613a4": {
+      "en": "DEPTH",
+      "text": "DEPTH"
+    },
+    "0x1415613af": {
+      "en": "REACH",
+      "text": "REACH"
+    },
+    "0x1415616e0": {
+      "en": "X  raise the tipping trailer's drawbar  ·  Z  lower it\nE  put the tractor in neutral",
+      "text": "X  raise the tipping trailer's drawbar  ·  Z  lower it\nE  put the tractor in neutral"
+    },
+    "0x141561738": {
+      "en": "The grade hold keeps the blade on the sticks' grade while the dozer climbs the ramp to the pad.",
+      "text": "The grade hold keeps the blade on the sticks' grade while the dozer climbs the ramp to the pad."
+    },
+    "0x141561c2a": {
+      "en": " and ",
+      "text": " and "
+    },
+    "0x141561c34": {
+      "en": "every seat",
+      "text": "every seat"
+    },
+    "0x141561c3f": {
+      "en": "every machine",
+      "text": "every machine"
+    },
+    "0x141561c4d": {
+      "en": "every wheeled seat",
+      "text": "every wheeled seat"
+    },
+    "0x141561c60": {
+      "en": "every wheeled machine",
+      "text": "every wheeled machine"
+    },
+    "0x141561c78": {
+      "en": "the trucks, the tractor and the bandvagn",
+      "text": "the trucks, the tractor and the bandvagn"
+    },
+    "0x141561ca1": {
+      "en": "the loaders",
+      "text": "the loaders"
+    },
+    "0x141561cad": {
+      "en": "the dozer",
+      "text": "the dozer"
+    },
+    "0x141561cb7": {
+      "en": "the excavator",
+      "text": "the excavator"
+    },
+    "0x141561cc5": {
+      "en": "the bike and the snowmobile",
+      "text": "the bike and the snowmobile"
+    },
+    "0x141561d7c": {
+      "en": "keyboard",
+      "text": "keyboard"
+    },
+    "0x141561d85": {
+      "en": "gamepad",
+      "text": "gamepad"
+    },
+    "0x141561d8d": {
+      "en": "joysticks",
+      "text": "joysticks"
+    },
+    "0x141561e07": {
+      "en": "wheel",
+      "text": "wheel"
+    },
+    "0x141561e8a": {
+      "en": "flight stick",
+      "text": "flight stick"
+    },
+    "0x141561ead": {
+      "en": "a joystick",
+      "text": "a joystick"
+    },
+    "0x141561fb3": {
+      "en": "push up…",
+      "text": "push up…"
+    },
+    "0x141561fbe": {
+      "en": "push sideways or hat…",
+      "text": "push sideways or hat…"
+    },
+    "0x141561fd6": {
+      "en": "push +…",
+      "text": "push +…"
+    },
+    "0x141561fe0": {
+      "en": "press…",
+      "text": "press…"
+    },
+    "0x141561fe9": {
+      "en": "push −…",
+      "text": "push −…"
+    },
+    "0x141561ff9": {
+      "en": "alt",
+      "text": "alt"
+    },
+    "0x141562008": {
+      "en": "gamepad disconnected",
+      "text": "gamepad disconnected"
+    },
+    "0x14156201d": {
+      "en": "sticks disconnected",
+      "text": "sticks disconnected"
+    },
+    "0x141562036": {
+      "en": "reset",
+      "text": "reset"
+    },
+    "0x14156203c": {
+      "en": "also bound to ",
+      "text": "also bound to "
+    },
+    "0x141562059": {
+      "en": "capture on: ",
+      "text": "capture on: "
+    },
+    "0x141562068": {
+      "en": "everything",
+      "text": "everything"
+    },
+    "0x141562073": {
+      "en": "developer",
+      "text": "developer"
+    },
+    "0x14156207d": {
+      "en": "open all###fold_all",
+      "text": "open all###fold_all"
+    },
+    "0x141562091": {
+      "en": "fold all###fold_all",
+      "text": "fold all###fold_all"
+    },
+    "0x1415620a5": {
+      "en": " axis rests",
+      "text": " axis rests"
+    },
+    "0x1415620b1": {
+      "en": " axes rest",
+      "text": " axes rest"
+    },
+    "0x1415620bc": {
+      "en": "GAMEPAD",
+      "text": "GAMEPAD"
+    },
+    "0x1415620c4": {
+      "en": "GAMEPAD · NOT CONNECTED",
+      "text": "GAMEPAD · NOT CONNECTED"
+    },
+    "0x1415620dd": {
+      "en": "JOYSTICKS",
+      "text": "JOYSTICKS"
+    },
+    "0x1415620e7": {
+      "en": "JOYSTICKS · NONE ASSIGNED",
+      "text": "JOYSTICKS · NONE ASSIGNED"
+    },
+    "0x141562108": {
+      "en": "how far back; the scroll wheel in the chase",
+      "text": "how far back; the scroll wheel in the chase"
+    },
+    "0x141562138": {
+      "en": "how far back the camera stands",
+      "text": "how far back the camera stands"
+    },
+    "0x141562157": {
+      "en": "mouse + shift arrows",
+      "text": "mouse + shift arrows"
+    },
+    "0x14156216c": {
+      "en": "shift + arrows",
+      "text": "shift + arrows"
+    },
+    "0x14156217b": {
+      "en": "hide 4 to 9",
+      "text": "hide 4 to 9"
+    },
+    "0x141562187": {
+      "en": "show 4 to 9",
+      "text": "show 4 to 9"
+    },
+    "0x141562198": {
+      "en": "SELECT A BINDING, THEN USE A KEY, BUTTON OR STICK · × OR DELETE CLEARS · ESC CANCELS",
+      "text": "SELECT A BINDING, THEN USE A KEY, BUTTON OR STICK · × OR DELETE CLEARS · ESC CANCELS"
+    },
+    "0x1415621f0": {
+      "en": "CONTROLS",
+      "text": "CONTROLS"
+    },
+    "0x1415621f9": {
+      "en": "close",
+      "text": "close"
+    },
+    "0x1415621ff": {
+      "en": "SHOWING",
+      "text": "SHOWING"
+    },
+    "0x14156220e": {
+      "en": "reset all controls",
+      "text": "reset all controls"
+    },
+    "0x141562221": {
+      "en": "%d plugged in",
+      "text": "%d plugged in"
+    },
+    "0x14156222f": {
+      "en": "the same in every layout",
+      "text": "the same in every layout"
+    },
+    "0x141562248": {
+      "en": "own layout",
+      "text": "own layout"
+    },
+    "0x141562253": {
+      "en": "Keyboard & mouse · ",
+      "text": "Keyboard & mouse · "
+    },
+    "0x14156226f": {
+      "en": "  ·  wheel lock ",
+      "text": "  ·  wheel lock "
+    },
+    "0x141562283": {
+      "en": "DEVICES",
+      "text": "DEVICES"
+    },
+    "0x14156228d": {
+      "en": "Keyboard & mouse",
+      "text": "Keyboard & mouse"
+    },
+    "0x14156229e": {
+      "en": "axes",
+      "text": "axes"
+    },
+    "0x1415622a3": {
+      "en": "axis",
+      "text": "axis"
+    },
+    "0x1415622a8": {
+      "en": "buttons",
+      "text": "buttons"
+    },
+    "0x1415622b0": {
+      "en": "button",
+      "text": "button"
+    },
+    "0x1415622b7": {
+      "en": "hats",
+      "text": "hats"
+    },
+    "0x1415622bc": {
+      "en": "hat",
+      "text": "hat"
+    },
+    "0x1415622c0": {
+      "en": "your own bindings; press a layout to replace them",
+      "text": "your own bindings; press a layout to replace them"
+    },
+    "0x1415622f2": {
+      "en": " · a pick here sets ",
+      "text": " · a pick here sets "
+    },
+    "0x141562308": {
+      "en": " alone",
+      "text": " alone"
+    },
+    "0x14156230f": {
+      "en": "pedals",
+      "text": "pedals"
+    },
+    "0x141562316": {
+      "en": "pedal",
+      "text": "pedal"
+    },
+    "0x14156231c": {
+      "en": " away from centre",
+      "text": " away from centre"
+    },
+    "0x14156233a": {
+      "en": "LEFT STICK",
+      "text": "LEFT STICK"
+    },
+    "0x141562345": {
+      "en": "RIGHT STICK",
+      "text": "RIGHT STICK"
+    },
+    "0x141562351": {
+      "en": "DEAD ZONE",
+      "text": "DEAD ZONE"
+    },
+    "0x141562370": {
+      "en": "wheel turn to full lock, as a share of its travel",
+      "text": "wheel turn to full lock, as a share of its travel"
+    },
+    "0x1415623a2": {
+      "en": "Wheel lock",
+      "text": "Wheel lock"
+    },
+    "0x1415623ad": {
+      "en": "wheel lock",
+      "text": "wheel lock"
+    },
+    "0x1415623b8": {
+      "en": "how fast the joystick levers move the rams",
+      "text": "how fast the joystick levers move the rams"
+    },
+    "0x1415623e3": {
+      "en": "Hydraulic speed",
+      "text": "Hydraulic speed"
+    },
+    "0x1415623fa": {
+      "en": "hydraulic speed",
+      "text": "hydraulic speed"
+    },
+    "0x14156240a": {
+      "en": "KEYBOARD & MOUSE",
+      "text": "KEYBOARD & MOUSE"
+    },
+    "0x14156241b": {
+      "en": "CAMERA",
+      "text": "CAMERA"
+    },
+    "0x141562422": {
+      "en": "STEERING RETURN",
+      "text": "STEERING RETURN"
+    },
+    "0x141562432": {
+      "en": "%d settings",
+      "text": "%d settings"
+    },
+    "0x141562440": {
+      "en": "returns %s  ·  hold below %.1f m/s  ·  full from %.1f m/s",
+      "text": "returns %s  ·  hold below %.1f m/s  ·  full from %.1f m/s"
+    },
+    "0x14156247c": {
+      "en": "sensitivity %.2f",
+      "text": "sensitivity %.2f"
+    },
+    "0x14156248d": {
+      "en": "  ·  inverted",
+      "text": "  ·  inverted"
+    },
+    "0x14156249c": {
+      "en": "  ·  distance %d%%",
+      "text": "  ·  distance %d%%"
+    },
+    "0x1415624b0": {
+      "en": "  ·  cab %d°",
+      "text": "  ·  cab %d°"
+    },
+    "0x1415624bf": {
+      "en": "  ·  follows the bucket",
+      "text": "  ·  follows the bucket"
+    },
+    "0x1415624d8": {
+      "en": "  ·  chase on the bucket",
+      "text": "  ·  chase on the bucket"
+    },
+    "0x1415624f4": {
+      "en": "%d control%s",
+      "text": "%d control%s"
+    },
+    "0x141562508": {
+      "en": "the wheel's angle when you let go",
+      "text": "the wheel's angle when you let go"
+    },
+    "0x14156252a": {
+      "en": "Returns",
+      "text": "Returns"
+    },
+    "0x141562548": {
+      "en": "letting go holds the angle under this",
+      "text": "letting go holds the angle under this"
+    },
+    "0x14156256e": {
+      "en": "Hold below",
+      "text": "Hold below"
+    },
+    "0x141562579": {
+      "en": "m/s",
+      "text": "m/s"
+    },
+    "0x141562580": {
+      "en": "full straightening from this speed",
+      "text": "full straightening from this speed"
+    },
+    "0x1415625a3": {
+      "en": "Return at",
+      "text": "Return at"
+    },
+    "0x1415625ad": {
+      "en": "full locks a second",
+      "text": "full locks a second"
+    },
+    "0x1415625c1": {
+      "en": "Return rate",
+      "text": "Return rate"
+    },
+    "0x1415625cd": {
+      "en": "/s",
+      "text": "/s"
+    },
+    "0x1415625d0": {
+      "en": "mouse, trackpad and right-stick look",
+      "text": "mouse, trackpad and right-stick look"
+    },
+    "0x1415625f5": {
+      "en": "Mouse sensitivity",
+      "text": "Mouse sensitivity"
+    },
+    "0x14156260e": {
+      "en": "Invert look",
+      "text": "Invert look"
+    },
+    "0x14156261a": {
+      "en": "Camera distance",
+      "text": "Camera distance"
+    },
+    "0x14156262a": {
+      "en": "camera distance",
+      "text": "camera distance"
+    },
+    "0x141562640": {
+      "en": "how wide; the scroll wheel in the cab",
+      "text": "how wide; the scroll wheel in the cab"
+    },
+    "0x141562666": {
+      "en": "Cab field of view",
+      "text": "Cab field of view"
+    },
+    "0x141562680": {
+      "en": "the cab view turns to keep the bucket in sight",
+      "text": "the cab view turns to keep the bucket in sight"
+    },
+    "0x1415626af": {
+      "en": "Cab follows the bucket",
+      "text": "Cab follows the bucket"
+    },
+    "0x1415626c8": {
+      "en": "the chase camera turns with the bucket's half, not the cab's",
+      "text": "the chase camera turns with the bucket's half, not the cab's"
+    },
+    "0x141562705": {
+      "en": "Chase follows the bucket",
+      "text": "Chase follows the bucket"
+    },
+    "0x14156271e": {
+      "en": "fixed",
+      "text": "fixed"
+    },
+    "0x141562728": {
+      "en": "Speed ranges %d · %d · %d",
+      "text": "Speed ranges %d · %d · %d"
+    },
+    "0x141562744": {
+      "en": "all wheeled",
+      "text": "all wheeled"
+    },
+    "0x141562750": {
+      "en": "wheeled machines",
+      "text": "wheeled machines"
+    },
+    "0x141562761": {
+      "en": "trucks and tractor",
+      "text": "trucks and tractor"
+    },
+    "0x141562774": {
+      "en": "bike and snowmobile",
+      "text": "bike and snowmobile"
+    },
+    "0x141562901": {
+      "en": "cancel",
+      "text": "cancel"
+    },
+    "0x141562908": {
+      "en": "Every key, button and stick goes back to the shipped layout.",
+      "text": "Every key, button and stick goes back to the shipped layout."
+    },
+    "0x141562945": {
+      "en": "RESET ALL CONTROLS?",
+      "text": "RESET ALL CONTROLS?"
+    },
+    "0x141562959": {
+      "en": "reset all",
+      "text": "reset all"
+    },
+    "0x141562963": {
+      "en": "The ",
+      "text": "The "
+    },
+    "0x141562968": {
+      "en": " bindings the layouts set go back to ",
+      "text": " bindings the layouts set go back to "
+    },
+    "0x14156298e": {
+      "en": " on ",
+      "text": " on "
+    },
+    "0x141562993": {
+      "en": "; the rest stay.",
+      "text": "; the rest stay."
+    },
+    "0x1415629a4": {
+      "en": "REPLACE YOUR LAYOUT?",
+      "text": "REPLACE YOUR LAYOUT?"
+    },
+    "0x1415629c8": {
+      "en": "replace",
+      "text": "replace"
+    },
+    "0x141563471": {
+      "en": "untitled job",
+      "text": "untitled job"
+    },
+    "0x14156347e": {
+      "en": "TEST DRIVE",
+      "text": "TEST DRIVE"
+    },
+    "0x141563489": {
+      "en": "DAY SHEET",
+      "text": "DAY SHEET"
+    },
+    "0x141563493": {
+      "en": "TICK %d",
+      "text": "TICK %d"
+    },
+    "0x14156349b": {
+      "en": "TICK %d · PAUSED",
+      "text": "TICK %d · PAUSED"
+    },
+    "0x1415634ad": {
+      "en": "Back to editor",
+      "text": "Back to editor"
+    },
+    "0x1415634bc": {
+      "en": "Leave",
+      "text": "Leave"
+    },
+    "0x1415634c2": {
+      "en": "rain/snow",
+      "text": "rain/snow"
+    },
+    "0x1415634cc": {
+      "en": "dry weather",
+      "text": "dry weather"
+    },
+    "0x1415634e1": {
+      "en": "JOBS",
+      "text": "JOBS"
+    },
+    "0x1415634e6": {
+      "en": "close",
+      "text": "close"
+    },
+    "0x1415634ec": {
+      "en": "no jobs on this site",
+      "text": "no jobs on this site"
+    },
+    "0x141563530": {
+      "en": "test drive changes are not saved",
+      "text": "test drive changes are not saved"
+    },
+    "0x141563551": {
+      "en": "GAME",
+      "text": "GAME"
+    },
+    "0x141563556": {
+      "en": "Settings",
+      "text": "Settings"
+    },
+    "0x14156355f": {
+      "en": "Jobs",
+      "text": "Jobs"
+    },
+    "0x141563564": {
+      "en": "Copy join link",
+      "text": "Copy join link"
+    },
+    "0x141563573": {
+      "en": "GRADE STICKS",
+      "text": "GRADE STICKS"
+    },
+    "0x141563580": {
+      "en": "Remove all",
+      "text": "Remove all"
+    },
+    "0x14156358b": {
+      "en": "WEATHER",
+      "text": "WEATHER"
+    },
+    "0x141563598": {
+      "en": "%.1f C, rain %.1f mm/h, snow %.2f m/h",
+      "text": "%.1f C, rain %.1f mm/h, snow %.2f m/h"
+    },
+    "0x1415635be": {
+      "en": "%s: %.0f s remaining",
+      "text": "%s: %.0f s remaining"
+    },
+    "0x1415635d3": {
+      "en": "Open dumps folder",
+      "text": "Open dumps folder"
+    },
+    "0x141563612": {
+      "en": "LEAVE THE EDITOR?",
+      "text": "LEAVE THE EDITOR?"
+    },
+    "0x141563624": {
+      "en": "LEAVE THE GAME?",
+      "text": "LEAVE THE GAME?"
+    },
+    "0x141563638": {
+      "en": "unsaved edits will be backed up",
+      "text": "unsaved edits will be backed up"
+    },
+    "0x141563658": {
+      "en": "Cancel",
+      "text": "Cancel"
+    },
+    "0x14156365f": {
+      "en": "Save and leave",
+      "text": "Save and leave"
+    },
+    "0x14156366e": {
+      "en": "Remove the stick",
+      "text": "Remove the stick"
+    },
+    "0x14156367f": {
+      "en": "Remove %zu sticks",
+      "text": "Remove %zu sticks"
+    },
+    "0x14156369e": {
+      "en": "REMOVE ALL STICKS?",
+      "text": "REMOVE ALL STICKS?"
+    },
+    "0x1415636b1": {
+      "en": "RECOVER UNSAVED EDITS?",
+      "text": "RECOVER UNSAVED EDITS?"
+    },
+    "0x1415636c8": {
+      "en": "%zu edits autosaved %s; %zu saved",
+      "text": "%zu edits autosaved %s; %zu saved"
+    },
+    "0x1415636ea": {
+      "en": "Discard",
+      "text": "Discard"
+    },
+    "0x1415636f2": {
+      "en": "Recover",
+      "text": "Recover"
+    },
+    "0x141564140": {
+      "en": "player ",
+      "text": "player "
+    },
+    "0x141564148": {
+      "en": "lost %d s",
+      "text": "lost %d s"
+    },
+    "0x141564152": {
+      "en": "lagging %.1f s",
+      "text": "lagging %.1f s"
+    },
+    "0x141564161": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x141564168": {
+      "en": "%.1f km",
+      "text": "%.1f km"
+    },
+    "0x14156418d": {
+      "en": "Balance:",
+      "text": "Balance:"
+    },
+    "0x141564201": {
+      "en": "Engine flooded. ",
+      "text": "Engine flooded. "
+    },
+    "0x141564212": {
+      "en": "Off the map. ",
+      "text": "Off the map. "
+    },
+    "0x141564600": {
+      "en": "loading",
+      "text": "loading"
+    },
+    "0x141564608": {
+      "en": "waiting for the host",
+      "text": "waiting for the host"
+    },
+    "0x141564630": {
+      "en": "receiving the site",
+      "text": "receiving the site"
+    },
+    "0x14156464b": {
+      "en": "quarry",
+      "text": "quarry"
+    },
+    "0x141564652": {
+      "en": "building terrain",
+      "text": "building terrain"
+    },
+    "0x141564940": {
+      "en": "PLAYED",
+      "text": "PLAYED"
+    },
+    "0x141564947": {
+      "en": "SAVED",
+      "text": "SAVED"
+    },
+    "0x14156494d": {
+      "en": "cancel",
+      "text": "cancel"
+    },
+    "0x141564a96": {
+      "en": "continue",
+      "text": "continue"
+    },
+    "0x141564a9f": {
+      "en": "play",
+      "text": "play"
+    },
+    "0x141564aa4": {
+      "en": "JOB TICKET — ",
+      "text": "JOB TICKET — "
+    },
+    "0x141564ab4": {
+      "en": "NO. %02zu",
+      "text": "NO. %02zu"
+    },
+    "0x141564aca": {
+      "en": "EDITABLE",
+      "text": "EDITABLE"
+    },
+    "0x141564ad3": {
+      "en": "never",
+      "text": "never"
+    },
+    "0x141564add": {
+      "en": "start over",
+      "text": "start over"
+    },
+    "0x141564ae8": {
+      "en": "update",
+      "text": "update"
+    },
+    "0x141564aef": {
+      "en": "update refused: ",
+      "text": "update refused: "
+    },
+    "0x141564b00": {
+      "en": "update available",
+      "text": "update available"
+    },
+    "0x141564b11": {
+      "en": "workshop item ",
+      "text": "workshop item "
+    },
+    "0x141565e81": {
+      "en": "built-in",
+      "text": "built-in"
+    },
+    "0x141565e8a": {
+      "en": "your site",
+      "text": "your site"
+    },
+    "0x141565ee7": {
+      "en": "by ",
+      "text": "by "
+    },
+    "0x141565eeb": {
+      "en": "%.1f km",
+      "text": "%.1f km"
+    },
+    "0x141565ef3": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x141565efa": {
+      "en": "%.1f by %.1f km",
+      "text": "%.1f by %.1f km"
+    },
+    "0x141565f0a": {
+      "en": "%.0f by %.0f m",
+      "text": "%.0f by %.0f m"
+    },
+    "0x141565f19": {
+      "en": "just now",
+      "text": "just now"
+    },
+    "0x141565f22": {
+      "en": "%lld min",
+      "text": "%lld min"
+    },
+    "0x141565f2b": {
+      "en": "%lld h",
+      "text": "%lld h"
+    },
+    "0x141565f32": {
+      "en": "%lld d",
+      "text": "%lld d"
+    },
+    "0x141565f39": {
+      "en": "%d min",
+      "text": "%d min"
+    },
+    "0x141565f40": {
+      "en": "%d h %02d min",
+      "text": "%d h %02d min"
+    },
+    "0x141565f93": {
+      "en": "S",
+      "text": "S"
+    },
+    "0x141565fa2": {
+      "en": "settings",
+      "text": "settings"
+    },
+    "0x141565fab": {
+      "en": "START ",
+      "text": "START "
+    },
+    "0x141565fb2": {
+      "en": " OVER?",
+      "text": " OVER?"
+    },
+    "0x141565fb9": {
+      "en": "UPDATE ",
+      "text": "UPDATE "
+    },
+    "0x141565fc1": {
+      "en": "SITE REGISTER",
+      "text": "SITE REGISTER"
+    },
+    "0x141565fcf": {
+      "en": "%zu SITE%s",
+      "text": "%zu SITE%s"
+    },
+    "0x141565fe6": {
+      "en": "EARNED",
+      "text": "EARNED"
+    },
+    "0x141565fed": {
+      "en": "OPERATOR: ",
+      "text": "OPERATOR: "
+    },
+    "0x141565ffc": {
+      "en": "OPERATOR:",
+      "text": "OPERATOR:"
+    },
+    "0x141566017": {
+      "en": "YOUR SITES",
+      "text": "YOUR SITES"
+    },
+    "0x141566022": {
+      "en": "SITE",
+      "text": "SITE"
+    },
+    "0x141566030": {
+      "en": "WORKSHOP SITES",
+      "text": "WORKSHOP SITES"
+    },
+    "0x141566045": {
+      "en": "DEMO",
+      "text": "DEMO"
+    },
+    "0x141566053": {
+      "en": "quit",
+      "text": "quit"
+    },
+    "0x141566058": {
+      "en": "Dirt Town by Skyturns. Third-party notices: THIRD-PARTY-LICENSES.md beside the game.",
+      "text": "Dirt Town by Skyturns. Third-party notices: THIRD-PARTY-LICENSES.md beside the game."
+    },
+    "0x1415660ad": {
+      "en": "2 h",
+      "text": "2 h"
+    },
+    "0x1415660b1": {
+      "en": "3 h 10 min",
+      "text": "3 h 10 min"
+    },
+    "0x141566720": {
+      "en": "%.0f km",
+      "text": "%.0f km"
+    },
+    "0x141566728": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x141566751": {
+      "en": "SITE MAP — ",
+      "text": "SITE MAP — "
+    },
+    "0x14156675f": {
+      "en": "CONTOURS EVERY %g M",
+      "text": "CONTOURS EVERY %g M"
+    },
+    "0x141566773": {
+      "en": "SITE MAP",
+      "text": "SITE MAP"
+    },
+    "0x1415667a9": {
+      "en": "close",
+      "text": "close"
+    },
+    "0x1415667b3": {
+      "en": "you",
+      "text": "you"
+    },
+    "0x1415667b7": {
+      "en": "N",
+      "text": "N"
+    },
+    "0x1415667b9": {
+      "en": "road",
+      "text": "road"
+    },
+    "0x1415667be": {
+      "en": "track",
+      "text": "track"
+    },
+    "0x1415667c4": {
+      "en": "building",
+      "text": "building"
+    },
+    "0x1415667cd": {
+      "en": "water",
+      "text": "water"
+    },
+    "0x1415667d3": {
+      "en": "woods",
+      "text": "woods"
+    },
+    "0x1415667d9": {
+      "en": "grass",
+      "text": "grass"
+    },
+    "0x1415667df": {
+      "en": "contour",
+      "text": "contour"
+    },
+    "0x1415667e7": {
+      "en": "index contour",
+      "text": "index contour"
+    },
+    "0x1415667f5": {
+      "en": "job",
+      "text": "job"
+    },
+    "0x14156709f": {
+      "en": "a protected ",
+      "text": "a protected "
+    },
+    "0x1415670ac": {
+      "en": " protected ",
+      "text": " protected "
+    },
+    "0x1415670bc": {
+      "en": "Sand for the yard",
+      "text": "Sand for the yard"
+    },
+    "0x1415670d0": {
+      "en": "Bring sand from the pit and tip it in the marked bay by the shed.",
+      "text": "Bring sand from the pit and tip it in the marked bay by the shed."
+    },
+    "0x141567112": {
+      "en": "The bay is full.",
+      "text": "The bay is full."
+    },
+    "0x14156712c": {
+      "en": "Cottage lot",
+      "text": "Cottage lot"
+    },
+    "0x141567138": {
+      "en": "Clear the lot for the cottage. The taped pines are protected: leave them standing.",
+      "text": "Clear the lot for the cottage. The taped pines are protected: leave them standing."
+    },
+    "0x14156719c": {
+      "en": "Tower road",
+      "text": "Tower road"
+    },
+    "0x1415671a8": {
+      "en": "Cut a road up to the knob, level the pad there, set the four footings at its stakes and lay the three tower sections east of it.",
+      "text": "Cut a road up to the knob, level the pad there, set the four footings at its stakes and lay the three tower sections east of it."
+    },
+    "0x141567229": {
+      "en": "The tower stands.",
+      "text": "The tower stands."
+    },
+    "0x14156727e": {
+      "en": "Level the knob",
+      "text": "Level the knob"
+    },
+    "0x1415672a3": {
+      "en": "Stack the sections",
+      "text": "Stack the sections"
+    },
+    "0x1415672b6": {
+      "en": "Level the knob, {}",
+      "text": "Level the knob, {}"
+    },
+    "0x1415672e3": {
+      "en": "Stack the sections, {}",
+      "text": "Stack the sections, {}"
+    },
+    "0x1415672fa": {
+      "en": "felled",
+      "text": "felled"
+    },
+    "0x141567301": {
+      "en": "tree",
+      "text": "tree"
+    },
+    "0x141567306": {
+      "en": "moved",
+      "text": "moved"
+    },
+    "0x14156730c": {
+      "en": "stone",
+      "text": "stone"
+    },
+    "0x141567312": {
+      "en": " and ",
+      "text": " and "
+    },
+    "0x141567318": {
+      "en": "stones",
+      "text": "stones"
+    },
+    "0x14156731f": {
+      "en": "trees",
+      "text": "trees"
+    },
+    "0x141567325": {
+      "en": "1 tree left",
+      "text": "1 tree left"
+    },
+    "0x141567331": {
+      "en": "%d trees left",
+      "text": "%d trees left"
+    },
+    "0x14156733f": {
+      "en": "1 stone left",
+      "text": "1 stone left"
+    },
+    "0x14156734c": {
+      "en": "%d stones left",
+      "text": "%d stones left"
+    },
+    "0x14156735e": {
+      "en": "level",
+      "text": "level"
+    },
+    "0x141567364": {
+      "en": "%.0f %% level%s, %d red",
+      "text": "%.0f %% level%s, %d red"
+    },
+    "0x14156737c": {
+      "en": "%.0f %% level%s",
+      "text": "%.0f %% level%s"
+    },
+    "0x14156738c": {
+      "en": "%.0f t",
+      "text": "%.0f t"
+    },
+    "0x141567393": {
+      "en": "%.1f t",
+      "text": "%.1f t"
+    },
+    "0x14156739a": {
+      "en": "%.1f of %.0f t",
+      "text": "%.1f of %.0f t"
+    },
+    "0x1415673a9": {
+      "en": ", one leans %.0f°",
+      "text": ", one leans %.0f°"
+    },
+    "0x1415673bc": {
+      "en": ", %d leaning, up to %.0f°",
+      "text": ", %d leaning, up to %.0f°"
+    },
+    "0x1415673d7": {
+      "en": ", one %.1f m off its mark",
+      "text": ", one %.1f m off its mark"
+    },
+    "0x1415673f1": {
+      "en": "%ld of %zu%s",
+      "text": "%ld of %zu%s"
+    },
+    "0x1415673fe": {
+      "en": "%d of %d",
+      "text": "%d of %d"
+    },
+    "0x141567407": {
+      "en": "cleared",
+      "text": "cleared"
+    },
+    "0x14156740f": {
+      "en": "%d %s, %d %s left",
+      "text": "%d %s, %d %s left"
+    },
+    "0x141567421": {
+      "en": "under water",
+      "text": "under water"
+    },
+    "0x14156742d": {
+      "en": "%.0f %% surrounded",
+      "text": "%.0f %% surrounded"
+    },
+    "0x141567440": {
+      "en": "stripped",
+      "text": "stripped"
+    },
+    "0x141567449": {
+      "en": "%.0f %% stripped",
+      "text": "%.0f %% stripped"
+    },
+    "0x1415674a7": {
+      "en": "Find the ",
+      "text": "Find the "
+    },
+    "0x1415674b1": {
+      "en": " over the ",
+      "text": " over the "
+    },
+    "0x1415674bc": {
+      "en": " to the ",
+      "text": " to the "
+    },
+    "0x1415674c5": {
+      "en": ", done",
+      "text": ", done"
+    },
+    "0x1415674d1": {
+      "en": "Jobs",
+      "text": "Jobs"
+    },
+    "0x1415674d6": {
+      "en": "hide the jobs list",
+      "text": "hide the jobs list"
+    },
+    "0x1415674e9": {
+      "en": "show the jobs list",
+      "text": "show the jobs list"
+    },
+    "0x1415674fc": {
+      "en": "untitled job",
+      "text": "untitled job"
+    },
+    "0x141567509": {
+      "en": "%s, done",
+      "text": "%s, done"
+    },
+    "0x141567527": {
+      "en": "%s: done",
+      "text": "%s: done"
+    },
+    "0x141567530": {
+      "en": "fold jobs",
+      "text": "fold jobs"
+    },
+    "0x14156753a": {
+      "en": "fine, %s",
+      "text": "fine, %s"
+    },
+    "0x141567549": {
+      "en": "bonus rounds, %.0f",
+      "text": "bonus rounds, %.0f"
+    },
+    "0x14156755c": {
+      "en": "extra %s, %.1f t",
+      "text": "extra %s, %.1f t"
+    },
+    "0x14156756d": {
+      "en": "diesel",
+      "text": "diesel"
+    },
+    "0x141567574": {
+      "en": "road: not found",
+      "text": "road: not found"
+    },
+    "0x141567588": {
+      "en": "road %.0f m, avg slope %.0f %%, steepest %.0f %%",
+      "text": "road %.0f m, avg slope %.0f %%, steepest %.0f %%"
+    },
+    "0x1415675b9": {
+      "en": ", side slope %.0f %%",
+      "text": ", side slope %.0f %%"
+    },
+    "0x1415675ce": {
+      "en": ", starts %.0f m off the pad",
+      "text": ", starts %.0f m off the pad"
+    },
+    "0x1415675ea": {
+      "en": ", %.0f m gap",
+      "text": ", %.0f m gap"
+    },
+    "0x1415675f7": {
+      "en": "EARNED",
+      "text": "EARNED"
+    },
+    "0x1415677ee": {
+      "en": "Find the truck",
+      "text": "Find the truck"
+    },
+    "0x14156782d": {
+      "en": "Boulder on hill",
+      "text": "Boulder on hill"
+    },
+    "0x141567878": {
+      "en": "Get the boulder up on the hill",
+      "text": "Get the boulder up on the hill"
+    },
+    "0x141567897": {
+      "en": "Sand haul & more",
+      "text": "Sand haul & more"
+    },
+    "0x1415678a8": {
+      "en": "40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it",
+      "text": "40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it"
+    },
+    "0x14156790c": {
+      "en": "MISSION ACCOMPLISHED",
+      "text": "MISSION ACCOMPLISHED"
+    },
+    "0x141567921": {
+      "en": "TASK DONE",
+      "text": "TASK DONE"
+    },
+    "0x14156792b": {
+      "en": "TOTAL",
+      "text": "TOTAL"
+    },
+    "0x141567931": {
+      "en": "SO FAR",
+      "text": "SO FAR"
+    },
+    "0x141567938": {
+      "en": " levelled",
+      "text": " levelled"
+    },
+    "0x141567942": {
+      "en": " levelled in ",
+      "text": " levelled in "
+    },
+    "0x141567950": {
+      "en": " set, %zu of %zu",
+      "text": " set, %zu of %zu"
+    },
+    "0x141567961": {
+      "en": " %d of %d",
+      "text": " %d of %d"
+    },
+    "0x14156796b": {
+      "en": " cleared",
+      "text": " cleared"
+    },
+    "0x141567974": {
+      "en": " cleared of stones",
+      "text": " cleared of stones"
+    },
+    "0x141567987": {
+      "en": " stripped of ",
+      "text": " stripped of "
+    },
+    "0x141567995": {
+      "en": " made",
+      "text": " made"
+    },
+    "0x14156799b": {
+      "en": " filled",
+      "text": " filled"
+    },
+    "0x1415679a3": {
+      "en": "found",
+      "text": "found"
+    },
+    "0x1415679a9": {
+      "en": "%.0f t × %g",
+      "text": "%.0f t × %g"
+    },
+    "0x1415679c7": {
+      "en": "fine, ",
+      "text": "fine, "
+    },
+    "0x1415679ce": {
+      "en": "%.1f t × %g",
+      "text": "%.1f t × %g"
+    },
+    "0x1415679db": {
+      "en": "extra ",
+      "text": "extra "
+    },
+    "0x1415679ed": {
+      "en": "%.1f l × %g",
+      "text": "%.1f l × %g"
+    },
+    "0x1415679fa": {
+      "en": "BUCKET & SONS · CONTRACTORS",
+      "text": "BUCKET & SONS · CONTRACTORS"
+    },
+    "0x141567a17": {
+      "en": "NO. %02zu",
+      "text": "NO. %02zu"
+    },
+    "0x141567a25": {
+      "en": "ON SITE",
+      "text": "ON SITE"
+    },
+    "0x141567a2d": {
+      "en": "%zu of %zu",
+      "text": "%zu of %zu"
+    },
+    "0x141567a38": {
+      "en": "TASKS",
+      "text": "TASKS"
+    },
+    "0x141567a3e": {
+      "en": "%d min",
+      "text": "%d min"
+    },
+    "0x141567a45": {
+      "en": "%d h %02d",
+      "text": "%d h %02d"
+    },
+    "0x141567a4f": {
+      "en": "WORK",
+      "text": "WORK"
+    },
+    "0x141567a54": {
+      "en": "FOREMAN",
+      "text": "FOREMAN"
+    },
+    "0x141567a5c": {
+      "en": "CUSTOMER'S COPY",
+      "text": "CUSTOMER'S COPY"
+    },
+    "0x141567a6c": {
+      "en": "“",
+      "text": "“"
+    },
+    "0x141567a70": {
+      "en": "”",
+      "text": "”"
+    },
+    "0x141567a81": {
+      "en": "Keep working",
+      "text": "Keep working"
+    },
+    "0x141567a8e": {
+      "en": "Leave",
+      "text": "Leave"
+    },
+    "0x141567a94": {
+      "en": "Wishlist",
+      "text": "Wishlist"
+    },
+    "0x141567ac0": {
+      "en": "The mast stands over the valley.",
+      "text": "The mast stands over the valley."
+    },
+    "0x141567ae1": {
+      "en": "Quality sand in the bay, {}",
+      "text": "Quality sand in the bay, {}"
+    },
+    "0x141567afd": {
+      "en": "Sand delivered, as quoted",
+      "text": "Sand delivered, as quoted"
+    },
+    "0x141567f47": {
+      "en": "ok",
+      "text": "ok"
+    },
+    "0x141567f50": {
+      "en": "Waiting for parts, estimated arrival dec 4th",
+      "text": "Waiting for parts, estimated arrival dec 4th"
+    },
+    "0x141567f7d": {
+      "en": "OUT OF ORDER",
+      "text": "OUT OF ORDER"
+    },
+    "0x141567f8a": {
+      "en": "back to menu",
+      "text": "back to menu"
+    },
+    "0x141567f98": {
+      "en": "the host's site has 15 machines and this one 10, and the two site files are not the same",
+      "text": "the host's site has 15 machines and this one 10, and the two site files are not the same"
+    },
+    "0x141567ff1": {
+      "en": "COULD NOT JOIN",
+      "text": "COULD NOT JOIN"
+    },
+    "0x141568516": {
+      "en": "plow",
+      "text": "plow"
+    },
+    "0x14156851b": {
+      "en": "off",
+      "text": "off"
+    },
+    "0x14156851f": {
+      "en": "blade",
+      "text": "blade"
+    },
+    "0x141568525": {
+      "en": "ready",
+      "text": "ready"
+    },
+    "0x14156852b": {
+      "en": "level",
+      "text": "level"
+    },
+    "0x141568531": {
+      "en": "free tilt",
+      "text": "free tilt"
+    },
+    "0x14156853b": {
+      "en": "lock tilt",
+      "text": "lock tilt"
+    },
+    "0x141568545": {
+      "en": "bucket",
+      "text": "bucket"
+    },
+    "0x14156854c": {
+      "en": "none",
+      "text": "none"
+    },
+    "0x141568551": {
+      "en": "in hand",
+      "text": "in hand"
+    },
+    "0x141568559": {
+      "en": "down",
+      "text": "down"
+    },
+    "0x14156855e": {
+      "en": "stowed",
+      "text": "stowed"
+    },
+    "0x141568565": {
+      "en": "hook in hand",
+      "text": "hook in hand"
+    },
+    "0x141568572": {
+      "en": "hook down",
+      "text": "hook down"
+    },
+    "0x14156857c": {
+      "en": "on",
+      "text": "on"
+    },
+    "0x14156857f": {
+      "en": "extend",
+      "text": "extend"
+    },
+    "0x141568586": {
+      "en": "retract",
+      "text": "retract"
+    },
+    "0x14156858e": {
+      "en": "hold",
+      "text": "hold"
+    },
+    "0x1415685a6": {
+      "en": "tips, home",
+      "text": "tips, home"
+    },
+    "0x1415685b1": {
+      "en": "swings, home",
+      "text": "swings, home"
+    },
+    "0x1415685be": {
+      "en": "lock",
+      "text": "lock"
+    },
+    "0x1415685c3": {
+      "en": "home to lock",
+      "text": "home to lock"
+    },
+    "0x1415685d0": {
+      "en": "out",
+      "text": "out"
+    },
+    "0x1415685d4": {
+      "en": "in",
+      "text": "in"
+    },
+    "0x1415685d7": {
+      "en": "partly in",
+      "text": "partly in"
+    },
+    "0x1415685e1": {
+      "en": "attached",
+      "text": "attached"
+    },
+    "0x1415685ea": {
+      "en": "empty",
+      "text": "empty"
+    },
+    "0x1415685f0": {
+      "en": "up",
+      "text": "up"
+    },
+    "0x1415685f3": {
+      "en": "lowering",
+      "text": "lowering"
+    },
+    "0x1415685fc": {
+      "en": "rising",
+      "text": "rising"
+    },
+    "0x141568603": {
+      "en": "lower",
+      "text": "lower"
+    },
+    "0x141568609": {
+      "en": "lift",
+      "text": "lift"
+    },
+    "0x14156860e": {
+      "en": "lip up, gate open %.0f deg",
+      "text": "lip up, gate open %.0f deg"
+    },
+    "0x141568629": {
+      "en": "locked, lip up",
+      "text": "locked, lip up"
+    },
+    "0x141568638": {
+      "en": "unlock",
+      "text": "unlock"
+    },
+    "0x14156863f": {
+      "en": "lower to detach",
+      "text": "lower to detach"
+    },
+    "0x14156864f": {
+      "en": "detach",
+      "text": "detach"
+    },
+    "0x141568656": {
+      "en": "locked",
+      "text": "locked"
+    },
+    "0x14156865d": {
+      "en": "open",
+      "text": "open"
+    },
+    "0x141568662": {
+      "en": "running",
+      "text": "running"
+    },
+    "0x14156866a": {
+      "en": "stopped",
+      "text": "stopped"
+    },
+    "0x141568672": {
+      "en": "hydraulics",
+      "text": "hydraulics"
+    },
+    "0x14156867d": {
+      "en": "camera",
+      "text": "camera"
+    },
+    "0x141568687": {
+      "en": "%.1f m/s",
+      "text": "%.1f m/s"
+    },
+    "0x1415686b7": {
+      "en": "RANGE",
+      "text": "RANGE"
+    },
+    "0x1415686bd": {
+      "en": "on/off",
+      "text": "on/off"
+    },
+    "0x1415686c4": {
+      "en": "FLOAT",
+      "text": "FLOAT"
+    },
+    "0x1415686d2": {
+      "en": "grips %d%%",
+      "text": "grips %d%%"
+    },
+    "0x1415686dd": {
+      "en": "%d%% closed",
+      "text": "%d%% closed"
+    },
+    "0x1415686e9": {
+      "en": "close",
+      "text": "close"
+    },
+    "0x1415686ff": {
+      "en": "close/open",
+      "text": "close/open"
+    },
+    "0x14156870a": {
+      "en": "THUMB",
+      "text": "THUMB"
+    },
+    "0x141568717": {
+      "en": "held %.1f m",
+      "text": "held %.1f m"
+    },
+    "0x14156872f": {
+      "en": "offset",
+      "text": "offset"
+    },
+    "0x141568736": {
+      "en": "AUTO",
+      "text": "AUTO"
+    },
+    "0x141568743": {
+      "en": "TOOL",
+      "text": "TOOL"
+    },
+    "0x14156874f": {
+      "en": "%.0f kN  %.0f%%",
+      "text": "%.0f kN  %.0f%%"
+    },
+    "0x14156875f": {
+      "en": "%.1f m out",
+      "text": "%.1f m out"
+    },
+    "0x14156876a": {
+      "en": "%s %.1f m",
+      "text": "%s %.1f m"
+    },
+    "0x141568774": {
+      "en": "remote out",
+      "text": "remote out"
+    },
+    "0x14156877f": {
+      "en": "in/out",
+      "text": "in/out"
+    },
+    "0x141568786": {
+      "en": "WINCH",
+      "text": "WINCH"
+    },
+    "0x141568794": {
+      "en": "LIGHT",
+      "text": "LIGHT"
+    },
+    "0x1415687a2": {
+      "en": "HYDR",
+      "text": "HYDR"
+    },
+    "0x1415687b1": {
+      "en": "raising",
+      "text": "raising"
+    },
+    "0x1415687b9": {
+      "en": "to %+.0f deg",
+      "text": "to %+.0f deg"
+    },
+    "0x1415687c6": {
+      "en": "up, back %+.0f",
+      "text": "up, back %+.0f"
+    },
+    "0x1415687d5": {
+      "en": "%+.0f deg",
+      "text": "%+.0f deg"
+    },
+    "0x1415687df": {
+      "en": "up/down",
+      "text": "up/down"
+    },
+    "0x1415687e7": {
+      "en": "HITCH",
+      "text": "HITCH"
+    },
+    "0x1415687f5": {
+      "en": "L %.0f  R %.0f deg",
+      "text": "L %.0f  R %.0f deg"
+    },
+    "0x141568808": {
+      "en": "both",
+      "text": "both"
+    },
+    "0x14156881e": {
+      "en": "FLAPS",
+      "text": "FLAPS"
+    },
+    "0x141568833": {
+      "en": "L %.2f  R %.2f m",
+      "text": "L %.2f  R %.2f m"
+    },
+    "0x14156884b": {
+      "en": "TINES",
+      "text": "TINES"
+    },
+    "0x14156885d": {
+      "en": "no forks",
+      "text": "no forks"
+    },
+    "0x141568866": {
+      "en": "tips, %.0f deg",
+      "text": "tips, %.0f deg"
+    },
+    "0x141568875": {
+      "en": "swings, %.0f deg",
+      "text": "swings, %.0f deg"
+    },
+    "0x14156889d": {
+      "en": "home",
+      "text": "home"
+    },
+    "0x1415688a2": {
+      "en": "LOCK",
+      "text": "LOCK"
+    },
+    "0x1415688bb": {
+      "en": "SLIDE",
+      "text": "SLIDE"
+    },
+    "0x1415688c9": {
+      "en": "HOOK",
+      "text": "HOOK"
+    },
+    "0x1415688d8": {
+      "en": "AXLE",
+      "text": "AXLE"
+    },
+    "0x1415688e4": {
+      "en": "lip rising",
+      "text": "lip rising"
+    },
+    "0x1415688ef": {
+      "en": "lip lowering",
+      "text": "lip lowering"
+    },
+    "0x1415688fc": {
+      "en": "open %.0f deg, chains %.0f",
+      "text": "open %.0f deg, chains %.0f"
+    },
+    "0x141568917": {
+      "en": "free, chains %.0f deg",
+      "text": "free, chains %.0f deg"
+    },
+    "0x14156892d": {
+      "en": "GATE",
+      "text": "GATE"
+    },
+    "0x14156893a": {
+      "en": "no tipper",
+      "text": "no tipper"
+    },
+    "0x141568944": {
+      "en": "up %.2f m, %+.0f deg",
+      "text": "up %.2f m, %+.0f deg"
+    },
+    "0x141568959": {
+      "en": "down, %+.0f deg",
+      "text": "down, %+.0f deg"
+    },
+    "0x141568969": {
+      "en": "angle",
+      "text": "angle"
+    },
+    "0x14156896f": {
+      "en": "PLOW",
+      "text": "PLOW"
+    },
+    "0x141568992": {
+      "en": "attach",
+      "text": "attach"
+    },
+    "0x141568999": {
+      "en": "DIFF",
+      "text": "DIFF"
+    },
+    "0x1415689a5": {
+      "en": "belt too tight",
+      "text": "belt too tight"
+    },
+    "0x1415689b4": {
+      "en": "working",
+      "text": "working"
+    },
+    "0x1415689bc": {
+      "en": "folded",
+      "text": "folded"
+    },
+    "0x1415689c3": {
+      "en": "%.0f deg folded",
+      "text": "%.0f deg folded"
+    },
+    "0x1415689d3": {
+      "en": "fold",
+      "text": "fold"
+    },
+    "0x1415689e8": {
+      "en": "fold/unfold",
+      "text": "fold/unfold"
+    },
+    "0x1415689f4": {
+      "en": "unfold",
+      "text": "unfold"
+    },
+    "0x1415689fb": {
+      "en": "HEAD",
+      "text": "HEAD"
+    },
+    "0x141568a07": {
+      "en": "hopper end %+.1f deg",
+      "text": "hopper end %+.1f deg"
+    },
+    "0x141568a2b": {
+      "en": "TILT",
+      "text": "TILT"
+    },
+    "0x141568a37": {
+      "en": "folded in",
+      "text": "folded in"
+    },
+    "0x141568a41": {
+      "en": "%.0f deg in",
+      "text": "%.0f deg in"
+    },
+    "0x141568a5c": {
+      "en": "WINGS",
+      "text": "WINGS"
+    },
+    "0x141568a6a": {
+      "en": "tight",
+      "text": "tight"
+    },
+    "0x141568a70": {
+      "en": "released %.2f m",
+      "text": "released %.2f m"
+    },
+    "0x141568a80": {
+      "en": "release",
+      "text": "release"
+    },
+    "0x141568a88": {
+      "en": "release/tighten",
+      "text": "release/tighten"
+    },
+    "0x141568a98": {
+      "en": "tighten",
+      "text": "tighten"
+    },
+    "0x141568aa0": {
+      "en": "TENSION",
+      "text": "TENSION"
+    },
+    "0x141568ab1": {
+      "en": "BELTS",
+      "text": "BELTS"
+    },
+    "0x141568abf": {
+      "en": "switch",
+      "text": "switch"
+    },
+    "0x141568ac6": {
+      "en": "STICK",
+      "text": "STICK"
+    },
+    "0x141568ad4": {
+      "en": "GRIP",
+      "text": "GRIP"
+    },
+    "0x141569180": {
+      "en": "SAVED AUTOMATICALLY",
+      "text": "SAVED AUTOMATICALLY"
+    },
+    "0x141569194": {
+      "en": "SETTINGS",
+      "text": "SETTINGS"
+    },
+    "0x14156919d": {
+      "en": "close",
+      "text": "close"
+    },
+    "0x1415691a3": {
+      "en": "GENERAL",
+      "text": "GENERAL"
+    },
+    "0x1415691ab": {
+      "en": "edit",
+      "text": "edit"
+    },
+    "0x1415691b0": {
+      "en": "Controls",
+      "text": "Controls"
+    },
+    "0x1415691b9": {
+      "en": "Fullscreen",
+      "text": "Fullscreen"
+    },
+    "0x1415691c4": {
+      "en": "UI size",
+      "text": "UI size"
+    },
+    "0x1415691d1": {
+      "en": "SOUND",
+      "text": "SOUND"
+    },
+    "0x1415691d7": {
+      "en": "Volume",
+      "text": "Volume"
+    },
+    "0x1415691de": {
+      "en": "Music",
+      "text": "Music"
+    },
+    "0x1415691e4": {
+      "en": "Ambience",
+      "text": "Ambience"
+    },
+    "0x1415691ed": {
+      "en": "reset",
+      "text": "reset"
+    },
+    "0x1415691f3": {
+      "en": "Reset sound",
+      "text": "Reset sound"
+    },
+    "0x1415691ff": {
+      "en": "GRAPHICS",
+      "text": "GRAPHICS"
+    },
+    "0x141569208": {
+      "en": "Graphics",
+      "text": "Graphics"
+    },
+    "0x141569215": {
+      "en": "Render scale",
+      "text": "Render scale"
+    },
+    "0x141569226": {
+      "en": "Mirrors",
+      "text": "Mirrors"
+    },
+    "0x14156922e": {
+      "en": "Half-rate physics",
+      "text": "Half-rate physics"
+    },
+    "0x141569240": {
+      "en": "Experimental physics mode for slower computers. Changing it restarts the game.",
+      "text": "Experimental physics mode for slower computers. Changing it restarts the game."
+    },
+    "0x1415692bc": {
+      "en": "cancel",
+      "text": "cancel"
+    },
+    "0x1415692c8": {
+      "en": "Half-rate physics changes with a restart.",
+      "text": "Half-rate physics changes with a restart."
+    },
+    "0x1415692f2": {
+      "en": "RESTART NOW?",
+      "text": "RESTART NOW?"
+    },
+    "0x1415692ff": {
+      "en": "restart",
+      "text": "restart"
+    },
+    "0x14156ac2a": {
+      "en": "Wheel loader",
+      "text": "Wheel loader"
+    },
+    "0x14156ac4e": {
+      "en": "HOLMGREN'S MACHINES",
+      "text": "HOLMGREN'S MACHINES"
+    },
+    "0x14156ac62": {
+      "en": "PRICE LIST",
+      "text": "PRICE LIST"
+    },
+    "0x14156ac70": {
+      "en": "by the hour or to keep; a row turns to its page",
+      "text": "by the hour or to keep; a row turns to its page"
+    },
+    "0x14156aca0": {
+      "en": "PER HOUR",
+      "text": "PER HOUR"
+    },
+    "0x14156aca9": {
+      "en": "TO BUY",
+      "text": "TO BUY"
+    },
+    "0x14156acda": {
+      "en": "%.0f kg",
+      "text": "%.0f kg"
+    },
+    "0x14156ace2": {
+      "en": "%.1f t",
+      "text": "%.1f t"
+    },
+    "0x14156ace9": {
+      "en": "Buy",
+      "text": "Buy"
+    },
+    "0x14156aced": {
+      "en": "Hire",
+      "text": "Hire"
+    },
+    "0x14156acf2": {
+      "en": "Operating weight",
+      "text": "Operating weight"
+    },
+    "0x14156ad03": {
+      "en": "%.0f kW",
+      "text": "%.0f kW"
+    },
+    "0x14156ad0b": {
+      "en": "Engine",
+      "text": "Engine"
+    },
+    "0x14156ad12": {
+      "en": "Equipped",
+      "text": "Equipped"
+    },
+    "0x14156ad1b": {
+      "en": "HIRE, PER HOUR",
+      "text": "HIRE, PER HOUR"
+    },
+    "0x14156ad30": {
+      "en": "PLANT HIRE & SALES  ·  EST. 1962",
+      "text": "PLANT HIRE & SALES  ·  EST. 1962"
+    },
+    "0x14156ad52": {
+      "en": "AUTUMN CATALOGUE 2026",
+      "text": "AUTUMN CATALOGUE 2026"
+    },
+    "0x14156ad72": {
+      "en": "MACHINES",
+      "text": "MACHINES"
+    },
+    "0x14156ad7f": {
+      "en": "INSIDE",
+      "text": "INSIDE"
+    },
+    "0x14156ad88": {
+      "en": "HIRE IT BY THE HOUR. BUY IT FOR LIFE.",
+      "text": "HIRE IT BY THE HOUR. BUY IT FOR LIFE."
+    },
+    "0x14156adb0": {
+      "en": "Every machine delivered to your site: to the yard, the gate or right beside you.",
+      "text": "Every machine delivered to your site: to the yard, the gate or right beside you."
+    },
+    "0x14156ae08": {
+      "en": "The yard on the north road  ·  open six till six  ·  ask for Erik",
+      "text": "The yard on the north road  ·  open six till six  ·  ask for Erik"
+    },
+    "0x14156ae4c": {
+      "en": "owned, on every site",
+      "text": "owned, on every site"
+    },
+    "0x14156ae61": {
+      "en": "to hire, waiting on you",
+      "text": "to hire, waiting on you"
+    },
+    "0x14156ae79": {
+      "en": "to buy, waiting on you",
+      "text": "to buy, waiting on you"
+    },
+    "0x14156ae90": {
+      "en": "on hire by the hour",
+      "text": "on hire by the hour"
+    },
+    "0x14156aea4": {
+      "en": "THE COUNTER",
+      "text": "THE COUNTER"
+    },
+    "0x14156aeb0": {
+      "en": "YOUR MACHINES",
+      "text": "YOUR MACHINES"
+    },
+    "0x14156aec0": {
+      "en": "Account 0042  ·  HOLMGREN'S MACHINES",
+      "text": "Account 0042  ·  HOLMGREN'S MACHINES"
+    },
+    "0x14156aee6": {
+      "en": "In the account",
+      "text": "In the account"
+    },
+    "0x14156aefe": {
+      "en": "ON HIRE",
+      "text": "ON HIRE"
+    },
+    "0x14156af08": {
+      "en": "A machine bought is paid at the counter, and a machine hired its first hour.",
+      "text": "A machine bought is paid at the counter, and a machine hired its first hour."
+    },
+    "0x14156af55": {
+      "en": "Nothing on order.",
+      "text": "Nothing on order."
+    },
+    "0x14156af68": {
+      "en": "Press Hire or Buy on a machine's page.",
+      "text": "Press Hire or Buy on a machine's page."
+    },
+    "0x14156af8f": {
+      "en": "OWNED",
+      "text": "OWNED"
+    },
+    "0x14156af98": {
+      "en": "short ",
+      "text": "short "
+    },
+    "0x14156af9f": {
+      "en": " / h",
+      "text": " / h"
+    },
+    "0x14156afa9": {
+      "en": "Confirm",
+      "text": "Confirm"
+    },
+    "0x14156afb1": {
+      "en": "Cancel",
+      "text": "Cancel"
+    },
+    "0x14156afb8": {
+      "en": "and %d more",
+      "text": "and %d more"
+    },
+    "0x14156afc4": {
+      "en": "Open",
+      "text": "Open"
+    },
+    "0x14156afc9": {
+      "en": "Next",
+      "text": "Next"
+    },
+    "0x14156afce": {
+      "en": "Previous",
+      "text": "Previous"
+    },
+    "0x14156afd7": {
+      "en": "Back",
+      "text": "Back"
+    },
+    "0x14156bd29": {
+      "en": "ROAD",
+      "text": "ROAD"
+    },
+    "0x14156bd2e": {
+      "en": "PAD",
+      "text": "PAD"
+    },
+    "0x14156bd32": {
+      "en": "%.2f m",
+      "text": "%.2f m"
+    },
+    "0x14156bd39": {
+      "en": "on grade",
+      "text": "on grade"
+    },
+    "0x14156bd42": {
+      "en": "cut",
+      "text": "cut"
+    },
+    "0x14156bd46": {
+      "en": "%s %.2f m",
+      "text": "%s %.2f m"
+    },
+    "0x14156bd50": {
+      "en": "fill",
+      "text": "fill"
+    },
+    "0x14156bd86": {
+      "en": "done",
+      "text": "done"
+    },
+    "0x14156bd8b": {
+      "en": "hold to remove",
+      "text": "hold to remove"
+    },
+    "0x14156cc64": {
+      "en": "%d · %.1f m/s",
+      "text": "%d · %.1f m/s"
+    },
+    "0x14156cca2": {
+      "en": "%+.0f cm",
+      "text": "%+.0f cm"
+    },
+    "0x14156ccab": {
+      "en": "%+.1f cm",
+      "text": "%+.1f cm"
+    },
+    "0x1414a5493": {
+      "en": "Save *",
+      "text": "Save *"
+    },
+    "0x1414a549a": {
+      "en": "Save",
+      "text": "Save"
+    },
+    "0x1414a549f": {
+      "en": "Cancel render",
+      "text": "Cancel render"
+    },
+    "0x1414a54ad": {
+      "en": "Render video",
+      "text": "Render video"
+    },
+    "0x1414a54d5": {
+      "en": "File",
+      "text": "File"
+    },
+    "0x1414a54e0": {
+      "en": "Open...",
+      "text": "Open..."
+    },
+    "0x1414a54ee": {
+      "en": "New from take...",
+      "text": "New from take..."
+    },
+    "0x1414a5511": {
+      "en": "Save as...",
+      "text": "Save as..."
+    },
+    "0x1414a5526": {
+      "en": "Close",
+      "text": "Close"
+    },
+    "0x1414a5538": {
+      "en": "Quit",
+      "text": "Quit"
+    },
+    "0x1414a5542": {
+      "en": "Edit",
+      "text": "Edit"
+    },
+    "0x1414a554d": {
+      "en": "Undo",
+      "text": "Undo"
+    },
+    "0x1414a5552": {
+      "en": "View",
+      "text": "View"
+    },
+    "0x1414a5557": {
+      "en": "Free",
+      "text": "Free"
+    },
+    "0x1414a5566": {
+      "en": "Chase",
+      "text": "Chase"
+    },
+    "0x1414a5578": {
+      "en": "Cab",
+      "text": "Cab"
+    },
+    "0x1414a5586": {
+      "en": "Through the clip",
+      "text": "Through the clip"
+    },
+    "0x1414a55a4": {
+      "en": "Show",
+      "text": "Show"
+    },
+    "0x1414a55b2": {
+      "en": "Hide panels",
+      "text": "Hide panels"
+    },
+    "0x1414a560f": {
+      "en": "clip tool",
+      "text": "clip tool"
+    },
+    "0x1414a56fd": {
+      "en": "timeline",
+      "text": "timeline"
+    },
+    "0x1414a56ee": {
+      "en": "playing",
+      "text": "playing"
+    },
+    "0x1414a56f6": {
+      "en": "paused",
+      "text": "paused"
+    },
+    "0x1414a578c": {
+      "en": "whole take",
+      "text": "whole take"
+    },
+    "0x1414a5797": {
+      "en": "zoom all",
+      "text": "zoom all"
+    },
+    "0x1414a57a0": {
+      "en": "fit range",
+      "text": "fit range"
+    },
+    "0x1414a57aa": {
+      "en": "zoom range",
+      "text": "zoom range"
+    }
+  },
+  "table_strings": {
+    "controls": {
+      "0x1414a0dc5": {
+        "en": "TRAVEL",
+        "text": "TRAVEL"
+      },
+      "0x1414a0f9d": {
+        "en": "HYDRAULICS",
+        "text": "HYDRAULICS"
+      },
+      "0x1414a1111": {
+        "en": "SWITCHES",
+        "text": "SWITCHES"
+      },
+      "0x1414a1251": {
+        "en": "GRADE HOLD",
+        "text": "GRADE HOLD"
+      },
+      "0x1414a171c": {
+        "en": "MENUS",
+        "text": "MENUS"
+      },
+      "0x1414a1814": {
+        "en": "CAMERA",
+        "text": "CAMERA"
+      },
+      "0x1414a18f5": {
+        "en": "ON FOOT",
+        "text": "ON FOOT"
+      },
+      "0x1414a1bbd": {
+        "en": "KEYS",
+        "text": "KEYS"
+      },
+      "0x1414a0dbf": {
+        "en": "Drive",
+        "text": "Drive"
+      },
+      "0x1414a0df5": {
+        "en": "Steer",
+        "text": "Steer"
+      },
+      "0x1414a0e0a": {
+        "en": "Brake / handbrake",
+        "text": "Brake / handbrake"
+      },
+      "0x1414a0e2c": {
+        "en": "Speed range 1",
+        "text": "Speed range 1"
+      },
+      "0x1414a0e4a": {
+        "en": "Speed range 2",
+        "text": "Speed range 2"
+      },
+      "0x1414a0e68": {
+        "en": "Speed range 3",
+        "text": "Speed range 3"
+      },
+      "0x1414a0e86": {
+        "en": "Speed range 4",
+        "text": "Speed range 4"
+      },
+      "0x1414a0ea4": {
+        "en": "Speed range 5",
+        "text": "Speed range 5"
+      },
+      "0x1414a0ec2": {
+        "en": "Speed range 6",
+        "text": "Speed range 6"
+      },
+      "0x1414a0ee0": {
+        "en": "Speed range 7",
+        "text": "Speed range 7"
+      },
+      "0x1414a0efe": {
+        "en": "Speed range 8",
+        "text": "Speed range 8"
+      },
+      "0x1414a0f1c": {
+        "en": "Speed range 9",
+        "text": "Speed range 9"
+      },
+      "0x1414a0f38": {
+        "en": "Arm",
+        "text": "Arm"
+      },
+      "0x1414a0f40": {
+        "en": "pull back to raise the hooklift's arm, the hauler's bed, the tractor's hitch or front loader",
+        "text": "pull back to raise the hooklift's arm, the hauler's bed, the tractor's hitch or front loader"
+      },
+      "0x1414a0fb6": {
+        "en": "Curl",
+        "text": "Curl"
+      },
+      "0x1414a0fc0": {
+        "en": "left slides the hooklift's bed, curls the tractor's front loader",
+        "text": "left slides the hooklift's bed, curls the tractor's front loader"
+      },
+      "0x1414a100d": {
+        "en": "pull back to raise",
+        "text": "pull back to raise"
+      },
+      "0x1414a102c": {
+        "en": "Bucket",
+        "text": "Bucket"
+      },
+      "0x1414a1033": {
+        "en": "left curls",
+        "text": "left curls"
+      },
+      "0x1414a104c": {
+        "en": "Attachment lever",
+        "text": "Attachment lever"
+      },
+      "0x1414a1060": {
+        "en": "flaps, tines, plow angle, slide",
+        "text": "flaps, tines, plow angle, slide"
+      },
+      "0x1414a1080": {
+        "en": "Front end",
+        "text": "Front end"
+      },
+      "0x1414a1090": {
+        "en": "hold to work the front loader or plow",
+        "text": "hold to work the front loader or plow"
+      },
+      "0x1414a10c9": {
+        "en": "Left side only",
+        "text": "Left side only"
+      },
+      "0x1414a10d8": {
+        "en": "hold to control only the left flap, tine or tractor fork",
+        "text": "hold to control only the left flap, tine or tractor fork"
+      },
+      "0x1414a112e": {
+        "en": "Right side only",
+        "text": "Right side only"
+      },
+      "0x1414a114e": {
+        "en": "Rear hydraulics",
+        "text": "Rear hydraulics"
+      },
+      "0x1414a1160": {
+        "en": "the tractor's outlets, the hooklift's plow, a tipping trailer",
+        "text": "the tractor's outlets, the hooklift's plow, a tipping trailer"
+      },
+      "0x1414a11ac": {
+        "en": "Lean",
+        "text": "Lean"
+      },
+      "0x1414a11c0": {
+        "en": "Winch drum",
+        "text": "Winch drum"
+      },
+      "0x1414a11df": {
+        "en": "Attachment",
+        "text": "Attachment"
+      },
+      "0x1414a11ea": {
+        "en": "hitch, plow, trailer",
+        "text": "hitch, plow, trailer"
+      },
+      "0x1414a120e": {
+        "en": "Speed range",
+        "text": "Speed range"
+      },
+      "0x1414a121a": {
+        "en": "opens the speed range menu",
+        "text": "opens the speed range menu"
+      },
+      "0x1414a1246": {
+        "en": "Hold grade",
+        "text": "Hold grade"
+      },
+      "0x1414a126c": {
+        "en": "Tilt lock",
+        "text": "Tilt lock"
+      },
+      "0x1414a1278": {
+        "en": "the blade's tilt follows the grade, or stays yours",
+        "text": "the blade's tilt follows the grade, or stays yours"
+      },
+      "0x1414a12bd": {
+        "en": "Hold offset",
+        "text": "Hold offset"
+      },
+      "0x1414a12c9": {
+        "en": "opens the grade offset menu",
+        "text": "opens the grade offset menu"
+      },
+      "0x1414a12fc": {
+        "en": "Warning light",
+        "text": "Warning light"
+      },
+      "0x1414a1320": {
+        "en": "Rear hydraulics fully up / down",
+        "text": "Rear hydraulics fully up / down"
+      },
+      "0x1414a1355": {
+        "en": "Hitch up / down",
+        "text": "Hitch up / down"
+      },
+      "0x1414a1378": {
+        "en": "Diff lock",
+        "text": "Diff lock"
+      },
+      "0x1414a139a": {
+        "en": "Attachment lock",
+        "text": "Attachment lock"
+      },
+      "0x1414a13b0": {
+        "en": "the tractor's front, the hooklift's arm, a loader's bracket",
+        "text": "the tractor's front, the hooklift's arm, a loader's bracket"
+      },
+      "0x1414a1403": {
+        "en": "Tailgate lock",
+        "text": "Tailgate lock"
+      },
+      "0x1414a1411": {
+        "en": "the tipper's",
+        "text": "the tipper's"
+      },
+      "0x1414a1431": {
+        "en": "Lift axle",
+        "text": "Lift axle"
+      },
+      "0x1414a1440": {
+        "en": "the hooklift's rear axle up or down",
+        "text": "the hooklift's rear axle up or down"
+      },
+      "0x1414a1473": {
+        "en": "Float",
+        "text": "Float"
+      },
+      "0x1414a1480": {
+        "en": "the plow, the dozer's blade, the feeder's belts on and off",
+        "text": "the plow, the dozer's blade, the feeder's belts on and off"
+      },
+      "0x1414a14cc": {
+        "en": "Respawn",
+        "text": "Respawn"
+      },
+      "0x1414a14e3": {
+        "en": "Throttle",
+        "text": "Throttle"
+      },
+      "0x1414a14ec": {
+        "en": "one joystick; neutral brakes",
+        "text": "one joystick; neutral brakes"
+      },
+      "0x1414a1520": {
+        "en": "Blade lift",
+        "text": "Blade lift"
+      },
+      "0x1414a1536": {
+        "en": "Blade tilt",
+        "text": "Blade tilt"
+      },
+      "0x1414a1553": {
+        "en": "Blade angle",
+        "text": "Blade angle"
+      },
+      "0x1414a1571": {
+        "en": "Blade pitch",
+        "text": "Blade pitch"
+      },
+      "0x1414a158e": {
+        "en": "Hold offset down",
+        "text": "Hold offset down"
+      },
+      "0x1414a15b0": {
+        "en": "Hold offset up",
+        "text": "Hold offset up"
+      },
+      "0x1414a15d4": {
+        "en": "Left track",
+        "text": "Left track"
+      },
+      "0x1414a15f5": {
+        "en": "Right track",
+        "text": "Right track"
+      },
+      "0x1414a1610": {
+        "en": "Boom",
+        "text": "Boom"
+      },
+      "0x1414a1624": {
+        "en": "Slew",
+        "text": "Slew"
+      },
+      "0x1414a1629": {
+        "en": "the feeder's hopper wings",
+        "text": "the feeder's hopper wings"
+      },
+      "0x1414a1653": {
+        "en": "Stick",
+        "text": "Stick"
+      },
+      "0x1414a1659": {
+        "en": "the feeder's head fold",
+        "text": "the feeder's head fold"
+      },
+      "0x1414a1680": {
+        "en": "left curls; the feeder's chassis tilt",
+        "text": "left curls; the feeder's chassis tilt"
+      },
+      "0x1414a16b6": {
+        "en": "Thumb",
+        "text": "Thumb"
+      },
+      "0x1414a16c0": {
+        "en": "push to close, stays where let go; the feeder's take-up",
+        "text": "push to close, stays where let go; the feeder's take-up"
+      },
+      "0x1414a16f8": {
+        "en": "Wheel",
+        "text": "Wheel"
+      },
+      "0x1414a16fe": {
+        "en": "the gamepad's and the sticks'",
+        "text": "the gamepad's and the sticks'"
+      },
+      "0x1414a172d": {
+        "en": "Map",
+        "text": "Map"
+      },
+      "0x1414a1731": {
+        "en": "opens the site map",
+        "text": "opens the site map"
+      },
+      "0x1414a1753": {
+        "en": "Minimap zoom",
+        "text": "Minimap zoom"
+      },
+      "0x1414a1760": {
+        "en": "where the site has a minimap",
+        "text": "where the site has a minimap"
+      },
+      "0x1414a1789": {
+        "en": "Hide or show jobs",
+        "text": "Hide or show jobs"
+      },
+      "0x1414a17a0": {
+        "en": "the jobs list in the top right corner",
+        "text": "the jobs list in the top right corner"
+      },
+      "0x1414a17d2": {
+        "en": "Grade grid",
+        "text": "Grade grid"
+      },
+      "0x1414a17dd": {
+        "en": "shown, or only after a change",
+        "text": "shown, or only after a change"
+      },
+      "0x1414a17fb": {
+        "en": "Change view",
+        "text": "Change view"
+      },
+      "0x1414a1807": {
+        "en": "chase or cab",
+        "text": "chase or cab"
+      },
+      "0x1414a1830": {
+        "en": "Look behind",
+        "text": "Look behind"
+      },
+      "0x1414a1840": {
+        "en": "hold to look behind, tap to put the view back",
+        "text": "hold to look behind, tap to put the view back"
+      },
+      "0x1414a1880": {
+        "en": "Get in or out",
+        "text": "Get in or out"
+      },
+      "0x1414a1890": {
+        "en": "a pad's or the sticks' Interact does it too",
+        "text": "a pad's or the sticks' Interact does it too"
+      },
+      "0x1414a18cc": {
+        "en": "Interact",
+        "text": "Interact"
+      },
+      "0x1414a18d5": {
+        "en": "Debug dump",
+        "text": "Debug dump"
+      },
+      "0x1414a18f0": {
+        "en": "Walk",
+        "text": "Walk"
+      },
+      "0x1414a190e": {
+        "en": "Strafe",
+        "text": "Strafe"
+      },
+      "0x1414a1921": {
+        "en": "Jump",
+        "text": "Jump"
+      },
+      "0x1414a1932": {
+        "en": "Push",
+        "text": "Push"
+      },
+      "0x1414a1938": {
+        "en": "hold and walk into a machine to push it",
+        "text": "hold and walk into a machine to push it"
+      },
+      "0x1414a196c": {
+        "en": "Talk",
+        "text": "Talk"
+      },
+      "0x1414a197c": {
+        "en": "Use",
+        "text": "Use"
+      },
+      "0x1414a1980": {
+        "en": "places a grade stick",
+        "text": "places a grade stick"
+      },
+      "0x1414a19a8": {
+        "en": "tap at a stick to set its height, hold to remove it; a pad's X does both",
+        "text": "tap at a stick to set its height, hold to remove it; a pad's X does both"
+      },
+      "0x1414a1a04": {
+        "en": "Mark height",
+        "text": "Mark height"
+      },
+      "0x1414a1a10": {
+        "en": "up or down in a stick's height mode",
+        "text": "up or down in a stick's height mode"
+      },
+      "0x1414a1a46": {
+        "en": "Stick mode",
+        "text": "Stick mode"
+      },
+      "0x1414a1a58": {
+        "en": "road or pad, in a stick's height mode",
+        "text": "road or pad, in a stick's height mode"
+      },
+      "0x1414a1a8c": {
+        "en": "Call the bike",
+        "text": "Call the bike"
+      },
+      "0x1414a1a9a": {
+        "en": "or the snowmobile",
+        "text": "or the snowmobile"
+      },
+      "0x1414a1abc": {
+        "en": "Fire the charges",
+        "text": "Fire the charges"
+      },
+      "0x1414a1ad9": {
+        "en": "Tool belt",
+        "text": "Tool belt"
+      },
+      "0x1414a1ae3": {
+        "en": "opens the tool belt menu",
+        "text": "opens the tool belt menu"
+      },
+      "0x1414a1b09": {
+        "en": "No tool",
+        "text": "No tool"
+      },
+      "0x1414a1b11": {
+        "en": "the hands free",
+        "text": "the hands free"
+      },
+      "0x1414a1b2d": {
+        "en": "Grade sticks",
+        "text": "Grade sticks"
+      },
+      "0x1414a1b47": {
+        "en": "Drill",
+        "text": "Drill"
+      },
+      "0x1414a1b5a": {
+        "en": "Dynamite",
+        "text": "Dynamite"
+      },
+      "0x1414a1b70": {
+        "en": "Detonator",
+        "text": "Detonator"
+      },
+      "0x1414a1b8c": {
+        "en": "Belt",
+        "text": "Belt"
+      },
+      "0x1414a1bb7": {
+        "en": "Pause",
+        "text": "Pause"
+      },
+      "0x1414a1bcd": {
+        "en": "Tuning",
+        "text": "Tuning"
+      },
+      "0x1414a1bdf": {
+        "en": "Replay",
+        "text": "Replay"
+      },
+      "0x1414a1bef": {
+        "en": "Record take",
+        "text": "Record take"
+      },
+      "0x1414a1c03": {
+        "en": "Run",
+        "text": "Run"
+      }
+    },
+    "free_cam": {
+      "0x141562d58": {
+        "en": "MENUS",
+        "text": "MENUS"
+      },
+      "0x141562d5e": {
+        "en": "Esc menu",
+        "text": "Esc menu"
+      },
+      "0x141562d71": {
+        "en": "FREE CAMERA",
+        "text": "FREE CAMERA"
+      },
+      "0x141562d7d": {
+        "en": "Fly",
+        "text": "Fly"
+      },
+      "0x141562d86": {
+        "en": "L stick",
+        "text": "L stick"
+      },
+      "0x141562d8e": {
+        "en": "Up / down",
+        "text": "Up / down"
+      },
+      "0x141562da6": {
+        "en": "Fast",
+        "text": "Fast"
+      },
+      "0x141562db4": {
+        "en": "Faster",
+        "text": "Faster"
+      }
+    },
+    "look_around": {
+      "0x141562c58": {
+        "en": "Look around",
+        "text": "Look around"
+      },
+      "0x141562c64": {
+        "en": "on foot",
+        "text": "on foot"
+      },
+      "0x141562c70": {
+        "en": "in a truck, the tractor, the bike or the snowmobile",
+        "text": "in a truck, the tractor, the bike or the snowmobile"
+      },
+      "0x141562ca4": {
+        "en": "in a loader",
+        "text": "in a loader"
+      },
+      "0x141562cb0": {
+        "en": "in the dozer",
+        "text": "in the dozer"
+      },
+      "0x141562cbd": {
+        "en": "in the excavator",
+        "text": "in the excavator"
+      }
+    },
+    "vehicle_tabs": {
+      "0x1414a0950": {
+        "en": "on foot",
+        "text": "on foot"
+      },
+      "0x1414a0958": {
+        "en": "loaders",
+        "text": "loaders"
+      },
+      "0x1414a0960": {
+        "en": "hauler",
+        "text": "hauler"
+      },
+      "0x1414a0967": {
+        "en": "truck",
+        "text": "truck"
+      },
+      "0x1414a096d": {
+        "en": "hooklift",
+        "text": "hooklift"
+      },
+      "0x1414a0976": {
+        "en": "tractor",
+        "text": "tractor"
+      },
+      "0x1414a097e": {
+        "en": "bandvagn",
+        "text": "bandvagn"
+      },
+      "0x1414a0987": {
+        "en": "dozer",
+        "text": "dozer"
+      },
+      "0x1414a098d": {
+        "en": "excavator",
+        "text": "excavator"
+      },
+      "0x1414a0997": {
+        "en": "dirt bike",
+        "text": "dirt bike"
+      },
+      "0x1414a09a1": {
+        "en": "snowmobile",
+        "text": "snowmobile"
+      },
+      "0x1414a09ac": {
+        "en": "track feeder",
+        "text": "track feeder"
+      },
+      "0x14149ed10": {
+        "en": "R stick + L hat",
+        "text": "R stick + L hat"
+      }
+    },
+    "machine_display": {
+      "0x141648820": {
+        "full_en": "dozer",
+        "full": "dozer",
+        "short_en": "dozer",
+        "short": "dozer"
+      },
+      "0x141648840": {
+        "full_en": "medium loader",
+        "full": "medium loader",
+        "short_en": "loader",
+        "short": "loader"
+      },
+      "0x141648860": {
+        "full_en": "bandvagn",
+        "full": "bandvagn",
+        "short_en": "bandvagn",
+        "short": "bandvagn"
+      },
+      "0x141648880": {
+        "full_en": "truck",
+        "full": "truck",
+        "short_en": "truck",
+        "short": "truck"
+      },
+      "0x1416488a0": {
+        "full_en": "hauler",
+        "full": "hauler",
+        "short_en": "hauler",
+        "short": "hauler"
+      },
+      "0x1416488c0": {
+        "full_en": "dirt bike",
+        "full": "dirt bike",
+        "short_en": "bike",
+        "short": "bike"
+      },
+      "0x1416488e0": {
+        "full_en": "excavator",
+        "full": "excavator",
+        "short_en": "excavator",
+        "short": "excavator"
+      },
+      "0x141648900": {
+        "full_en": "snowmobile",
+        "full": "snowmobile",
+        "short_en": "sled",
+        "short": "sled"
+      },
+      "0x141648920": {
+        "full_en": "tractor",
+        "full": "tractor",
+        "short_en": "tractor",
+        "short": "tractor"
+      },
+      "0x141648940": {
+        "full_en": "hooklift",
+        "full": "hooklift",
+        "short_en": "hooklift",
+        "short": "hooklift"
+      },
+      "0x141648960": {
+        "full_en": "large loader",
+        "full": "large loader",
+        "short_en": "loader",
+        "short": "loader"
+      },
+      "0x141648980": {
+        "full_en": "track feeder",
+        "full": "track feeder",
+        "short_en": "feeder",
+        "short": "feeder"
+      }
+    },
+    "editor": {
+      "Select": "Select",
+      "Sculpt": "Sculpt",
+      "Ground": "Ground",
+      "Shapes": "Shapes",
+      "Paint": "Paint",
+      "Water": "Water",
+      "raise": "raise",
+      "lift": "lift",
+      "lower": "lower",
+      "paint": "paint",
+      "vegetation": "vegetation",
+      "flatten": "flatten",
+      "smooth": "smooth",
+      "pour water": "pour water",
+      "water to level": "water to level",
+      "tunnel": "tunnel",
+      "noise": "noise",
+      "weather": "weather",
+      "erode": "erode",
+      "profile": "profile",
+      "terrace": "terrace",
+      "clone": "clone",
+      "peak / valley": "peak / valley",
+      "paint mask": "paint mask",
+      "stencil": "stencil",
+      "spring": "spring",
+      "road": "road",
+      "tree": "tree",
+      "rock": "rock",
+      "prop": "prop",
+      "spawn": "spawn",
+      "section": "section",
+      "delete": "delete",
+      "select": "select",
+      "field": "field",
+      "thin vegetation": "thin vegetation",
+      "tree brush": "tree brush",
+      "places a rectangular block of material on the ground": "places a rectangular block of material on the ground",
+      "places a ramp rising along Z to the chosen height": "places a ramp rising along Z to the chosen height",
+      "creates a flat pad at the clicked height, blending into the surrounding terrain": "creates a flat pad at the clicked height, blending into the surrounding terrain",
+      "creates a circular pond, initially 1 metre above the clicked ground": "creates a circular pond, initially 1 metre above the clicked ground",
+      "adds a grayscale heightmap to the bedrock; black and white map to the low and high settings": "adds a grayscale heightmap to the bedrock; black and white map to the low and high settings",
+      "deposits material from an image mask, with material and thickness set per pixel value": "deposits material from an image mask, with material and thickness set per pixel value",
+      "paints vegetation over a rectangle, using one type or an image mask": "paints vegetation over a rectangle, using one type or an image mask",
+      "creates scattered domes or narrow towers of material within a rectangle": "creates scattered domes or narrow towers of material within a rectangle",
+      "scatters trees in a circle, limited by slope and a mask": "scatters trees in a circle, limited by slope and a mask",
+      "thins listed trees inside an outline, leaving stumps and heath": "thins listed trees inside an outline, leaving stumps and heath",
+      "carves a hollow below the clicked ground": "carves a hollow below the clicked ground",
+      "adds material under the brush; uses the existing surface material unless you choose a fill": "adds material under the brush; uses the existing surface material unless you choose a fill",
+      "raises the ground, including its layers, grass and water, without adding material": "raises the ground, including its layers, grass and water, without adding material"
+    },
+    "extra_ui": {
+      "0x141562f80": {
+        "en": "CAMERA",
+        "text": "CAMERA"
+      },
+      "0x141562f88": {
+        "en": "TRAVEL",
+        "text": "TRAVEL"
+      },
+      "0x141562f90": {
+        "en": "STEERING RETURN",
+        "text": "STEERING RETURN"
+      },
+      "0x141562f98": {
+        "en": "HYDRAULICS",
+        "text": "HYDRAULICS"
+      },
+      "0x141562fa0": {
+        "en": "SWITCHES",
+        "text": "SWITCHES"
+      },
+      "0x141562fa8": {
+        "en": "GRADE HOLD",
+        "text": "GRADE HOLD"
+      },
+      "0x141562fb0": {
+        "en": "MENUS",
+        "text": "MENUS"
+      },
+      "0x141562fb8": {
+        "en": "ON FOOT",
+        "text": "ON FOOT"
+      },
+      "0x141562fc0": {
+        "en": "KEYS",
+        "text": "KEYS"
+      },
+      "0x141562fc8": {
+        "en": "FREE CAMERA",
+        "text": "FREE CAMERA"
+      },
+      "0x1416351c0": {
+        "en": "loading site",
+        "text": "loading site"
+      },
+      "0x1416351c8": {
+        "en": "building roads",
+        "text": "building roads"
+      },
+      "0x1416351d0": {
+        "en": "building terrain",
+        "text": "building terrain"
+      },
+      "0x1416351d8": {
+        "en": "placing trees",
+        "text": "placing trees"
+      },
+      "0x1416351e0": {
+        "en": "placing buildings",
+        "text": "placing buildings"
+      },
+      "0x1416351e8": {
+        "en": "preparing dirt",
+        "text": "preparing dirt"
+      },
+      "0x1416351f0": {
+        "en": "placing machines",
+        "text": "placing machines"
+      },
+      "0x1416351f8": {
+        "en": "placing objects",
+        "text": "placing objects"
+      },
+      "0x141635200": {
+        "en": "building collisions",
+        "text": "building collisions"
+      },
+      "0x141635208": {
+        "en": "settling terrain",
+        "text": "settling terrain"
+      },
+      "0x141635210": {
+        "en": "compiling shaders",
+        "text": "compiling shaders"
+      },
+      "0x141635218": {
+        "en": "receiving the site",
+        "text": "receiving the site"
+      },
+      "0x141566338": {
+        "en": "SIZE",
+        "text": "SIZE"
+      },
+      "0x141566340": {
+        "en": "SOURCE",
+        "text": "SOURCE"
+      },
+      "0x1415666b0": {
+        "en": "THE GAME'S SITES",
+        "text": "THE GAME'S SITES"
+      }
+    }
+  },
+  "pack_toml": {
+    "shop.toml": [
+      {
+        "old": "section = \"Loaders\"",
+        "new": "section = \"Loaders\""
+      },
+      {
+        "old": "section = \"Earthmoving\"",
+        "new": "section = \"Earthmoving\""
+      },
+      {
+        "old": "section = \"Haulage\"",
+        "new": "section = \"Haulage\""
+      },
+      {
+        "old": "section = \"Farm\"",
+        "new": "section = \"Farm\""
+      },
+      {
+        "old": "section = \"Getting about\"",
+        "new": "section = \"Getting about\""
+      },
+      {
+        "old": "name = \"Wheel loader\"",
+        "new": "name = \"Wheel loader\""
+      },
+      {
+        "old": "name = \"Large wheel loader\"",
+        "new": "name = \"Large wheel loader\""
+      },
+      {
+        "old": "name = \"Crawler dozer\"",
+        "new": "name = \"Crawler dozer\""
+      },
+      {
+        "old": "name = \"Excavator\"",
+        "new": "name = \"Excavator\""
+      },
+      {
+        "old": "name = \"Articulated hauler\"",
+        "new": "name = \"Articulated hauler\""
+      },
+      {
+        "old": "name = \"Hooklift truck\"",
+        "new": "name = \"Hooklift truck\""
+      },
+      {
+        "old": "name = \"Farm tractor\"",
+        "new": "name = \"Farm tractor\""
+      },
+      {
+        "old": "name = \"Pickup\"",
+        "new": "name = \"Pickup\""
+      },
+      {
+        "old": "name = \"Tracked carrier\"",
+        "new": "name = \"Tracked carrier\""
+      },
+      {
+        "old": "name = \"Snowmobile\"",
+        "new": "name = \"Snowmobile\""
+      },
+      {
+        "old": "name = \"Dirt bike\"",
+        "new": "name = \"Dirt bike\""
+      },
+      {
+        "old": "spec = \"1.8 m3 bucket\"",
+        "new": "spec = \"1.8 m3 bucket\""
+      },
+      {
+        "old": "spec = \"3.8 m3 bucket\"",
+        "new": "spec = \"3.8 m3 bucket\""
+      },
+      {
+        "old": "spec = \"3.4 m blade\"",
+        "new": "spec = \"3.4 m blade\""
+      },
+      {
+        "old": "spec = \"6.6 m reach\"",
+        "new": "spec = \"6.6 m reach\""
+      },
+      {
+        "old": "spec = \"12 m3 body\"",
+        "new": "spec = \"12 m3 body\""
+      },
+      {
+        "old": "spec = \"takes every container\"",
+        "new": "spec = \"takes every container\""
+      },
+      {
+        "old": "spec = \"front loader, three point hitch\"",
+        "new": "spec = \"front loader, three point hitch\""
+      },
+      {
+        "old": "spec = \"plough mount\"",
+        "new": "spec = \"plough mount\""
+      },
+      {
+        "old": "spec = \"two bodies, it swims\"",
+        "new": "spec = \"two bodies, it swims\""
+      },
+      {
+        "old": "spec = \"one seat, one ski each side\"",
+        "new": "spec = \"one seat, one ski each side\""
+      },
+      {
+        "old": "spec = \"two wheels, no excuses\"",
+        "new": "spec = \"two wheels, no excuses\""
+      },
+      {
+        "old": "tagline = \"The site's all-rounder: scoops, carries, ploughs and loads a truck in four passes.\"",
+        "new": "tagline = \"The site's all-rounder: scoops, carries, ploughs and loads a truck in four passes.\""
+      },
+      {
+        "old": "tagline = \"Twice the bucket, a pin hitch for trailers, and a cab you could live in.\"",
+        "new": "tagline = \"Twice the bucket, a pin hitch for trailers, and a cab you could live in.\""
+      },
+      {
+        "old": "tagline = \"Push, rip and grade. Tracks that float on mud and a blade that tilts as you think it.\"",
+        "new": "tagline = \"Push, rip and grade. Tracks that float on mud and a blade that tilts as you think it.\""
+      },
+      {
+        "old": "tagline = \"A trench by lunch, a pond by tea. Quick coupler ready.\"",
+        "new": "tagline = \"A trench by lunch, a pond by tea. Quick coupler ready.\""
+      },
+      {
+        "old": "tagline = \"Six wheels driven, a body that tips in eight seconds and a ride over anything.\"",
+        "new": "tagline = \"Six wheels driven, a body that tips in eight seconds and a ride over anything.\""
+      },
+      {
+        "old": "tagline = \"Swap a tipper for a flatrack without leaving the seat.\"",
+        "new": "tagline = \"Swap a tipper for a flatrack without leaving the seat.\""
+      },
+      {
+        "old": "tagline = \"Loader up front, plough behind, and the radio still works.\"",
+        "new": "tagline = \"Loader up front, plough behind, and the radio still works.\""
+      },
+      {
+        "old": "tagline = \"The boss's ride, the plough's mount, the coffee run.\"",
+        "new": "tagline = \"The boss's ride, the plough's mount, the coffee run.\""
+      },
+      {
+        "old": "tagline = \"Two bodies, four tracks, and it floats when the creek is higher than you thought.\"",
+        "new": "tagline = \"Two bodies, four tracks, and it floats when the creek is higher than you thought.\""
+      },
+      {
+        "old": "tagline = \"For the morning round of the village and nothing heavier.\"",
+        "new": "tagline = \"For the morning round of the village and nothing heavier.\""
+      },
+      {
+        "old": "tagline = \"Kick it, ride it, drop it in the ditch. It doesn't mind.\"",
+        "new": "tagline = \"Kick it, ride it, drop it in the ditch. It doesn't mind.\""
+      }
+    ],
+    "key_layouts.toml": [
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"classic\""
+      },
+      {
+        "old": "hint = \"the arrows work the arm and the bucket, the left and right buttons curl, the mouse always looks\"",
+        "new": "hint = \"the arrows work the arm and the bucket, the left and right buttons curl, the mouse always looks\""
+      },
+      {
+        "old": "name = \"farm sim\"",
+        "new": "name = \"farm sim\""
+      },
+      {
+        "old": "hint = \"hold the left button and move the mouse for the arm and the bucket or the blade, the right for the excavator's stick and swing\"",
+        "new": "hint = \"hold the left button and move the mouse for the arm and the bucket or the blade, the right for the excavator's stick and swing\""
+      }
+    ],
+    "pad_layouts.toml": [
+      {
+        "old": "name = \"hold LB\"",
+        "new": "name = \"hold LB\""
+      },
+      {
+        "old": "hint = \"hold LB and the right stick works the arm, the bucket or the blade\"",
+        "new": "hint = \"hold LB and the right stick works the arm, the bucket or the blade\""
+      },
+      {
+        "old": "name = \"click RS\"",
+        "new": "name = \"click RS\""
+      },
+      {
+        "old": "hint = \"click the right stick to switch it between the camera and the arm, the bucket or the blade\"",
+        "new": "hint = \"click the right stick to switch it between the camera and the arm, the bucket or the blade\""
+      },
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"classic\""
+      },
+      {
+        "old": "hint = \"the arm on the triggers and the bucket and the blade's tilt on the shoulders, the left stick driving\"",
+        "new": "hint = \"the arm on the triggers and the bucket and the blade's tilt on the shoulders, the left stick driving\""
+      }
+    ],
+    "sites/demo2/demo2.toml": [
+      {
+        "old": "name = \"Flower Hill\"",
+        "new": "name = \"Flower Hill\""
+      },
+      {
+        "old": "byline = \"Demo map\"",
+        "new": "byline = \"Demo map\""
+      },
+      {
+        "old": "accepts = [\"27d9a082d2382faa\"]",
+        "new": "accepts = [\"27d9a082d2382faa\", \"811034dce06dee68\", \"bc57be2314fd0a38\"]"
+      },
+      {
+        "old": "locked = \"Waiting for parts, estimated arrival dec 4th\"",
+        "new": "locked = \"Waiting for parts, estimated arrival dec 4th\""
+      },
+      {
+        "old": "title = \"Sand haul & more\"",
+        "new": "title = \"Sand haul & more\""
+      },
+      {
+        "old": "done = \"40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it\"",
+        "new": "done = \"40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it\""
+      },
+      {
+        "old": "sheet = \"Sand to the gravel pad, {}\"",
+        "new": "sheet = \"Sand to the gravel pad, {}\""
+      },
+      {
+        "old": "bill = \"Sand to the gravel pad\"",
+        "new": "bill = \"Sand to the gravel pad\""
+      },
+      {
+        "old": "sheet = \"Find the truck\"",
+        "new": "sheet = \"Find the truck\""
+      },
+      {
+        "old": "bill = \"Find the truck\"",
+        "new": "bill = \"Find the truck\""
+      },
+      {
+        "old": "sheet = \"Jump the river with the truck\"",
+        "new": "sheet = \"Jump the river with the truck\""
+      },
+      {
+        "old": "bill = \"Sick jump with the truck\"",
+        "new": "bill = \"Sick jump with the truck\""
+      },
+      {
+        "old": "say = \"And when you are done, there is a truck up on the hill. Find it, and get it over the river. Somehow\"",
+        "new": "say = \"And when you are done, there is a truck up on the hill. Find it, and get it over the river. Somehow\""
+      },
+      {
+        "old": "sheet = \"Get the boulder up on the hill\"",
+        "new": "sheet = \"Get the boulder up on the hill\""
+      },
+      {
+        "old": "bill = \"Boulder on hill\"",
+        "new": "bill = \"Boulder on hill\""
+      },
+      {
+        "old": "text = \"Here is the start area with your machines.\"",
+        "new": "text = \"Here is the start area with your machines.\""
+      },
+      {
+        "old": "text = \"There is sand on the far end of this site, and we need it.\"",
+        "new": "text = \"There is sand on the far end of this site, and we need it.\""
+      },
+      {
+        "old": "text = \"Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand\"",
+        "new": "text = \"Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand\""
+      }
+    ]
+  }
+}

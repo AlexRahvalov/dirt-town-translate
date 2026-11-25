@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Validate translation JSONs
+        run: python validate_translations.py
+
       - name: Configure CMake
         run: cmake -S plugin -B build -A x64
 
