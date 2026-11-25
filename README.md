@@ -9,7 +9,7 @@
 - Хук чтения `DIGP`-ресурсов подменяет в памяти переводы TOML-файлов (`shop.toml`, `key_layouts.toml`, `pad_layouts.toml`, `sites/demo2/demo2.toml`, с сохранением штампов `811034dce06dee68` для старых сейвов) и подключает кириллические шрифты (`Roboto-Regular`/`Bold` из `data.pack` + системные `cour.ttf`/`courbd.ttf`).
 
 ### Установка плагина (для игроков)
-1. Скачайте готовый архив `DirtTownDemo-RU-Plugin.zip` из **Actions** (или **Releases** при теге `v*`).
+1. Скачайте готовый архив `DirtTownDemo-Locale-Plugin.zip` из **Actions** (или **Releases** при теге `v*`).
 2. Распакуйте `version.dll` и папку `locales/` в папку с игрой рядом с `dirttown.exe`.
 3. Для переключения языка или отключения редактируйте `locales/lang.ini`:
    ```ini
@@ -18,7 +18,7 @@
 4. Полное удаление: просто удалите `version.dll` и папку `locales/`.
 
 ### Сборка `version.dll`
-- На GitHub настроен workflow [`.github/workflows/build.yml`](.github/workflows/build.yml) (проверяет переводы в `translations/*.json`, собирает x64 `version.dll` через MSVC и упаковывает `DirtTownDemo-RU-Plugin.zip` со всеми языками из `locales/`).
+- На GitHub настроен workflow [`.github/workflows/build.yml`](.github/workflows/build.yml) (проверяет переводы в `translations/*.json`, собирает x64 `version.dll` через MSVC и упаковывает `DirtTownDemo-Locale-Plugin.zip` со всеми языками из `locales/`).
 - Локально (при наличии VS Build Tools / CMake):
   ```powershell
   cmake -S plugin -B build -A x64
