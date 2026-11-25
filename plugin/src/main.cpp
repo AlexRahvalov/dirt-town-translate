@@ -28,14 +28,36 @@ struct GameStr {
 using FnOpNew = void* (*)(size_t);
 using FnOpDelete = void (*)(void*, size_t);
 using FnReadPackAsset = bool (*)(void* pack, const GameStr* key, GameStr* out);
+using FnDrawFooterText = void (*)(const char* text);
+using FnDrawSectionLabel = void (*)(const char* text);
+using FnNextWidgetId = int (*)();
+using FnDrawToggleBtn = bool (*)(const char* label, int id, int active, float scale, void* extra);
+using FnSameLine = void (*)(float offset_x, float spacing);
 
 FnOpNew g_op_new = nullptr;
 FnOpDelete g_op_delete = nullptr;
 FnReadPackAsset g_orig_read_pack_asset = nullptr;
+FnDrawFooterText g_orig_draw_footer = nullptr;
+FnDrawSectionLabel g_draw_section_label = nullptr;
+FnNextWidgetId g_next_widget_id = nullptr;
+FnDrawToggleBtn g_draw_toggle_btn = nullptr;
+FnSameLine g_same_line = nullptr;
 
 // ============================================================================
 // Plugin configuration & loaded override tables
 // ============================================================================
+
+struct LocaleEntry {
+    std::string code;
+    std::string label;
+};
+
+constexpr uint32_t kSettingsFooterCallRva = 0x0CB8C88;
+constexpr uint32_t kSettingsFooterOrigRva = 0x0CBA150;
+constexpr uint32_t kDrawSectionLabelRva = 0x116A430;
+constexpr uint32_t kNextWidgetIdRva = 0x0CD86C0;
+constexpr uint32_t kDrawToggleBtnRva = 0x0CDAD80;
+constexpr uint32_t kSameLineRva = 0x114E600;
 
 enum class FontKind : uint8_t {
     Pack = 0,
@@ -53,9 +75,13 @@ struct TomlRule {
 };
 
 fs::path g_game_dir;
+fs::path g_locales_root;
 fs::path g_locale_dir;
 fs::path g_override_dir;
 fs::path g_log_path;
+std::string g_active_lang = "en";
+std::string g_selected_lang = "en";
+std::vector<LocaleEntry> g_available_langs;
 std::unordered_map<std::string, FontRedirect> g_font_redirects;
 std::unordered_map<std::string, std::vector<TomlRule>> g_toml_rules;
 
@@ -145,6 +171,72 @@ std::string ReadActiveLocale(const fs::path& ini_path) {
         }
     }
     return "";
+}
+
+bool WriteActiveLocale(const fs::path& ini_path, const std::string& code) {
+    std::string content = "active=" + code + "\r\n";
+    HANDLE h = CreateFileW(
+        ini_path.c_str(),
+        GENERIC_WRITE,
+        FILE_SHARE_READ,
+        nullptr,
+        CREATE_ALWAYS,
+        FILE_ATTRIBUTE_NORMAL,
+        nullptr);
+    if (h == INVALID_HANDLE_VALUE) return false;
+    DWORD written = 0;
+    BOOL ok = WriteFile(h, content.data(), static_cast<DWORD>(content.size()), &written, nullptr);
+    CloseHandle(h);
+    return ok && written == content.size();
+}
+
+void DiscoverAvailableLocales() {
+    g_available_langs.clear();
+    g_available_langs.push_back(LocaleEntry{"en", "EN"});
+    std::error_code ec;
+    std::vector<LocaleEntry> extra;
+    for (const auto& entry : fs::directory_iterator(g_locales_root, ec)) {
+        if (!entry.is_directory(ec)) continue;
+        std::string code = entry.path().filename().string();
+        if (code == "en" || code.empty() || code.size() > 15) continue;
+        if (!fs::exists(entry.path() / L"exe_patch.dtloc", ec)) continue;
+        std::string label = code;
+        for (char& ch : label) {
+            if (ch >= 'a' && ch <= 'z') ch = static_cast<char>(ch - 'a' + 'A');
+        }
+        extra.push_back(LocaleEntry{std::move(code), std::move(label)});
+    }
+    std::sort(extra.begin(), extra.end(), [](const LocaleEntry& a, const LocaleEntry& b) {
+        return a.code < b.code;
+    });
+    for (auto& item : extra) {
+        g_available_langs.push_back(std::move(item));
+    }
+}
+
+void HookDrawSettingsFooter(const char* version_str) {
+    if (!g_available_langs.empty() && g_draw_section_label && g_next_widget_id && g_draw_toggle_btn && g_same_line) {
+        const char* hdr = (g_active_lang == "en") ? "Language" : "Язык / Language";
+        g_draw_section_label(hdr);
+        for (size_t i = 0; i < g_available_langs.size(); ++i) {
+            if (i > 0) g_same_line(0.0f, -1.0f);
+            int id = g_next_widget_id();
+            int selected = (g_available_langs[i].code == g_selected_lang) ? 1 : 0;
+            if (g_draw_toggle_btn(g_available_langs[i].label.c_str(), id, selected, 1.1f, nullptr)) {
+                g_selected_lang = g_available_langs[i].code;
+                WriteActiveLocale(g_locales_root / L"lang.ini", g_selected_lang);
+            }
+        }
+        if (g_selected_lang != g_active_lang && g_orig_draw_footer) {
+            const char* note = (g_active_lang == "en")
+                ? "Restart the game to apply language."
+                : "Перезапустите игру для применения языка.";
+            g_orig_draw_footer(note);
+        }
+    }
+    if (g_orig_draw_footer) {
+        g_orig_draw_footer(version_str);
+    }
 }
 
 // ============================================================================
@@ -397,6 +489,63 @@ bool LoadPackPatches(const fs::path& dtpk_path) {
     return true;
 }
 
+void WriteAbsJumpStub(uint8_t* stub, uint64_t fn_addr) {
+    stub[0] = 0xFF;
+    stub[1] = 0x25;
+    uint32_t zero = 0;
+    std::memcpy(stub + 2, &zero, 4);
+    std::memcpy(stub + 6, &fn_addr, 8);
+}
+
+void PatchMemBytes(uintptr_t addr, const void* src, size_t sz) {
+    DWORD oldp = 0;
+    VirtualProtect(reinterpret_cast<void*>(addr), sz, PAGE_EXECUTE_READWRITE, &oldp);
+    std::memcpy(reinterpret_cast<void*>(addr), src, sz);
+    DWORD dummy = 0;
+    VirtualProtect(reinterpret_cast<void*>(addr), sz, oldp, &dummy);
+}
+
+bool CanHookCallSite(uintptr_t base, size_t img_size, uint32_t call_rva, uint32_t orig_rva) {
+    if (call_rva + 5 > img_size) return false;
+    uint8_t op = *reinterpret_cast<uint8_t*>(base + call_rva);
+    int32_t rel = 0;
+    std::memcpy(&rel, reinterpret_cast<void*>(base + call_rva + 1), 4);
+    return op == 0xE8 && static_cast<int64_t>(call_rva + 5) + rel == orig_rva;
+}
+
+bool InstallStandaloneSettingsHook() {
+    uintptr_t base = reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
+    auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(base);
+    if (dos->e_magic != IMAGE_DOS_SIGNATURE) return false;
+    auto* nt = reinterpret_cast<IMAGE_NT_HEADERS64*>(base + dos->e_lfanew);
+    if (nt->Signature != IMAGE_NT_SIGNATURE) return false;
+    size_t img_size = nt->OptionalHeader.SizeOfImage;
+
+    if (!CanHookCallSite(base, img_size, kSettingsFooterCallRva, kSettingsFooterOrigRva)) {
+        LogMsg("Settings footer call site mismatch; language UI skipped.");
+        return false;
+    }
+
+    uint8_t* stub = AllocNearModule(base, 16);
+    if (!stub) return false;
+    WriteAbsJumpStub(stub, reinterpret_cast<uint64_t>(&HookDrawSettingsFooter));
+    DWORD oldp = 0;
+    VirtualProtect(stub, 16, PAGE_EXECUTE_READ, &oldp);
+    FlushInstructionCache(GetCurrentProcess(), stub, 16);
+
+    g_orig_draw_footer = reinterpret_cast<FnDrawFooterText>(base + kSettingsFooterOrigRva);
+    g_draw_section_label = reinterpret_cast<FnDrawSectionLabel>(base + kDrawSectionLabelRva);
+    g_next_widget_id = reinterpret_cast<FnNextWidgetId>(base + kNextWidgetIdRva);
+    g_draw_toggle_btn = reinterpret_cast<FnDrawToggleBtn>(base + kDrawToggleBtnRva);
+    g_same_line = reinterpret_cast<FnSameLine>(base + kSameLineRva);
+
+    int64_t next_ip = static_cast<int64_t>(base + kSettingsFooterCallRva + 5);
+    int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(stub) - next_ip);
+    PatchMemBytes(base + kSettingsFooterCallRva + 1, &new_rel, 4);
+    FlushInstructionCache(GetCurrentProcess(), reinterpret_cast<void*>(base + kSettingsFooterCallRva), 5);
+    return true;
+}
+
 bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
     std::vector<uint8_t> buf;
     if (!ReadFileBytes(dtlp_path, buf)) {
@@ -445,9 +594,10 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
     auto* nt = reinterpret_cast<IMAGE_NT_HEADERS64*>(base + dos->e_lfanew);
     size_t img_size = nt->OptionalHeader.SizeOfImage;
 
-    // Allocate .loc + 16-byte trampoline stub within +-1 GB of dirttown.exe
-    size_t stub_off = (hdr.loc_blob_size + 15ULL) & ~15ULL;
-    size_t alloc_size = stub_off + 16ULL;
+    // Allocate .loc + two 16-byte trampoline stubs within +-1 GB of dirttown.exe
+    size_t stub_pack_off = (hdr.loc_blob_size + 15ULL) & ~15ULL;
+    size_t stub_settings_off = stub_pack_off + 16ULL;
+    size_t alloc_size = stub_settings_off + 16ULL;
     uint8_t* loc_mem = AllocNearModule(base, alloc_size);
     if (!loc_mem) {
         LogMsg("VirtualAlloc near module failed.");
@@ -517,56 +667,39 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
         }
     }
 
-    // Validate pack hook call site (call rel32 -> orig_read_pack_asset)
-    bool has_pack_hook = false;
-    if (hdr.pack_hook_call_rva + 5 <= img_size) {
-        uint8_t op = *reinterpret_cast<uint8_t*>(base + hdr.pack_hook_call_rva);
-        int32_t rel = 0;
-        std::memcpy(&rel, reinterpret_cast<void*>(base + hdr.pack_hook_call_rva + 1), 4);
-        if (op == 0xE8 && static_cast<int64_t>(hdr.pack_hook_call_rva + 5) + rel == hdr.pack_read_orig_rva) {
-            has_pack_hook = true;
-        } else {
-            LogMsg("Pack call site mismatch; skipping DIGP hook.");
-        }
+    bool has_pack_hook = CanHookCallSite(base, img_size, hdr.pack_hook_call_rva, hdr.pack_read_orig_rva);
+    if (!has_pack_hook) {
+        LogMsg("Pack call site mismatch; skipping DIGP hook.");
+    }
+    bool has_settings_hook = CanHookCallSite(base, img_size, kSettingsFooterCallRva, kSettingsFooterOrigRva);
+    if (!has_settings_hook) {
+        LogMsg("Settings footer call site mismatch; skipping language UI.");
     }
 
-    // Write 14-byte x64 absolute jump stub at loc_mem + stub_off: FF 25 00 00 00 00 <HookReadPackAsset>
     if (has_pack_hook) {
-        uint8_t* stub = loc_mem + stub_off;
-        stub[0] = 0xFF;
-        stub[1] = 0x25;
-        uint32_t zero = 0;
-        std::memcpy(stub + 2, &zero, 4);
-        uint64_t fn_addr = reinterpret_cast<uint64_t>(&HookReadPackAsset);
-        std::memcpy(stub + 6, &fn_addr, 8);
+        WriteAbsJumpStub(loc_mem + stub_pack_off, reinterpret_cast<uint64_t>(&HookReadPackAsset));
+    }
+    if (has_settings_hook) {
+        WriteAbsJumpStub(loc_mem + stub_settings_off, reinterpret_cast<uint64_t>(&HookDrawSettingsFooter));
     }
 
     DWORD old_loc_prot = 0;
     VirtualProtect(loc_mem, alloc_size, PAGE_EXECUTE_READ, &old_loc_prot);
     FlushInstructionCache(GetCurrentProcess(), loc_mem, alloc_size);
 
-    // Apply validated patches in RAM
-    auto PatchMem = [](uintptr_t addr, const void* src, size_t sz) {
-        DWORD oldp = 0;
-        VirtualProtect(reinterpret_cast<void*>(addr), sz, PAGE_EXECUTE_READWRITE, &oldp);
-        std::memcpy(reinterpret_cast<void*>(addr), src, sz);
-        DWORD dummy = 0;
-        VirtualProtect(reinterpret_cast<void*>(addr), sz, oldp, &dummy);
-    };
-
     for (const auto& rp : rip32s) {
         int64_t next_ip = static_cast<int64_t>(base + rp.insn_rva + rp.insn_size);
         int32_t new_disp = static_cast<int32_t>(reinterpret_cast<uintptr_t>(loc_mem + rp.target_loc_off) - next_ip);
-        PatchMem(base + rp.insn_rva + rp.insn_size - 4, &new_disp, 4);
+        PatchMemBytes(base + rp.insn_rva + rp.insn_size - 4, &new_disp, 4);
     }
 
     for (const auto& pp : ptr64s) {
         uint64_t val = reinterpret_cast<uint64_t>(loc_mem + pp.target_loc_off);
-        PatchMem(base + pp.ptr_rva, &val, 8);
+        PatchMemBytes(base + pp.ptr_rva, &val, 8);
     }
 
     for (const auto& rr : raws) {
-        PatchMem(base + rr.rva, rr.new_bytes.data(), rr.new_bytes.size());
+        PatchMemBytes(base + rr.rva, rr.new_bytes.data(), rr.new_bytes.size());
     }
 
     if (has_pack_hook && (!g_font_redirects.empty() || !g_toml_rules.empty() || fs::exists(g_override_dir))) {
@@ -575,8 +708,20 @@ bool ApplyRuntimeExePatch(const fs::path& dtlp_path) {
         g_orig_read_pack_asset = reinterpret_cast<FnReadPackAsset>(base + hdr.pack_read_orig_rva);
 
         int64_t next_ip = static_cast<int64_t>(base + hdr.pack_hook_call_rva + 5);
-        int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(loc_mem + stub_off) - next_ip);
-        PatchMem(base + hdr.pack_hook_call_rva + 1, &new_rel, 4);
+        int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(loc_mem + stub_pack_off) - next_ip);
+        PatchMemBytes(base + hdr.pack_hook_call_rva + 1, &new_rel, 4);
+    }
+
+    if (has_settings_hook) {
+        g_orig_draw_footer = reinterpret_cast<FnDrawFooterText>(base + kSettingsFooterOrigRva);
+        g_draw_section_label = reinterpret_cast<FnDrawSectionLabel>(base + kDrawSectionLabelRva);
+        g_next_widget_id = reinterpret_cast<FnNextWidgetId>(base + kNextWidgetIdRva);
+        g_draw_toggle_btn = reinterpret_cast<FnDrawToggleBtn>(base + kDrawToggleBtnRva);
+        g_same_line = reinterpret_cast<FnSameLine>(base + kSameLineRva);
+
+        int64_t next_ip = static_cast<int64_t>(base + kSettingsFooterCallRva + 5);
+        int32_t new_rel = static_cast<int32_t>(reinterpret_cast<uintptr_t>(loc_mem + stub_settings_off) - next_ip);
+        PatchMemBytes(base + kSettingsFooterCallRva + 1, &new_rel, 4);
     }
 
     FlushInstructionCache(GetCurrentProcess(), reinterpret_cast<void*>(base), img_size);
@@ -589,28 +734,39 @@ void InitPlugin(HMODULE self_mod) {
     if (GetModuleFileNameW(self_mod, mod_path, MAX_PATH) == 0) return;
 
     g_game_dir = fs::path(mod_path).parent_path();
-    fs::path locales_root = g_game_dir / L"locales";
-    if (!fs::exists(locales_root)) return;
+    g_locales_root = g_game_dir / L"locales";
+    if (!fs::exists(g_locales_root)) return;
 
-    g_log_path = locales_root / L"plugin.log";
+    g_log_path = g_locales_root / L"plugin.log";
     DeleteFileW(g_log_path.c_str());
 
-    std::string active = ReadActiveLocale(locales_root / L"lang.ini");
-    if (active.empty() || active == "en" || active == "none") {
-        LogMsg("Plugin inactive (active=" + active + ").");
+    DiscoverAvailableLocales();
+    std::string active = ReadActiveLocale(g_locales_root / L"lang.ini");
+    if (active.empty()) active = "en";
+    g_active_lang = active;
+    g_selected_lang = active;
+
+    if (active == "en" || active == "none") {
+        LogMsg("Plugin in English mode (active=" + active + ").");
+        InstallStandaloneSettingsHook();
         return;
     }
 
-    g_locale_dir = locales_root / Utf8ToPath(active);
+    g_locale_dir = g_locales_root / Utf8ToPath(active);
     g_override_dir = g_locale_dir / L"override";
     if (!fs::exists(g_locale_dir)) {
         LogMsg("Locale folder missing: " + active);
+        g_active_lang = "en";
+        InstallStandaloneSettingsHook();
         return;
     }
 
     LogMsg("Initializing locale: " + active);
     LoadPackPatches(g_locale_dir / L"pack_patches.dtpk");
-    ApplyRuntimeExePatch(g_locale_dir / L"exe_patch.dtloc");
+    if (!ApplyRuntimeExePatch(g_locale_dir / L"exe_patch.dtloc")) {
+        g_active_lang = "en";
+        InstallStandaloneSettingsHook();
+    }
 }
 
 // ============================================================================
