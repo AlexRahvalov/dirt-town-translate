@@ -19,6 +19,7 @@ from common import (
 from loc_strings import (
     CONTROLS_PTR_TRANSLATIONS,
     EDITOR_STR_PTR_MAP,
+    EXTRA_UI_PTR_TABLES,
     FREE_CAM_PTR_TRANSLATIONS,
     GRAPHICS_PRESET_UI,
     LOOK_AROUND_PTR_TRANSLATIONS,
@@ -274,6 +275,20 @@ def build_plugin_data(game_dir: Path, locale: str = "ru") -> None:
     add_imm(0x140c6b57f, 0x25, l_bind, 4)
 
     add_imm(0x140c7e3cf, 0x0F, slen(0x141564aa4), 4)
+    add_raw(
+        0x140c7e6d9,
+        b"\x48\xb8" + "да".encode("utf-8").ljust(8, b"\x00")
+        + b"\x48\x89\x84\x24\xc0\x01\x00\x00\xb8\x04\x00\x00\x00" + b"\x90" * 11,
+        bytes.fromhex("ba79650000c68424c201000073b80300000066899424c0010000c68424c301000000"),
+    )
+    add_raw(
+        0x140c7ed58,
+        b"\x48\xb8" + "нет".encode("utf-8").ljust(8, b"\x00")
+        + b"\x48\x89\x84\x24\xc0\x01\x00\x00\xb8\x06\x00\x00\x00"
+        + b"\xe9" + struct.pack("<i", 0x140c7e6fb - (0x140c7ed58 + 23 + 5)) + b"\x90" * 3,
+        bytes.fromhex("b86e6f0000c68424c20100000066898424c0010000b802000000e984f9ffff"),
+    )
+    add_rip32(0x140c66e53, add_str(""), 0x141562102)
     add_imm(0x140c7eaf9, 0x0E, slen(0x141564b11), 4)
     add_imm(0x140c7edf6, 0x10, slen(0x141564aef), 4)
     add_imm(0x140c7ef50, 0x10, slen(0x141564b00), 4)
@@ -368,6 +383,10 @@ def build_plugin_data(game_dir: Path, locale: str = "ru") -> None:
             s = read_cstr(tgt)
             if s in EDITOR_STR_PTR_MAP:
                 add_ptr64(pva, add_str(EDITOR_STR_PTR_MAP[s]), tgt)
+
+    for pva, orig_s_va, exp_en, ru_s in EXTRA_UI_PTR_TABLES:
+        assert read_cstr(orig_s_va) == exp_en, f"EXTRA_UI mismatch at 0x{pva:x}"
+        add_ptr64(pva, add_str(ru_s), orig_s_va)
 
     # Write DTLP v1
     loc_dir = ROOT_DIR / "locales" / locale

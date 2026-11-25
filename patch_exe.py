@@ -14,6 +14,7 @@ from loc_strings import (
     MACHINE_DISPLAY_ROWS,
     GRAPHICS_PRESET_UI,
     SHOP_SECTIONS_UI,
+    EXTRA_UI_PTR_TABLES,
     EDITOR_STR_PTR_MAP,
 )
 
@@ -383,6 +384,24 @@ patch_imm_at(0x140c6b57f, 0x25, l_bind, 4)
 
 # Test drive & Start screen
 patch_imm_at(0x140c7e3cf, 0x0f, slen(0x141564aa4), 4)
+# Inline "yes" / "no" in site card (EDITABLE -> РЕДАКТ.)
+r_yes = va_to_raw(0x140c7e6d9)
+orig_yes = bytes.fromhex("ba79650000c68424c201000073b80300000066899424c0010000c68424c301000000")
+assert data[r_yes:r_yes + len(orig_yes)] == orig_yes
+data[r_yes:r_yes + len(orig_yes)] = (
+    b"\x48\xb8" + "да".encode("utf-8").ljust(8, b"\x00")
+    + b"\x48\x89\x84\x24\xc0\x01\x00\x00\xb8\x04\x00\x00\x00" + b"\x90" * 11
+)
+r_no = va_to_raw(0x140c7ed58)
+orig_no = bytes.fromhex("b86e6f0000c68424c20100000066898424c0010000b802000000e984f9ffff")
+assert data[r_no:r_no + len(orig_no)] == orig_no
+data[r_no:r_no + len(orig_no)] = (
+    b"\x48\xb8" + "нет".encode("utf-8").ljust(8, b"\x00")
+    + b"\x48\x89\x84\x24\xc0\x01\x00\x00\xb8\x06\x00\x00\x00"
+    + b"\xe9" + struct.pack("<i", 0x140c7e6fb - (0x140c7ed58 + 23 + 5)) + b"\x90" * 3
+)
+# Silence plural "s" in Controls "%d control%s"
+patch_rip_target(0x140c66e53, loc_va_base + add_str(""), 0x141562102)
 patch_imm_at(0x140c7eaf9, 0x0e, slen(0x141564b11), 4)
 patch_imm_at(0x140c7edf6, 0x10, slen(0x141564aef), 4)
 patch_imm_at(0x140c7ef50, 0x10, slen(0x141564b00), 4)
@@ -498,6 +517,11 @@ for tbl_va, count, stride in [
         s = read_cstr(tgt)
         if s in EDITOR_STR_PTR_MAP:
             patch_ptr64(pva, loc_va_base + add_str(EDITOR_STR_PTR_MAP[s]), tgt)
+
+# Controls categories, loading stages, and start screen card PTR64s
+for pva, orig_s_va, exp_en, ru_s in EXTRA_UI_PTR_TABLES:
+    assert read_cstr(orig_s_va) == exp_en, f"EXTRA_UI mismatch at 0x{pva:x}"
+    patch_ptr64(pva, loc_va_base + add_str(ru_s), orig_s_va)
 
 # Append DIR64 relocation block for gfx_table_va into free padding at end of .reloc
 reloc_idx = [i for i, x in enumerate(sections) if x[0] == ".reloc"][0]

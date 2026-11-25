@@ -218,7 +218,7 @@ STRING_PATCHES = {
     0x1415621f0: ("CONTROLS", "УПРАВЛЕНИЕ", GP_UI),
     0x1415621f9: ("close", "закрыть", GP_UI),
     0x1415621ff: ("SHOWING", "ПОКАЗ", GP_UI),
-    0x14156220e: ("reset all controls", "сбросить всё управление", GP_UI),
+    0x14156220e: ("reset all controls", "сбросить всё", GP_UI),
     0x141562221: ("%d plugged in", "подключено: %d", GP_UI),
     0x14156222f: ("the same in every layout", "одинаково во всех раскладках", GP_UI),
     0x141562248: ("own layout", "своя раскладка", GP_UI),
@@ -303,7 +303,7 @@ STRING_PATCHES = {
     0x141563489: ("DAY SHEET", "СВОДКА ДНЯ", GP_UI),
     0x141563493: ("TICK %d", "ТИК %d", GP_UI),
     0x14156349b: ("TICK %d · PAUSED", "ТИК %d · ПАУЗА", GP_UI),
-    0x1415634ad: ("Back to editor", "Вернуться в редактор", GP_UI),
+    0x1415634ad: ("Back to editor", "В редактор", GP_UI),
     0x1415634bc: ("Leave", "Выйти", GP_UI),
     0x1415634c2: ("rain/snow", "дождь/снег", GP_UI),
     0x1415634cc: ("dry weather", "сухая погода", GP_UI),
@@ -314,18 +314,18 @@ STRING_PATCHES = {
     0x141563551: ("GAME", "ИГРА", GP_UI),
     0x141563556: ("Settings", "Настройки", GP_UI),
     0x14156355f: ("Jobs", "Задания", GP_UI),
-    0x141563564: ("Copy join link", "Копировать ссылку входа", GP_UI),
+    0x141563564: ("Copy join link", "Копир. ссылку", GP_UI),
     0x141563573: ("GRADE STICKS", "КОЛЫШКИ", GP_UI),
     0x141563580: ("Remove all", "Убрать все", GP_UI),
     0x14156358b: ("WEATHER", "ПОГОДА", GP_UI),
     0x141563598: ("%.1f C, rain %.1f mm/h, snow %.2f m/h", "%.1f °C, дождь %.1f мм/ч, снег %.2f м/ч", GP_UI),
     0x1415635be: ("%s: %.0f s remaining", "%s: осталось %.0f с", GP_UI),
-    0x1415635d3: ("Open dumps folder", "Открыть папку дампов", GP_UI),
+    0x1415635d3: ("Open dumps folder", "Папка дампов", GP_UI),
     0x141563612: ("LEAVE THE EDITOR?", "ВЫЙТИ ИЗ РЕДАКТОРА?", GP_UI),
     0x141563624: ("LEAVE THE GAME?", "ВЫЙТИ ИЗ ИГРЫ?", GP_UI),
     0x141563638: ("unsaved edits will be backed up", "несохранённые правки попадут в резервную копию", GP_UI),
     0x141563658: ("Cancel", "Отмена", GP_UI),
-    0x14156365f: ("Save and leave", "Сохранить и выйти", GP_UI),
+    0x14156365f: ("Save and leave", "Сохр. и выйти", GP_UI),
     0x14156366e: ("Remove the stick", "Убрать колышек", GP_UI),
     0x14156367f: ("Remove %zu sticks", "Убрать колышков: %zu", GP_UI),
     0x14156369e: ("REMOVE ALL STICKS?", "УБРАТЬ ВСЕ КОЛЫШКИ?", GP_UI),
@@ -378,6 +378,7 @@ STRING_PATCHES = {
     0x141565f39: ("%d min", "%d мин", GP_UI),
     0x141565f40: ("%d h %02d min", "%d ч %02d мин", GP_UI),
     0x141565f93: ("S", "", GP_UI),
+    0x141565fa2: ("settings", "настройки", GP_UI),
     0x141565fab: ("START ", "НАЧАТЬ ", GP_UI),
     0x141565fb2: (" OVER?", " ЗАНОВО?", GP_UI),
     0x141565fb9: ("UPDATE ", "ОБНОВИТЬ ", GP_UI),
@@ -969,6 +970,38 @@ GRAPHICS_PRESET_UI = ["Низкие", "Средние", "Высокие", "Ул�
 
 # Shop sections UI table (MUST match shop.toml section names!)
 SHOP_SECTIONS_UI = ["Погрузчики", "Землеройные", "Самосвалы", "Фермерские", "Транспорт"]
+
+# Additional .rdata PTR64 UI tables (Controls categories, Loading stages, Start Screen card headers)
+EXTRA_UI_PTR_TABLES = [
+    # Controls category headers 0x141562f80..0x141562fc8
+    (0x141562f80, 0x14156241b, "CAMERA", "КАМЕРА"),
+    (0x141562f88, 0x141562f48, "TRAVEL", "ДВИЖЕНИЕ"),
+    (0x141562f90, 0x141562422, "STEERING RETURN", "ВОЗВРАТ РУЛЯ"),
+    (0x141562f98, 0x141562f4f, "HYDRAULICS", "ГИДРАВЛИКА"),
+    (0x141562fa0, 0x141562f5a, "SWITCHES", "ПЕРЕКЛЮЧАТЕЛИ"),
+    (0x141562fa8, 0x141562f63, "GRADE HOLD", "УДЕРЖАНИЕ УКЛОНА"),
+    (0x141562fb0, 0x141562d58, "MENUS", "МЕНЮ"),
+    (0x141562fb8, 0x141562f6e, "ON FOOT", "ПЕШКОМ"),
+    (0x141562fc0, 0x141562f76, "KEYS", "КЛАВИШИ"),
+    (0x141562fc8, 0x141562d71, "FREE CAMERA", "СВОБОДНАЯ КАМЕРА"),
+    # Loading stage labels 0x1416351c0..0x141635218
+    (0x1416351c0, 0x141564691, "loading site", "загрузка участка"),
+    (0x1416351c8, 0x14156469e, "building roads", "построение дорог"),
+    (0x1416351d0, 0x141564652, "building terrain", "создание рельефа"),
+    (0x1416351d8, 0x1415646ad, "placing trees", "посадка деревьев"),
+    (0x1416351e0, 0x1415646bb, "placing buildings", "размещение зданий"),
+    (0x1416351e8, 0x1415646cd, "preparing dirt", "подготовка грунта"),
+    (0x1416351f0, 0x1415646dc, "placing machines", "расстановка техники"),
+    (0x1416351f8, 0x1415646ed, "placing objects", "размещение объектов"),
+    (0x141635200, 0x1415646fd, "building collisions", "просчёт коллизий"),
+    (0x141635208, 0x141564711, "settling terrain", "усадка рельефа"),
+    (0x141635210, 0x141564722, "compiling shaders", "компиляция шейдеров"),
+    (0x141635218, 0x141564630, "receiving the site", "получение участка"),
+    # Start screen card labels & headers
+    (0x141566338, 0x141564ac5, "SIZE", "РАЗМЕР"),
+    (0x141566340, 0x141564abe, "SOURCE", "ИСТОЧНИК"),
+    (0x1415666b0, 0x141566006, "THE GAME'S SITES", "КАРТЫ ИГРЫ"),
+]
 
 # Site Editor tables (0x1414d0080 tabs, 0x1414d0628 tooltips, 0x1414d1280 brush tooltips, 0x1414d14a0 brush names)
 EDITOR_PTR_TRANSLATIONS = {
