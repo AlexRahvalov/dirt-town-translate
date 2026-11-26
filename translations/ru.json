@@ -15,6 +15,31 @@
       "en": "no",
       "text": "нет",
       "max_bytes": 7
+    },
+    "bucket": {
+      "en": "bucket",
+      "text": "ковш",
+      "max_bytes": 15
+    },
+    "plow": {
+      "en": "plow",
+      "text": "отвал",
+      "max_bytes": 15
+    },
+    "jib": {
+      "en": "jib",
+      "text": "гусёк",
+      "max_bytes": 15
+    },
+    "flipper_bucket": {
+      "en": "flipper bucket",
+      "text": "перекид.",
+      "max_bytes": 15
+    },
+    "pallet_forks": {
+      "en": "pallet forks",
+      "text": "вилы",
+      "max_bytes": 15
     }
   },
   "simd_strings": {
@@ -80,6 +105,10 @@
     "Транспорт"
   ],
   "exe_strings": {
+    "0x14149adde": {
+      "en": "Debug dump",
+      "text": "Отладочный дамп"
+    },
     "0x14149b5ba": {
       "en": "the account is short",
       "text": "на счёте не хватает средств"
@@ -487,6 +516,118 @@
     "0x141548d70": {
       "en": "sled",
       "text": "снегоход"
+    },
+    "0x14155f1ca": {
+      "en": "  unlock the ",
+      "text": "  разблокировать "
+    },
+    "0x14155f1d8": {
+      "en": "  lock the ",
+      "text": "  заблокировать "
+    },
+    "0x14155f1e4": {
+      "en": "bring the shaft to the ",
+      "text": "подведите вал к крюкам ("
+    },
+    "0x14155f1fc": {
+      "en": "'s hooks to lock it",
+      "text": "), чтобы заблокировать"
+    },
+    "0x14155f210": {
+      "en": "  open the Q-Lock to release the bucket",
+      "text": "  откройте Q-Lock, чтобы отцепить ковш"
+    },
+    "0x14155f238": {
+      "en": "  close the Q-Lock on the bucket",
+      "text": "  закройте Q-Lock на ковше"
+    },
+    "0x14155f260": {
+      "en": "bring the shaft to the bucket's hooks to lock it",
+      "text": "подведите вал к крюкам ковша, чтобы заблокировать"
+    },
+    "0x14155f291": {
+      "en": "  ·  nothing inside the loop",
+      "text": "  ·  внутри петли ничего нет"
+    },
+    "0x14155f2af": {
+      "en": "  take the ",
+      "text": "  взять: "
+    },
+    "0x14155f2bb": {
+      "en": "'s winch remote",
+      "text": " — пульт лебёдки"
+    },
+    "0x14155f2d0": {
+      "en": "  return the winch remote  ·  nothing on the line",
+      "text": "  вернуть пульт лебёдки  ·  на тросе ничего нет"
+    },
+    "0x14155f303": {
+      "en": "  return the winch remote",
+      "text": "  вернуть пульт лебёдки"
+    },
+    "0x14155f31d": {
+      "en": "  shackle to the ",
+      "text": "  прицепить к: "
+    },
+    "0x14155f32f": {
+      "en": "'s ",
+      "text": " — "
+    },
+    "0x14155f333": {
+      "en": "  hook the ",
+      "text": "  зацепить: "
+    },
+    "0x14155f33f": {
+      "en": "'s line to itself",
+      "text": " — трос за себя"
+    },
+    "0x14155f358": {
+      "en": "'s winch line is fully extended",
+      "text": ": трос лебёдки полностью размотан"
+    },
+    "0x14155f378": {
+      "en": "  set the hook down",
+      "text": "  положить крюк"
+    },
+    "0x14155f38c": {
+      "en": "  unhook the ",
+      "text": "  отцепить: "
+    },
+    "0x14155f39a": {
+      "en": "'s line from itself",
+      "text": " — трос от себя"
+    },
+    "0x14155f3ae": {
+      "en": "  unshackle the ",
+      "text": "  отцепить: "
+    },
+    "0x14155f3bf": {
+      "en": "'s line",
+      "text": " — трос"
+    },
+    "0x14155f3c7": {
+      "en": "'s hook",
+      "text": " — крюк"
+    },
+    "0x14155f3cf": {
+      "en": "  toggle the ",
+      "text": "  переключить: "
+    },
+    "0x14155f3dd": {
+      "en": "'s brake",
+      "text": " — тормоз"
+    },
+    "0x14155f3e6": {
+      "en": "  set the ",
+      "text": "  поставить: "
+    },
+    "0x14155f3f1": {
+      "en": "  put the ",
+      "text": "  перевести "
+    },
+    "0x14155f3fc": {
+      "en": " in neutral",
+      "text": " в нейтраль"
     },
     "0x141548d75": {
       "en": "dirt bike",

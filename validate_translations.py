@@ -48,14 +48,15 @@ def validate_doc(doc: dict, template: dict, name: str) -> list[str]:
     if not doc.get("meta", {}).get("code"):
         errs.append(f"{name}: missing meta.code")
 
-    for k in ("yes", "no"):
+    for k, tmpl in template["inline_literals"].items():
         item = doc.get("inline_literals", {}).get(k)
         if not item or not isinstance(item.get("text"), str):
             errs.append(f"{name}: missing inline_literals.{k}.text")
         else:
             bl = len(item["text"].encode("utf-8"))
-            if not (1 <= bl <= 7):
-                errs.append(f"{name}: inline_literals.{k} '{item['text']}' is {bl}B (must be 1..7 UTF-8 bytes)")
+            mx = tmpl.get("max_bytes", 7)
+            if not (1 <= bl <= mx):
+                errs.append(f"{name}: inline_literals.{k} '{item['text']}' is {bl}B (must be 1..{mx} UTF-8 bytes)")
 
     for k, tmpl in template["simd_strings"].items():
         item = doc.get("simd_strings", {}).get(k)

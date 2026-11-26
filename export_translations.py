@@ -62,6 +62,11 @@ def build_doc(use_russian: bool) -> dict:
         "inline_literals": {
             "yes": {"en": "yes", "text": pick("yes", "да"), "max_bytes": 7},
             "no": {"en": "no", "text": pick("no", "нет"), "max_bytes": 7},
+            "bucket": {"en": "bucket", "text": pick("bucket", "ковш"), "max_bytes": 15},
+            "plow": {"en": "plow", "text": pick("plow", "отвал"), "max_bytes": 15},
+            "jib": {"en": "jib", "text": pick("jib", "гусёк"), "max_bytes": 15},
+            "flipper_bucket": {"en": "flipper bucket", "text": pick("flipper bucket", "перекид."), "max_bytes": 15},
+            "pallet_forks": {"en": "pallet forks", "text": pick("pallet forks", "вилы"), "max_bytes": 15},
         },
         "simd_strings": {
             k: {"en": v["en"], "text": pick(v["en"], v["ru"]), "max_bytes": v["max_bytes"]}

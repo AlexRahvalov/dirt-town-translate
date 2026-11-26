@@ -272,6 +272,49 @@ def build_plugin_data(game_dir: Path, locale: str = "ru") -> None:
         + b"\xe9" + struct.pack("<i", 0x140c7e6fb - (0x140c7ed58 + 23 + 5)) + b"\x90" * 3,
         bytes.fromhex("b86e6f0000c68424c20100000066898424c0010000b802000000e984f9ffff"),
     )
+
+    # Attachment name SSO helper at 0x140c21010..0x140c210db (203 bytes):
+    # Preserves r9/r10/r11 (GCC -fipa-ra callers keep r9 live across call) and writes up to 15B UTF-8 SSO std::string.
+    att_keys = ["bucket", "plow", "flipper_bucket", "pallet_forks", "jib"]
+    att_vals = [doc["inline_literals"][k]["text"].encode("utf-8") for k in att_keys]
+    for k, b in zip(att_keys, att_vals):
+        assert 1 <= len(b) <= 15, f"inline_literals.{k} must be 1..15 UTF-8 bytes, got {len(b)}"
+
+    def _att_branch(b: bytes, jmp_rel: int | None) -> bytes:
+        padded = b.ljust(16, b"\x00")
+        code = b"\x48\xba" + padded[:8] + b"\x49\xb8" + padded[8:16] + struct.pack("<BI", 0xB9, len(b))
+        if jmp_rel is not None:
+            code += struct.pack("<Bb", 0xEB, jmp_rel)
+        return code
+
+    # Layout: prologue (10B) + 4x (cmp dl, imm8; je rel8 = 5B) -> 30B header
+    # Branches (each 27B except last 25B, total 133B) -> shared epilogue (13B) = 176B <= 203B
+    # Offsets from 0x140c21010:
+    #   0x00..0x09 (10B): mov rax, rcx; lea rcx, [rcx+0x10]; mov [rax], rcx
+    #   0x0a..0x1d (20B): cmp dl,1 je b1; cmp dl,3 je b2; cmp dl,4 je b3; cmp dl,5 je b4
+    #   0x1e (b0 bucket, 27B) -> jmp epi
+    #   0x39 (b1 plow, 27B) -> jmp epi
+    #   0x54 (b2 flipper, 27B) -> jmp epi
+    #   0x6f (b3 forks, 27B) -> jmp epi
+    #   0x8a (b4 jib, 25B) -> fallthrough to epi
+    #   0xa3 (epi, 13B): mov [rax+0x10], rdx; mov [rax+0x18], r8; mov [rax+8], rcx; ret
+    epi_off = 0xA3
+    att_code = bytearray()
+    att_code += b"\x48\x89\xc8\x48\x8d\x49\x10\x48\x89\x08"  # 10B prologue
+    for kind_byte, target_off in [(1, 0x39), (3, 0x54), (4, 0x6F), (5, 0x8A)]:
+        att_code += bytes([0x80, 0xFA, kind_byte, 0x74])
+        att_code += struct.pack("<b", target_off - (len(att_code) + 1))
+    assert len(att_code) == 0x1E
+    for idx, b in enumerate(att_vals):
+        is_last = idx == len(att_vals) - 1
+        rel = None if is_last else (epi_off - (len(att_code) + 27))
+        att_code += _att_branch(b, rel)
+    assert len(att_code) == epi_off
+    att_code += b"\x48\x89\x50\x10\x4c\x89\x40\x18\x48\x89\x48\x08\xc3"  # 13B epilogue
+    assert len(att_code) <= 203
+    att_padded = bytes(att_code).ljust(203, b"\x90")
+    att_orig = orig[va_to_raw(0x140c21010):va_to_raw(0x140c21010) + 203]
+    add_raw(0x140c21010, att_padded, att_orig)
     add_rip32(0x140c66e53, add_str(""), 0x141562102)
 
     add_imm(0x140c7eaf9, 0x0E, slen(0x141564b11), 4)

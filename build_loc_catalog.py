@@ -6,7 +6,10 @@ from capstone import Cs, CS_ARCH_X86, CS_MODE_64
 from common import CATALOG_PATH, add_game_dir_arg, resolve_game_dir
 
 _args = add_game_dir_arg(argparse.ArgumentParser()).parse_args()
-EXE = resolve_game_dir(_args.game_dir) / "backup_en" / "dirttown.exe"
+_game_dir = resolve_game_dir(_args.game_dir)
+EXE = _game_dir / "backup_en" / "dirttown.exe"
+if not EXE.exists():
+    EXE = _game_dir / "dirttown.exe"
 data = EXE.read_bytes()
 pe_off = struct.unpack_from("<I", data, 0x3C)[0]
 num_sec = struct.unpack_from("<H", data, pe_off + 6)[0]
@@ -110,6 +113,8 @@ for name, s_va, s_vsz, s_rptr, s_rsz in sections:
 # 3. Collect all strings in the known UI code ranges + tables
 ui_code_ranges = [
     ("game_ui", 0x140c40000, 0x140d00000),
+    ("interact_prompts", 0x140c34000, 0x140c36000),
+    ("debug_hud", 0x14024a000, 0x140250000),
     ("net_shop_prompts", 0x140250000, 0x140280000),
     ("clip_tool", 0x1402c0000, 0x1402d2000),
     ("editor_ui", 0x14034e000, 0x14043a000),

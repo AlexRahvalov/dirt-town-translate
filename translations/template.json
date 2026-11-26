@@ -15,6 +15,31 @@
       "en": "no",
       "text": "no",
       "max_bytes": 7
+    },
+    "bucket": {
+      "en": "bucket",
+      "text": "bucket",
+      "max_bytes": 15
+    },
+    "plow": {
+      "en": "plow",
+      "text": "plow",
+      "max_bytes": 15
+    },
+    "jib": {
+      "en": "jib",
+      "text": "jib",
+      "max_bytes": 15
+    },
+    "flipper_bucket": {
+      "en": "flipper bucket",
+      "text": "flipper bucket",
+      "max_bytes": 15
+    },
+    "pallet_forks": {
+      "en": "pallet forks",
+      "text": "pallet forks",
+      "max_bytes": 15
     }
   },
   "simd_strings": {
@@ -80,6 +105,10 @@
     "Getting about"
   ],
   "exe_strings": {
+    "0x14149adde": {
+      "en": "Debug dump",
+      "text": "Debug dump"
+    },
     "0x14149b5ba": {
       "en": "the account is short",
       "text": "the account is short"
@@ -487,6 +516,118 @@
     "0x141548d70": {
       "en": "sled",
       "text": "sled"
+    },
+    "0x14155f1ca": {
+      "en": "  unlock the ",
+      "text": "  unlock the "
+    },
+    "0x14155f1d8": {
+      "en": "  lock the ",
+      "text": "  lock the "
+    },
+    "0x14155f1e4": {
+      "en": "bring the shaft to the ",
+      "text": "bring the shaft to the "
+    },
+    "0x14155f1fc": {
+      "en": "'s hooks to lock it",
+      "text": "'s hooks to lock it"
+    },
+    "0x14155f210": {
+      "en": "  open the Q-Lock to release the bucket",
+      "text": "  open the Q-Lock to release the bucket"
+    },
+    "0x14155f238": {
+      "en": "  close the Q-Lock on the bucket",
+      "text": "  close the Q-Lock on the bucket"
+    },
+    "0x14155f260": {
+      "en": "bring the shaft to the bucket's hooks to lock it",
+      "text": "bring the shaft to the bucket's hooks to lock it"
+    },
+    "0x14155f291": {
+      "en": "  ·  nothing inside the loop",
+      "text": "  ·  nothing inside the loop"
+    },
+    "0x14155f2af": {
+      "en": "  take the ",
+      "text": "  take the "
+    },
+    "0x14155f2bb": {
+      "en": "'s winch remote",
+      "text": "'s winch remote"
+    },
+    "0x14155f2d0": {
+      "en": "  return the winch remote  ·  nothing on the line",
+      "text": "  return the winch remote  ·  nothing on the line"
+    },
+    "0x14155f303": {
+      "en": "  return the winch remote",
+      "text": "  return the winch remote"
+    },
+    "0x14155f31d": {
+      "en": "  shackle to the ",
+      "text": "  shackle to the "
+    },
+    "0x14155f32f": {
+      "en": "'s ",
+      "text": "'s "
+    },
+    "0x14155f333": {
+      "en": "  hook the ",
+      "text": "  hook the "
+    },
+    "0x14155f33f": {
+      "en": "'s line to itself",
+      "text": "'s line to itself"
+    },
+    "0x14155f358": {
+      "en": "'s winch line is fully extended",
+      "text": "'s winch line is fully extended"
+    },
+    "0x14155f378": {
+      "en": "  set the hook down",
+      "text": "  set the hook down"
+    },
+    "0x14155f38c": {
+      "en": "  unhook the ",
+      "text": "  unhook the "
+    },
+    "0x14155f39a": {
+      "en": "'s line from itself",
+      "text": "'s line from itself"
+    },
+    "0x14155f3ae": {
+      "en": "  unshackle the ",
+      "text": "  unshackle the "
+    },
+    "0x14155f3bf": {
+      "en": "'s line",
+      "text": "'s line"
+    },
+    "0x14155f3c7": {
+      "en": "'s hook",
+      "text": "'s hook"
+    },
+    "0x14155f3cf": {
+      "en": "  toggle the ",
+      "text": "  toggle the "
+    },
+    "0x14155f3dd": {
+      "en": "'s brake",
+      "text": "'s brake"
+    },
+    "0x14155f3e6": {
+      "en": "  set the ",
+      "text": "  set the "
+    },
+    "0x14155f3f1": {
+      "en": "  put the ",
+      "text": "  put the "
+    },
+    "0x14155f3fc": {
+      "en": " in neutral",
+      "text": " in neutral"
     },
     "0x141548d75": {
       "en": "dirt bike",
