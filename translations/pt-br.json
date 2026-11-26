@@ -120,6 +120,10 @@
     "Deslocamento"
   ],
   "exe_strings": {
+    "0x14149ac60": {
+      "en": "loading",
+      "text": "carregando"
+    },
     "0x14149adde": {
       "en": "Debug dump",
       "text": "Dump de depuração"

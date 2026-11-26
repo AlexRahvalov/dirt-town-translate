@@ -12,6 +12,7 @@ ED_ALL = {"clip_tool", "editor_ui", "editor_tuning"}
 # Format: orig_va: (expected_en, ru_text, allowed_groups_set)
 STRING_PATCHES = {
     # --- HUD / Prompts / World / Delivery / Chains / Respawn ---
+    0x14149ac60: ("loading", "загрузка", {"debug_hud"}),
     0x14149adde: ("Debug dump", "Отладочный дамп", {"debug_hud"}),
     0x14149b5ba: ("the account is short", "на счёте не хватает средств", {"net_shop_prompts"}),
     0x14149b5fc: (", delivered in front of you", ", доставлено прямо перед вами", {"net_shop_prompts"}),

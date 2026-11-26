@@ -120,6 +120,10 @@
     "Desplazamiento"
   ],
   "exe_strings": {
+    "0x14149ac60": {
+      "en": "loading",
+      "text": "cargando"
+    },
     "0x14149adde": {
       "en": "Debug dump",
       "text": "Volcado de depuración"

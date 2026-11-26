@@ -130,6 +130,10 @@
     "代步工具"
   ],
   "exe_strings": {
+    "0x14149ac60": {
+      "en": "loading",
+      "text": "加载中"
+    },
     "0x14149adde": {
       "en": "Debug dump",
       "text": "调试转储"

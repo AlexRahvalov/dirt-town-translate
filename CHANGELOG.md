@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [1.5.1] - 2026-11-26
+
+- **Fix**: Translated the initial splash screen `loading` badge (`0x14149ac60`, `0x1402433c2` / `0x140244ed2` / `0x140244ee2`) across all 8 non-English locales.
+
 ## [1.5.0] - 2026-11-26
 
 - **Feat**: Added 3 new full translations — **Belarusian (`be`)**, **Ukrainian (`uk`)**, and **Polish (`pl`)** — bringing total supported languages to **9** (`en`, `ru`, `be`, `uk`, `pl`, `zh-cn`, `es`, `de`, `pt-br`), all with live hot-swap support.

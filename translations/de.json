@@ -120,6 +120,10 @@
     "Unterwegs"
   ],
   "exe_strings": {
+    "0x14149ac60": {
+      "en": "loading",
+      "text": "Laden"
+    },
     "0x14149adde": {
       "en": "Debug dump",
       "text": "Debug-Dump"

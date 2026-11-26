@@ -120,6 +120,10 @@
     "Getting about"
   ],
   "exe_strings": {
+    "0x14149ac60": {
+      "en": "loading",
+      "text": "loading"
+    },
     "0x14149adde": {
       "en": "Debug dump",
       "text": "Debug dump"

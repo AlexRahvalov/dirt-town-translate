@@ -114,7 +114,7 @@ for name, s_va, s_vsz, s_rptr, s_rsz in sections:
 ui_code_ranges = [
     ("game_ui", 0x140c40000, 0x140d00000),
     ("interact_prompts", 0x140c34000, 0x140c36000),
-    ("debug_hud", 0x14024a000, 0x140250000),
+    ("debug_hud", 0x140243000, 0x140250000),
     ("net_shop_prompts", 0x140250000, 0x140280000),
     ("clip_tool", 0x1402c0000, 0x1402d2000),
     ("editor_ui", 0x14034e000, 0x14043a000),
