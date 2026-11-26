@@ -1,0 +1,4228 @@
+{
+  "meta": {
+    "code": "be",
+    "name": "Беларуская",
+    "game_build": "ed45b4be7fc6",
+    "version": 1
+  },
+  "inline_literals": {
+    "yes": {
+      "en": "yes",
+      "text": "так",
+      "max_bytes": 7
+    },
+    "no": {
+      "en": "no",
+      "text": "не",
+      "max_bytes": 7
+    },
+    "bucket": {
+      "en": "bucket",
+      "text": "коўш",
+      "max_bytes": 15
+    },
+    "plow": {
+      "en": "plow",
+      "text": "адвал",
+      "max_bytes": 15
+    },
+    "jib": {
+      "en": "jib",
+      "text": "гусёк",
+      "max_bytes": 15
+    },
+    "flipper_bucket": {
+      "en": "flipper bucket",
+      "text": "перакід.",
+      "max_bytes": 15
+    },
+    "pallet_forks": {
+      "en": "pallet forks",
+      "text": "вілы",
+      "max_bytes": 15
+    },
+    "respawn_prefix": {
+      "en": "Press ",
+      "text": "Націсніце ",
+      "max_bytes": 60
+    },
+    "respawn_suffix": {
+      "en": " to respawn",
+      "text": " для адраджэння",
+      "max_bytes": 60
+    },
+    "respawn_bind": {
+      "en": "Bind Respawn in Controls",
+      "text": "Прызначце Адраджэнне ў Кіраванні",
+      "max_bytes": 90
+    }
+  },
+  "simd_strings": {
+    "clear_pad_26b": {
+      "en": "clear the pad for the crew",
+      "text": "ачысціць зону",
+      "max_bytes": 26
+    },
+    "seat_37b": {
+      "en": "step out of the seat to take delivery",
+      "text": "выйдзіце з кабіны!",
+      "max_bytes": 37
+    },
+    "flat_51b": {
+      "en": "there is no flat ground nearby for the delivery.",
+      "text": "побач няма роўнага месца.",
+      "max_bytes": 51
+    },
+    "dealer_46b": {
+      "en": "the dealer has none of those left on the lot",
+      "text": "тэхнікі няма ў дылера",
+      "max_bytes": 46
+    },
+    "item_31b": {
+      "en": "the item is no longer installed",
+      "text": "прадмет выдалены",
+      "max_bytes": 31
+    }
+  },
+  "font_redirects": [
+    {
+      "pack_key": "fonts/Roboto-Medium.ttf",
+      "kind": "pack",
+      "target": "fonts/Roboto-Regular.ttf"
+    },
+    {
+      "pack_key": "fonts/Roboto-Black.ttf",
+      "kind": "pack",
+      "target": "fonts/Roboto-Bold.ttf"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Regular.ttf",
+      "kind": "winfont",
+      "target": "cour.ttf"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Bold.ttf",
+      "kind": "winfont",
+      "target": "courbd.ttf"
+    }
+  ],
+  "graphics_presets": [
+    "Нізкія",
+    "Сярэднія",
+    "Высокія",
+    "Ультра"
+  ],
+  "shop_sections": [
+    "Пагрузчыкі",
+    "Землярыйныя",
+    "Самазвалы",
+    "Фермерскія",
+    "Транспарт"
+  ],
+  "exe_strings": {
+    "0x14149adde": {
+      "en": "Debug dump",
+      "text": "Адладачны дамп"
+    },
+    "0x14149b5ba": {
+      "en": "the account is short",
+      "text": "на рахунку не хапае сродкаў"
+    },
+    "0x14149b5fc": {
+      "en": ", delivered in front of you",
+      "text": ", дастаўлена проста перад вамі"
+    },
+    "0x14149b698": {
+      "en": "grade grid on",
+      "text": "сетка ўхілу ўкл."
+    },
+    "0x14149b6a6": {
+      "en": "grade grid auto",
+      "text": "сетка ўхілу аўта"
+    },
+    "0x14149b6c1": {
+      "en": "too close to another stick",
+      "text": "занадта блізка да іншага калка"
+    },
+    "0x14149b6dc": {
+      "en": "range %d of %d, %.1f m/s",
+      "text": "дыяпазон %d з %d, %.1f м/с"
+    },
+    "0x14149b6f8": {
+      "en": "arm lock: bring the arm home first",
+      "text": "замок стралы: спачатку складзіце стралу"
+    },
+    "0x14149bd1a": {
+      "en": "blade level, %.2f m%s",
+      "text": "адвал у гарызонт, %.2f м%s"
+    },
+    "0x14149bd30": {
+      "en": "blade on the sticks, %.2f m%s",
+      "text": "адвал па калках, %.2f м%s"
+    },
+    "0x14149bd50": {
+      "en": "blade tilt locked to the grade",
+      "text": "нахіл адвала зафіксаваны па ўхіле"
+    },
+    "0x14149bd6f": {
+      "en": "blade tilt free",
+      "text": "вольны нахіл адвала"
+    },
+    "0x14149be27": {
+      "en": " This session is not saved.",
+      "text": " Гэты сеанс не захоўваецца."
+    },
+    "0x14149be43": {
+      "en": "the host is gone",
+      "text": "хост адключыўся"
+    },
+    "0x14149beeb": {
+      "en": "receiving the site, ",
+      "text": "атрыманне карты, "
+    },
+    "0x14149bf02": {
+      "en": "reconnected to host",
+      "text": "перападключана да хоста"
+    },
+    "0x14149bf59": {
+      "en": "connecting, attempt ",
+      "text": "падключэнне, спроба "
+    },
+    "0x14149bf6e": {
+      "en": ", trying again",
+      "text": ", паўторная спроба"
+    },
+    "0x14149bf7d": {
+      "en": "receiving the site, 0%",
+      "text": "атрыманне карты, 0%"
+    },
+    "0x14149bf98": {
+      "en": " plugged in · not used. Settings › Controls › Devices assigns it.",
+      "text": " падключана · не выкарыстоўваецца. Прызначце ў Налады › Кіраванне › Прылады."
+    },
+    "0x14149c0af": {
+      "en": "Use",
+      "text": "Ужыць"
+    },
+    "0x14149c0b3": {
+      "en": "LMB",
+      "text": "ЛКМ"
+    },
+    "0x14149c0b7": {
+      "en": "Click",
+      "text": "Клік"
+    },
+    "0x14149c0bd": {
+      "en": "Press ",
+      "text": "Націсніце "
+    },
+    "0x14149c0c4": {
+      "en": "Bind Hold grade in Controls",
+      "text": "Прызначце Утрыманне ўхілу ў Кіраванні"
+    },
+    "0x14149c0e0": {
+      "en": "Bind Grade sticks in Controls",
+      "text": "Прызначце Узроўневыя калкі ў Кіраванні"
+    },
+    "0x14149c0fe": {
+      "en": " for the grade sticks",
+      "text": " для ўзроўневых калкоў"
+    },
+    "0x14149c114": {
+      "en": "the host has left",
+      "text": "хост выйшаў"
+    },
+    "0x14149c126": {
+      "en": ", %+.2f m",
+      "text": ", %+.2f м"
+    },
+    "0x14149c130": {
+      "en": "blade free",
+      "text": "адвал вольны"
+    },
+    "0x14149c13b": {
+      "en": "blade hold at grade",
+      "text": "утрыманне адвала па ўхіле"
+    },
+    "0x14149c14f": {
+      "en": "blade hold %+.2f m",
+      "text": "утрыманне адвала %+.2f м"
+    },
+    "0x14149c162": {
+      "en": ", %.0f s",
+      "text": ", %.0f с"
+    },
+    "0x14149c16b": {
+      "en": "leave game",
+      "text": "выйсці з гульні"
+    },
+    "0x14149c178": {
+      "en": "CONNECTION LOST. RECONNECTING...",
+      "text": "СУВЯЗЬ СТРАЧАНА. ПЕРАПАДКЛЮЧЭННЕ..."
+    },
+    "0x14149c199": {
+      "en": "back to menu",
+      "text": "у меню"
+    },
+    "0x14149c1a6": {
+      "en": "COULD NOT JOIN",
+      "text": "НЕ ЎДАЛОСЯ ДАЛУЧЫЦЦА"
+    },
+    "0x14149c1b5": {
+      "en": "ok",
+      "text": "ок"
+    },
+    "0x14149c1b8": {
+      "en": "OUT OF ORDER",
+      "text": "НЕ ПРАЦУЕ"
+    },
+    "0x14149c1c5": {
+      "en": "Stick removed",
+      "text": "Калок выдалены"
+    },
+    "0x14149c1d3": {
+      "en": "All ",
+      "text": "Усе "
+    },
+    "0x14149c1d8": {
+      "en": " sticks removed",
+      "text": " калкоў выдалена"
+    },
+    "0x14149c1e8": {
+      "en": "join link copied",
+      "text": "спасылка скапіявана"
+    },
+    "0x14149c338": {
+      "en": "updated",
+      "text": "абноўлена"
+    },
+    "0x14149c340": {
+      "en": "published",
+      "text": "апублікавана"
+    },
+    "0x14149c350": {
+      "en": "accept the Workshop agreement on the page Steam opened",
+      "text": "прыміце пагадненне Workshop у Steam"
+    },
+    "0x14149c598": {
+      "en": "the item is no longer installed",
+      "text": "аб'ект больш не ўсталяваны"
+    },
+    "0x14149c5b8": {
+      "en": "the author's update could not be taken",
+      "text": "не ўдалося прыняць абнаўленне аўтара"
+    },
+    "0x14149c630": {
+      "en": "A Dirt Town site made in the game's editor.",
+      "text": "Карта Dirt Town, створаная ў рэдактары гульні."
+    },
+    "0x14149c65c": {
+      "en": "could not write ",
+      "text": "не ўдалося запісаць "
+    },
+    "0x14149c68a": {
+      "en": "could not start the session",
+      "text": "не ўдалося запусціць сеанс"
+    },
+    "0x1414d3ba0": {
+      "en": "Pause",
+      "text": "Паўза"
+    },
+    "0x1414d3ba6": {
+      "en": "Esc menu",
+      "text": "Меню Esc"
+    },
+    "0x1414d3baf": {
+      "en": "Map",
+      "text": "Карта"
+    },
+    "0x1414d3bb3": {
+      "en": "Minimap zoom",
+      "text": "Маштаб міні-карты"
+    },
+    "0x1414d3bc0": {
+      "en": "Hide or show jobs",
+      "text": "Схаваць/паказаць заданні"
+    },
+    "0x1414d3bd2": {
+      "en": "Get in or out",
+      "text": "Сесці / выйсці"
+    },
+    "0x1414d3be0": {
+      "en": "Interact",
+      "text": "Узаемадзеянне"
+    },
+    "0x1414d3be9": {
+      "en": "Fire the charges",
+      "text": "Падарваць зарады"
+    },
+    "0x1414d3bfa": {
+      "en": "Tool belt",
+      "text": "Пояс інструментаў"
+    },
+    "0x1414d3c04": {
+      "en": "No tool",
+      "text": "Без інструмента"
+    },
+    "0x1414d3c0c": {
+      "en": "Grade sticks",
+      "text": "Узроўневыя калкі"
+    },
+    "0x1414d3c19": {
+      "en": "Drill",
+      "text": "Бур"
+    },
+    "0x1414d3c1f": {
+      "en": "Dynamite",
+      "text": "Дынаміт"
+    },
+    "0x1414d3c28": {
+      "en": "Detonator",
+      "text": "Дэтанатар"
+    },
+    "0x1414d3c32": {
+      "en": "Use",
+      "text": "Ужыць"
+    },
+    "0x1414d3c36": {
+      "en": "Talk",
+      "text": "Гаварыць"
+    },
+    "0x1414d3c3b": {
+      "en": "Stick",
+      "text": "Калок"
+    },
+    "0x1414d3c41": {
+      "en": "Call the bike",
+      "text": "Выклікаць матацыкл"
+    },
+    "0x1414d3c4f": {
+      "en": "Attachment",
+      "text": "Навясное"
+    },
+    "0x1414d3c5a": {
+      "en": "Change view",
+      "text": "Змяніць від"
+    },
+    "0x1414d3c66": {
+      "en": "Float",
+      "text": "Плаваючы рэжым"
+    },
+    "0x1414d3c6c": {
+      "en": "Hold grade",
+      "text": "Утрыманне ўхілу"
+    },
+    "0x1414d3c77": {
+      "en": "Tilt lock",
+      "text": "Фіксацыя нахілу"
+    },
+    "0x1414d3c81": {
+      "en": "Hold offset",
+      "text": "Зрушэнне ўзроўню"
+    },
+    "0x1414d3c8d": {
+      "en": "Grade grid",
+      "text": "Сетка ўхілу"
+    },
+    "0x1414d3c98": {
+      "en": "Range",
+      "text": "Дыяпазон"
+    },
+    "0x1414d3c9e": {
+      "en": "Speed range",
+      "text": "Дыяпазон хуткасцяў"
+    },
+    "0x1414d3caa": {
+      "en": "Warning light",
+      "text": "Маячок"
+    },
+    "0x1414d3cb8": {
+      "en": "Rear hydraulics",
+      "text": "Задняя гідраўліка"
+    },
+    "0x1414d3cc8": {
+      "en": "Hitch up/down",
+      "text": "Счэпка ўверх/уніз"
+    },
+    "0x1414d3cd6": {
+      "en": "Diff lock",
+      "text": "Блакіроўка дыф."
+    },
+    "0x1414d3ce0": {
+      "en": "Attachment lock",
+      "text": "Замок навяснога"
+    },
+    "0x1414d3cf0": {
+      "en": "Tailgate lock",
+      "text": "Замок задняга борта"
+    },
+    "0x1414d3cfe": {
+      "en": "Lift axle",
+      "text": "Пад'ёмная вось"
+    },
+    "0x1414d3d08": {
+      "en": "Respawn",
+      "text": "Адраджэнне"
+    },
+    "0x1414d3d10": {
+      "en": "Tuning",
+      "text": "Тюнінг"
+    },
+    "0x1414d3d17": {
+      "en": "Mark",
+      "text": "Пазнака"
+    },
+    "0x1414d3d1c": {
+      "en": "Replay",
+      "text": "Паўтор"
+    },
+    "0x1414d3d23": {
+      "en": "Record take",
+      "text": "Запіс дубля"
+    },
+    "0x1414d411d": {
+      "en": "%.0f m",
+      "text": "%.0f м"
+    },
+    "0x1414d4124": {
+      "en": "N",
+      "text": "Пн"
+    },
+    "0x141548bc6": {
+      "en": "Off the map. ",
+      "text": "За межамі карты. "
+    },
+    "0x141548bd4": {
+      "en": "Engine flooded. ",
+      "text": "Рухавік заліты. "
+    },
+    "0x141548c2b": {
+      "en": "Use ",
+      "text": "Утрымлівайце "
+    },
+    "0x141548c30": {
+      "en": " to push",
+      "text": ", каб штурхаць"
+    },
+    "0x141548c67": {
+      "en": "this site has no dealer",
+      "text": "на гэтай карце няма дылера"
+    },
+    "0x141548c80": {
+      "en": "step out of the seat to take delivery",
+      "text": "выйдзіце з кабіны, каб прыняць дастаўку"
+    },
+    "0x141548ca8": {
+      "en": "only the host takes delivery in a session yet",
+      "text": "пакуль толькі хост можа прымаць дастаўку ў сеансе"
+    },
+    "0x141548cd8": {
+      "en": "the dealer has none of these left on this site",
+      "text": "у дылера больш няма такой тэхнікі на гэтай карце"
+    },
+    "0x141548d08": {
+      "en": "there is no flat, dry, clear ground near you for it",
+      "text": "побач няма роўнага, сухога і вольнага месца"
+    },
+    "0x141548d67": {
+      "en": " is free",
+      "text": " вольны"
+    },
+    "0x141548d70": {
+      "en": "sled",
+      "text": "снегаход"
+    },
+    "0x14155f1ca": {
+      "en": "  unlock the ",
+      "text": "  адкрыць замок: "
+    },
+    "0x14155f1d8": {
+      "en": "  lock the ",
+      "text": "  закрыць замок: "
+    },
+    "0x14155f1e4": {
+      "en": "bring the shaft to the ",
+      "text": "падвядзіце вал да крукоў ("
+    },
+    "0x14155f1fc": {
+      "en": "'s hooks to lock it",
+      "text": "), каб зафіксаваць"
+    },
+    "0x14155f210": {
+      "en": "  open the Q-Lock to release the bucket",
+      "text": "  адкрыць Q-Lock, каб адчапіць коўш"
+    },
+    "0x14155f238": {
+      "en": "  close the Q-Lock on the bucket",
+      "text": "  закрыць Q-Lock на каўшы"
+    },
+    "0x14155f260": {
+      "en": "bring the shaft to the bucket's hooks to lock it",
+      "text": "падвядзіце вал да крукоў каўша для фіксацыі"
+    },
+    "0x14155f291": {
+      "en": "  ·  nothing inside the loop",
+      "text": "  ·  унутры пятлі нічога няма"
+    },
+    "0x14155f2af": {
+      "en": "  take the ",
+      "text": "  узяць пульт лябёдкі: "
+    },
+    "0x14155f2bb": {
+      "en": "'s winch remote",
+      "text": ""
+    },
+    "0x14155f2d0": {
+      "en": "  return the winch remote  ·  nothing on the line",
+      "text": "  вярнуць пульт лябёдкі  ·  трос вольны"
+    },
+    "0x14155f303": {
+      "en": "  return the winch remote",
+      "text": "  вярнуць пульт лябёдкі"
+    },
+    "0x14155f31d": {
+      "en": "  shackle to the ",
+      "text": "  прычапіць шакл да "
+    },
+    "0x14155f32f": {
+      "en": "'s ",
+      "text": " — "
+    },
+    "0x14155f333": {
+      "en": "  hook the ",
+      "text": "  зачапіць трос ("
+    },
+    "0x14155f33f": {
+      "en": "'s line to itself",
+      "text": ") за сябе"
+    },
+    "0x14155f358": {
+      "en": "'s winch line is fully extended",
+      "text": ": трос лябёдкі цалкам размотаны"
+    },
+    "0x14155f378": {
+      "en": "  set the hook down",
+      "text": "  пакласці крук"
+    },
+    "0x14155f38c": {
+      "en": "  unhook the ",
+      "text": "  адчапіць трос ("
+    },
+    "0x14155f39a": {
+      "en": "'s line from itself",
+      "text": ") ад сябе"
+    },
+    "0x14155f3ae": {
+      "en": "  unshackle the ",
+      "text": "  зняць шакл з "
+    },
+    "0x14155f3bf": {
+      "en": "'s line",
+      "text": " (трос)"
+    },
+    "0x14155f3c7": {
+      "en": "'s hook",
+      "text": " (крук)"
+    },
+    "0x14155f3cf": {
+      "en": "  toggle the ",
+      "text": "  пераключыць тормаз: "
+    },
+    "0x14155f3dd": {
+      "en": "'s brake",
+      "text": ""
+    },
+    "0x14155f3e6": {
+      "en": "  set the ",
+      "text": "  паставіць на тормаз: "
+    },
+    "0x14155f3f1": {
+      "en": "  put the ",
+      "text": "  уключыць нейтраль: "
+    },
+    "0x14155f3fc": {
+      "en": " in neutral",
+      "text": ""
+    },
+    "0x141548d75": {
+      "en": "dirt bike",
+      "text": "матацыкл"
+    },
+    "0x141548d7f": {
+      "en": " on this site",
+      "text": " на гэтай карце"
+    },
+    "0x14154a31a": {
+      "en": "  put the chain away",
+      "text": "  схаваць"
+    },
+    "0x14154a330": {
+      "en": "  set the chain's end down  ·  look at an eye or a bucket to hook it",
+      "text": "  пакласці канец ланцуга  ·  навядзіце на вушка або коўш, каб зачапіць"
+    },
+    "0x14154a376": {
+      "en": "  pick the chain's end up",
+      "text": "  падняць ланцуг"
+    },
+    "0x14154a390": {
+      "en": "  unhook the chain",
+      "text": "  зняць ланцуг"
+    },
+    "0x14154f495": {
+      "en": "Click",
+      "text": "Клік"
+    },
+    "0x14154f49b": {
+      "en": "Press J",
+      "text": "Націсніце J"
+    },
+    "0x14154f4a3": {
+      "en": "Press 2 for the grade sticks",
+      "text": "Націсніце 2 для ўзроўневых калкоў"
+    },
+    "0x14154f4c0": {
+      "en": "Press Backspace to respawn",
+      "text": "Націсніце Backspace для адраджэння"
+    },
+    "0x14155a3d9": {
+      "en": "  set its height  ·  hold ",
+      "text": "  задаць вышыню  ·  утрымл. "
+    },
+    "0x14155a3f5": {
+      "en": "  take out the grade sticks",
+      "text": "  дастаць узроўневыя калкі"
+    },
+    "0x14156063a": {
+      "en": "limit exceeded",
+      "text": "ліміт перавышаны"
+    },
+    "0x141560650": {
+      "en": "insufficient privilege: a limited account cannot publish",
+      "text": "недастаткова правоў: абмежаваны акаўнт не можа публікаваць"
+    },
+    "0x141560689": {
+      "en": "access denied",
+      "text": "доступ забаронены"
+    },
+    "0x141560697": {
+      "en": "timeout",
+      "text": "час чакання выйшаў"
+    },
+    "0x14156069f": {
+      "en": "banned",
+      "text": "заблакіравана"
+    },
+    "0x1415606a6": {
+      "en": "not logged on",
+      "text": "не ўвайшлі ў сетку"
+    },
+    "0x1415606b4": {
+      "en": "fail",
+      "text": "памылка"
+    },
+    "0x1415606b9": {
+      "en": "invalid parameter",
+      "text": "няправільны параметр"
+    },
+    "0x1415606cb": {
+      "en": "file not found",
+      "text": "файл не знойдзены"
+    },
+    "0x1415606da": {
+      "en": "service unavailable",
+      "text": "сэрвіс недаступны"
+    },
+    "0x141560ba0": {
+      "en": ", the Workshop agreement is not yet accepted",
+      "text": ", пагадненне Workshop яшчэ не прынята"
+    },
+    "0x141561200": {
+      "en": "B  skip",
+      "text": "B  прапусціць"
+    },
+    "0x141561208": {
+      "en": "A",
+      "text": "A"
+    },
+    "0x14156120a": {
+      "en": "Esc  skip",
+      "text": "Esc  прапусціць"
+    },
+    "0x141561214": {
+      "en": "Enter",
+      "text": "Enter"
+    },
+    "0x141561220": {
+      "en": "OK",
+      "text": "ОК"
+    },
+    "0x141561228": {
+      "en": "Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand",
+      "text": "Дастаўце мінімум 40 тон пяску на жвіровую пляцоўку для шчодрага заказчыка. Гэта адборны пясок"
+    },
+    "0x14156135e": {
+      "en": "LOCKED",
+      "text": "ЗАБЛАК."
+    },
+    "0x141561365": {
+      "en": "NO STICKS",
+      "text": "НЯМА КАЛКОЎ"
+    },
+    "0x14156136f": {
+      "en": "FREE",
+      "text": "ВОЛЬНА"
+    },
+    "0x141561374": {
+      "en": "AUTO",
+      "text": "АЎТА"
+    },
+    "0x141561379": {
+      "en": "MAN",
+      "text": "РУЧН."
+    },
+    "0x14156137d": {
+      "en": "WAIT",
+      "text": "ЧАКАННЕ"
+    },
+    "0x141561382": {
+      "en": "NO GRADE",
+      "text": "БЕЗ УХІЛУ"
+    },
+    "0x14156138b": {
+      "en": "TO GRADE",
+      "text": "ПА ЎХІЛЕ"
+    },
+    "0x14156139a": {
+      "en": "OFS",
+      "text": "ЗРУШ."
+    },
+    "0x1415613a4": {
+      "en": "DEPTH",
+      "text": "ГЛЫБ."
+    },
+    "0x1415613af": {
+      "en": "REACH",
+      "text": "ВЫЛЕТ"
+    },
+    "0x1415616e0": {
+      "en": "X  raise the tipping trailer's drawbar  ·  Z  lower it\nE  put the tractor in neutral",
+      "text": "X  падняць дышла самазвальнага прычэпа  ·  Z  апусціць\nE  паставіць трактар на нейтраль"
+    },
+    "0x141561738": {
+      "en": "The grade hold keeps the blade on the sticks' grade while the dozer climbs the ramp to the pad.",
+      "text": "Утрыманне ўхілу трымае адвал на ўзроўні калкоў, пакуль бульдозер падымаецца па насыпе да пляцоўкі."
+    },
+    "0x141561c2a": {
+      "en": " and ",
+      "text": " і "
+    },
+    "0x141561c34": {
+      "en": "every seat",
+      "text": "уся тэхніка"
+    },
+    "0x141561c3f": {
+      "en": "every machine",
+      "text": "усе машыны"
+    },
+    "0x141561c4d": {
+      "en": "every wheeled seat",
+      "text": "уся колавая тэхніка"
+    },
+    "0x141561c60": {
+      "en": "every wheeled machine",
+      "text": "усе колавыя машыны"
+    },
+    "0x141561c78": {
+      "en": "the trucks, the tractor and the bandvagn",
+      "text": "грузавікі, трактар і ўсюдыход"
+    },
+    "0x141561ca1": {
+      "en": "the loaders",
+      "text": "пагрузчыкі"
+    },
+    "0x141561cad": {
+      "en": "the dozer",
+      "text": "бульдозер"
+    },
+    "0x141561cb7": {
+      "en": "the excavator",
+      "text": "экскаватар"
+    },
+    "0x141561cc5": {
+      "en": "the bike and the snowmobile",
+      "text": "матацыкл і снегаход"
+    },
+    "0x141561d7c": {
+      "en": "keyboard",
+      "text": "клавіятура"
+    },
+    "0x141561d85": {
+      "en": "gamepad",
+      "text": "геймпад"
+    },
+    "0x141561d8d": {
+      "en": "joysticks",
+      "text": "джойсцікі"
+    },
+    "0x141561e07": {
+      "en": "wheel",
+      "text": "руль"
+    },
+    "0x141561e8a": {
+      "en": "flight stick",
+      "text": "авіяджойсцік"
+    },
+    "0x141561ead": {
+      "en": "a joystick",
+      "text": "джойсцік"
+    },
+    "0x141561fb3": {
+      "en": "push up…",
+      "text": "уверх…"
+    },
+    "0x141561fbe": {
+      "en": "push sideways or hat…",
+      "text": "убок або хатка…"
+    },
+    "0x141561fd6": {
+      "en": "push +…",
+      "text": "ход +…"
+    },
+    "0x141561fe0": {
+      "en": "press…",
+      "text": "цісні…"
+    },
+    "0x141561fe9": {
+      "en": "push −…",
+      "text": "ход −…"
+    },
+    "0x141561ff9": {
+      "en": "alt",
+      "text": "дад."
+    },
+    "0x141562008": {
+      "en": "gamepad disconnected",
+      "text": "геймпад адключаны"
+    },
+    "0x14156201d": {
+      "en": "sticks disconnected",
+      "text": "джойсцікі адключаны"
+    },
+    "0x141562036": {
+      "en": "reset",
+      "text": "скінуць"
+    },
+    "0x14156203c": {
+      "en": "also bound to ",
+      "text": "таксама прывязана да "
+    },
+    "0x141562059": {
+      "en": "capture on: ",
+      "text": "захоп з: "
+    },
+    "0x141562068": {
+      "en": "everything",
+      "text": "усё"
+    },
+    "0x141562073": {
+      "en": "developer",
+      "text": "распрацоўшчык"
+    },
+    "0x14156207d": {
+      "en": "open all###fold_all",
+      "text": "разгарнуць усё###fold_all"
+    },
+    "0x141562091": {
+      "en": "fold all###fold_all",
+      "text": "згарнуць усё###fold_all"
+    },
+    "0x1415620a5": {
+      "en": " axis rests",
+      "text": " вось у спакоі"
+    },
+    "0x1415620b1": {
+      "en": " axes rest",
+      "text": " восяў у спакоі"
+    },
+    "0x1415620bc": {
+      "en": "GAMEPAD",
+      "text": "ГЕЙМПАД"
+    },
+    "0x1415620c4": {
+      "en": "GAMEPAD · NOT CONNECTED",
+      "text": "ГЕЙМПАД · НЕ ПАДКЛЮЧАНЫ"
+    },
+    "0x1415620dd": {
+      "en": "JOYSTICKS",
+      "text": "ДЖОЙСЦІКІ"
+    },
+    "0x1415620e7": {
+      "en": "JOYSTICKS · NONE ASSIGNED",
+      "text": "ДЖОЙСЦІКІ · НЕ ПРЫЗНАЧАНЫ"
+    },
+    "0x141562108": {
+      "en": "how far back; the scroll wheel in the chase",
+      "text": "аддаленне; кола мышы ў знешнім відзе"
+    },
+    "0x141562138": {
+      "en": "how far back the camera stands",
+      "text": "наколькі далёка стаіць камера"
+    },
+    "0x141562157": {
+      "en": "mouse + shift arrows",
+      "text": "мыш + Shift-стрэлкі"
+    },
+    "0x14156216c": {
+      "en": "shift + arrows",
+      "text": "Shift + стрэлкі"
+    },
+    "0x14156217b": {
+      "en": "hide 4 to 9",
+      "text": "схаваць 4–9"
+    },
+    "0x141562187": {
+      "en": "show 4 to 9",
+      "text": "паказаць 4–9"
+    },
+    "0x141562198": {
+      "en": "SELECT A BINDING, THEN USE A KEY, BUTTON OR STICK · × OR DELETE CLEARS · ESC CANCELS",
+      "text": "АБЯРЫЦЕ ДЗЕЯННЕ І НАЦІСНІЦЕ КЛАВІШУ АБО СЦІК · × АБО DELETE АЧЫШЧАЕ · ESC АДМЯНЯЕ"
+    },
+    "0x1415621f0": {
+      "en": "CONTROLS",
+      "text": "КІРАВАННЕ"
+    },
+    "0x1415621f9": {
+      "en": "close",
+      "text": "закрыць"
+    },
+    "0x1415621ff": {
+      "en": "SHOWING",
+      "text": "ПАКАЗАНА"
+    },
+    "0x14156220e": {
+      "en": "reset all controls",
+      "text": "скінуць усё"
+    },
+    "0x141562221": {
+      "en": "%d plugged in",
+      "text": "%d падключана"
+    },
+    "0x14156222f": {
+      "en": "the same in every layout",
+      "text": "аднолькава ў любой раскладцы"
+    },
+    "0x141562248": {
+      "en": "own layout",
+      "text": "свая раскладка"
+    },
+    "0x141562253": {
+      "en": "Keyboard & mouse · ",
+      "text": "Клавіятура і мыш · "
+    },
+    "0x14156226f": {
+      "en": "  ·  wheel lock ",
+      "text": "  ·  выварат руля "
+    },
+    "0x141562283": {
+      "en": "DEVICES",
+      "text": "ПРЫЛАДЫ"
+    },
+    "0x14156228d": {
+      "en": "Keyboard & mouse",
+      "text": "Клавіятура і мыш"
+    },
+    "0x14156229e": {
+      "en": "axes",
+      "text": "восі"
+    },
+    "0x1415622a3": {
+      "en": "axis",
+      "text": "вось"
+    },
+    "0x1415622a8": {
+      "en": "buttons",
+      "text": "кнопкі"
+    },
+    "0x1415622b0": {
+      "en": "button",
+      "text": "кнопка"
+    },
+    "0x1415622b7": {
+      "en": "hats",
+      "text": "хаткі"
+    },
+    "0x1415622bc": {
+      "en": "hat",
+      "text": "хатка"
+    },
+    "0x1415622c0": {
+      "en": "your own bindings; press a layout to replace them",
+      "text": "вашы прывязкі; абярыце раскладку, каб замяніць іх"
+    },
+    "0x1415622f2": {
+      "en": " · a pick here sets ",
+      "text": " · выбар тут задае толькі "
+    },
+    "0x141562308": {
+      "en": " alone",
+      "text": ""
+    },
+    "0x14156230f": {
+      "en": "pedals",
+      "text": "педалі"
+    },
+    "0x141562316": {
+      "en": "pedal",
+      "text": "педаль"
+    },
+    "0x14156231c": {
+      "en": " away from centre",
+      "text": " ад цэнтра"
+    },
+    "0x14156233a": {
+      "en": "LEFT STICK",
+      "text": "ЛЕВЫ СЦІК"
+    },
+    "0x141562345": {
+      "en": "RIGHT STICK",
+      "text": "ПРАВЫ СЦІК"
+    },
+    "0x141562351": {
+      "en": "DEAD ZONE",
+      "text": "МЁРТВАЯ ЗОНА"
+    },
+    "0x141562370": {
+      "en": "wheel turn to full lock, as a share of its travel",
+      "text": "паварот руля да ўпору як доля яго ходу"
+    },
+    "0x1415623a2": {
+      "en": "Wheel lock",
+      "text": "Выварат руля"
+    },
+    "0x1415623ad": {
+      "en": "wheel lock",
+      "text": "выварат руля"
+    },
+    "0x1415623b8": {
+      "en": "how fast the joystick levers move the rams",
+      "text": "хуткасць ходу гідрацыліндраў ад джойсцікаў"
+    },
+    "0x1415623e3": {
+      "en": "Hydraulic speed",
+      "text": "Хуткасць гідраўлікі"
+    },
+    "0x1415623fa": {
+      "en": "hydraulic speed",
+      "text": "хуткасць гідраўлікі"
+    },
+    "0x14156240a": {
+      "en": "KEYBOARD & MOUSE",
+      "text": "КЛАВІЯТУРА І МЫШ"
+    },
+    "0x14156241b": {
+      "en": "CAMERA",
+      "text": "КАМЕРА"
+    },
+    "0x141562422": {
+      "en": "STEERING RETURN",
+      "text": "ЗВАРОТ РУЛЯ"
+    },
+    "0x141562432": {
+      "en": "%d settings",
+      "text": "%d налад"
+    },
+    "0x141562440": {
+      "en": "returns %s  ·  hold below %.1f m/s  ·  full from %.1f m/s",
+      "text": "зварот %s  ·  трымаць ніжэй за %.1f м/с  ·  поўны ад %.1f м/с"
+    },
+    "0x14156247c": {
+      "en": "sensitivity %.2f",
+      "text": "адчувальнасць %.2f"
+    },
+    "0x14156248d": {
+      "en": "  ·  inverted",
+      "text": "  ·  інверсія"
+    },
+    "0x14156249c": {
+      "en": "  ·  distance %d%%",
+      "text": "  ·  дыстанцыя %d%%"
+    },
+    "0x1415624b0": {
+      "en": "  ·  cab %d°",
+      "text": "  ·  кабіна %d°"
+    },
+    "0x1415624bf": {
+      "en": "  ·  follows the bucket",
+      "text": "  ·  сочыць за каўшом"
+    },
+    "0x1415624d8": {
+      "en": "  ·  chase on the bucket",
+      "text": "  ·  знешняя за каўшом"
+    },
+    "0x1415624f4": {
+      "en": "%d control%s",
+      "text": "%d прывяз.%s"
+    },
+    "0x141562508": {
+      "en": "the wheel's angle when you let go",
+      "text": "вугал колаў, калі адпускаеце руль"
+    },
+    "0x14156252a": {
+      "en": "Returns",
+      "text": "Зварот"
+    },
+    "0x141562548": {
+      "en": "letting go holds the angle under this",
+      "text": "ніжэй за гэту хуткасць вугал утрымліваецца"
+    },
+    "0x14156256e": {
+      "en": "Hold below",
+      "text": "Трымаць ніжэй за"
+    },
+    "0x141562579": {
+      "en": "m/s",
+      "text": "м/с"
+    },
+    "0x141562580": {
+      "en": "full straightening from this speed",
+      "text": "поўнае выраўноўванне ад гэтай хуткасці"
+    },
+    "0x1415625a3": {
+      "en": "Return at",
+      "text": "Зварот ад"
+    },
+    "0x1415625ad": {
+      "en": "full locks a second",
+      "text": "поўных паваротаў у секунду"
+    },
+    "0x1415625c1": {
+      "en": "Return rate",
+      "text": "Хуткасць звароту"
+    },
+    "0x1415625cd": {
+      "en": "/s",
+      "text": "/с"
+    },
+    "0x1415625d0": {
+      "en": "mouse, trackpad and right-stick look",
+      "text": "агляд мышшу, тачпадам і правым сцікам"
+    },
+    "0x1415625f5": {
+      "en": "Mouse sensitivity",
+      "text": "Адчувальнасць мышы"
+    },
+    "0x14156260e": {
+      "en": "Invert look",
+      "text": "Інверсія агляду"
+    },
+    "0x14156261a": {
+      "en": "Camera distance",
+      "text": "Дыстанцыя камеры"
+    },
+    "0x14156262a": {
+      "en": "camera distance",
+      "text": "дыстанцыя камеры"
+    },
+    "0x141562640": {
+      "en": "how wide; the scroll wheel in the cab",
+      "text": "шырыня агляду; кола мышы ў кабіне"
+    },
+    "0x141562666": {
+      "en": "Cab field of view",
+      "text": "FOV у кабіне"
+    },
+    "0x141562680": {
+      "en": "the cab view turns to keep the bucket in sight",
+      "text": "від з кабіны паварочваецца за каўшом"
+    },
+    "0x1415626af": {
+      "en": "Cab follows the bucket",
+      "text": "Кабіна сочыць за каўшом"
+    },
+    "0x1415626c8": {
+      "en": "the chase camera turns with the bucket's half, not the cab's",
+      "text": "знешняя камера паварочваецца за часткай з каўшом, а не за кабінай"
+    },
+    "0x141562705": {
+      "en": "Chase follows the bucket",
+      "text": "Знешняя камера за каўшом"
+    },
+    "0x14156271e": {
+      "en": "fixed",
+      "text": "фікс."
+    },
+    "0x141562728": {
+      "en": "Speed ranges %d · %d · %d",
+      "text": "Дыяпазоны хуткасцяў %d · %d · %d"
+    },
+    "0x141562744": {
+      "en": "all wheeled",
+      "text": "усе колавыя"
+    },
+    "0x141562750": {
+      "en": "wheeled machines",
+      "text": "колавыя машыны"
+    },
+    "0x141562761": {
+      "en": "trucks and tractor",
+      "text": "грузавікі і трактар"
+    },
+    "0x141562774": {
+      "en": "bike and snowmobile",
+      "text": "матацыкл і снегаход"
+    },
+    "0x141562901": {
+      "en": "cancel",
+      "text": "адмена"
+    },
+    "0x141562908": {
+      "en": "Every key, button and stick goes back to the shipped layout.",
+      "text": "Усе клавішы, кнопкі і сцікі вернуцца да стандартнай раскладкі."
+    },
+    "0x141562945": {
+      "en": "RESET ALL CONTROLS?",
+      "text": "СКІНУЦЬ УСЁ КІРАВАННЕ?"
+    },
+    "0x141562959": {
+      "en": "reset all",
+      "text": "скінуць усё"
+    },
+    "0x141562963": {
+      "en": "The ",
+      "text": "Усе "
+    },
+    "0x141562968": {
+      "en": " bindings the layouts set go back to ",
+      "text": " кнопак скінуцца да "
+    },
+    "0x14156298e": {
+      "en": " on ",
+      "text": " для "
+    },
+    "0x141562993": {
+      "en": "; the rest stay.",
+      "text": "; астатнія застануцца."
+    },
+    "0x1415629a4": {
+      "en": "REPLACE YOUR LAYOUT?",
+      "text": "ЗАМЯНІЦЬ ВАШУ РАСКЛАДКУ?"
+    },
+    "0x1415629c8": {
+      "en": "replace",
+      "text": "замяніць"
+    },
+    "0x141563471": {
+      "en": "untitled job",
+      "text": "заданне без назвы"
+    },
+    "0x14156347e": {
+      "en": "TEST DRIVE",
+      "text": "ТЭСТ-ДРАЙВ"
+    },
+    "0x141563489": {
+      "en": "DAY SHEET",
+      "text": "НАРАД НА ДЗЕНЬ"
+    },
+    "0x141563493": {
+      "en": "TICK %d",
+      "text": "ЦІК %d"
+    },
+    "0x14156349b": {
+      "en": "TICK %d · PAUSED",
+      "text": "ЦІК %d · ПАЎЗА"
+    },
+    "0x1415634ad": {
+      "en": "Back to editor",
+      "text": "У рэдактар"
+    },
+    "0x1415634bc": {
+      "en": "Leave",
+      "text": "Выйсці"
+    },
+    "0x1415634c2": {
+      "en": "rain/snow",
+      "text": "дождж/снег"
+    },
+    "0x1415634cc": {
+      "en": "dry weather",
+      "text": "сухое надвор'е"
+    },
+    "0x1415634e1": {
+      "en": "JOBS",
+      "text": "ЗАДАННІ"
+    },
+    "0x1415634e6": {
+      "en": "close",
+      "text": "закрыць"
+    },
+    "0x1415634ec": {
+      "en": "no jobs on this site",
+      "text": "на гэтай карце няма заданняў"
+    },
+    "0x141563530": {
+      "en": "test drive changes are not saved",
+      "text": "змены тэст-драйву не захоўваюцца"
+    },
+    "0x141563551": {
+      "en": "GAME",
+      "text": "ГУЛЬНЯ"
+    },
+    "0x141563556": {
+      "en": "Settings",
+      "text": "Налады"
+    },
+    "0x14156355f": {
+      "en": "Jobs",
+      "text": "Заданні"
+    },
+    "0x141563564": {
+      "en": "Copy join link",
+      "text": "Спасылка гульні"
+    },
+    "0x141563573": {
+      "en": "GRADE STICKS",
+      "text": "УЗРОЎНЕВЫЯ КАЛКІ"
+    },
+    "0x141563580": {
+      "en": "Remove all",
+      "text": "Выдаліць усе"
+    },
+    "0x14156358b": {
+      "en": "WEATHER",
+      "text": "НАДВОР'Е"
+    },
+    "0x141563598": {
+      "en": "%.1f C, rain %.1f mm/h, snow %.2f m/h",
+      "text": "%.1f C, дождж %.1f мм/г, снег %.2f м/г"
+    },
+    "0x1415635be": {
+      "en": "%s: %.0f s remaining",
+      "text": "%s: засталося %.0f с"
+    },
+    "0x1415635d3": {
+      "en": "Open dumps folder",
+      "text": "Папка дампаў"
+    },
+    "0x141563612": {
+      "en": "LEAVE THE EDITOR?",
+      "text": "ВЫЙСЦІ З РЭДАКТАРА?"
+    },
+    "0x141563624": {
+      "en": "LEAVE THE GAME?",
+      "text": "ВЫЙСЦІ З ГУЛЬНІ?"
+    },
+    "0x141563638": {
+      "en": "unsaved edits will be backed up",
+      "text": "незахаваныя праўкі будуць захаваны ў рэзерв"
+    },
+    "0x141563658": {
+      "en": "Cancel",
+      "text": "Адмена"
+    },
+    "0x14156365f": {
+      "en": "Save and leave",
+      "text": "Захаваць/выйсці"
+    },
+    "0x14156366e": {
+      "en": "Remove the stick",
+      "text": "Выдаліць калок"
+    },
+    "0x14156367f": {
+      "en": "Remove %zu sticks",
+      "text": "Выдаліць калкі (%zu)"
+    },
+    "0x14156369e": {
+      "en": "REMOVE ALL STICKS?",
+      "text": "ВЫДАЛІЦЬ УСЕ КАЛКІ?"
+    },
+    "0x1415636b1": {
+      "en": "RECOVER UNSAVED EDITS?",
+      "text": "АДНАВІЦЬ НЕЗАХАВАНЫЯ ПРАЎКІ?"
+    },
+    "0x1415636c8": {
+      "en": "%zu edits autosaved %s; %zu saved",
+      "text": "%zu правак аўтазахавана %s; %zu захавана"
+    },
+    "0x1415636ea": {
+      "en": "Discard",
+      "text": "Адхіліць"
+    },
+    "0x1415636f2": {
+      "en": "Recover",
+      "text": "Аднавіць"
+    },
+    "0x141564140": {
+      "en": "player ",
+      "text": "гулец "
+    },
+    "0x141564148": {
+      "en": "lost %d s",
+      "text": "страчаны %d с"
+    },
+    "0x141564152": {
+      "en": "lagging %.1f s",
+      "text": "затрымка %.1f с"
+    },
+    "0x141564161": {
+      "en": "%.0f m",
+      "text": "%.0f м"
+    },
+    "0x141564168": {
+      "en": "%.1f km",
+      "text": "%.1f км"
+    },
+    "0x14156418d": {
+      "en": "Balance:",
+      "text": "Баланс:"
+    },
+    "0x141564201": {
+      "en": "Engine flooded. ",
+      "text": "Рухавік заліты. "
+    },
+    "0x141564212": {
+      "en": "Off the map. ",
+      "text": "За межамі карты. "
+    },
+    "0x141564600": {
+      "en": "loading",
+      "text": "загрузка"
+    },
+    "0x141564608": {
+      "en": "waiting for the host",
+      "text": "чаканне хоста"
+    },
+    "0x141564630": {
+      "en": "receiving the site",
+      "text": "атрыманне карты"
+    },
+    "0x14156464b": {
+      "en": "quarry",
+      "text": "кар'ер"
+    },
+    "0x141564652": {
+      "en": "building terrain",
+      "text": "пабудова рэльефу"
+    },
+    "0x141564940": {
+      "en": "PLAYED",
+      "text": "ЗГУЛЯНА"
+    },
+    "0x141564947": {
+      "en": "SAVED",
+      "text": "ЗАХАВАНА"
+    },
+    "0x14156494d": {
+      "en": "cancel",
+      "text": "адмена"
+    },
+    "0x141564a96": {
+      "en": "continue",
+      "text": "працягнуць"
+    },
+    "0x141564a9f": {
+      "en": "play",
+      "text": "гуляць"
+    },
+    "0x141564aa4": {
+      "en": "JOB TICKET — ",
+      "text": "НАРАД — "
+    },
+    "0x141564ab4": {
+      "en": "NO. %02zu",
+      "text": "№ %02zu"
+    },
+    "0x141564aca": {
+      "en": "EDITABLE",
+      "text": "РЭДАГУЕМАЯ"
+    },
+    "0x141564ad3": {
+      "en": "never",
+      "text": "ніколі"
+    },
+    "0x141564add": {
+      "en": "start over",
+      "text": "пачаць нанова"
+    },
+    "0x141564ae8": {
+      "en": "update",
+      "text": "абнавіць"
+    },
+    "0x141564aef": {
+      "en": "update refused: ",
+      "text": "абнаўленне адхілена: "
+    },
+    "0x141564b00": {
+      "en": "update available",
+      "text": "даступна абнаўленне"
+    },
+    "0x141564b11": {
+      "en": "workshop item ",
+      "text": "аб'ект Workshop "
+    },
+    "0x141565e81": {
+      "en": "built-in",
+      "text": "убудаваная"
+    },
+    "0x141565e8a": {
+      "en": "your site",
+      "text": "ваша карта"
+    },
+    "0x141565ee7": {
+      "en": "by ",
+      "text": "аўтар: "
+    },
+    "0x141565eeb": {
+      "en": "%.1f km",
+      "text": "%.1f км"
+    },
+    "0x141565ef3": {
+      "en": "%.0f m",
+      "text": "%.0f м"
+    },
+    "0x141565efa": {
+      "en": "%.1f by %.1f km",
+      "text": "%.1f на %.1f км"
+    },
+    "0x141565f0a": {
+      "en": "%.0f by %.0f m",
+      "text": "%.0f на %.0f м"
+    },
+    "0x141565f19": {
+      "en": "just now",
+      "text": "толькі што"
+    },
+    "0x141565f22": {
+      "en": "%lld min",
+      "text": "%lld хв"
+    },
+    "0x141565f2b": {
+      "en": "%lld h",
+      "text": "%lld г"
+    },
+    "0x141565f32": {
+      "en": "%lld d",
+      "text": "%lld дн"
+    },
+    "0x141565f39": {
+      "en": "%d min",
+      "text": "%d хв"
+    },
+    "0x141565f40": {
+      "en": "%d h %02d min",
+      "text": "%d г %02d хв"
+    },
+    "0x141565f93": {
+      "en": "S",
+      "text": ""
+    },
+    "0x141565fa2": {
+      "en": "settings",
+      "text": "налады"
+    },
+    "0x141565fab": {
+      "en": "START ",
+      "text": "ПАЧАЦЬ "
+    },
+    "0x141565fb2": {
+      "en": " OVER?",
+      "text": " НАНОВА?"
+    },
+    "0x141565fb9": {
+      "en": "UPDATE ",
+      "text": "АБНАВІЦЬ "
+    },
+    "0x141565fc1": {
+      "en": "SITE REGISTER",
+      "text": "РЭЕСТР КАРТ"
+    },
+    "0x141565fcf": {
+      "en": "%zu SITE%s",
+      "text": "%zu КАРТ%s"
+    },
+    "0x141565fe6": {
+      "en": "EARNED",
+      "text": "ЗАРОБЛЕНА"
+    },
+    "0x141565fed": {
+      "en": "OPERATOR: ",
+      "text": "АПЕРАТАР: "
+    },
+    "0x141565ffc": {
+      "en": "OPERATOR:",
+      "text": "АПЕРАТАР:"
+    },
+    "0x141566017": {
+      "en": "YOUR SITES",
+      "text": "ВАШЫ КАРТЫ"
+    },
+    "0x141566022": {
+      "en": "SITE",
+      "text": "КАРТА"
+    },
+    "0x141566030": {
+      "en": "WORKSHOP SITES",
+      "text": "КАРТЫ WORKSHOP"
+    },
+    "0x141566045": {
+      "en": "DEMO",
+      "text": "ДЭМА"
+    },
+    "0x141566053": {
+      "en": "quit",
+      "text": "выхад"
+    },
+    "0x141566058": {
+      "en": "Dirt Town by Skyturns. Third-party notices: THIRD-PARTY-LICENSES.md beside the game.",
+      "text": "Dirt Town ад Skyturns. Ліцэнзіі іншых распрацоўшчыкаў: THIRD-PARTY-LICENSES.md побач з гульнёй."
+    },
+    "0x1415660ad": {
+      "en": "2 h",
+      "text": "2 г"
+    },
+    "0x1415660b1": {
+      "en": "3 h 10 min",
+      "text": "3 г 10 хв"
+    },
+    "0x141566720": {
+      "en": "%.0f km",
+      "text": "%.0f км"
+    },
+    "0x141566728": {
+      "en": "%.0f m",
+      "text": "%.0f м"
+    },
+    "0x141566751": {
+      "en": "SITE MAP — ",
+      "text": "КАРТА АБ'ЕКТА — "
+    },
+    "0x14156675f": {
+      "en": "CONTOURS EVERY %g M",
+      "text": "ГАРЫЗАНТАЛІ ПРАЗ %g М"
+    },
+    "0x141566773": {
+      "en": "SITE MAP",
+      "text": "КАРТА АБ'ЕКТА"
+    },
+    "0x1415667a9": {
+      "en": "close",
+      "text": "закрыць"
+    },
+    "0x1415667b3": {
+      "en": "you",
+      "text": "вы"
+    },
+    "0x1415667b7": {
+      "en": "N",
+      "text": "Пн"
+    },
+    "0x1415667b9": {
+      "en": "road",
+      "text": "дарога"
+    },
+    "0x1415667be": {
+      "en": "track",
+      "text": "прасёлак"
+    },
+    "0x1415667c4": {
+      "en": "building",
+      "text": "будынак"
+    },
+    "0x1415667cd": {
+      "en": "water",
+      "text": "вада"
+    },
+    "0x1415667d3": {
+      "en": "woods",
+      "text": "лес"
+    },
+    "0x1415667d9": {
+      "en": "grass",
+      "text": "трава"
+    },
+    "0x1415667df": {
+      "en": "contour",
+      "text": "гарызанталь"
+    },
+    "0x1415667e7": {
+      "en": "index contour",
+      "text": "асноўная гарызанталь"
+    },
+    "0x1415667f5": {
+      "en": "job",
+      "text": "заданне"
+    },
+    "0x14156709f": {
+      "en": "a protected ",
+      "text": "ахоўнае "
+    },
+    "0x1415670ac": {
+      "en": " protected ",
+      "text": " ахоўных "
+    },
+    "0x1415670bc": {
+      "en": "Sand for the yard",
+      "text": "Пясок для двара"
+    },
+    "0x1415670d0": {
+      "en": "Bring sand from the pit and tip it in the marked bay by the shed.",
+      "text": "Прывязіце пясок з кар'ера і высыпце ў пазначаны адсек каля хлява."
+    },
+    "0x141567112": {
+      "en": "The bay is full.",
+      "text": "Адсек поўны."
+    },
+    "0x14156712c": {
+      "en": "Cottage lot",
+      "text": "Участак пад катэдж"
+    },
+    "0x141567138": {
+      "en": "Clear the lot for the cottage. The taped pines are protected: leave them standing.",
+      "text": "Расчысціце ўчастак пад катэдж. Сосны са стужкай пад аховай: пакіньце іх стаяць."
+    },
+    "0x14156719c": {
+      "en": "Tower road",
+      "text": "Дарога да вышкі"
+    },
+    "0x1415671a8": {
+      "en": "Cut a road up to the knob, level the pad there, set the four footings at its stakes and lay the three tower sections east of it.",
+      "text": "Пракладзіце дарогу на ўзгорак, выраўнуйце там пляцоўку, усталюйце чатыры падмуркі па калках і складзіце тры секцыі вышкі на ўсход ад яе."
+    },
+    "0x141567229": {
+      "en": "The tower stands.",
+      "text": "Вышка стаіць."
+    },
+    "0x14156727e": {
+      "en": "Level the knob",
+      "text": "Выраўнаваць узгорак"
+    },
+    "0x1415672a3": {
+      "en": "Stack the sections",
+      "text": "Скласці секцыі"
+    },
+    "0x1415672b6": {
+      "en": "Level the knob, {}",
+      "text": "Выраўнаваць узгорак, {}"
+    },
+    "0x1415672e3": {
+      "en": "Stack the sections, {}",
+      "text": "Скласці секцыі, {}"
+    },
+    "0x1415672fa": {
+      "en": "felled",
+      "text": "спілавана"
+    },
+    "0x141567301": {
+      "en": "tree",
+      "text": "дрэва"
+    },
+    "0x141567306": {
+      "en": "moved",
+      "text": "перасунута"
+    },
+    "0x14156730c": {
+      "en": "stone",
+      "text": "камень"
+    },
+    "0x141567312": {
+      "en": " and ",
+      "text": " і "
+    },
+    "0x141567318": {
+      "en": "stones",
+      "text": "камянёў"
+    },
+    "0x14156731f": {
+      "en": "trees",
+      "text": "дрэў"
+    },
+    "0x141567325": {
+      "en": "1 tree left",
+      "text": "засталося 1 дрэва"
+    },
+    "0x141567331": {
+      "en": "%d trees left",
+      "text": "засталося %d дрэў"
+    },
+    "0x14156733f": {
+      "en": "1 stone left",
+      "text": "застаўся 1 камень"
+    },
+    "0x14156734c": {
+      "en": "%d stones left",
+      "text": "засталося %d камянёў"
+    },
+    "0x14156735e": {
+      "en": "level",
+      "text": "роўна"
+    },
+    "0x141567364": {
+      "en": "%.0f %% level%s, %d red",
+      "text": "%.0f %% роўна%s, %d чырвоных"
+    },
+    "0x14156737c": {
+      "en": "%.0f %% level%s",
+      "text": "%.0f %% роўна%s"
+    },
+    "0x14156738c": {
+      "en": "%.0f t",
+      "text": "%.0f т"
+    },
+    "0x141567393": {
+      "en": "%.1f t",
+      "text": "%.1f т"
+    },
+    "0x14156739a": {
+      "en": "%.1f of %.0f t",
+      "text": "%.1f з %.0f т"
+    },
+    "0x1415673a9": {
+      "en": ", one leans %.0f°",
+      "text": ", адзін нахілены на %.0f°"
+    },
+    "0x1415673bc": {
+      "en": ", %d leaning, up to %.0f°",
+      "text": ", %d нахіленыя, да %.0f°"
+    },
+    "0x1415673d7": {
+      "en": ", one %.1f m off its mark",
+      "text": ", адзін на %.1f м ад пазнакі"
+    },
+    "0x1415673f1": {
+      "en": "%ld of %zu%s",
+      "text": "%ld з %zu%s"
+    },
+    "0x1415673fe": {
+      "en": "%d of %d",
+      "text": "%d з %d"
+    },
+    "0x141567407": {
+      "en": "cleared",
+      "text": "расчышчана"
+    },
+    "0x14156740f": {
+      "en": "%d %s, %d %s left",
+      "text": "засталося %d %s, %d %s"
+    },
+    "0x141567421": {
+      "en": "under water",
+      "text": "пад вадой"
+    },
+    "0x14156742d": {
+      "en": "%.0f %% surrounded",
+      "text": "%.0f %% акружана"
+    },
+    "0x141567440": {
+      "en": "stripped",
+      "text": "знята"
+    },
+    "0x141567449": {
+      "en": "%.0f %% stripped",
+      "text": "%.0f %% знята"
+    },
+    "0x1415674a7": {
+      "en": "Find the ",
+      "text": "Знайсці "
+    },
+    "0x1415674b1": {
+      "en": " over the ",
+      "text": " праз "
+    },
+    "0x1415674bc": {
+      "en": " to the ",
+      "text": " на "
+    },
+    "0x1415674c5": {
+      "en": ", done",
+      "text": ", гатова"
+    },
+    "0x1415674d1": {
+      "en": "Jobs",
+      "text": "Заданні"
+    },
+    "0x1415674d6": {
+      "en": "hide the jobs list",
+      "text": "схаваць спіс заданняў"
+    },
+    "0x1415674e9": {
+      "en": "show the jobs list",
+      "text": "паказаць спіс заданняў"
+    },
+    "0x1415674fc": {
+      "en": "untitled job",
+      "text": "заданне без назвы"
+    },
+    "0x141567509": {
+      "en": "%s, done",
+      "text": "%s, гатова"
+    },
+    "0x141567527": {
+      "en": "%s: done",
+      "text": "%s: гатова"
+    },
+    "0x141567530": {
+      "en": "fold jobs",
+      "text": "згарнуць заданні"
+    },
+    "0x14156753a": {
+      "en": "fine, %s",
+      "text": "штраф, %s"
+    },
+    "0x141567549": {
+      "en": "bonus rounds, %.0f",
+      "text": "бонусныя рэйсы, %.0f"
+    },
+    "0x14156755c": {
+      "en": "extra %s, %.1f t",
+      "text": "звыш плана %s, %.1f т"
+    },
+    "0x14156756d": {
+      "en": "diesel",
+      "text": "дызель"
+    },
+    "0x141567574": {
+      "en": "road: not found",
+      "text": "дарога: не знойдзена"
+    },
+    "0x141567588": {
+      "en": "road %.0f m, avg slope %.0f %%, steepest %.0f %%",
+      "text": "дарога %.0f м, сяр. ухіл %.0f %%, макс. %.0f %%"
+    },
+    "0x1415675b9": {
+      "en": ", side slope %.0f %%",
+      "text": ", бакавы ўхіл %.0f %%"
+    },
+    "0x1415675ce": {
+      "en": ", starts %.0f m off the pad",
+      "text": ", пачатак за %.0f м ад пляцоўкі"
+    },
+    "0x1415675ea": {
+      "en": ", %.0f m gap",
+      "text": ", разрыў %.0f м"
+    },
+    "0x1415675f7": {
+      "en": "EARNED",
+      "text": "ЗАРОБЛЕНА"
+    },
+    "0x1415677ee": {
+      "en": "Find the truck",
+      "text": "Знайсці грузавік"
+    },
+    "0x14156782d": {
+      "en": "Boulder on hill",
+      "text": "Валун на ўзгорку"
+    },
+    "0x141567878": {
+      "en": "Get the boulder up on the hill",
+      "text": "Зацягнуць валун на ўзгорак"
+    },
+    "0x141567897": {
+      "en": "Sand haul & more",
+      "text": "Дастаўка пяску і не толькі"
+    },
+    "0x1415678a8": {
+      "en": "40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it",
+      "text": "40 тон на месцы, рака пераадолена і валун на ўзгорку. Выдатна. Можаце вазіць далей, калі хочаце"
+    },
+    "0x14156790c": {
+      "en": "MISSION ACCOMPLISHED",
+      "text": "ЗАДАННЕ ВЫКАНАНА"
+    },
+    "0x141567921": {
+      "en": "TASK DONE",
+      "text": "ЭТАП ЗАВЕРШАНЫ"
+    },
+    "0x14156792b": {
+      "en": "TOTAL",
+      "text": "РАЗАМ"
+    },
+    "0x141567931": {
+      "en": "SO FAR",
+      "text": "ПАКУЛЬ ШТО"
+    },
+    "0x141567938": {
+      "en": " levelled",
+      "text": " выраўнавана"
+    },
+    "0x141567942": {
+      "en": " levelled in ",
+      "text": " выраўнавана ў "
+    },
+    "0x141567950": {
+      "en": " set, %zu of %zu",
+      "text": " усталявана, %zu з %zu"
+    },
+    "0x141567961": {
+      "en": " %d of %d",
+      "text": " %d з %d"
+    },
+    "0x14156796b": {
+      "en": " cleared",
+      "text": " расчышчана"
+    },
+    "0x141567974": {
+      "en": " cleared of stones",
+      "text": " расчышчана ад камянёў"
+    },
+    "0x141567987": {
+      "en": " stripped of ",
+      "text": " зняты пласт "
+    },
+    "0x141567995": {
+      "en": " made",
+      "text": " зроблена"
+    },
+    "0x14156799b": {
+      "en": " filled",
+      "text": " засыпана"
+    },
+    "0x1415679a3": {
+      "en": "found",
+      "text": "знойдзена"
+    },
+    "0x1415679a9": {
+      "en": "%.0f t × %g",
+      "text": "%.0f т × %g"
+    },
+    "0x1415679c7": {
+      "en": "fine, ",
+      "text": "штраф, "
+    },
+    "0x1415679ce": {
+      "en": "%.1f t × %g",
+      "text": "%.1f т × %g"
+    },
+    "0x1415679db": {
+      "en": "extra ",
+      "text": "звыш плана "
+    },
+    "0x1415679ed": {
+      "en": "%.1f l × %g",
+      "text": "%.1f л × %g"
+    },
+    "0x1415679fa": {
+      "en": "BUCKET & SONS · CONTRACTORS",
+      "text": "BUCKET & SONS · ПАДРАДЧЫКІ"
+    },
+    "0x141567a17": {
+      "en": "NO. %02zu",
+      "text": "№ %02zu"
+    },
+    "0x141567a25": {
+      "en": "ON SITE",
+      "text": "НА АБ'ЕКЦЕ"
+    },
+    "0x141567a2d": {
+      "en": "%zu of %zu",
+      "text": "%zu з %zu"
+    },
+    "0x141567a38": {
+      "en": "TASKS",
+      "text": "ЗАДАЧЫ"
+    },
+    "0x141567a3e": {
+      "en": "%d min",
+      "text": "%d хв"
+    },
+    "0x141567a45": {
+      "en": "%d h %02d",
+      "text": "%d г %02d"
+    },
+    "0x141567a4f": {
+      "en": "WORK",
+      "text": "ПРАЦА"
+    },
+    "0x141567a54": {
+      "en": "FOREMAN",
+      "text": "ПРАРАБ"
+    },
+    "0x141567a5c": {
+      "en": "CUSTOMER'S COPY",
+      "text": "КОПІЯ ЗАКАЗЧЫКА"
+    },
+    "0x141567a6c": {
+      "en": "“",
+      "text": "«"
+    },
+    "0x141567a70": {
+      "en": "”",
+      "text": "»"
+    },
+    "0x141567a81": {
+      "en": "Keep working",
+      "text": "Працаваць далей"
+    },
+    "0x141567a8e": {
+      "en": "Leave",
+      "text": "Выйсці"
+    },
+    "0x141567a94": {
+      "en": "Wishlist",
+      "text": "У жаданае"
+    },
+    "0x141567ac0": {
+      "en": "The mast stands over the valley.",
+      "text": "Мачта ўзвышаецца над далінай."
+    },
+    "0x141567ae1": {
+      "en": "Quality sand in the bay, {}",
+      "text": "Адборны пясок у адсеку, {}"
+    },
+    "0x141567afd": {
+      "en": "Sand delivered, as quoted",
+      "text": "Пясок дастаўлены па каштарысе"
+    },
+    "0x141567f47": {
+      "en": "ok",
+      "text": "ок"
+    },
+    "0x141567f50": {
+      "en": "Waiting for parts, estimated arrival dec 4th",
+      "text": "Чакаем запчасткі, арыенціровачна 4 снежня"
+    },
+    "0x141567f7d": {
+      "en": "OUT OF ORDER",
+      "text": "НЕ ПРАЦУЕ"
+    },
+    "0x141567f8a": {
+      "en": "back to menu",
+      "text": "у меню"
+    },
+    "0x141567f98": {
+      "en": "the host's site has 15 machines and this one 10, and the two site files are not the same",
+      "text": "на карце хоста 15 машын, а тут 10, і файлы карт не супадаюць"
+    },
+    "0x141567ff1": {
+      "en": "COULD NOT JOIN",
+      "text": "НЕ ЎДАЛОСЯ ДАЛУЧЫЦЦА"
+    },
+    "0x141568516": {
+      "en": "plow",
+      "text": "адвал"
+    },
+    "0x14156851b": {
+      "en": "off",
+      "text": "выкл."
+    },
+    "0x14156851f": {
+      "en": "blade",
+      "text": "адвал"
+    },
+    "0x141568525": {
+      "en": "ready",
+      "text": "гатова"
+    },
+    "0x14156852b": {
+      "en": "level",
+      "text": "гарызонт"
+    },
+    "0x141568531": {
+      "en": "free tilt",
+      "text": "вольны нахіл"
+    },
+    "0x14156853b": {
+      "en": "lock tilt",
+      "text": "фікс. нахілу"
+    },
+    "0x141568545": {
+      "en": "bucket",
+      "text": "коўш"
+    },
+    "0x14156854c": {
+      "en": "none",
+      "text": "няма"
+    },
+    "0x141568551": {
+      "en": "in hand",
+      "text": "у руцэ"
+    },
+    "0x141568559": {
+      "en": "down",
+      "text": "апушч."
+    },
+    "0x14156855e": {
+      "en": "stowed",
+      "text": "складз."
+    },
+    "0x141568565": {
+      "en": "hook in hand",
+      "text": "крук у руцэ"
+    },
+    "0x141568572": {
+      "en": "hook down",
+      "text": "крук на зямлі"
+    },
+    "0x14156857c": {
+      "en": "on",
+      "text": "укл."
+    },
+    "0x14156857f": {
+      "en": "extend",
+      "text": "высунуць"
+    },
+    "0x141568586": {
+      "en": "retract",
+      "text": "засунуць"
+    },
+    "0x14156858e": {
+      "en": "hold",
+      "text": "утрыманне"
+    },
+    "0x1415685a6": {
+      "en": "tips, home",
+      "text": "самазвал, дома"
+    },
+    "0x1415685b1": {
+      "en": "swings, home",
+      "text": "паварот, дома"
+    },
+    "0x1415685be": {
+      "en": "lock",
+      "text": "замок"
+    },
+    "0x1415685c3": {
+      "en": "home to lock",
+      "text": "складзіце для замка"
+    },
+    "0x1415685d0": {
+      "en": "out",
+      "text": "выс."
+    },
+    "0x1415685d4": {
+      "en": "in",
+      "text": "зас."
+    },
+    "0x1415685d7": {
+      "en": "partly in",
+      "text": "часткова"
+    },
+    "0x1415685e1": {
+      "en": "attached",
+      "text": "зачэплена"
+    },
+    "0x1415685ea": {
+      "en": "empty",
+      "text": "пуста"
+    },
+    "0x1415685f0": {
+      "en": "up",
+      "text": "уверсе"
+    },
+    "0x1415685f3": {
+      "en": "lowering",
+      "text": "апускаецца"
+    },
+    "0x1415685fc": {
+      "en": "rising",
+      "text": "падымаецца"
+    },
+    "0x141568603": {
+      "en": "lower",
+      "text": "апусціць"
+    },
+    "0x141568609": {
+      "en": "lift",
+      "text": "падняць"
+    },
+    "0x14156860e": {
+      "en": "lip up, gate open %.0f deg",
+      "text": "кромка ўверх, борт %.0f°"
+    },
+    "0x141568629": {
+      "en": "locked, lip up",
+      "text": "закрыта, кромка ўверх"
+    },
+    "0x141568638": {
+      "en": "unlock",
+      "text": "адкрыць"
+    },
+    "0x14156863f": {
+      "en": "lower to detach",
+      "text": "апусціце, каб адчапіць"
+    },
+    "0x14156864f": {
+      "en": "detach",
+      "text": "адчапіць"
+    },
+    "0x141568656": {
+      "en": "locked",
+      "text": "закрыта"
+    },
+    "0x14156865d": {
+      "en": "open",
+      "text": "адкрыта"
+    },
+    "0x141568662": {
+      "en": "running",
+      "text": "працуе"
+    },
+    "0x14156866a": {
+      "en": "stopped",
+      "text": "спынена"
+    },
+    "0x141568672": {
+      "en": "hydraulics",
+      "text": "гідраўліка"
+    },
+    "0x14156867d": {
+      "en": "camera",
+      "text": "камера"
+    },
+    "0x141568687": {
+      "en": "%.1f m/s",
+      "text": "%.1f м/с"
+    },
+    "0x1415686aa": {
+      "en": "pick",
+      "text": "выбар"
+    },
+    "0x1415686b7": {
+      "en": "RANGE",
+      "text": "ДЫЯП."
+    },
+    "0x1415686bd": {
+      "en": "on/off",
+      "text": "укл./выкл."
+    },
+    "0x1415686c4": {
+      "en": "FLOAT",
+      "text": "ПЛАВ."
+    },
+    "0x1415686d2": {
+      "en": "grips %d%%",
+      "text": "захоп %d%%"
+    },
+    "0x1415686dd": {
+      "en": "%d%% closed",
+      "text": "закрыта %d%%"
+    },
+    "0x1415686e9": {
+      "en": "close",
+      "text": "закрыць"
+    },
+    "0x1415686ff": {
+      "en": "close/open",
+      "text": "закр./адкр."
+    },
+    "0x14156870a": {
+      "en": "THUMB",
+      "text": "ЗАХОП"
+    },
+    "0x141568717": {
+      "en": "held %.1f m",
+      "text": "утрым. %.1f м"
+    },
+    "0x14156872f": {
+      "en": "offset",
+      "text": "зрушэнне"
+    },
+    "0x141568736": {
+      "en": "AUTO",
+      "text": "АЎТА"
+    },
+    "0x141568743": {
+      "en": "TOOL",
+      "text": "АБСТ."
+    },
+    "0x14156874f": {
+      "en": "%.0f kN  %.0f%%",
+      "text": "%.0f кН  %.0f%%"
+    },
+    "0x14156875f": {
+      "en": "%.1f m out",
+      "text": "выпуск %.1f м"
+    },
+    "0x14156876a": {
+      "en": "%s %.1f m",
+      "text": "%s %.1f м"
+    },
+    "0x141568774": {
+      "en": "remote out",
+      "text": "пульт у руках"
+    },
+    "0x14156877f": {
+      "en": "in/out",
+      "text": "змат./разм."
+    },
+    "0x141568786": {
+      "en": "WINCH",
+      "text": "ЛЯБЁДКА"
+    },
+    "0x141568794": {
+      "en": "LIGHT",
+      "text": "МАЯК"
+    },
+    "0x1415687a2": {
+      "en": "HYDR",
+      "text": "ГІДР."
+    },
+    "0x1415687b1": {
+      "en": "raising",
+      "text": "пад'ём"
+    },
+    "0x1415687b9": {
+      "en": "to %+.0f deg",
+      "text": "да %+.0f°"
+    },
+    "0x1415687c6": {
+      "en": "up, back %+.0f",
+      "text": "уверсе, задн. %+.0f"
+    },
+    "0x1415687d5": {
+      "en": "%+.0f deg",
+      "text": "%+.0f°"
+    },
+    "0x1415687df": {
+      "en": "up/down",
+      "text": "уверх/уніз"
+    },
+    "0x1415687e7": {
+      "en": "HITCH",
+      "text": "СЧЭПКА"
+    },
+    "0x1415687f5": {
+      "en": "L %.0f  R %.0f deg",
+      "text": "Л %.0f  П %.0f°"
+    },
+    "0x141568808": {
+      "en": "both",
+      "text": "абодва"
+    },
+    "0x14156881e": {
+      "en": "FLAPS",
+      "text": "КРЫЛЫ"
+    },
+    "0x141568833": {
+      "en": "L %.2f  R %.2f m",
+      "text": "Л %.2f  П %.2f м"
+    },
+    "0x14156884b": {
+      "en": "TINES",
+      "text": "ВІЛЫ"
+    },
+    "0x14156885d": {
+      "en": "no forks",
+      "text": "няма віл"
+    },
+    "0x141568866": {
+      "en": "tips, %.0f deg",
+      "text": "самазвал, %.0f°"
+    },
+    "0x141568875": {
+      "en": "swings, %.0f deg",
+      "text": "паварот, %.0f°"
+    },
+    "0x14156889d": {
+      "en": "home",
+      "text": "дома"
+    },
+    "0x1415688a2": {
+      "en": "LOCK",
+      "text": "ЗАМОК"
+    },
+    "0x1415688bb": {
+      "en": "SLIDE",
+      "text": "ЗРУХ"
+    },
+    "0x1415688c9": {
+      "en": "HOOK",
+      "text": "КРУК"
+    },
+    "0x1415688d8": {
+      "en": "AXLE",
+      "text": "ВОСЬ"
+    },
+    "0x1415688e4": {
+      "en": "lip rising",
+      "text": "кромка ўверх"
+    },
+    "0x1415688ef": {
+      "en": "lip lowering",
+      "text": "кромка ўніз"
+    },
+    "0x1415688fc": {
+      "en": "open %.0f deg, chains %.0f",
+      "text": "адкр. %.0f°, ланц. %.0f"
+    },
+    "0x141568917": {
+      "en": "free, chains %.0f deg",
+      "text": "вольн., ланц. %.0f°"
+    },
+    "0x14156892d": {
+      "en": "GATE",
+      "text": "БОРТ"
+    },
+    "0x14156893a": {
+      "en": "no tipper",
+      "text": "няма кузава"
+    },
+    "0x141568944": {
+      "en": "up %.2f m, %+.0f deg",
+      "text": "уверсе %.2f м, %+.0f°"
+    },
+    "0x141568959": {
+      "en": "down, %+.0f deg",
+      "text": "унізе, %+.0f°"
+    },
+    "0x141568969": {
+      "en": "angle",
+      "text": "вугал"
+    },
+    "0x14156896f": {
+      "en": "PLOW",
+      "text": "АДВАЛ"
+    },
+    "0x141568992": {
+      "en": "attach",
+      "text": "зачапіць"
+    },
+    "0x141568999": {
+      "en": "DIFF",
+      "text": "ДЫФ."
+    },
+    "0x1415689a5": {
+      "en": "belt too tight",
+      "text": "стужка перацягнута"
+    },
+    "0x1415689b4": {
+      "en": "working",
+      "text": "працуе"
+    },
+    "0x1415689bc": {
+      "en": "folded",
+      "text": "складз."
+    },
+    "0x1415689c3": {
+      "en": "%.0f deg folded",
+      "text": "складз. %.0f°"
+    },
+    "0x1415689d3": {
+      "en": "fold",
+      "text": "скласці"
+    },
+    "0x1415689e8": {
+      "en": "fold/unfold",
+      "text": "скл./раскл."
+    },
+    "0x1415689f4": {
+      "en": "unfold",
+      "text": "раскласці"
+    },
+    "0x1415689fb": {
+      "en": "HEAD",
+      "text": "ГАЛАВА"
+    },
+    "0x141568a07": {
+      "en": "hopper end %+.1f deg",
+      "text": "бункер %+.1f°"
+    },
+    "0x141568a2b": {
+      "en": "TILT",
+      "text": "НАХІЛ"
+    },
+    "0x141568a37": {
+      "en": "folded in",
+      "text": "складзена"
+    },
+    "0x141568a41": {
+      "en": "%.0f deg in",
+      "text": "складз. %.0f°"
+    },
+    "0x141568a5c": {
+      "en": "WINGS",
+      "text": "БАРТЫ"
+    },
+    "0x141568a6a": {
+      "en": "tight",
+      "text": "нацягнута"
+    },
+    "0x141568a70": {
+      "en": "released %.2f m",
+      "text": "паслаб. %.2f м"
+    },
+    "0x141568a80": {
+      "en": "release",
+      "text": "паслабіць"
+    },
+    "0x141568a88": {
+      "en": "release/tighten",
+      "text": "пасл./нац."
+    },
+    "0x141568a98": {
+      "en": "tighten",
+      "text": "нацягнуць"
+    },
+    "0x141568aa0": {
+      "en": "TENSION",
+      "text": "НАЦЯЖ."
+    },
+    "0x141568ab1": {
+      "en": "BELTS",
+      "text": "СТУЖКІ"
+    },
+    "0x141568abf": {
+      "en": "switch",
+      "text": "перакл."
+    },
+    "0x141568ac6": {
+      "en": "STICK",
+      "text": "СЦІК"
+    },
+    "0x141568ad4": {
+      "en": "GRIP",
+      "text": "ЗАХОП"
+    },
+    "0x141569180": {
+      "en": "SAVED AUTOMATICALLY",
+      "text": "ЗАХОЎВАЕЦЦА АЎТАМАТЫЧНА"
+    },
+    "0x141569194": {
+      "en": "SETTINGS",
+      "text": "НАЛАДЫ"
+    },
+    "0x14156919d": {
+      "en": "close",
+      "text": "закрыць"
+    },
+    "0x1415691a3": {
+      "en": "GENERAL",
+      "text": "АГУЛЬНЫЯ"
+    },
+    "0x1415691ab": {
+      "en": "edit",
+      "text": "змяніць"
+    },
+    "0x1415691b0": {
+      "en": "Controls",
+      "text": "Кіраванне"
+    },
+    "0x1415691b9": {
+      "en": "Fullscreen",
+      "text": "Поўны экран"
+    },
+    "0x1415691c4": {
+      "en": "UI size",
+      "text": "Памер інтэрфейсу"
+    },
+    "0x1415691d1": {
+      "en": "SOUND",
+      "text": "ГУК"
+    },
+    "0x1415691d7": {
+      "en": "Volume",
+      "text": "Гучнасць"
+    },
+    "0x1415691de": {
+      "en": "Music",
+      "text": "Музыка"
+    },
+    "0x1415691e4": {
+      "en": "Ambience",
+      "text": "Асяроддзе"
+    },
+    "0x1415691ed": {
+      "en": "reset",
+      "text": "скінуць"
+    },
+    "0x1415691f3": {
+      "en": "Reset sound",
+      "text": "Скінуць гук"
+    },
+    "0x1415691ff": {
+      "en": "GRAPHICS",
+      "text": "ГРАФІКА"
+    },
+    "0x141569208": {
+      "en": "Graphics",
+      "text": "Графіка"
+    },
+    "0x141569215": {
+      "en": "Render scale",
+      "text": "Маштаб рэндэру"
+    },
+    "0x141569226": {
+      "en": "Mirrors",
+      "text": "Люстэркі"
+    },
+    "0x14156922e": {
+      "en": "Half-rate physics",
+      "text": "Фізіка ў палову частаты"
+    },
+    "0x141569240": {
+      "en": "Experimental physics mode for slower computers. Changing it restarts the game.",
+      "text": "Эксперыментальны рэжым фізікі для слабых ПК. Змена патрабуе перазапуску гульні."
+    },
+    "0x1415692bc": {
+      "en": "cancel",
+      "text": "адмена"
+    },
+    "0x1415692c8": {
+      "en": "Half-rate physics changes with a restart.",
+      "text": "Рэжым фізікі зменіцца пасля перазапуску."
+    },
+    "0x1415692f2": {
+      "en": "RESTART NOW?",
+      "text": "ПЕРАЗАПУСЦІЦЬ ЗАРАЗ?"
+    },
+    "0x1415692ff": {
+      "en": "restart",
+      "text": "перазапуск"
+    },
+    "0x14156ac2a": {
+      "en": "Wheel loader",
+      "text": "Франтальны пагрузчык"
+    },
+    "0x14156ac4e": {
+      "en": "HOLMGREN'S MACHINES",
+      "text": "ТЭХНІКА ХОЛЬМГРЭНА"
+    },
+    "0x14156ac62": {
+      "en": "PRICE LIST",
+      "text": "ПРАЙС-ЛІСТ"
+    },
+    "0x14156ac70": {
+      "en": "by the hour or to keep; a row turns to its page",
+      "text": "пагадзінна або ва ўласнасць; радок адкрывае старонку"
+    },
+    "0x14156aca0": {
+      "en": "PER HOUR",
+      "text": "ЗА ГАДЗІНУ"
+    },
+    "0x14156aca9": {
+      "en": "TO BUY",
+      "text": "КУПЛЯ"
+    },
+    "0x14156acda": {
+      "en": "%.0f kg",
+      "text": "%.0f кг"
+    },
+    "0x14156ace2": {
+      "en": "%.1f t",
+      "text": "%.1f т"
+    },
+    "0x14156ace9": {
+      "en": "Buy",
+      "text": "Купіць"
+    },
+    "0x14156aced": {
+      "en": "Hire",
+      "text": "Арэнда"
+    },
+    "0x14156acf2": {
+      "en": "Operating weight",
+      "text": "Эксплуатацыйная маса"
+    },
+    "0x14156ad03": {
+      "en": "%.0f kW",
+      "text": "%.0f кВт"
+    },
+    "0x14156ad0b": {
+      "en": "Engine",
+      "text": "Рухавік"
+    },
+    "0x14156ad12": {
+      "en": "Equipped",
+      "text": "Аснашчэнне"
+    },
+    "0x14156ad1b": {
+      "en": "HIRE, PER HOUR",
+      "text": "АРЭНДА ЗА ГАДЗІНУ"
+    },
+    "0x14156ad30": {
+      "en": "PLANT HIRE & SALES  ·  EST. 1962",
+      "text": "АРЭНДА І ПРОДАЖ ТЭХНІКІ  ·  З 1962 Г."
+    },
+    "0x14156ad52": {
+      "en": "AUTUMN CATALOGUE 2026",
+      "text": "ВОСЕНЬСКІ КАТАЛОГ 2026"
+    },
+    "0x14156ad72": {
+      "en": "MACHINES",
+      "text": "ТЭХНІКА"
+    },
+    "0x14156ad7f": {
+      "en": "INSIDE",
+      "text": "УНУТРЫ"
+    },
+    "0x14156ad88": {
+      "en": "HIRE IT BY THE HOUR. BUY IT FOR LIFE.",
+      "text": "БЯРЫ ПАГАДЗІННА. КУПЛЯЙ НАЗАЎСЁДЫ."
+    },
+    "0x14156adb0": {
+      "en": "Every machine delivered to your site: to the yard, the gate or right beside you.",
+      "text": "Дастаўка любой машыны на ваш аб'ект: на базу, да брамы або проста да вас."
+    },
+    "0x14156ae08": {
+      "en": "The yard on the north road  ·  open six till six  ·  ask for Erik",
+      "text": "Пляцоўка на паўночнай дарозе  ·  ад шасці да шасці  ·  спытайце Эрыка"
+    },
+    "0x14156ae4c": {
+      "en": "owned, on every site",
+      "text": "ва ўласнасці, на ўсіх картах"
+    },
+    "0x14156ae61": {
+      "en": "to hire, waiting on you",
+      "text": "у арэнду, чакае вас"
+    },
+    "0x14156ae79": {
+      "en": "to buy, waiting on you",
+      "text": "да куплі, чакае вас"
+    },
+    "0x14156ae90": {
+      "en": "on hire by the hour",
+      "text": "у пагадзіннай арэндзе"
+    },
+    "0x14156aea4": {
+      "en": "THE COUNTER",
+      "text": "КАСА"
+    },
+    "0x14156aeb0": {
+      "en": "YOUR MACHINES",
+      "text": "ВАША ТЭХНІКА"
+    },
+    "0x14156aec0": {
+      "en": "Account 0042  ·  HOLMGREN'S MACHINES",
+      "text": "Рахунак 0042  ·  ТЭХНІКА ХОЛЬМГРЭНА"
+    },
+    "0x14156aee6": {
+      "en": "In the account",
+      "text": "На рахунку"
+    },
+    "0x14156aefe": {
+      "en": "ON HIRE",
+      "text": "У АРЭНДЗЕ"
+    },
+    "0x14156af08": {
+      "en": "A machine bought is paid at the counter, and a machine hired its first hour.",
+      "text": "Купленая машына аплачваецца адразу, а арандаваная — за першую гадзіну."
+    },
+    "0x14156af55": {
+      "en": "Nothing on order.",
+      "text": "У замове нічога няма."
+    },
+    "0x14156af68": {
+      "en": "Press Hire or Buy on a machine's page.",
+      "text": "Націсніце «Арэнда» або «Купіць» на старонцы машыны."
+    },
+    "0x14156af8f": {
+      "en": "OWNED",
+      "text": "УЛАСНАСЦЬ"
+    },
+    "0x14156af98": {
+      "en": "short ",
+      "text": "не хапае "
+    },
+    "0x14156af9f": {
+      "en": " / h",
+      "text": " / г"
+    },
+    "0x14156afa9": {
+      "en": "Confirm",
+      "text": "Пацвердзіць"
+    },
+    "0x14156afb1": {
+      "en": "Cancel",
+      "text": "Адмена"
+    },
+    "0x14156afb8": {
+      "en": "and %d more",
+      "text": "і яшчэ %d"
+    },
+    "0x14156afc4": {
+      "en": "Open",
+      "text": "Адкрыць"
+    },
+    "0x14156afc9": {
+      "en": "Next",
+      "text": "Далей"
+    },
+    "0x14156afce": {
+      "en": "Previous",
+      "text": "Назад"
+    },
+    "0x14156afd7": {
+      "en": "Back",
+      "text": "Назад"
+    },
+    "0x14156bd29": {
+      "en": "ROAD",
+      "text": "ДАРОГА"
+    },
+    "0x14156bd2e": {
+      "en": "PAD",
+      "text": "ПЛЯЦОЎКА"
+    },
+    "0x14156bd32": {
+      "en": "%.2f m",
+      "text": "%.2f м"
+    },
+    "0x14156bd39": {
+      "en": "on grade",
+      "text": "у ровень"
+    },
+    "0x14156bd42": {
+      "en": "cut",
+      "text": "зразаць"
+    },
+    "0x14156bd46": {
+      "en": "%s %.2f m",
+      "text": "%s %.2f м"
+    },
+    "0x14156bd50": {
+      "en": "fill",
+      "text": "насыпаць"
+    },
+    "0x14156bd86": {
+      "en": "done",
+      "text": "гатова"
+    },
+    "0x14156bd8b": {
+      "en": "hold to remove",
+      "text": "утрымл. для выдалення"
+    },
+    "0x14156cc64": {
+      "en": "%d · %.1f m/s",
+      "text": "%d · %.1f м/с"
+    },
+    "0x14156cca2": {
+      "en": "%+.0f cm",
+      "text": "%+.0f см"
+    },
+    "0x14156ccab": {
+      "en": "%+.1f cm",
+      "text": "%+.1f см"
+    },
+    "0x1414a5493": {
+      "en": "Save *",
+      "text": "Захаваць *"
+    },
+    "0x1414a549a": {
+      "en": "Save",
+      "text": "Захаваць"
+    },
+    "0x1414a549f": {
+      "en": "Cancel render",
+      "text": "Адмяніць рэндэр"
+    },
+    "0x1414a54ad": {
+      "en": "Render video",
+      "text": "Рэндэр відэа"
+    },
+    "0x1414a54d5": {
+      "en": "File",
+      "text": "Файл"
+    },
+    "0x1414a54e0": {
+      "en": "Open...",
+      "text": "Адкрыць..."
+    },
+    "0x1414a54ee": {
+      "en": "New from take...",
+      "text": "Новы з дубля..."
+    },
+    "0x1414a5511": {
+      "en": "Save as...",
+      "text": "Захаваць як..."
+    },
+    "0x1414a5526": {
+      "en": "Close",
+      "text": "Закрыць"
+    },
+    "0x1414a5538": {
+      "en": "Quit",
+      "text": "Выхад"
+    },
+    "0x1414a5542": {
+      "en": "Edit",
+      "text": "Праўка"
+    },
+    "0x1414a554d": {
+      "en": "Undo",
+      "text": "Адмяніць"
+    },
+    "0x1414a5552": {
+      "en": "View",
+      "text": "Від"
+    },
+    "0x1414a5557": {
+      "en": "Free",
+      "text": "Вольны"
+    },
+    "0x1414a5566": {
+      "en": "Chase",
+      "text": "Знешні"
+    },
+    "0x1414a5578": {
+      "en": "Cab",
+      "text": "Кабіна"
+    },
+    "0x1414a5586": {
+      "en": "Through the clip",
+      "text": "Праз кліп"
+    },
+    "0x1414a55a4": {
+      "en": "Show",
+      "text": "Паказаць"
+    },
+    "0x1414a55b2": {
+      "en": "Hide panels",
+      "text": "Схаваць панэлі"
+    },
+    "0x1414a560f": {
+      "en": "clip tool",
+      "text": "інструмент кліпа"
+    },
+    "0x1414a56fd": {
+      "en": "timeline",
+      "text": "шкала часу"
+    },
+    "0x1414a56ee": {
+      "en": "playing",
+      "text": "іграе"
+    },
+    "0x1414a56f6": {
+      "en": "paused",
+      "text": "паўза"
+    },
+    "0x1414a578c": {
+      "en": "whole take",
+      "text": "увесь дубль"
+    },
+    "0x1414a5797": {
+      "en": "zoom all",
+      "text": "паказаць усё"
+    },
+    "0x1414a57a0": {
+      "en": "fit range",
+      "text": "па дыяпазоне"
+    },
+    "0x1414a57aa": {
+      "en": "zoom range",
+      "text": "маштаб дыяпазону"
+    }
+  },
+  "table_strings": {
+    "controls": {
+      "0x1414a0dc5": {
+        "en": "TRAVEL",
+        "text": "РУХ"
+      },
+      "0x1414a0f9d": {
+        "en": "HYDRAULICS",
+        "text": "ГІДРАЎЛІКА"
+      },
+      "0x1414a1111": {
+        "en": "SWITCHES",
+        "text": "ПЕРАКЛЮЧАЛЬНІКІ"
+      },
+      "0x1414a1251": {
+        "en": "GRADE HOLD",
+        "text": "УТРЫМАННЕ ЎХІЛУ"
+      },
+      "0x1414a171c": {
+        "en": "MENUS",
+        "text": "МЕНЮ"
+      },
+      "0x1414a1814": {
+        "en": "CAMERA",
+        "text": "КАМЕРА"
+      },
+      "0x1414a18f5": {
+        "en": "ON FOOT",
+        "text": "ПЕШШУ"
+      },
+      "0x1414a1bbd": {
+        "en": "KEYS",
+        "text": "КЛАВІШЫ"
+      },
+      "0x1414a0dbf": {
+        "en": "Drive",
+        "text": "Язда"
+      },
+      "0x1414a0df5": {
+        "en": "Steer",
+        "text": "Руль"
+      },
+      "0x1414a0e0a": {
+        "en": "Brake / handbrake",
+        "text": "Тормаз / ручнік"
+      },
+      "0x1414a0e2c": {
+        "en": "Speed range 1",
+        "text": "Дыяпазон хуткасці 1"
+      },
+      "0x1414a0e4a": {
+        "en": "Speed range 2",
+        "text": "Дыяпазон хуткасці 2"
+      },
+      "0x1414a0e68": {
+        "en": "Speed range 3",
+        "text": "Дыяпазон хуткасці 3"
+      },
+      "0x1414a0e86": {
+        "en": "Speed range 4",
+        "text": "Дыяпазон хуткасці 4"
+      },
+      "0x1414a0ea4": {
+        "en": "Speed range 5",
+        "text": "Дыяпазон хуткасці 5"
+      },
+      "0x1414a0ec2": {
+        "en": "Speed range 6",
+        "text": "Дыяпазон хуткасці 6"
+      },
+      "0x1414a0ee0": {
+        "en": "Speed range 7",
+        "text": "Дыяпазон хуткасці 7"
+      },
+      "0x1414a0efe": {
+        "en": "Speed range 8",
+        "text": "Дыяпазон хуткасці 8"
+      },
+      "0x1414a0f1c": {
+        "en": "Speed range 9",
+        "text": "Дыяпазон хуткасці 9"
+      },
+      "0x1414a0f38": {
+        "en": "Arm",
+        "text": "Страла"
+      },
+      "0x1414a0f40": {
+        "en": "pull back to raise the hooklift's arm, the hauler's bed, the tractor's hitch or front loader",
+        "text": "на сябе — падняць стралу мультыліфта, кузаў самазвала, навяску або пагрузчык трактара"
+      },
+      "0x1414a0fb6": {
+        "en": "Curl",
+        "text": "Нахіл"
+      },
+      "0x1414a0fc0": {
+        "en": "left slides the hooklift's bed, curls the tractor's front loader",
+        "text": "улева — зрух рамы мультыліфта, нахіл каўша пагрузчыка трактара"
+      },
+      "0x1414a100d": {
+        "en": "pull back to raise",
+        "text": "на сябе — падняць"
+      },
+      "0x1414a102c": {
+        "en": "Bucket",
+        "text": "Коўш"
+      },
+      "0x1414a1033": {
+        "en": "left curls",
+        "text": "улева — зачэрпванне"
+      },
+      "0x1414a104c": {
+        "en": "Attachment lever",
+        "text": "Рычаг навяснога"
+      },
+      "0x1414a1060": {
+        "en": "flaps, tines, plow angle, slide",
+        "text": "крылы, вілы, паварот адвала, зрух"
+      },
+      "0x1414a1080": {
+        "en": "Front end",
+        "text": "Пярэдняе абст."
+      },
+      "0x1414a1090": {
+        "en": "hold to work the front loader or plow",
+        "text": "утрымлівайце для працы з пярэднім пагрузчыкам або адвалам"
+      },
+      "0x1414a10c9": {
+        "en": "Left side only",
+        "text": "Толькі левы бок"
+      },
+      "0x1414a10d8": {
+        "en": "hold to control only the left flap, tine or tractor fork",
+        "text": "утрымлівайце для кіравання толькі левым крылом, зубцом або віламі трактара"
+      },
+      "0x1414a112e": {
+        "en": "Right side only",
+        "text": "Толькі правы бок"
+      },
+      "0x1414a114e": {
+        "en": "Rear hydraulics",
+        "text": "Задняя гідраўліка"
+      },
+      "0x1414a1160": {
+        "en": "the tractor's outlets, the hooklift's plow, a tipping trailer",
+        "text": "выхады трактара, адвал мультыліфта, самазвальны прычэп"
+      },
+      "0x1414a11ac": {
+        "en": "Lean",
+        "text": "Нахіл цела"
+      },
+      "0x1414a11c0": {
+        "en": "Winch drum",
+        "text": "Барабан лябёдкі"
+      },
+      "0x1414a11df": {
+        "en": "Attachment",
+        "text": "Навясное"
+      },
+      "0x1414a11ea": {
+        "en": "hitch, plow, trailer",
+        "text": "счэпка, адвал, прычэп"
+      },
+      "0x1414a120e": {
+        "en": "Speed range",
+        "text": "Дыяпазон хуткасцяў"
+      },
+      "0x1414a121a": {
+        "en": "opens the speed range menu",
+        "text": "адкрывае меню дыяпазонаў хуткасцяў"
+      },
+      "0x1414a1246": {
+        "en": "Hold grade",
+        "text": "Утрыманне ўхілу"
+      },
+      "0x1414a126c": {
+        "en": "Tilt lock",
+        "text": "Фіксацыя нахілу"
+      },
+      "0x1414a1278": {
+        "en": "the blade's tilt follows the grade, or stays yours",
+        "text": "нахіл адвала ідзе па ўхіле або застаецца ручным"
+      },
+      "0x1414a12bd": {
+        "en": "Hold offset",
+        "text": "Зрушэнне ўзроўню"
+      },
+      "0x1414a12c9": {
+        "en": "opens the grade offset menu",
+        "text": "адкрывае меню зрушэння ўзроўню"
+      },
+      "0x1414a12fc": {
+        "en": "Warning light",
+        "text": "Маячок"
+      },
+      "0x1414a1320": {
+        "en": "Rear hydraulics fully up / down",
+        "text": "Задняя гідраўліка цалкам уверх / уніз"
+      },
+      "0x1414a1355": {
+        "en": "Hitch up / down",
+        "text": "Счэпка ўверх / уніз"
+      },
+      "0x1414a1378": {
+        "en": "Diff lock",
+        "text": "Блакіроўка дыферэнцыяла"
+      },
+      "0x1414a139a": {
+        "en": "Attachment lock",
+        "text": "Замок навяснога"
+      },
+      "0x1414a13b0": {
+        "en": "the tractor's front, the hooklift's arm, a loader's bracket",
+        "text": "пярэдняя частка трактара, страла мультыліфта, кранштэйн пагрузчыка"
+      },
+      "0x1414a1403": {
+        "en": "Tailgate lock",
+        "text": "Замок задняга борта"
+      },
+      "0x1414a1411": {
+        "en": "the tipper's",
+        "text": "у самазвала"
+      },
+      "0x1414a1431": {
+        "en": "Lift axle",
+        "text": "Пад'ёмная вось"
+      },
+      "0x1414a1440": {
+        "en": "the hooklift's rear axle up or down",
+        "text": "пад'ём або апусканне задняй восі мультыліфта"
+      },
+      "0x1414a1473": {
+        "en": "Float",
+        "text": "Плаваючы рэжым"
+      },
+      "0x1414a1480": {
+        "en": "the plow, the dozer's blade, the feeder's belts on and off",
+        "text": "адвал, нож бульдозера, укл./выкл. стужак канвеера"
+      },
+      "0x1414a14cc": {
+        "en": "Respawn",
+        "text": "Адраджэнне"
+      },
+      "0x1414a14e3": {
+        "en": "Throttle",
+        "text": "Газ"
+      },
+      "0x1414a14ec": {
+        "en": "one joystick; neutral brakes",
+        "text": "адзін джойсцік; у нейтралі — тормаз"
+      },
+      "0x1414a1520": {
+        "en": "Blade lift",
+        "text": "Пад'ём адвала"
+      },
+      "0x1414a1536": {
+        "en": "Blade tilt",
+        "text": "Перакос адвала"
+      },
+      "0x1414a1553": {
+        "en": "Blade angle",
+        "text": "Паварот адвала"
+      },
+      "0x1414a1571": {
+        "en": "Blade pitch",
+        "text": "Вугал рэзання адвала"
+      },
+      "0x1414a158e": {
+        "en": "Hold offset down",
+        "text": "Зрушэнне ўзроўню ўніз"
+      },
+      "0x1414a15b0": {
+        "en": "Hold offset up",
+        "text": "Зрушэнне ўзроўню ўверх"
+      },
+      "0x1414a15d4": {
+        "en": "Left track",
+        "text": "Левая гусеніца"
+      },
+      "0x1414a15f5": {
+        "en": "Right track",
+        "text": "Правая гусеніца"
+      },
+      "0x1414a1610": {
+        "en": "Boom",
+        "text": "Страла"
+      },
+      "0x1414a1624": {
+        "en": "Slew",
+        "text": "Паварот"
+      },
+      "0x1414a1629": {
+        "en": "the feeder's hopper wings",
+        "text": "барты бункера канвеера"
+      },
+      "0x1414a1653": {
+        "en": "Stick",
+        "text": "Рукаяць"
+      },
+      "0x1414a1659": {
+        "en": "the feeder's head fold",
+        "text": "складванне галавы канвеера"
+      },
+      "0x1414a1680": {
+        "en": "left curls; the feeder's chassis tilt",
+        "text": "улева — зачэрпванне; нахіл шасі канвеера"
+      },
+      "0x1414a16b6": {
+        "en": "Thumb",
+        "text": "Захоп"
+      },
+      "0x1414a16c0": {
+        "en": "push to close, stays where let go; the feeder's take-up",
+        "text": "націсніце, каб сціснуць, утрымлівае пазіцыю; нацяжэнне стужкі канвеера"
+      },
+      "0x1414a16f8": {
+        "en": "Wheel",
+        "text": "Кола меню"
+      },
+      "0x1414a16fe": {
+        "en": "the gamepad's and the sticks'",
+        "text": "на геймпадзе і джойсціках"
+      },
+      "0x1414a172d": {
+        "en": "Map",
+        "text": "Карта"
+      },
+      "0x1414a1731": {
+        "en": "opens the site map",
+        "text": "адкрывае карту аб'екта"
+      },
+      "0x1414a1753": {
+        "en": "Minimap zoom",
+        "text": "Маштаб міні-карты"
+      },
+      "0x1414a1760": {
+        "en": "where the site has a minimap",
+        "text": "дзе на карце ёсць міні-карта"
+      },
+      "0x1414a1789": {
+        "en": "Hide or show jobs",
+        "text": "Схаваць або паказаць заданні"
+      },
+      "0x1414a17a0": {
+        "en": "the jobs list in the top right corner",
+        "text": "спіс заданняў у правым верхнім вугле"
+      },
+      "0x1414a17d2": {
+        "en": "Grade grid",
+        "text": "Сетка ўхілу"
+      },
+      "0x1414a17dd": {
+        "en": "shown, or only after a change",
+        "text": "пастаянна або толькі пасля змены"
+      },
+      "0x1414a17fb": {
+        "en": "Change view",
+        "text": "Змяніць від"
+      },
+      "0x1414a1807": {
+        "en": "chase or cab",
+        "text": "знешняя камера або кабіна"
+      },
+      "0x1414a1830": {
+        "en": "Look behind",
+        "text": "Агляд назад"
+      },
+      "0x1414a1840": {
+        "en": "hold to look behind, tap to put the view back",
+        "text": "утрымлівайце, каб глядзець назад, націсніце для звароту"
+      },
+      "0x1414a1880": {
+        "en": "Get in or out",
+        "text": "Сесці або выйсці"
+      },
+      "0x1414a1890": {
+        "en": "a pad's or the sticks' Interact does it too",
+        "text": "кнопка ўзаемадзеяння на геймпадзе або джойсціку робіць тое ж"
+      },
+      "0x1414a18cc": {
+        "en": "Interact",
+        "text": "Узаемадзеянне"
+      },
+      "0x1414a18d5": {
+        "en": "Debug dump",
+        "text": "Адладачны дамп"
+      },
+      "0x1414a18f0": {
+        "en": "Walk",
+        "text": "Хадзьба"
+      },
+      "0x1414a190e": {
+        "en": "Strafe",
+        "text": "Крок убок"
+      },
+      "0x1414a1921": {
+        "en": "Jump",
+        "text": "Скачок"
+      },
+      "0x1414a1932": {
+        "en": "Push",
+        "text": "Штурхаць"
+      },
+      "0x1414a1938": {
+        "en": "hold and walk into a machine to push it",
+        "text": "утрымлівайце і ідзіце на машыну, каб штурхаць яе"
+      },
+      "0x1414a196c": {
+        "en": "Talk",
+        "text": "Гаварыць"
+      },
+      "0x1414a197c": {
+        "en": "Use",
+        "text": "Ужыць"
+      },
+      "0x1414a1980": {
+        "en": "places a grade stick",
+        "text": "ставіць узроўневы калок"
+      },
+      "0x1414a19a8": {
+        "en": "tap at a stick to set its height, hold to remove it; a pad's X does both",
+        "text": "націсніце ля калка для вышыні, утрымлівайце для выдалення; на геймпадзе — X"
+      },
+      "0x1414a1a04": {
+        "en": "Mark height",
+        "text": "Вышыня пазнакі"
+      },
+      "0x1414a1a10": {
+        "en": "up or down in a stick's height mode",
+        "text": "уверх або ўніз у рэжыме налады вышыні калка"
+      },
+      "0x1414a1a46": {
+        "en": "Stick mode",
+        "text": "Рэжым калка"
+      },
+      "0x1414a1a58": {
+        "en": "road or pad, in a stick's height mode",
+        "text": "дарога або пляцоўка ў рэжыме вышыні калка"
+      },
+      "0x1414a1a8c": {
+        "en": "Call the bike",
+        "text": "Выклікаць матацыкл"
+      },
+      "0x1414a1a9a": {
+        "en": "or the snowmobile",
+        "text": "або снегаход"
+      },
+      "0x1414a1abc": {
+        "en": "Fire the charges",
+        "text": "Падарваць зарады"
+      },
+      "0x1414a1ad9": {
+        "en": "Tool belt",
+        "text": "Пояс інструментаў"
+      },
+      "0x1414a1ae3": {
+        "en": "opens the tool belt menu",
+        "text": "адкрывае меню пояса інструментаў"
+      },
+      "0x1414a1b09": {
+        "en": "No tool",
+        "text": "Без інструмента"
+      },
+      "0x1414a1b11": {
+        "en": "the hands free",
+        "text": "вольныя рукі"
+      },
+      "0x1414a1b2d": {
+        "en": "Grade sticks",
+        "text": "Узроўневыя калкі"
+      },
+      "0x1414a1b47": {
+        "en": "Drill",
+        "text": "Бур"
+      },
+      "0x1414a1b5a": {
+        "en": "Dynamite",
+        "text": "Дынаміт"
+      },
+      "0x1414a1b70": {
+        "en": "Detonator",
+        "text": "Дэтанатар"
+      },
+      "0x1414a1b8c": {
+        "en": "Belt",
+        "text": "Пояс"
+      },
+      "0x1414a1bb7": {
+        "en": "Pause",
+        "text": "Паўза"
+      },
+      "0x1414a1bcd": {
+        "en": "Tuning",
+        "text": "Тюнінг"
+      },
+      "0x1414a1bdf": {
+        "en": "Replay",
+        "text": "Паўтор"
+      },
+      "0x1414a1bef": {
+        "en": "Record take",
+        "text": "Запіс дубля"
+      },
+      "0x1414a1c03": {
+        "en": "Run",
+        "text": "Бег"
+      }
+    },
+    "free_cam": {
+      "0x141562d58": {
+        "en": "MENUS",
+        "text": "МЕНЮ"
+      },
+      "0x141562d5e": {
+        "en": "Esc menu",
+        "text": "Меню Esc"
+      },
+      "0x141562d71": {
+        "en": "FREE CAMERA",
+        "text": "ВОЛЬНАЯ КАМЕРА"
+      },
+      "0x141562d7d": {
+        "en": "Fly",
+        "text": "Палёт"
+      },
+      "0x141562d86": {
+        "en": "L stick",
+        "text": "Л. сцік"
+      },
+      "0x141562d8e": {
+        "en": "Up / down",
+        "text": "Уверх / уніз"
+      },
+      "0x141562da6": {
+        "en": "Fast",
+        "text": "Хутка"
+      },
+      "0x141562db4": {
+        "en": "Faster",
+        "text": "Хутчэй"
+      }
+    },
+    "look_around": {
+      "0x141562c58": {
+        "en": "Look around",
+        "text": "Агляд"
+      },
+      "0x141562c64": {
+        "en": "on foot",
+        "text": "пешшу"
+      },
+      "0x141562c70": {
+        "en": "in a truck, the tractor, the bike or the snowmobile",
+        "text": "у грузавіку, трактары, на матацыкле або снегаходзе"
+      },
+      "0x141562ca4": {
+        "en": "in a loader",
+        "text": "у пагрузчыку"
+      },
+      "0x141562cb0": {
+        "en": "in the dozer",
+        "text": "у бульдозеры"
+      },
+      "0x141562cbd": {
+        "en": "in the excavator",
+        "text": "у экскаватары"
+      }
+    },
+    "vehicle_tabs": {
+      "0x1414a0950": {
+        "en": "on foot",
+        "text": "пешшу"
+      },
+      "0x1414a0958": {
+        "en": "loaders",
+        "text": "пагрузчыкі"
+      },
+      "0x1414a0960": {
+        "en": "hauler",
+        "text": "самазвал"
+      },
+      "0x1414a0967": {
+        "en": "truck",
+        "text": "пікап"
+      },
+      "0x1414a096d": {
+        "en": "hooklift",
+        "text": "мультыліфт"
+      },
+      "0x1414a0976": {
+        "en": "tractor",
+        "text": "трактар"
+      },
+      "0x1414a097e": {
+        "en": "bandvagn",
+        "text": "усюдыход"
+      },
+      "0x1414a0987": {
+        "en": "dozer",
+        "text": "бульдозер"
+      },
+      "0x1414a098d": {
+        "en": "excavator",
+        "text": "экскаватар"
+      },
+      "0x1414a0997": {
+        "en": "dirt bike",
+        "text": "матацыкл"
+      },
+      "0x1414a09a1": {
+        "en": "snowmobile",
+        "text": "снегаход"
+      },
+      "0x1414a09ac": {
+        "en": "track feeder",
+        "text": "канвеер"
+      },
+      "0x14149ed10": {
+        "en": "R stick + L hat",
+        "text": "Пр. сцік + Л. хатка"
+      }
+    },
+    "machine_display": {
+      "0x141648820": {
+        "full_en": "dozer",
+        "full": "бульдозер",
+        "short_en": "dozer",
+        "short": "бульдозер"
+      },
+      "0x141648840": {
+        "full_en": "medium loader",
+        "full": "сярэдні пагрузчык",
+        "short_en": "loader",
+        "short": "пагрузчык"
+      },
+      "0x141648860": {
+        "full_en": "bandvagn",
+        "full": "усюдыход",
+        "short_en": "bandvagn",
+        "short": "усюдыход"
+      },
+      "0x141648880": {
+        "full_en": "truck",
+        "full": "пікап",
+        "short_en": "truck",
+        "short": "пікап"
+      },
+      "0x1416488a0": {
+        "full_en": "hauler",
+        "full": "самазвал",
+        "short_en": "hauler",
+        "short": "самазвал"
+      },
+      "0x1416488c0": {
+        "full_en": "dirt bike",
+        "full": "матацыкл",
+        "short_en": "bike",
+        "short": "матацыкл"
+      },
+      "0x1416488e0": {
+        "full_en": "excavator",
+        "full": "экскаватар",
+        "short_en": "excavator",
+        "short": "экскаватар"
+      },
+      "0x141648900": {
+        "full_en": "snowmobile",
+        "full": "снегаход",
+        "short_en": "sled",
+        "short": "снегаход"
+      },
+      "0x141648920": {
+        "full_en": "tractor",
+        "full": "трактар",
+        "short_en": "tractor",
+        "short": "трактар"
+      },
+      "0x141648940": {
+        "full_en": "hooklift",
+        "full": "мультыліфт",
+        "short_en": "hooklift",
+        "short": "мультыліфт"
+      },
+      "0x141648960": {
+        "full_en": "large loader",
+        "full": "вялікі пагрузчык",
+        "short_en": "loader",
+        "short": "пагрузчык"
+      },
+      "0x141648980": {
+        "full_en": "track feeder",
+        "full": "гусенічны канвеер",
+        "short_en": "feeder",
+        "short": "канвеер"
+      }
+    },
+    "editor": {
+      "Select": "Выбар",
+      "Sculpt": "Рэльеф",
+      "Ground": "Грунт",
+      "Shapes": "Формы",
+      "Paint": "Афарбоўка",
+      "Water": "Вада",
+      "raise": "падняць",
+      "lift": "узняць",
+      "lower": "апусціць",
+      "paint": "фарбаваць",
+      "vegetation": "расліннасць",
+      "flatten": "выраўнаваць",
+      "smooth": "згладзіць",
+      "pour water": "наліць ваду",
+      "water to level": "вада да ўзроўню",
+      "tunnel": "тунэль",
+      "noise": "шум",
+      "weather": "выветрыванне",
+      "erode": "эрозія",
+      "profile": "профіль",
+      "terrace": "тэраса",
+      "clone": "кланаваць",
+      "peak / valley": "пік / даліна",
+      "paint mask": "маска фарбы",
+      "stencil": "трафарэт",
+      "spring": "крыніца",
+      "road": "дарога",
+      "tree": "дрэва",
+      "rock": "камень",
+      "prop": "аб'ект",
+      "spawn": "кропка з'яўлення",
+      "section": "секцыя",
+      "delete": "выдаліць",
+      "select": "выбраць",
+      "field": "поле",
+      "thin vegetation": "прарэдзіць лес",
+      "tree brush": "пэндзаль дрэў",
+      "places a rectangular block of material on the ground": "размяшчае прамавугольны блок матэрыялу на зямлі",
+      "places a ramp rising along Z to the chosen height": "стварае рампу, якая падымаецца па восі Z да выбранай вышыні",
+      "creates a flat pad at the clicked height, blending into the surrounding terrain": "стварае роўную пляцоўку на вышыні кліку з плаўным пераходам у рэльеф",
+      "creates a circular pond, initially 1 metre above the clicked ground": "стварае круглую сажалку спачатку на 1 метр вышэй за кропку кліку",
+      "adds a grayscale heightmap to the bedrock; black and white map to the low and high settings": "дадае карту вышынь у адценнях шэрага да скальнай пароды; чорны і белы адпавядаюць мінімуму і максімуму",
+      "deposits material from an image mask, with material and thickness set per pixel value": "наносіць матэрыял па масцы выявы, задаючы тып і таўшчыню па значэнні пікселя",
+      "paints vegetation over a rectangle, using one type or an image mask": "размяшчае расліннасць у прамавугольніку аднаго тыпу або па масцы выявы",
+      "creates scattered domes or narrow towers of material within a rectangle": "стварае раскіданыя купалы або вузкія вежы матэрыялу ў межах прамавугольніка",
+      "scatters trees in a circle, limited by slope and a mask": "раскідвае дрэвы ў крузе з абмежаваннем па ўхіле і масцы",
+      "thins listed trees inside an outline, leaving stumps and heath": "прарэджвае ўказаныя дрэвы ўнутры контуру, пакідаючы пні і верас",
+      "carves a hollow below the clicked ground": "выразае паглыбленне ніжэй за ўзровень кліку",
+      "adds material under the brush; uses the existing surface material unless you choose a fill": "дадае матэрыял пад пэндзлем; бярэ матэрыял паверхні, калі не выбрана іншая засыпка",
+      "raises the ground, including its layers, grass and water, without adding material": "падымае грунт разам з пластамі, травой і вадой без дадання матэрыялу"
+    },
+    "extra_ui": {
+      "0x141562f80": {
+        "en": "CAMERA",
+        "text": "КАМЕРА"
+      },
+      "0x141562f88": {
+        "en": "TRAVEL",
+        "text": "РУХ"
+      },
+      "0x141562f90": {
+        "en": "STEERING RETURN",
+        "text": "ЗВАРОТ РУЛЯ"
+      },
+      "0x141562f98": {
+        "en": "HYDRAULICS",
+        "text": "ГІДРАЎЛІКА"
+      },
+      "0x141562fa0": {
+        "en": "SWITCHES",
+        "text": "ПЕРАКЛЮЧАЛЬНІКІ"
+      },
+      "0x141562fa8": {
+        "en": "GRADE HOLD",
+        "text": "УТРЫМАННЕ ЎХІЛУ"
+      },
+      "0x141562fb0": {
+        "en": "MENUS",
+        "text": "МЕНЮ"
+      },
+      "0x141562fb8": {
+        "en": "ON FOOT",
+        "text": "ПЕШШУ"
+      },
+      "0x141562fc0": {
+        "en": "KEYS",
+        "text": "КЛАВІШЫ"
+      },
+      "0x141562fc8": {
+        "en": "FREE CAMERA",
+        "text": "ВОЛЬНАЯ КАМЕРА"
+      },
+      "0x1416351c0": {
+        "en": "loading site",
+        "text": "загрузка карты"
+      },
+      "0x1416351c8": {
+        "en": "building roads",
+        "text": "пабудова дарог"
+      },
+      "0x1416351d0": {
+        "en": "building terrain",
+        "text": "пабудова рэльефу"
+      },
+      "0x1416351d8": {
+        "en": "placing trees",
+        "text": "расстаноўка дрэў"
+      },
+      "0x1416351e0": {
+        "en": "placing buildings",
+        "text": "расстаноўка будынкаў"
+      },
+      "0x1416351e8": {
+        "en": "preparing dirt",
+        "text": "падрыхтоўка грунту"
+      },
+      "0x1416351f0": {
+        "en": "placing machines",
+        "text": "расстаноўка тэхнікі"
+      },
+      "0x1416351f8": {
+        "en": "placing objects",
+        "text": "расстаноўка аб'ектаў"
+      },
+      "0x141635200": {
+        "en": "building collisions",
+        "text": "пабудова калізій"
+      },
+      "0x141635208": {
+        "en": "settling terrain",
+        "text": "укладка рэльефу"
+      },
+      "0x141635210": {
+        "en": "compiling shaders",
+        "text": "кампіляцыя шэйдараў"
+      },
+      "0x141635218": {
+        "en": "receiving the site",
+        "text": "атрыманне карты"
+      },
+      "0x141566338": {
+        "en": "SIZE",
+        "text": "ПАМЕР"
+      },
+      "0x141566340": {
+        "en": "SOURCE",
+        "text": "КРЫНІЦА"
+      },
+      "0x1415666b0": {
+        "en": "THE GAME'S SITES",
+        "text": "КАРТЫ ГУЛЬНІ"
+      }
+    }
+  },
+  "pack_toml": {
+    "shop.toml": [
+      {
+        "old": "section = \"Loaders\"",
+        "new": "section = \"Пагрузчыкі\""
+      },
+      {
+        "old": "section = \"Earthmoving\"",
+        "new": "section = \"Землярыйныя\""
+      },
+      {
+        "old": "section = \"Haulage\"",
+        "new": "section = \"Самазвалы\""
+      },
+      {
+        "old": "section = \"Farm\"",
+        "new": "section = \"Фермерскія\""
+      },
+      {
+        "old": "section = \"Getting about\"",
+        "new": "section = \"Транспарт\""
+      },
+      {
+        "old": "name = \"Wheel loader\"",
+        "new": "name = \"Франтальны пагрузчык\""
+      },
+      {
+        "old": "name = \"Large wheel loader\"",
+        "new": "name = \"Вялікі франтальны пагрузчык\""
+      },
+      {
+        "old": "name = \"Crawler dozer\"",
+        "new": "name = \"Гусенічны бульдозер\""
+      },
+      {
+        "old": "name = \"Excavator\"",
+        "new": "name = \"Экскаватар\""
+      },
+      {
+        "old": "name = \"Articulated hauler\"",
+        "new": "name = \"Шарнірны самазвал\""
+      },
+      {
+        "old": "name = \"Hooklift truck\"",
+        "new": "name = \"Мультыліфт\""
+      },
+      {
+        "old": "name = \"Farm tractor\"",
+        "new": "name = \"Сельскагаспадарчы трактар\""
+      },
+      {
+        "old": "name = \"Pickup\"",
+        "new": "name = \"Пікап\""
+      },
+      {
+        "old": "name = \"Tracked carrier\"",
+        "new": "name = \"Гусенічны ўсюдыход\""
+      },
+      {
+        "old": "name = \"Snowmobile\"",
+        "new": "name = \"Снегаход\""
+      },
+      {
+        "old": "name = \"Dirt bike\"",
+        "new": "name = \"Кросавы матацыкл\""
+      },
+      {
+        "old": "spec = \"1.8 m3 bucket\"",
+        "new": "spec = \"коўш 1,8 м3\""
+      },
+      {
+        "old": "spec = \"3.8 m3 bucket\"",
+        "new": "spec = \"коўш 3,8 м3\""
+      },
+      {
+        "old": "spec = \"3.4 m blade\"",
+        "new": "spec = \"адвал 3,4 м\""
+      },
+      {
+        "old": "spec = \"6.6 m reach\"",
+        "new": "spec = \"вылет 6,6 м\""
+      },
+      {
+        "old": "spec = \"12 m3 body\"",
+        "new": "spec = \"кузаў 12 м3\""
+      },
+      {
+        "old": "spec = \"takes every container\"",
+        "new": "spec = \"бярэ любыя кантэйнеры\""
+      },
+      {
+        "old": "spec = \"front loader, three point hitch\"",
+        "new": "spec = \"франтальны пагрузчык, трохкропкавая навяска\""
+      },
+      {
+        "old": "spec = \"plough mount\"",
+        "new": "spec = \"мацаванне пад адвал\""
+      },
+      {
+        "old": "spec = \"two bodies, it swims\"",
+        "new": "spec = \"дзве секцыі, плавае\""
+      },
+      {
+        "old": "spec = \"one seat, one ski each side\"",
+        "new": "spec = \"адно сядзенне, па лыжы з кожнага боку\""
+      },
+      {
+        "old": "spec = \"two wheels, no excuses\"",
+        "new": "spec = \"два колы, без адгаворак\""
+      },
+      {
+        "old": "tagline = \"The site's all-rounder: scoops, carries, ploughs and loads a truck in four passes.\"",
+        "new": "tagline = \"Універсал на пляцоўцы: чэрпае, возіць, чысціць і грузіць самазвал за чатыры каўшы.\""
+      },
+      {
+        "old": "tagline = \"Twice the bucket, a pin hitch for trailers, and a cab you could live in.\"",
+        "new": "tagline = \"Удвая большы коўш, счэпка пад прычэпы і кабіна, у якой хоць жыві.\""
+      },
+      {
+        "old": "tagline = \"Push, rip and grade. Tracks that float on mud and a blade that tilts as you think it.\"",
+        "new": "tagline = \"Штурхае, рыхліць і раўнуе. Гусеніцы трымаюцца на гразі, а адвал слухаецца думкі.\""
+      },
+      {
+        "old": "tagline = \"A trench by lunch, a pond by tea. Quick coupler ready.\"",
+        "new": "tagline = \"Траншэя да абеду, сажалка да вячэры. Гатовы да хутказдыму.\""
+      },
+      {
+        "old": "tagline = \"Six wheels driven, a body that tips in eight seconds and a ride over anything.\"",
+        "new": "tagline = \"Шэсць вядучых колаў, разгрузка кузава за восем секунд і праходнасць паўсюль.\""
+      },
+      {
+        "old": "tagline = \"Swap a tipper for a flatrack without leaving the seat.\"",
+        "new": "tagline = \"Змяняй самазвал на платформу, не выходзячы з кабіны.\""
+      },
+      {
+        "old": "tagline = \"Loader up front, plough behind, and the radio still works.\"",
+        "new": "tagline = \"Пагрузчык спераду, адвал ззаду, і радыё яшчэ працуе.\""
+      },
+      {
+        "old": "tagline = \"The boss's ride, the plough's mount, the coffee run.\"",
+        "new": "tagline = \"Машына начальніка, аснова пад адвал і паездка па каву.\""
+      },
+      {
+        "old": "tagline = \"Two bodies, four tracks, and it floats when the creek is higher than you thought.\"",
+        "new": "tagline = \"Дзве секцыі, чатыры гусеніцы — і плыве, калі ручай глыбейшы, чым здавалася.\""
+      },
+      {
+        "old": "tagline = \"For the morning round of the village and nothing heavier.\"",
+        "new": "tagline = \"Для ранішняга аб'езду вёскі і нічога цяжэйшага.\""
+      },
+      {
+        "old": "tagline = \"Kick it, ride it, drop it in the ditch. It doesn't mind.\"",
+        "new": "tagline = \"Заводзь, гані, кідай у кювет. Яму ўсё адно.\""
+      }
+    ],
+    "key_layouts.toml": [
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"класіка\""
+      },
+      {
+        "old": "hint = \"the arrows work the arm and the bucket, the left and right buttons curl, the mouse always looks\"",
+        "new": "hint = \"стрэлкі кіруюць стралой і каўшом, левая і правая кнопкі — зачэрпванне, мыш заўсёды круціць камеру\""
+      },
+      {
+        "old": "name = \"farm sim\"",
+        "new": "name = \"ферма-сім\""
+      },
+      {
+        "old": "hint = \"hold the left button and move the mouse for the arm and the bucket or the blade, the right for the excavator's stick and swing\"",
+        "new": "hint = \"утрымлівайце ЛКМ і рухайце мыш для стралы і каўша або адвала, ПКМ — для рукаяці і павароту экскаватара\""
+      }
+    ],
+    "pad_layouts.toml": [
+      {
+        "old": "name = \"hold LB\"",
+        "new": "name = \"утрымл. LB\""
+      },
+      {
+        "old": "hint = \"hold LB and the right stick works the arm, the bucket or the blade\"",
+        "new": "hint = \"утрымлівайце LB, і правы сцік кіруе стралой, каўшом або адвалам\""
+      },
+      {
+        "old": "name = \"click RS\"",
+        "new": "name = \"націск RS\""
+      },
+      {
+        "old": "hint = \"click the right stick to switch it between the camera and the arm, the bucket or the blade\"",
+        "new": "hint = \"націсніце правы сцік, каб пераключыць яго паміж камерай і стралой, каўшом або адвалам\""
+      },
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"класіка\""
+      },
+      {
+        "old": "hint = \"the arm on the triggers and the bucket and the blade's tilt on the shoulders, the left stick driving\"",
+        "new": "hint = \"страла на курках, коўш і нахіл адвала на бамперах, левы сцік — язда\""
+      }
+    ],
+    "sites/demo2/demo2.toml": [
+      {
+        "old": "name = \"Flower Hill\"",
+        "new": "name = \"Кветкавы ўзгорак\""
+      },
+      {
+        "old": "byline = \"Demo map\"",
+        "new": "byline = \"Дэма-карта\""
+      },
+      {
+        "old": "accepts = [\"27d9a082d2382faa\"]",
+        "new": "accepts = [\"27d9a082d2382faa\", \"811034dce06dee68\", \"bc57be2314fd0a38\"]"
+      },
+      {
+        "old": "locked = \"Waiting for parts, estimated arrival dec 4th\"",
+        "new": "locked = \"Чакаем запчасткі, арыенціровачна 4 снежня\""
+      },
+      {
+        "old": "title = \"Sand haul & more\"",
+        "new": "title = \"Дастаўка пяску і не толькі\""
+      },
+      {
+        "old": "done = \"40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it\"",
+        "new": "done = \"40 тон на месцы, рака пераадолена і валун на ўзгорку. Выдатна. Можаце вазіць далей, калі хочаце\""
+      },
+      {
+        "old": "sheet = \"Sand to the gravel pad, {}\"",
+        "new": "sheet = \"Пясок на жвіровую пляцоўку, {}\""
+      },
+      {
+        "old": "bill = \"Sand to the gravel pad\"",
+        "new": "bill = \"Пясок на жвіровую пляцоўку\""
+      },
+      {
+        "old": "sheet = \"Find the truck\"",
+        "new": "sheet = \"Знайсці грузавік\""
+      },
+      {
+        "old": "bill = \"Find the truck\"",
+        "new": "bill = \"Знайсці грузавік\""
+      },
+      {
+        "old": "sheet = \"Jump the river with the truck\"",
+        "new": "sheet = \"Пераскочыць раку на грузавіку\""
+      },
+      {
+        "old": "bill = \"Sick jump with the truck\"",
+        "new": "bill = \"Круты скачок на грузавіку\""
+      },
+      {
+        "old": "say = \"And when you are done, there is a truck up on the hill. Find it, and get it over the river. Somehow\"",
+        "new": "say = \"А калі скончыце — на ўзгорку стаіць грузавік. Знайдзіце яго і перапраўце праз раку. Хоць як\""
+      },
+      {
+        "old": "sheet = \"Get the boulder up on the hill\"",
+        "new": "sheet = \"Зацягнуць валун на ўзгорак\""
+      },
+      {
+        "old": "bill = \"Boulder on hill\"",
+        "new": "bill = \"Валун на ўзгорку\""
+      },
+      {
+        "old": "text = \"Here is the start area with your machines.\"",
+        "new": "text = \"Вось стартавая пляцоўка з вашай тэхнікай.\""
+      },
+      {
+        "old": "text = \"There is sand on the far end of this site, and we need it.\"",
+        "new": "text = \"На далёкім краі гэтай карты ёсць пясок, і ён нам патрэбны.\""
+      },
+      {
+        "old": "text = \"Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand\"",
+        "new": "text = \"Дастаўце мінімум 40 тон пяску на жвіровую пляцоўку для шчодрага заказчыка. Гэта адборны пясок\""
+      }
+    ]
+  }
+}

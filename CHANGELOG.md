@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-11-26
+
+- **Feat**: Added 3 new full translations — **Belarusian (`be`)**, **Ukrainian (`uk`)**, and **Polish (`pl`)** — bringing total supported languages to **9** (`en`, `ru`, `be`, `uk`, `pl`, `zh-cn`, `es`, `de`, `pt-br`), all with live hot-swap support.
+- **Docs**: Added localized READMEs (`README.be.md`, `README.uk.md`, `README.pl.md`) and updated the language switcher across all 9 READMEs.
+
 ## [1.4.0] - 2026-11-26
 
 - **Feat**: Added 4 new full translations — **Simplified Chinese (`zh-cn`)**, **Spanish (`es`)**, **German (`de`)**, and **Brazilian Portuguese (`pt-br`)** — alongside English (`en`) and Russian (`ru`) (6 languages total).

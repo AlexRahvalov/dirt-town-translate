@@ -1,4 +1,7 @@
-[English](README.md) | [Русский](README.ru.md) | **简体中文** | [Español](README.es.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md)
+[English](README.md) | [Русский](README.ru.md) | [Беларуская](README.be.md) | [Українська](README.uk.md) | [Polski](README.pl.md) | **Беларуская** | `be` | [`translations/be.json`](translations/be.json) | 实时热切换 |
+| **Українська** | `uk` | [`translations/uk.json`](translations/uk.json) | 实时热切换 |
+| **Polski** | `pl` | [`translations/pl.json`](translations/pl.json) | 实时热切换 |
+| **简体中文** | [Español](README.es.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md)
 
 # Dirt Town Demo — 多语言本地化插件
 
@@ -32,7 +35,7 @@
    - 切换至**简体中文（`zh-cn`）**后，请**重启游戏**，以便启动时加载系统微软雅黑字体（`msyh.ttc` / `msyhbd.ttc`）。
    - 也可以在 `locales/lang.ini` 中手动指定语言：
      ```ini
-     active=zh-cn   # en | ru | zh-cn | es | de | pt-br
+     active=zh-cn   # en | ru | be | uk | pl | zh-cn | es | de | pt-br
      ```
 4. 完全卸载：直接删除 `version.dll` 和 `locales/` 文件夹即可。
 

@@ -1,4 +1,4 @@
-[English](README.md) | [Русский](README.ru.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | **Deutsch** | [Português (BR)](README.pt-BR.md)
+[English](README.md) | [Русский](README.ru.md) | [Беларуская](README.be.md) | [Українська](README.uk.md) | [Polski](README.pl.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | **Deutsch** | [Português (BR)](README.pt-BR.md)
 
 # Dirt Town Demo — Mehrsprachiges Lokalisierungs-Plugin
 
@@ -10,6 +10,9 @@ Runtime-Lokalisierungs-Plugin und Patcher für **Dirt Town Demo** (Steam-Build `
 |---|---|---|---|
 | **English** | `en` | Integriertes Original | Live-Wechsel |
 | **Русский** | `ru` | [`translations/ru.json`](translations/ru.json) | Live-Wechsel (`Roboto` + `cour.ttf`) |
+| **Беларуская** | `be` | [`translations/be.json`](translations/be.json) | Live-Wechsel |
+| **Українська** | `uk` | [`translations/uk.json`](translations/uk.json) | Live-Wechsel |
+| **Polski** | `pl` | [`translations/pl.json`](translations/pl.json) | Live-Wechsel |
 | **简体中文** | `zh-cn` | [`translations/zh-cn.json`](translations/zh-cn.json) | Nutzt Windows-Schriften `msyh.ttc` / `msyhbd.ttc` (Neustart nach Wechsel auf CJK erforderlich) |
 | **Español** | `es` | [`translations/es.json`](translations/es.json) | Live-Wechsel |
 | **Deutsch** | `de` | [`translations/de.json`](translations/de.json) | Live-Wechsel |
@@ -32,7 +35,7 @@ Die Spieldateien (`dirttown.exe` und `data.pack`) werden **auf der Festplatte ni
    - Für **Vereinfachtes Chinesisch (`zh-cn`)** die Sprache wählen und das **Spiel neu starten**, damit die Windows-CJK-Schriften (`msyh.ttc` / `msyhbd.ttc`) beim Start geladen werden.
    - Alternativ manuell in `locales/lang.ini` setzen:
      ```ini
-     active=de   # en | ru | zh-cn | es | de | pt-br
+     active=de   # en | ru | be | uk | pl | zh-cn | es | de | pt-br
      ```
 4. Vollständige Deinstallation: einfach `version.dll` und den Ordner `locales/` löschen.
 

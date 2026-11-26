@@ -1,4 +1,4 @@
-[English](README.md) | **Русский** | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md)
+[English](README.md) | **Русский** | [Беларуская](README.be.md) | [Українська](README.uk.md) | [Polski](README.pl.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md)
 
 # Dirt Town Demo — Мультиязычный плагин локализации
 
@@ -10,6 +10,9 @@ Runtime-плагин локализации и патчер для **Dirt Town D
 |---|---|---|---|
 | **English** | `en` | Встроенный оригинал | Мгновенное переключение |
 | **Русский** | `ru` | [`translations/ru.json`](translations/ru.json) | Мгновенное переключение (`Roboto` + `cour.ttf`) |
+| **Беларуская** | `be` | [`translations/be.json`](translations/be.json) | Мгновенное переключение |
+| **Українська** | `uk` | [`translations/uk.json`](translations/uk.json) | Мгновенное переключение |
+| **Polski** | `pl` | [`translations/pl.json`](translations/pl.json) | Мгновенное переключение |
 | **简体中文** | `zh-cn` | [`translations/zh-cn.json`](translations/zh-cn.json) | Системные шрифты `msyh.ttc` / `msyhbd.ttc` (нужен перезапуск для загрузки CJK-шрифтов) |
 | **Español** | `es` | [`translations/es.json`](translations/es.json) | Мгновенное переключение |
 | **Deutsch** | `de` | [`translations/de.json`](translations/de.json) | Мгновенное переключение |
@@ -32,7 +35,7 @@ Runtime-плагин локализации и патчер для **Dirt Town D
    - Для **упрощённого китайского (`zh-cn`)** выберите его и **перезапустите игру**, чтобы при старте загрузились системные CJK-шрифты (`msyh.ttc` / `msyhbd.ttc`).
    - Также язык можно задать вручную в `locales/lang.ini`:
      ```ini
-     active=ru   # en | ru | zh-cn | es | de | pt-br
+     active=ru   # en | ru | be | uk | pl | zh-cn | es | de | pt-br
      ```
 4. Полное удаление: просто удалите `version.dll` и папку `locales/`.
 

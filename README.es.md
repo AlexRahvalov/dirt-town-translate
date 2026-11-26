@@ -1,4 +1,4 @@
-[English](README.md) | [Русский](README.ru.md) | [简体中文](README.zh-CN.md) | **Español** | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md)
+[English](README.md) | [Русский](README.ru.md) | [Беларуская](README.be.md) | [Українська](README.uk.md) | [Polski](README.pl.md) | [简体中文](README.zh-CN.md) | **Español** | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md)
 
 # Dirt Town Demo — Plugin de localización multilingüe
 
@@ -10,6 +10,9 @@ Plugin de localización en tiempo de ejecución y parcheador para **Dirt Town De
 |---|---|---|---|
 | **English** | `en` | Original integrado | Cambio en vivo |
 | **Русский** | `ru` | [`translations/ru.json`](translations/ru.json) | Cambio en vivo (`Roboto` + `cour.ttf`) |
+| **Беларуская** | `be` | [`translations/be.json`](translations/be.json) | Cambio en vivo |
+| **Українська** | `uk` | [`translations/uk.json`](translations/uk.json) | Cambio en vivo |
+| **Polski** | `pl` | [`translations/pl.json`](translations/pl.json) | Cambio en vivo |
 | **简体中文** | `zh-cn` | [`translations/zh-cn.json`](translations/zh-cn.json) | Usa fuentes de Windows `msyh.ttc` / `msyhbd.ttc` (requiere reiniciar al cambiar a CJK) |
 | **Español** | `es` | [`translations/es.json`](translations/es.json) | Cambio en vivo |
 | **Deutsch** | `de` | [`translations/de.json`](translations/de.json) | Cambio en vivo |
@@ -32,7 +35,7 @@ Los archivos del juego (`dirttown.exe` y `data.pack`) **no se modifican en disco
    - Para **Chino simplificado (`zh-cn`)**, selecciónalo y **reinicia el juego** para cargar las fuentes CJK de Windows (`msyh.ttc` / `msyhbd.ttc`).
    - También puedes configurarlo manualmente en `locales/lang.ini`:
      ```ini
-     active=es   # en | ru | zh-cn | es | de | pt-br
+     active=es   # en | ru | be | uk | pl | zh-cn | es | de | pt-br
      ```
 4. Desinstalación completa: simplemente elimina `version.dll` y la carpeta `locales/`.
 
