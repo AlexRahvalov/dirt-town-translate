@@ -40,6 +40,21 @@
       "en": "pallet forks",
       "text": "pallet forks",
       "max_bytes": 15
+    },
+    "respawn_prefix": {
+      "en": "Press ",
+      "text": "Press ",
+      "max_bytes": 60
+    },
+    "respawn_suffix": {
+      "en": " to respawn",
+      "text": " to respawn",
+      "max_bytes": 60
+    },
+    "respawn_bind": {
+      "en": "Bind Respawn in Controls",
+      "text": "Bind Respawn in Controls",
+      "max_bytes": 90
     }
   },
   "simd_strings": {

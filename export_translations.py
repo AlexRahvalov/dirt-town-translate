@@ -67,6 +67,9 @@ def build_doc(use_russian: bool) -> dict:
             "jib": {"en": "jib", "text": pick("jib", "гусёк"), "max_bytes": 15},
             "flipper_bucket": {"en": "flipper bucket", "text": pick("flipper bucket", "перекид."), "max_bytes": 15},
             "pallet_forks": {"en": "pallet forks", "text": pick("pallet forks", "вилы"), "max_bytes": 15},
+            "respawn_prefix": {"en": "Press ", "text": pick("Press ", "Нажмите "), "max_bytes": 60},
+            "respawn_suffix": {"en": " to respawn", "text": pick(" to respawn", " для возрождения"), "max_bytes": 60},
+            "respawn_bind": {"en": "Bind Respawn in Controls", "text": pick("Bind Respawn in Controls", "Назначьте Возрождение в Управлении"), "max_bytes": 90},
         },
         "simd_strings": {
             k: {"en": v["en"], "text": pick(v["en"], v["ru"]), "max_bytes": v["max_bytes"]}

@@ -315,6 +315,50 @@ def build_plugin_data(game_dir: Path, locale: str = "ru") -> None:
     att_padded = bytes(att_code).ljust(203, b"\x90")
     att_orig = orig[va_to_raw(0x140c21010):va_to_raw(0x140c21010) + 203]
     add_raw(0x140c21010, att_padded, att_orig)
+
+    # Dynamic respawn hint builder at 0x140c738c0 ("Press <key> to respawn" / "Bind Respawn in Controls"):
+    # Replaces GCC-inlined ASCII literals with clean std::string(const char*) + append calls using embedded UTF-8 strings.
+    rp_pre = doc["inline_literals"]["respawn_prefix"]["text"].encode("utf-8") + b"\x00"
+    rp_suf = doc["inline_literals"]["respawn_suffix"]["text"].encode("utf-8") + b"\x00"
+    rp_bnd = doc["inline_literals"]["respawn_bind"]["text"].encode("utf-8") + b"\x00"
+    str_base = 0x140c73ab8
+    pre_va = str_base
+    suf_va = pre_va + len(rp_pre)
+    bnd_va = suf_va + len(rp_suf)
+    assert bnd_va + len(rp_bnd) <= 0x140c73b8f, "respawn hint strings exceed embedded 215B pool"
+
+    def _rel32(from_va: int, to_va: int) -> bytes:
+        return struct.pack("<i", to_va - (from_va + 4))
+
+    # 1) 0x140c7392c: jmp 0x140c73a80 (5B)
+    j1 = b"\xe9" + _rel32(0x140c7392c + 1, 0x140c73a80)
+    add_raw(0x140c7392c, j1, orig[va_to_raw(0x140c7392c):va_to_raw(0x140c7392c) + len(j1)])
+
+    # 2) 0x140c73a12: mov rcx, rbx; lea rdx, [rip+bnd]; call 0x140c1f310; jmp 0x140c73a54 (20B)
+    b_code = bytearray()
+    b_code += b"\x48\x89\xd9"                                                    # mov rcx, rbx
+    b_code += b"\x48\x8d\x15" + _rel32(0x140c73a12 + len(b_code) + 3, bnd_va)    # lea rdx, [rip+bnd]
+    b_code += b"\xe8" + _rel32(0x140c73a12 + len(b_code) + 1, 0x140c1f310)       # call std::string(cstr)
+    b_code += b"\xeb" + struct.pack("<b", 0x140c73a54 - (0x140c73a12 + len(b_code) + 2))
+    add_raw(0x140c73a12, bytes(b_code), orig[va_to_raw(0x140c73a12):va_to_raw(0x140c73a12) + len(b_code)])
+
+    # 3) 0x140c73a80..0x140c73b8f (271B): shared builder + embedded NUL-terminated UTF-8 strings
+    r_code = bytearray()
+    r_code += b"\x48\x89\xd9"                                                    # mov rcx, rbx
+    r_code += b"\x48\x8d\x15" + _rel32(0x140c73a80 + len(r_code) + 3, pre_va)    # lea rdx, [rip+pre]
+    r_code += b"\xe8" + _rel32(0x140c73a80 + len(r_code) + 1, 0x140c1f310)       # call std::string(cstr)
+    r_code += b"\x48\x89\xd9"                                                    # mov rcx, rbx
+    r_code += b"\x48\x8b\x54\x24\x40"                                            # mov rdx, [rsp+0x40]
+    r_code += b"\xe8" + _rel32(0x140c73a80 + len(r_code) + 1, 0x14141f990)       # call append(cstr)
+    r_code += b"\x48\x89\xd9"                                                    # mov rcx, rbx
+    r_code += b"\x48\x8d\x15" + _rel32(0x140c73a80 + len(r_code) + 3, suf_va)    # lea rdx, [rip+suf]
+    r_code += b"\xe8" + _rel32(0x140c73a80 + len(r_code) + 1, 0x14141f990)       # call append(cstr)
+    r_code += b"\x4c\x8d\x64\x24\x50"                                            # lea r12, [rsp+0x50]
+    r_code += b"\xeb" + struct.pack("<b", 0x140c73a54 - (0x140c73a80 + len(r_code) + 2))
+    assert 0x140c73a80 + len(r_code) <= str_base
+    r_buf = bytes(r_code).ljust(str_base - 0x140c73a80, b"\x90") + rp_pre + rp_suf + rp_bnd
+    r_buf = r_buf.ljust(0x140c73b8f - 0x140c73a80, b"\x00")
+    add_raw(0x140c73a80, r_buf, orig[va_to_raw(0x140c73a80):va_to_raw(0x140c73a80) + len(r_buf)])
     add_rip32(0x140c66e53, add_str(""), 0x141562102)
 
     add_imm(0x140c7eaf9, 0x0E, slen(0x141564b11), 4)

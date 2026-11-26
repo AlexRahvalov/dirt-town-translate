@@ -40,6 +40,21 @@
       "en": "pallet forks",
       "text": "вилы",
       "max_bytes": 15
+    },
+    "respawn_prefix": {
+      "en": "Press ",
+      "text": "Нажмите ",
+      "max_bytes": 60
+    },
+    "respawn_suffix": {
+      "en": " to respawn",
+      "text": " для возрождения",
+      "max_bytes": 60
+    },
+    "respawn_bind": {
+      "en": "Bind Respawn in Controls",
+      "text": "Назначьте Возрождение в Управлении",
+      "max_bytes": 90
     }
   },
   "simd_strings": {
