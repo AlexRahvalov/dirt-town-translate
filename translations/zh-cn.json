@@ -1,0 +1,4238 @@
+{
+  "meta": {
+    "code": "zh-cn",
+    "name": "简体中文",
+    "game_build": "ed45b4be7fc6",
+    "version": 1
+  },
+  "inline_literals": {
+    "yes": {
+      "en": "yes",
+      "text": "是",
+      "max_bytes": 7
+    },
+    "no": {
+      "en": "no",
+      "text": "否",
+      "max_bytes": 7
+    },
+    "bucket": {
+      "en": "bucket",
+      "text": "铲斗",
+      "max_bytes": 15
+    },
+    "plow": {
+      "en": "plow",
+      "text": "推雪铲",
+      "max_bytes": 15
+    },
+    "jib": {
+      "en": "jib",
+      "text": "吊臂",
+      "max_bytes": 15
+    },
+    "flipper_bucket": {
+      "en": "flipper bucket",
+      "text": "翻盖铲斗",
+      "max_bytes": 15
+    },
+    "pallet_forks": {
+      "en": "pallet forks",
+      "text": "托盘货叉",
+      "max_bytes": 15
+    },
+    "respawn_prefix": {
+      "en": "Press ",
+      "text": "按 ",
+      "max_bytes": 60
+    },
+    "respawn_suffix": {
+      "en": " to respawn",
+      "text": " 重置位置",
+      "max_bytes": 60
+    },
+    "respawn_bind": {
+      "en": "Bind Respawn in Controls",
+      "text": "请在控制设置中绑定“重置位置”",
+      "max_bytes": 90
+    }
+  },
+  "simd_strings": {
+    "clear_pad_26b": {
+      "en": "clear the pad for the crew",
+      "text": "请腾出场地供交车",
+      "max_bytes": 26
+    },
+    "seat_37b": {
+      "en": "step out of the seat to take delivery",
+      "text": "请先下车再接收交付的机械",
+      "max_bytes": 37
+    },
+    "flat_51b": {
+      "en": "there is no flat ground nearby for the delivery.",
+      "text": "附近没有可供交车的平地。",
+      "max_bytes": 51
+    },
+    "dealer_46b": {
+      "en": "the dealer has none of those left on the lot",
+      "text": "经销商场内已无此机械库存",
+      "max_bytes": 46
+    },
+    "item_31b": {
+      "en": "the item is no longer installed",
+      "text": "该物品已不再安装",
+      "max_bytes": 31
+    }
+  },
+  "font_redirects": [
+    {
+      "pack_key": "fonts/Roboto-Regular.ttf",
+      "kind": "winfont",
+      "target": "msyh.ttc"
+    },
+    {
+      "pack_key": "fonts/Roboto-Medium.ttf",
+      "kind": "winfont",
+      "target": "msyh.ttc"
+    },
+    {
+      "pack_key": "fonts/Roboto-Bold.ttf",
+      "kind": "winfont",
+      "target": "msyhbd.ttc"
+    },
+    {
+      "pack_key": "fonts/Roboto-Black.ttf",
+      "kind": "winfont",
+      "target": "msyhbd.ttc"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Regular.ttf",
+      "kind": "winfont",
+      "target": "msyh.ttc"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Bold.ttf",
+      "kind": "winfont",
+      "target": "msyhbd.ttc"
+    }
+  ],
+  "graphics_presets": [
+    "低",
+    "中",
+    "高",
+    "超高"
+  ],
+  "shop_sections": [
+    "装载机",
+    "土方机械",
+    "运输车辆",
+    "农用机械",
+    "代步工具"
+  ],
+  "exe_strings": {
+    "0x14149adde": {
+      "en": "Debug dump",
+      "text": "调试转储"
+    },
+    "0x14149b5ba": {
+      "en": "the account is short",
+      "text": "账户余额不足"
+    },
+    "0x14149b5fc": {
+      "en": ", delivered in front of you",
+      "text": "，已交付至你面前"
+    },
+    "0x14149b698": {
+      "en": "grade grid on",
+      "text": "标高网格：开启"
+    },
+    "0x14149b6a6": {
+      "en": "grade grid auto",
+      "text": "标高网格：自动"
+    },
+    "0x14149b6c1": {
+      "en": "too close to another stick",
+      "text": "距离另一根标高桩太近"
+    },
+    "0x14149b6dc": {
+      "en": "range %d of %d, %.1f m/s",
+      "text": "档位 %d/%d，%.1f m/s"
+    },
+    "0x14149b6f8": {
+      "en": "arm lock: bring the arm home first",
+      "text": "勾臂锁：请先将勾臂复位"
+    },
+    "0x14149bd1a": {
+      "en": "blade level, %.2f m%s",
+      "text": "推土铲水平，%.2f m%s"
+    },
+    "0x14149bd30": {
+      "en": "blade on the sticks, %.2f m%s",
+      "text": "推土铲按桩定高，%.2f m%s"
+    },
+    "0x14149bd50": {
+      "en": "blade tilt locked to the grade",
+      "text": "推土铲倾斜已锁定至标高"
+    },
+    "0x14149bd6f": {
+      "en": "blade tilt free",
+      "text": "推土铲倾斜自由"
+    },
+    "0x14149be27": {
+      "en": " This session is not saved.",
+      "text": " 本次会话不会保存。"
+    },
+    "0x14149be43": {
+      "en": "the host is gone",
+      "text": "主机已断开"
+    },
+    "0x14149beeb": {
+      "en": "receiving the site, ",
+      "text": "正在接收场地，"
+    },
+    "0x14149bf02": {
+      "en": "reconnected to host",
+      "text": "已重新连接至主机"
+    },
+    "0x14149bf59": {
+      "en": "connecting, attempt ",
+      "text": "正在连接，第 "
+    },
+    "0x14149bf6e": {
+      "en": ", trying again",
+      "text": " 次，正在重试"
+    },
+    "0x14149bf7d": {
+      "en": "receiving the site, 0%",
+      "text": "正在接收场地，0%"
+    },
+    "0x14149bf98": {
+      "en": " plugged in · not used. Settings › Controls › Devices assigns it.",
+      "text": " 已插入 · 未使用。可在 设置 › 控制 › 设备 中分配。"
+    },
+    "0x14149c0af": {
+      "en": "Use",
+      "text": "使用"
+    },
+    "0x14149c0b3": {
+      "en": "LMB",
+      "text": "左键"
+    },
+    "0x14149c0b7": {
+      "en": "Click",
+      "text": "点击"
+    },
+    "0x14149c0bd": {
+      "en": "Press ",
+      "text": "按 "
+    },
+    "0x14149c0c4": {
+      "en": "Bind Hold grade in Controls",
+      "text": "请在控制设置中绑定“保持标高”"
+    },
+    "0x14149c0e0": {
+      "en": "Bind Grade sticks in Controls",
+      "text": "请在控制设置中绑定“标高桩”"
+    },
+    "0x14149c0fe": {
+      "en": " for the grade sticks",
+      "text": " 取出标高桩"
+    },
+    "0x14149c114": {
+      "en": "the host has left",
+      "text": "主机已离开"
+    },
+    "0x14149c126": {
+      "en": ", %+.2f m",
+      "text": "，%+.2f m"
+    },
+    "0x14149c130": {
+      "en": "blade free",
+      "text": "推土铲自由"
+    },
+    "0x14149c13b": {
+      "en": "blade hold at grade",
+      "text": "推土铲保持标高"
+    },
+    "0x14149c14f": {
+      "en": "blade hold %+.2f m",
+      "text": "推土铲保持 %+.2f m"
+    },
+    "0x14149c162": {
+      "en": ", %.0f s",
+      "text": "，%.0f 秒"
+    },
+    "0x14149c16b": {
+      "en": "leave game",
+      "text": "离开游戏"
+    },
+    "0x14149c178": {
+      "en": "CONNECTION LOST. RECONNECTING...",
+      "text": "连接断开，正在重连..."
+    },
+    "0x14149c199": {
+      "en": "back to menu",
+      "text": "返回主菜单"
+    },
+    "0x14149c1a6": {
+      "en": "COULD NOT JOIN",
+      "text": "无法加入"
+    },
+    "0x14149c1b5": {
+      "en": "ok",
+      "text": "确定"
+    },
+    "0x14149c1b8": {
+      "en": "OUT OF ORDER",
+      "text": "暂不可用"
+    },
+    "0x14149c1c5": {
+      "en": "Stick removed",
+      "text": "已移除标高桩"
+    },
+    "0x14149c1d3": {
+      "en": "All ",
+      "text": "全部 "
+    },
+    "0x14149c1d8": {
+      "en": " sticks removed",
+      "text": " 根标高桩已移除"
+    },
+    "0x14149c1e8": {
+      "en": "join link copied",
+      "text": "已复制加入链接"
+    },
+    "0x14149c338": {
+      "en": "updated",
+      "text": "已更新"
+    },
+    "0x14149c340": {
+      "en": "published",
+      "text": "已发布"
+    },
+    "0x14149c350": {
+      "en": "accept the Workshop agreement on the page Steam opened",
+      "text": "请在 Steam 页面上同意创意工坊协议"
+    },
+    "0x14149c598": {
+      "en": "the item is no longer installed",
+      "text": "该物品已不再安装"
+    },
+    "0x14149c5b8": {
+      "en": "the author's update could not be taken",
+      "text": "无法应用作者的更新"
+    },
+    "0x14149c630": {
+      "en": "A Dirt Town site made in the game's editor.",
+      "text": "使用游戏编辑器制作的 Dirt Town 场地。"
+    },
+    "0x14149c65c": {
+      "en": "could not write ",
+      "text": "无法写入 "
+    },
+    "0x14149c68a": {
+      "en": "could not start the session",
+      "text": "无法启动会话"
+    },
+    "0x1414d3ba0": {
+      "en": "Pause",
+      "text": "暂停"
+    },
+    "0x1414d3ba6": {
+      "en": "Esc menu",
+      "text": "Esc 菜单"
+    },
+    "0x1414d3baf": {
+      "en": "Map",
+      "text": "地图"
+    },
+    "0x1414d3bb3": {
+      "en": "Minimap zoom",
+      "text": "小地图缩放"
+    },
+    "0x1414d3bc0": {
+      "en": "Hide or show jobs",
+      "text": "隐藏或显示任务"
+    },
+    "0x1414d3bd2": {
+      "en": "Get in or out",
+      "text": "上车 / 下车"
+    },
+    "0x1414d3be0": {
+      "en": "Interact",
+      "text": "交互"
+    },
+    "0x1414d3be9": {
+      "en": "Fire the charges",
+      "text": "引爆炸药"
+    },
+    "0x1414d3bfa": {
+      "en": "Tool belt",
+      "text": "工具腰带"
+    },
+    "0x1414d3c04": {
+      "en": "No tool",
+      "text": "空手"
+    },
+    "0x1414d3c0c": {
+      "en": "Grade sticks",
+      "text": "标高桩"
+    },
+    "0x1414d3c19": {
+      "en": "Drill",
+      "text": "电钻"
+    },
+    "0x1414d3c1f": {
+      "en": "Dynamite",
+      "text": "炸药"
+    },
+    "0x1414d3c28": {
+      "en": "Detonator",
+      "text": "起爆器"
+    },
+    "0x1414d3c32": {
+      "en": "Use",
+      "text": "使用"
+    },
+    "0x1414d3c36": {
+      "en": "Talk",
+      "text": "对话"
+    },
+    "0x1414d3c3b": {
+      "en": "Stick",
+      "text": "标高桩"
+    },
+    "0x1414d3c41": {
+      "en": "Call the bike",
+      "text": "呼叫摩托"
+    },
+    "0x1414d3c4f": {
+      "en": "Attachment",
+      "text": "属具"
+    },
+    "0x1414d3c5a": {
+      "en": "Change view",
+      "text": "切换视角"
+    },
+    "0x1414d3c66": {
+      "en": "Float",
+      "text": "浮动模式"
+    },
+    "0x1414d3c6c": {
+      "en": "Hold grade",
+      "text": "保持标高"
+    },
+    "0x1414d3c77": {
+      "en": "Tilt lock",
+      "text": "倾斜锁定"
+    },
+    "0x1414d3c81": {
+      "en": "Hold offset",
+      "text": "标高偏移"
+    },
+    "0x1414d3c8d": {
+      "en": "Grade grid",
+      "text": "标高网格"
+    },
+    "0x1414d3c98": {
+      "en": "Range",
+      "text": "档位"
+    },
+    "0x1414d3c9e": {
+      "en": "Speed range",
+      "text": "速度档位"
+    },
+    "0x1414d3caa": {
+      "en": "Warning light",
+      "text": "警示灯"
+    },
+    "0x1414d3cb8": {
+      "en": "Rear hydraulics",
+      "text": "后液压"
+    },
+    "0x1414d3cc8": {
+      "en": "Hitch up/down",
+      "text": "悬挂升降"
+    },
+    "0x1414d3cd6": {
+      "en": "Diff lock",
+      "text": "差速锁"
+    },
+    "0x1414d3ce0": {
+      "en": "Attachment lock",
+      "text": "属具锁"
+    },
+    "0x1414d3cf0": {
+      "en": "Tailgate lock",
+      "text": "尾门锁"
+    },
+    "0x1414d3cfe": {
+      "en": "Lift axle",
+      "text": "提升桥"
+    },
+    "0x1414d3d08": {
+      "en": "Respawn",
+      "text": "重置位置"
+    },
+    "0x1414d3d10": {
+      "en": "Tuning",
+      "text": "调校"
+    },
+    "0x1414d3d17": {
+      "en": "Mark",
+      "text": "标记"
+    },
+    "0x1414d3d1c": {
+      "en": "Replay",
+      "text": "回放"
+    },
+    "0x1414d3d23": {
+      "en": "Record take",
+      "text": "录制片段"
+    },
+    "0x1414d411d": {
+      "en": "%.0f m",
+      "text": "%.0f 米"
+    },
+    "0x1414d4124": {
+      "en": "N",
+      "text": "北"
+    },
+    "0x141548bc6": {
+      "en": "Off the map. ",
+      "text": "已超出地图范围。"
+    },
+    "0x141548bd4": {
+      "en": "Engine flooded. ",
+      "text": "发动机进水。"
+    },
+    "0x141548c2b": {
+      "en": "Use ",
+      "text": "使用 "
+    },
+    "0x141548c30": {
+      "en": " to push",
+      "text": " 推动"
+    },
+    "0x141548c67": {
+      "en": "this site has no dealer",
+      "text": "此场地没有经销商"
+    },
+    "0x141548c80": {
+      "en": "step out of the seat to take delivery",
+      "text": "请先下车再接收交付的机械"
+    },
+    "0x141548ca8": {
+      "en": "only the host takes delivery in a session yet",
+      "text": "目前联机中仅主机可接收交付"
+    },
+    "0x141548cd8": {
+      "en": "the dealer has none of these left on this site",
+      "text": "经销商在此场地已无此类库存"
+    },
+    "0x141548d08": {
+      "en": "there is no flat, dry, clear ground near you for it",
+      "text": "附近没有平整、干燥且空旷的地面可供交付"
+    },
+    "0x141548d67": {
+      "en": " is free",
+      "text": " 免费"
+    },
+    "0x141548d70": {
+      "en": "sled",
+      "text": "雪地车"
+    },
+    "0x14155f1ca": {
+      "en": "  unlock the ",
+      "text": "  解锁"
+    },
+    "0x14155f1d8": {
+      "en": "  lock the ",
+      "text": "  锁定"
+    },
+    "0x14155f1e4": {
+      "en": "bring the shaft to the ",
+      "text": "将销轴对准"
+    },
+    "0x14155f1fc": {
+      "en": "'s hooks to lock it",
+      "text": "的挂钩以锁定"
+    },
+    "0x14155f210": {
+      "en": "  open the Q-Lock to release the bucket",
+      "text": "  打开 Q-Lock 以卸下铲斗"
+    },
+    "0x14155f238": {
+      "en": "  close the Q-Lock on the bucket",
+      "text": "  闭合 Q-Lock 以锁定铲斗"
+    },
+    "0x14155f260": {
+      "en": "bring the shaft to the bucket's hooks to lock it",
+      "text": "将销轴对准铲斗挂钩以锁定"
+    },
+    "0x14155f291": {
+      "en": "  ·  nothing inside the loop",
+      "text": "  ·  套环内无物体"
+    },
+    "0x14155f2af": {
+      "en": "  take the ",
+      "text": "  拿起"
+    },
+    "0x14155f2bb": {
+      "en": "'s winch remote",
+      "text": "的绞盘遥控器"
+    },
+    "0x14155f2d0": {
+      "en": "  return the winch remote  ·  nothing on the line",
+      "text": "  放回绞盘遥控器  ·  钢索未挂载物体"
+    },
+    "0x14155f303": {
+      "en": "  return the winch remote",
+      "text": "  放回绞盘遥控器"
+    },
+    "0x14155f31d": {
+      "en": "  shackle to the ",
+      "text": "  用卸扣连接至"
+    },
+    "0x14155f32f": {
+      "en": "'s ",
+      "text": "的"
+    },
+    "0x14155f333": {
+      "en": "  hook the ",
+      "text": "  将"
+    },
+    "0x14155f33f": {
+      "en": "'s line to itself",
+      "text": "的钢索挂回自身"
+    },
+    "0x14155f358": {
+      "en": "'s winch line is fully extended",
+      "text": "的绞盘钢索已完全放出"
+    },
+    "0x14155f378": {
+      "en": "  set the hook down",
+      "text": "  放下挂钩"
+    },
+    "0x14155f38c": {
+      "en": "  unhook the ",
+      "text": "  将"
+    },
+    "0x14155f39a": {
+      "en": "'s line from itself",
+      "text": "的钢索从自身解开"
+    },
+    "0x14155f3ae": {
+      "en": "  unshackle the ",
+      "text": "  解开"
+    },
+    "0x14155f3bf": {
+      "en": "'s line",
+      "text": "的钢索"
+    },
+    "0x14155f3c7": {
+      "en": "'s hook",
+      "text": "的挂钩"
+    },
+    "0x14155f3cf": {
+      "en": "  toggle the ",
+      "text": "  切换"
+    },
+    "0x14155f3dd": {
+      "en": "'s brake",
+      "text": "的驻车制动"
+    },
+    "0x14155f3e6": {
+      "en": "  set the ",
+      "text": "  拉起"
+    },
+    "0x14155f3f1": {
+      "en": "  put the ",
+      "text": "  将"
+    },
+    "0x14155f3fc": {
+      "en": " in neutral",
+      "text": "挂入空挡"
+    },
+    "0x141548d75": {
+      "en": "dirt bike",
+      "text": "越野摩托"
+    },
+    "0x141548d7f": {
+      "en": " on this site",
+      "text": "（在此场地）"
+    },
+    "0x14154a31a": {
+      "en": "  put the chain away",
+      "text": "  收起链条"
+    },
+    "0x14154a330": {
+      "en": "  set the chain's end down  ·  look at an eye or a bucket to hook it",
+      "text": "  放下链条末端  ·  对准吊耳或铲斗以挂钩"
+    },
+    "0x14154a376": {
+      "en": "  pick the chain's end up",
+      "text": "  拾起链条末端"
+    },
+    "0x14154a390": {
+      "en": "  unhook the chain",
+      "text": "  解开链条挂钩"
+    },
+    "0x14154f495": {
+      "en": "Click",
+      "text": "点击"
+    },
+    "0x14154f49b": {
+      "en": "Press J",
+      "text": "按 J 键"
+    },
+    "0x14154f4a3": {
+      "en": "Press 2 for the grade sticks",
+      "text": "按 2 键取出标高桩"
+    },
+    "0x14154f4c0": {
+      "en": "Press Backspace to respawn",
+      "text": "按 Backspace 重置位置"
+    },
+    "0x14155a3d9": {
+      "en": "  set its height  ·  hold ",
+      "text": "  设置高度  ·  按住 "
+    },
+    "0x14155a3f5": {
+      "en": "  take out the grade sticks",
+      "text": "  取出标高桩"
+    },
+    "0x14156063a": {
+      "en": "limit exceeded",
+      "text": "超出限制"
+    },
+    "0x141560650": {
+      "en": "insufficient privilege: a limited account cannot publish",
+      "text": "权限不足：受限账号无法发布创意工坊内容"
+    },
+    "0x141560689": {
+      "en": "access denied",
+      "text": "访问被拒绝"
+    },
+    "0x141560697": {
+      "en": "timeout",
+      "text": "连接超时"
+    },
+    "0x14156069f": {
+      "en": "banned",
+      "text": "已被封禁"
+    },
+    "0x1415606a6": {
+      "en": "not logged on",
+      "text": "未登录"
+    },
+    "0x1415606b4": {
+      "en": "fail",
+      "text": "失败"
+    },
+    "0x1415606b9": {
+      "en": "invalid parameter",
+      "text": "无效参数"
+    },
+    "0x1415606cb": {
+      "en": "file not found",
+      "text": "未找到文件"
+    },
+    "0x1415606da": {
+      "en": "service unavailable",
+      "text": "服务不可用"
+    },
+    "0x141560ba0": {
+      "en": ", the Workshop agreement is not yet accepted",
+      "text": "，尚未同意 Steam 创意工坊协议"
+    },
+    "0x141561200": {
+      "en": "B  skip",
+      "text": "B  跳过"
+    },
+    "0x141561208": {
+      "en": "A",
+      "text": "A"
+    },
+    "0x14156120a": {
+      "en": "Esc  skip",
+      "text": "Esc  跳过"
+    },
+    "0x141561214": {
+      "en": "Enter",
+      "text": "Enter"
+    },
+    "0x141561220": {
+      "en": "OK",
+      "text": "确定"
+    },
+    "0x141561228": {
+      "en": "Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand",
+      "text": "把至少 40 吨沙子运到砂石坪，给一位出手阔绰的客户。这可是优质沙。"
+    },
+    "0x14156135e": {
+      "en": "LOCKED",
+      "text": "已锁定"
+    },
+    "0x141561365": {
+      "en": "NO STICKS",
+      "text": "无标高桩"
+    },
+    "0x14156136f": {
+      "en": "FREE",
+      "text": "自由"
+    },
+    "0x141561374": {
+      "en": "AUTO",
+      "text": "自动"
+    },
+    "0x141561379": {
+      "en": "MAN",
+      "text": "手动"
+    },
+    "0x14156137d": {
+      "en": "WAIT",
+      "text": "等待"
+    },
+    "0x141561382": {
+      "en": "NO GRADE",
+      "text": "无标高"
+    },
+    "0x14156138b": {
+      "en": "TO GRADE",
+      "text": "距标高"
+    },
+    "0x14156139a": {
+      "en": "OFS",
+      "text": "偏移"
+    },
+    "0x1415613a4": {
+      "en": "DEPTH",
+      "text": "深度"
+    },
+    "0x1415613af": {
+      "en": "REACH",
+      "text": "伸距"
+    },
+    "0x1415616e0": {
+      "en": "X  raise the tipping trailer's drawbar  ·  Z  lower it\nE  put the tractor in neutral",
+      "text": "X  升起自卸拖车牵引杆  ·  Z  降下\nE  将拖拉机挂入空挡"
+    },
+    "0x141561738": {
+      "en": "The grade hold keeps the blade on the sticks' grade while the dozer climbs the ramp to the pad.",
+      "text": "标高保持会在推土机爬上斜坡前往平台时，使推土铲始终贴合标高桩所定的坡面。"
+    },
+    "0x141561c2a": {
+      "en": " and ",
+      "text": "和"
+    },
+    "0x141561c34": {
+      "en": "every seat",
+      "text": "所有驾驶位"
+    },
+    "0x141561c3f": {
+      "en": "every machine",
+      "text": "所有机械"
+    },
+    "0x141561c4d": {
+      "en": "every wheeled seat",
+      "text": "所有轮式驾驶位"
+    },
+    "0x141561c60": {
+      "en": "every wheeled machine",
+      "text": "所有轮式机械"
+    },
+    "0x141561c78": {
+      "en": "the trucks, the tractor and the bandvagn",
+      "text": "卡车、拖拉机和履带运输车"
+    },
+    "0x141561ca1": {
+      "en": "the loaders",
+      "text": "装载机"
+    },
+    "0x141561cad": {
+      "en": "the dozer",
+      "text": "推土机"
+    },
+    "0x141561cb7": {
+      "en": "the excavator",
+      "text": "挖掘机"
+    },
+    "0x141561cc5": {
+      "en": "the bike and the snowmobile",
+      "text": "越野摩托和雪地摩托"
+    },
+    "0x141561d7c": {
+      "en": "keyboard",
+      "text": "键盘"
+    },
+    "0x141561d85": {
+      "en": "gamepad",
+      "text": "手柄"
+    },
+    "0x141561d8d": {
+      "en": "joysticks",
+      "text": "摇杆"
+    },
+    "0x141561e07": {
+      "en": "wheel",
+      "text": "方向盘"
+    },
+    "0x141561e8a": {
+      "en": "flight stick",
+      "text": "飞行摇杆"
+    },
+    "0x141561ead": {
+      "en": "a joystick",
+      "text": "摇杆设备"
+    },
+    "0x141561fb3": {
+      "en": "push up…",
+      "text": "向上推…"
+    },
+    "0x141561fbe": {
+      "en": "push sideways or hat…",
+      "text": "侧推或拨动苦力帽…"
+    },
+    "0x141561fd6": {
+      "en": "push +…",
+      "text": "推向 +…"
+    },
+    "0x141561fe0": {
+      "en": "press…",
+      "text": "请按键…"
+    },
+    "0x141561fe9": {
+      "en": "push −…",
+      "text": "推向 −…"
+    },
+    "0x141561ff9": {
+      "en": "alt",
+      "text": "备用"
+    },
+    "0x141562008": {
+      "en": "gamepad disconnected",
+      "text": "手柄已断开"
+    },
+    "0x14156201d": {
+      "en": "sticks disconnected",
+      "text": "摇杆已断开"
+    },
+    "0x141562036": {
+      "en": "reset",
+      "text": "重置"
+    },
+    "0x14156203c": {
+      "en": "also bound to ",
+      "text": "同时绑定至 "
+    },
+    "0x141562059": {
+      "en": "capture on: ",
+      "text": "捕获设备："
+    },
+    "0x141562068": {
+      "en": "everything",
+      "text": "全部"
+    },
+    "0x141562073": {
+      "en": "developer",
+      "text": "开发者"
+    },
+    "0x14156207d": {
+      "en": "open all###fold_all",
+      "text": "全部展开###fold_all"
+    },
+    "0x141562091": {
+      "en": "fold all###fold_all",
+      "text": "全部折叠###fold_all"
+    },
+    "0x1415620a5": {
+      "en": " axis rests",
+      "text": " 根轴已归中"
+    },
+    "0x1415620b1": {
+      "en": " axes rest",
+      "text": " 根轴已归中"
+    },
+    "0x1415620bc": {
+      "en": "GAMEPAD",
+      "text": "手柄"
+    },
+    "0x1415620c4": {
+      "en": "GAMEPAD · NOT CONNECTED",
+      "text": "手柄 · 未连接"
+    },
+    "0x1415620dd": {
+      "en": "JOYSTICKS",
+      "text": "摇杆"
+    },
+    "0x1415620e7": {
+      "en": "JOYSTICKS · NONE ASSIGNED",
+      "text": "摇杆 · 未分配"
+    },
+    "0x141562108": {
+      "en": "how far back; the scroll wheel in the chase",
+      "text": "摄像机后退距离；追尾视角可用滚轮调节"
+    },
+    "0x141562138": {
+      "en": "how far back the camera stands",
+      "text": "摄像机与机械的距离"
+    },
+    "0x141562157": {
+      "en": "mouse + shift arrows",
+      "text": "鼠标 + Shift 方向键"
+    },
+    "0x14156216c": {
+      "en": "shift + arrows",
+      "text": "Shift + 方向键"
+    },
+    "0x14156217b": {
+      "en": "hide 4 to 9",
+      "text": "隐藏 4 至 9 档"
+    },
+    "0x141562187": {
+      "en": "show 4 to 9",
+      "text": "显示 4 至 9 档"
+    },
+    "0x141562198": {
+      "en": "SELECT A BINDING, THEN USE A KEY, BUTTON OR STICK · × OR DELETE CLEARS · ESC CANCELS",
+      "text": "选择绑定项后按下按键、按钮或推动摇杆 · × 或 Delete 清除 · Esc 取消"
+    },
+    "0x1415621f0": {
+      "en": "CONTROLS",
+      "text": "控制设置"
+    },
+    "0x1415621f9": {
+      "en": "close",
+      "text": "关闭"
+    },
+    "0x1415621ff": {
+      "en": "SHOWING",
+      "text": "当前显示"
+    },
+    "0x14156220e": {
+      "en": "reset all controls",
+      "text": "重置所有控制"
+    },
+    "0x141562221": {
+      "en": "%d plugged in",
+      "text": "已插入 %d 个设备"
+    },
+    "0x14156222f": {
+      "en": "the same in every layout",
+      "text": "在所有方案中相同"
+    },
+    "0x141562248": {
+      "en": "own layout",
+      "text": "自定义方案"
+    },
+    "0x141562253": {
+      "en": "Keyboard & mouse · ",
+      "text": "键盘与鼠标 · "
+    },
+    "0x14156226f": {
+      "en": "  ·  wheel lock ",
+      "text": "  ·  方向盘转向锁 "
+    },
+    "0x141562283": {
+      "en": "DEVICES",
+      "text": "设备"
+    },
+    "0x14156228d": {
+      "en": "Keyboard & mouse",
+      "text": "键盘与鼠标"
+    },
+    "0x14156229e": {
+      "en": "axes",
+      "text": "轴"
+    },
+    "0x1415622a3": {
+      "en": "axis",
+      "text": "轴"
+    },
+    "0x1415622a8": {
+      "en": "buttons",
+      "text": "按钮"
+    },
+    "0x1415622b0": {
+      "en": "button",
+      "text": "按钮"
+    },
+    "0x1415622b7": {
+      "en": "hats",
+      "text": "苦力帽"
+    },
+    "0x1415622bc": {
+      "en": "hat",
+      "text": "苦力帽"
+    },
+    "0x1415622c0": {
+      "en": "your own bindings; press a layout to replace them",
+      "text": "当前为自定义绑定；点击预设方案可替换"
+    },
+    "0x1415622f2": {
+      "en": " · a pick here sets ",
+      "text": " · 此处选择仅设置"
+    },
+    "0x141562308": {
+      "en": " alone",
+      "text": ""
+    },
+    "0x14156230f": {
+      "en": "pedals",
+      "text": "踏板"
+    },
+    "0x141562316": {
+      "en": "pedal",
+      "text": "踏板"
+    },
+    "0x14156231c": {
+      "en": " away from centre",
+      "text": " 偏离中心"
+    },
+    "0x14156233a": {
+      "en": "LEFT STICK",
+      "text": "左摇杆"
+    },
+    "0x141562345": {
+      "en": "RIGHT STICK",
+      "text": "右摇杆"
+    },
+    "0x141562351": {
+      "en": "DEAD ZONE",
+      "text": "死区"
+    },
+    "0x141562370": {
+      "en": "wheel turn to full lock, as a share of its travel",
+      "text": "打满方向所需的方向盘行程比例"
+    },
+    "0x1415623a2": {
+      "en": "Wheel lock",
+      "text": "方向盘锁止行程"
+    },
+    "0x1415623ad": {
+      "en": "wheel lock",
+      "text": "方向盘锁止行程"
+    },
+    "0x1415623b8": {
+      "en": "how fast the joystick levers move the rams",
+      "text": "摇杆操纵液压油缸的响应速度"
+    },
+    "0x1415623e3": {
+      "en": "Hydraulic speed",
+      "text": "液压速度"
+    },
+    "0x1415623fa": {
+      "en": "hydraulic speed",
+      "text": "液压速度"
+    },
+    "0x14156240a": {
+      "en": "KEYBOARD & MOUSE",
+      "text": "键盘与鼠标"
+    },
+    "0x14156241b": {
+      "en": "CAMERA",
+      "text": "摄像机"
+    },
+    "0x141562422": {
+      "en": "STEERING RETURN",
+      "text": "转向回正"
+    },
+    "0x141562432": {
+      "en": "%d settings",
+      "text": "%d 项设置"
+    },
+    "0x141562440": {
+      "en": "returns %s  ·  hold below %.1f m/s  ·  full from %.1f m/s",
+      "text": "自动回正 %s  ·  低于 %.1f m/s 保持  ·  %.1f m/s 起全速回正"
+    },
+    "0x14156247c": {
+      "en": "sensitivity %.2f",
+      "text": "灵敏度 %.2f"
+    },
+    "0x14156248d": {
+      "en": "  ·  inverted",
+      "text": "  ·  已反转"
+    },
+    "0x14156249c": {
+      "en": "  ·  distance %d%%",
+      "text": "  ·  距离 %d%%"
+    },
+    "0x1415624b0": {
+      "en": "  ·  cab %d°",
+      "text": "  ·  驾驶室 %d°"
+    },
+    "0x1415624bf": {
+      "en": "  ·  follows the bucket",
+      "text": "  ·  跟随铲斗"
+    },
+    "0x1415624d8": {
+      "en": "  ·  chase on the bucket",
+      "text": "  ·  追尾跟随铲斗"
+    },
+    "0x1415624f4": {
+      "en": "%d control%s",
+      "text": "控制项：%d%s"
+    },
+    "0x141562508": {
+      "en": "the wheel's angle when you let go",
+      "text": "松开按键后的车轮转向行为"
+    },
+    "0x14156252a": {
+      "en": "Returns",
+      "text": "自动回正"
+    },
+    "0x141562548": {
+      "en": "letting go holds the angle under this",
+      "text": "低于此速度松开按键时保持当前转角"
+    },
+    "0x14156256e": {
+      "en": "Hold below",
+      "text": "保持上限速度"
+    },
+    "0x141562579": {
+      "en": "m/s",
+      "text": "m/s"
+    },
+    "0x141562580": {
+      "en": "full straightening from this speed",
+      "text": "达到此速度后全速自动回正"
+    },
+    "0x1415625a3": {
+      "en": "Return at",
+      "text": "全速回正速度"
+    },
+    "0x1415625ad": {
+      "en": "full locks a second",
+      "text": "每秒回正满舵次数"
+    },
+    "0x1415625c1": {
+      "en": "Return rate",
+      "text": "回正速率"
+    },
+    "0x1415625cd": {
+      "en": "/s",
+      "text": "/秒"
+    },
+    "0x1415625d0": {
+      "en": "mouse, trackpad and right-stick look",
+      "text": "鼠标、触控板与右摇杆视角移动"
+    },
+    "0x1415625f5": {
+      "en": "Mouse sensitivity",
+      "text": "鼠标灵敏度"
+    },
+    "0x14156260e": {
+      "en": "Invert look",
+      "text": "反转视角"
+    },
+    "0x14156261a": {
+      "en": "Camera distance",
+      "text": "摄像机距离"
+    },
+    "0x14156262a": {
+      "en": "camera distance",
+      "text": "摄像机距离"
+    },
+    "0x141562640": {
+      "en": "how wide; the scroll wheel in the cab",
+      "text": "视野宽度；驾驶室内可用滚轮调节"
+    },
+    "0x141562666": {
+      "en": "Cab field of view",
+      "text": "驾驶室视野 (FOV)"
+    },
+    "0x141562680": {
+      "en": "the cab view turns to keep the bucket in sight",
+      "text": "驾驶室视角自动转动以保持铲斗在视野内"
+    },
+    "0x1415626af": {
+      "en": "Cab follows the bucket",
+      "text": "驾驶室视角跟随铲斗"
+    },
+    "0x1415626c8": {
+      "en": "the chase camera turns with the bucket's half, not the cab's",
+      "text": "追尾视角随铰接前车（铲斗端）转动，而非驾驶室端"
+    },
+    "0x141562705": {
+      "en": "Chase follows the bucket",
+      "text": "追尾视角跟随铲斗"
+    },
+    "0x14156271e": {
+      "en": "fixed",
+      "text": "固定"
+    },
+    "0x141562728": {
+      "en": "Speed ranges %d · %d · %d",
+      "text": "速度档位 %d · %d · %d"
+    },
+    "0x141562744": {
+      "en": "all wheeled",
+      "text": "所有轮式车辆"
+    },
+    "0x141562750": {
+      "en": "wheeled machines",
+      "text": "轮式机械"
+    },
+    "0x141562761": {
+      "en": "trucks and tractor",
+      "text": "卡车与拖拉机"
+    },
+    "0x141562774": {
+      "en": "bike and snowmobile",
+      "text": "摩托与雪地车"
+    },
+    "0x141562901": {
+      "en": "cancel",
+      "text": "取消"
+    },
+    "0x141562908": {
+      "en": "Every key, button and stick goes back to the shipped layout.",
+      "text": "所有按键、手柄按钮和摇杆都将恢复为默认方案。"
+    },
+    "0x141562945": {
+      "en": "RESET ALL CONTROLS?",
+      "text": "重置所有控制？"
+    },
+    "0x141562959": {
+      "en": "reset all",
+      "text": "全部重置"
+    },
+    "0x141562963": {
+      "en": "The ",
+      "text": "将 "
+    },
+    "0x141562968": {
+      "en": " bindings the layouts set go back to ",
+      "text": " 的方案键位重置为 "
+    },
+    "0x14156298e": {
+      "en": " on ",
+      "text": "（设备："
+    },
+    "0x141562993": {
+      "en": "; the rest stay.",
+      "text": "），其余保持不变。"
+    },
+    "0x1415629a4": {
+      "en": "REPLACE YOUR LAYOUT?",
+      "text": "替换当前方案？"
+    },
+    "0x1415629c8": {
+      "en": "replace",
+      "text": "替换"
+    },
+    "0x141563471": {
+      "en": "untitled job",
+      "text": "未命名任务"
+    },
+    "0x14156347e": {
+      "en": "TEST DRIVE",
+      "text": "试驾模式"
+    },
+    "0x141563489": {
+      "en": "DAY SHEET",
+      "text": "施工日报"
+    },
+    "0x141563493": {
+      "en": "TICK %d",
+      "text": "帧刻 %d"
+    },
+    "0x14156349b": {
+      "en": "TICK %d · PAUSED",
+      "text": "帧刻 %d · 已暂停"
+    },
+    "0x1415634ad": {
+      "en": "Back to editor",
+      "text": "返回编辑器"
+    },
+    "0x1415634bc": {
+      "en": "Leave",
+      "text": "离开"
+    },
+    "0x1415634c2": {
+      "en": "rain/snow",
+      "text": "雨雪天气"
+    },
+    "0x1415634cc": {
+      "en": "dry weather",
+      "text": "晴朗干燥"
+    },
+    "0x1415634e1": {
+      "en": "JOBS",
+      "text": "任务列表"
+    },
+    "0x1415634e6": {
+      "en": "close",
+      "text": "关闭"
+    },
+    "0x1415634ec": {
+      "en": "no jobs on this site",
+      "text": "此场地暂无任务"
+    },
+    "0x141563530": {
+      "en": "test drive changes are not saved",
+      "text": "试驾中的更改不会被保存"
+    },
+    "0x141563551": {
+      "en": "GAME",
+      "text": "游戏"
+    },
+    "0x141563556": {
+      "en": "Settings",
+      "text": "设置"
+    },
+    "0x14156355f": {
+      "en": "Jobs",
+      "text": "任务"
+    },
+    "0x141563564": {
+      "en": "Copy join link",
+      "text": "复制加入链接"
+    },
+    "0x141563573": {
+      "en": "GRADE STICKS",
+      "text": "标高桩"
+    },
+    "0x141563580": {
+      "en": "Remove all",
+      "text": "全部移除"
+    },
+    "0x14156358b": {
+      "en": "WEATHER",
+      "text": "天气"
+    },
+    "0x141563598": {
+      "en": "%.1f C, rain %.1f mm/h, snow %.2f m/h",
+      "text": "%.1f °C，降雨 %.1f mm/h，降雪 %.2f m/h"
+    },
+    "0x1415635be": {
+      "en": "%s: %.0f s remaining",
+      "text": "%s：剩余 %.0f 秒"
+    },
+    "0x1415635d3": {
+      "en": "Open dumps folder",
+      "text": "打开转储目录"
+    },
+    "0x141563612": {
+      "en": "LEAVE THE EDITOR?",
+      "text": "离开编辑器？"
+    },
+    "0x141563624": {
+      "en": "LEAVE THE GAME?",
+      "text": "离开游戏？"
+    },
+    "0x141563638": {
+      "en": "unsaved edits will be backed up",
+      "text": "未保存的编辑将被自动备份"
+    },
+    "0x141563658": {
+      "en": "Cancel",
+      "text": "取消"
+    },
+    "0x14156365f": {
+      "en": "Save and leave",
+      "text": "保存并离开"
+    },
+    "0x14156366e": {
+      "en": "Remove the stick",
+      "text": "移除该标高桩"
+    },
+    "0x14156367f": {
+      "en": "Remove %zu sticks",
+      "text": "移除 %zu 根标高桩"
+    },
+    "0x14156369e": {
+      "en": "REMOVE ALL STICKS?",
+      "text": "移除全部标高桩？"
+    },
+    "0x1415636b1": {
+      "en": "RECOVER UNSAVED EDITS?",
+      "text": "恢复未保存的编辑？"
+    },
+    "0x1415636c8": {
+      "en": "%zu edits autosaved %s; %zu saved",
+      "text": "%zu 项编辑于 %s 自动保存；已保存 %zu 项"
+    },
+    "0x1415636ea": {
+      "en": "Discard",
+      "text": "放弃"
+    },
+    "0x1415636f2": {
+      "en": "Recover",
+      "text": "恢复"
+    },
+    "0x141564140": {
+      "en": "player ",
+      "text": "玩家 "
+    },
+    "0x141564148": {
+      "en": "lost %d s",
+      "text": "失联 %d 秒"
+    },
+    "0x141564152": {
+      "en": "lagging %.1f s",
+      "text": "延迟 %.1f 秒"
+    },
+    "0x141564161": {
+      "en": "%.0f m",
+      "text": "%.0f 米"
+    },
+    "0x141564168": {
+      "en": "%.1f km",
+      "text": "%.1f 公里"
+    },
+    "0x14156418d": {
+      "en": "Balance:",
+      "text": "余额："
+    },
+    "0x141564201": {
+      "en": "Engine flooded. ",
+      "text": "发动机进水。"
+    },
+    "0x141564212": {
+      "en": "Off the map. ",
+      "text": "已超出地图范围。"
+    },
+    "0x141564600": {
+      "en": "loading",
+      "text": "正在加载"
+    },
+    "0x141564608": {
+      "en": "waiting for the host",
+      "text": "等待主机中"
+    },
+    "0x141564630": {
+      "en": "receiving the site",
+      "text": "正在接收场地"
+    },
+    "0x14156464b": {
+      "en": "quarry",
+      "text": "采石场"
+    },
+    "0x141564652": {
+      "en": "building terrain",
+      "text": "正在生成地形"
+    },
+    "0x141564940": {
+      "en": "PLAYED",
+      "text": "游玩时长"
+    },
+    "0x141564947": {
+      "en": "SAVED",
+      "text": "上次保存"
+    },
+    "0x14156494d": {
+      "en": "cancel",
+      "text": "取消"
+    },
+    "0x141564a96": {
+      "en": "continue",
+      "text": "继续"
+    },
+    "0x141564a9f": {
+      "en": "play",
+      "text": "开始游玩"
+    },
+    "0x141564aa4": {
+      "en": "JOB TICKET — ",
+      "text": "工程工单 — "
+    },
+    "0x141564ab4": {
+      "en": "NO. %02zu",
+      "text": "编号 %02zu"
+    },
+    "0x141564aca": {
+      "en": "EDITABLE",
+      "text": "可编辑"
+    },
+    "0x141564ad3": {
+      "en": "never",
+      "text": "从未"
+    },
+    "0x141564add": {
+      "en": "start over",
+      "text": "重新开始"
+    },
+    "0x141564ae8": {
+      "en": "update",
+      "text": "更新"
+    },
+    "0x141564aef": {
+      "en": "update refused: ",
+      "text": "更新被拒绝："
+    },
+    "0x141564b00": {
+      "en": "update available",
+      "text": "有可用更新"
+    },
+    "0x141564b11": {
+      "en": "workshop item ",
+      "text": "创意工坊物品 "
+    },
+    "0x141565e81": {
+      "en": "built-in",
+      "text": "内置"
+    },
+    "0x141565e8a": {
+      "en": "your site",
+      "text": "自建场地"
+    },
+    "0x141565ee7": {
+      "en": "by ",
+      "text": "作者："
+    },
+    "0x141565eeb": {
+      "en": "%.1f km",
+      "text": "%.1f 公里"
+    },
+    "0x141565ef3": {
+      "en": "%.0f m",
+      "text": "%.0f 米"
+    },
+    "0x141565efa": {
+      "en": "%.1f by %.1f km",
+      "text": "%.1f × %.1f 公里"
+    },
+    "0x141565f0a": {
+      "en": "%.0f by %.0f m",
+      "text": "%.0f × %.0f 米"
+    },
+    "0x141565f19": {
+      "en": "just now",
+      "text": "刚刚"
+    },
+    "0x141565f22": {
+      "en": "%lld min",
+      "text": "%lld 分钟前"
+    },
+    "0x141565f2b": {
+      "en": "%lld h",
+      "text": "%lld 小时前"
+    },
+    "0x141565f32": {
+      "en": "%lld d",
+      "text": "%lld 天前"
+    },
+    "0x141565f39": {
+      "en": "%d min",
+      "text": "%d 分钟"
+    },
+    "0x141565f40": {
+      "en": "%d h %02d min",
+      "text": "%d 小时 %02d 分钟"
+    },
+    "0x141565f93": {
+      "en": "S",
+      "text": ""
+    },
+    "0x141565fa2": {
+      "en": "settings",
+      "text": "设置"
+    },
+    "0x141565fab": {
+      "en": "START ",
+      "text": "重新开始 "
+    },
+    "0x141565fb2": {
+      "en": " OVER?",
+      "text": " 吗？"
+    },
+    "0x141565fb9": {
+      "en": "UPDATE ",
+      "text": "更新 "
+    },
+    "0x141565fc1": {
+      "en": "SITE REGISTER",
+      "text": "场地登记表"
+    },
+    "0x141565fcf": {
+      "en": "%zu SITE%s",
+      "text": "%zu 个场地%s"
+    },
+    "0x141565fe6": {
+      "en": "EARNED",
+      "text": "已赚取"
+    },
+    "0x141565fed": {
+      "en": "OPERATOR: ",
+      "text": "操作员："
+    },
+    "0x141565ffc": {
+      "en": "OPERATOR:",
+      "text": "操作员："
+    },
+    "0x141566017": {
+      "en": "YOUR SITES",
+      "text": "你的场地"
+    },
+    "0x141566022": {
+      "en": "SITE",
+      "text": "场地"
+    },
+    "0x141566030": {
+      "en": "WORKSHOP SITES",
+      "text": "创意工坊场地"
+    },
+    "0x141566045": {
+      "en": "DEMO",
+      "text": "试玩版"
+    },
+    "0x141566053": {
+      "en": "quit",
+      "text": "退出"
+    },
+    "0x141566058": {
+      "en": "Dirt Town by Skyturns. Third-party notices: THIRD-PARTY-LICENSES.md beside the game.",
+      "text": "Dirt Town 由 Skyturns 开发。第三方声明见游戏目录旁的 THIRD-PARTY-LICENSES.md。"
+    },
+    "0x1415660ad": {
+      "en": "2 h",
+      "text": "2 小时"
+    },
+    "0x1415660b1": {
+      "en": "3 h 10 min",
+      "text": "3 小时 10 分钟"
+    },
+    "0x141566720": {
+      "en": "%.0f km",
+      "text": "%.0f 公里"
+    },
+    "0x141566728": {
+      "en": "%.0f m",
+      "text": "%.0f 米"
+    },
+    "0x141566751": {
+      "en": "SITE MAP — ",
+      "text": "场地地图 — "
+    },
+    "0x14156675f": {
+      "en": "CONTOURS EVERY %g M",
+      "text": "等高距 %g 米"
+    },
+    "0x141566773": {
+      "en": "SITE MAP",
+      "text": "场地地图"
+    },
+    "0x1415667a9": {
+      "en": "close",
+      "text": "关闭"
+    },
+    "0x1415667b3": {
+      "en": "you",
+      "text": "你"
+    },
+    "0x1415667b7": {
+      "en": "N",
+      "text": "北"
+    },
+    "0x1415667b9": {
+      "en": "road",
+      "text": "公路"
+    },
+    "0x1415667be": {
+      "en": "track",
+      "text": "土路"
+    },
+    "0x1415667c4": {
+      "en": "building",
+      "text": "建筑"
+    },
+    "0x1415667cd": {
+      "en": "water",
+      "text": "水域"
+    },
+    "0x1415667d3": {
+      "en": "woods",
+      "text": "树林"
+    },
+    "0x1415667d9": {
+      "en": "grass",
+      "text": "草地"
+    },
+    "0x1415667df": {
+      "en": "contour",
+      "text": "等高线"
+    },
+    "0x1415667e7": {
+      "en": "index contour",
+      "text": "计曲线"
+    },
+    "0x1415667f5": {
+      "en": "job",
+      "text": "任务"
+    },
+    "0x14156709f": {
+      "en": "a protected ",
+      "text": "1 棵受保护的"
+    },
+    "0x1415670ac": {
+      "en": " protected ",
+      "text": " 棵受保护的"
+    },
+    "0x1415670bc": {
+      "en": "Sand for the yard",
+      "text": "给料场运沙"
+    },
+    "0x1415670d0": {
+      "en": "Bring sand from the pit and tip it in the marked bay by the shed.",
+      "text": "从采沙坑运来沙子，倒在棚屋旁标出的料仓里。"
+    },
+    "0x141567112": {
+      "en": "The bay is full.",
+      "text": "料仓已装满。"
+    },
+    "0x14156712c": {
+      "en": "Cottage lot",
+      "text": "木屋宅基地"
+    },
+    "0x141567138": {
+      "en": "Clear the lot for the cottage. The taped pines are protected: leave them standing.",
+      "text": "清理木屋宅基地。绑着彩带的松树受保护：请保留它们。"
+    },
+    "0x14156719c": {
+      "en": "Tower road",
+      "text": "塔基通道"
+    },
+    "0x1415671a8": {
+      "en": "Cut a road up to the knob, level the pad there, set the four footings at its stakes and lay the three tower sections east of it.",
+      "text": "开一条路通往山头，整平那里的平台，在标桩处安放四个基础，并将三节塔段摆放在东侧。"
+    },
+    "0x141567229": {
+      "en": "The tower stands.",
+      "text": "铁塔已矗立。"
+    },
+    "0x14156727e": {
+      "en": "Level the knob",
+      "text": "整平山头"
+    },
+    "0x1415672a3": {
+      "en": "Stack the sections",
+      "text": "堆放塔段"
+    },
+    "0x1415672b6": {
+      "en": "Level the knob, {}",
+      "text": "整平山头，{}"
+    },
+    "0x1415672e3": {
+      "en": "Stack the sections, {}",
+      "text": "堆放塔段，{}"
+    },
+    "0x1415672fa": {
+      "en": "felled",
+      "text": "已砍伐"
+    },
+    "0x141567301": {
+      "en": "tree",
+      "text": "棵树"
+    },
+    "0x141567306": {
+      "en": "moved",
+      "text": "已移走"
+    },
+    "0x14156730c": {
+      "en": "stone",
+      "text": "块石头"
+    },
+    "0x141567312": {
+      "en": " and ",
+      "text": "和"
+    },
+    "0x141567318": {
+      "en": "stones",
+      "text": "块石头"
+    },
+    "0x14156731f": {
+      "en": "trees",
+      "text": "棵树"
+    },
+    "0x141567325": {
+      "en": "1 tree left",
+      "text": "剩余 1 棵树"
+    },
+    "0x141567331": {
+      "en": "%d trees left",
+      "text": "剩余 %d 棵树"
+    },
+    "0x14156733f": {
+      "en": "1 stone left",
+      "text": "剩余 1 块石头"
+    },
+    "0x14156734c": {
+      "en": "%d stones left",
+      "text": "剩余 %d 块石头"
+    },
+    "0x14156735e": {
+      "en": "level",
+      "text": "平整"
+    },
+    "0x141567364": {
+      "en": "%.0f %% level%s, %d red",
+      "text": "平整度 %.0f %%%s，%d 处标红"
+    },
+    "0x14156737c": {
+      "en": "%.0f %% level%s",
+      "text": "平整度 %.0f %%%s"
+    },
+    "0x14156738c": {
+      "en": "%.0f t",
+      "text": "%.0f 吨"
+    },
+    "0x141567393": {
+      "en": "%.1f t",
+      "text": "%.1f 吨"
+    },
+    "0x14156739a": {
+      "en": "%.1f of %.0f t",
+      "text": "%.1f / %.0f 吨"
+    },
+    "0x1415673a9": {
+      "en": ", one leans %.0f°",
+      "text": "，1 处倾斜 %.0f°"
+    },
+    "0x1415673bc": {
+      "en": ", %d leaning, up to %.0f°",
+      "text": "，%d 处倾斜，最大 %.0f°"
+    },
+    "0x1415673d7": {
+      "en": ", one %.1f m off its mark",
+      "text": "，1 处偏离标记 %.1f 米"
+    },
+    "0x1415673f1": {
+      "en": "%ld of %zu%s",
+      "text": "%ld / %zu%s"
+    },
+    "0x1415673fe": {
+      "en": "%d of %d",
+      "text": "%d / %d"
+    },
+    "0x141567407": {
+      "en": "cleared",
+      "text": "已清理"
+    },
+    "0x14156740f": {
+      "en": "%d %s, %d %s left",
+      "text": "剩余 %d %s、%d %s"
+    },
+    "0x141567421": {
+      "en": "under water",
+      "text": "已被水淹没"
+    },
+    "0x14156742d": {
+      "en": "%.0f %% surrounded",
+      "text": "已围合 %.0f %%"
+    },
+    "0x141567440": {
+      "en": "stripped",
+      "text": "已剥离"
+    },
+    "0x141567449": {
+      "en": "%.0f %% stripped",
+      "text": "已剥离 %.0f %%"
+    },
+    "0x1415674a7": {
+      "en": "Find the ",
+      "text": "找到"
+    },
+    "0x1415674b1": {
+      "en": " over the ",
+      "text": "越过"
+    },
+    "0x1415674bc": {
+      "en": " to the ",
+      "text": "送到"
+    },
+    "0x1415674c5": {
+      "en": ", done",
+      "text": "，已完成"
+    },
+    "0x1415674d1": {
+      "en": "Jobs",
+      "text": "任务"
+    },
+    "0x1415674d6": {
+      "en": "hide the jobs list",
+      "text": "隐藏任务列表"
+    },
+    "0x1415674e9": {
+      "en": "show the jobs list",
+      "text": "显示任务列表"
+    },
+    "0x1415674fc": {
+      "en": "untitled job",
+      "text": "未命名任务"
+    },
+    "0x141567509": {
+      "en": "%s, done",
+      "text": "%s，已完成"
+    },
+    "0x141567527": {
+      "en": "%s: done",
+      "text": "%s：已完成"
+    },
+    "0x141567530": {
+      "en": "fold jobs",
+      "text": "折叠任务"
+    },
+    "0x14156753a": {
+      "en": "fine, %s",
+      "text": "罚款，%s"
+    },
+    "0x141567549": {
+      "en": "bonus rounds, %.0f",
+      "text": "奖励回合，%.0f"
+    },
+    "0x14156755c": {
+      "en": "extra %s, %.1f t",
+      "text": "额外%s，%.1f 吨"
+    },
+    "0x14156756d": {
+      "en": "diesel",
+      "text": "柴油"
+    },
+    "0x141567574": {
+      "en": "road: not found",
+      "text": "道路：未找到"
+    },
+    "0x141567588": {
+      "en": "road %.0f m, avg slope %.0f %%, steepest %.0f %%",
+      "text": "道路 %.0f 米，平均坡度 %.0f %%，最大坡度 %.0f %%"
+    },
+    "0x1415675b9": {
+      "en": ", side slope %.0f %%",
+      "text": "，横坡 %.0f %%"
+    },
+    "0x1415675ce": {
+      "en": ", starts %.0f m off the pad",
+      "text": "，起点距平台 %.0f 米"
+    },
+    "0x1415675ea": {
+      "en": ", %.0f m gap",
+      "text": "，缺口 %.0f 米"
+    },
+    "0x1415675f7": {
+      "en": "EARNED",
+      "text": "已赚取"
+    },
+    "0x1415677ee": {
+      "en": "Find the truck",
+      "text": "找到卡车"
+    },
+    "0x14156782d": {
+      "en": "Boulder on hill",
+      "text": "山顶巨石"
+    },
+    "0x141567878": {
+      "en": "Get the boulder up on the hill",
+      "text": "把巨石搬到山顶上去"
+    },
+    "0x141567897": {
+      "en": "Sand haul & more",
+      "text": "运沙及其他"
+    },
+    "0x1415678a8": {
+      "en": "40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it",
+      "text": "40 吨沙子到位，飞跃河道成功，巨石也上了山顶。漂亮！想继续运沙也随你。"
+    },
+    "0x14156790c": {
+      "en": "MISSION ACCOMPLISHED",
+      "text": "工程圆满完成"
+    },
+    "0x141567921": {
+      "en": "TASK DONE",
+      "text": "任务完成"
+    },
+    "0x14156792b": {
+      "en": "TOTAL",
+      "text": "总计"
+    },
+    "0x141567931": {
+      "en": "SO FAR",
+      "text": "目前为止"
+    },
+    "0x141567938": {
+      "en": " levelled",
+      "text": " 已整平"
+    },
+    "0x141567942": {
+      "en": " levelled in ",
+      "text": " 已整平于 "
+    },
+    "0x141567950": {
+      "en": " set, %zu of %zu",
+      "text": " 已安放，%zu / %zu"
+    },
+    "0x141567961": {
+      "en": " %d of %d",
+      "text": " %d / %d"
+    },
+    "0x14156796b": {
+      "en": " cleared",
+      "text": " 已清理"
+    },
+    "0x141567974": {
+      "en": " cleared of stones",
+      "text": " 已清理石块"
+    },
+    "0x141567987": {
+      "en": " stripped of ",
+      "text": " 已剥离 "
+    },
+    "0x141567995": {
+      "en": " made",
+      "text": " 已修通"
+    },
+    "0x14156799b": {
+      "en": " filled",
+      "text": " 已填满"
+    },
+    "0x1415679a3": {
+      "en": "found",
+      "text": "已找到"
+    },
+    "0x1415679a9": {
+      "en": "%.0f t × %g",
+      "text": "%.0f 吨 × %g"
+    },
+    "0x1415679c7": {
+      "en": "fine, ",
+      "text": "罚款，"
+    },
+    "0x1415679ce": {
+      "en": "%.1f t × %g",
+      "text": "%.1f 吨 × %g"
+    },
+    "0x1415679db": {
+      "en": "extra ",
+      "text": "额外 "
+    },
+    "0x1415679ed": {
+      "en": "%.1f l × %g",
+      "text": "%.1f 升 × %g"
+    },
+    "0x1415679fa": {
+      "en": "BUCKET & SONS · CONTRACTORS",
+      "text": "铲斗父子工程承包公司"
+    },
+    "0x141567a17": {
+      "en": "NO. %02zu",
+      "text": "编号 %02zu"
+    },
+    "0x141567a25": {
+      "en": "ON SITE",
+      "text": "在场时间"
+    },
+    "0x141567a2d": {
+      "en": "%zu of %zu",
+      "text": "%zu / %zu"
+    },
+    "0x141567a38": {
+      "en": "TASKS",
+      "text": "任务"
+    },
+    "0x141567a3e": {
+      "en": "%d min",
+      "text": "%d 分钟"
+    },
+    "0x141567a45": {
+      "en": "%d h %02d",
+      "text": "%d 小时 %02d 分"
+    },
+    "0x141567a4f": {
+      "en": "WORK",
+      "text": "施工项目"
+    },
+    "0x141567a54": {
+      "en": "FOREMAN",
+      "text": "工长"
+    },
+    "0x141567a5c": {
+      "en": "CUSTOMER'S COPY",
+      "text": "客户留存联"
+    },
+    "0x141567a6c": {
+      "en": "“",
+      "text": "“"
+    },
+    "0x141567a70": {
+      "en": "”",
+      "text": "”"
+    },
+    "0x141567a81": {
+      "en": "Keep working",
+      "text": "继续干活"
+    },
+    "0x141567a8e": {
+      "en": "Leave",
+      "text": "离开"
+    },
+    "0x141567a94": {
+      "en": "Wishlist",
+      "text": "加入愿望单"
+    },
+    "0x141567ac0": {
+      "en": "The mast stands over the valley.",
+      "text": "铁塔矗立在山谷之上。"
+    },
+    "0x141567ae1": {
+      "en": "Quality sand in the bay, {}",
+      "text": "料仓中的优质沙，{}"
+    },
+    "0x141567afd": {
+      "en": "Sand delivered, as quoted",
+      "text": "沙子已按报价交付"
+    },
+    "0x141567f47": {
+      "en": "ok",
+      "text": "确定"
+    },
+    "0x141567f50": {
+      "en": "Waiting for parts, estimated arrival dec 4th",
+      "text": "等待配件中，预计 12 月 4 日到货"
+    },
+    "0x141567f7d": {
+      "en": "OUT OF ORDER",
+      "text": "暂不可用"
+    },
+    "0x141567f8a": {
+      "en": "back to menu",
+      "text": "返回主菜单"
+    },
+    "0x141567f98": {
+      "en": "the host's site has 15 machines and this one 10, and the two site files are not the same",
+      "text": "主机场地包含 15 台机械而本地为 10 台，且两个场地文件不一致"
+    },
+    "0x141567ff1": {
+      "en": "COULD NOT JOIN",
+      "text": "无法加入"
+    },
+    "0x141568516": {
+      "en": "plow",
+      "text": "推雪铲"
+    },
+    "0x14156851b": {
+      "en": "off",
+      "text": "关"
+    },
+    "0x14156851f": {
+      "en": "blade",
+      "text": "推土铲"
+    },
+    "0x141568525": {
+      "en": "ready",
+      "text": "就绪"
+    },
+    "0x14156852b": {
+      "en": "level",
+      "text": "水平"
+    },
+    "0x141568531": {
+      "en": "free tilt",
+      "text": "自由倾斜"
+    },
+    "0x14156853b": {
+      "en": "lock tilt",
+      "text": "锁定倾斜"
+    },
+    "0x141568545": {
+      "en": "bucket",
+      "text": "铲斗"
+    },
+    "0x14156854c": {
+      "en": "none",
+      "text": "无"
+    },
+    "0x141568551": {
+      "en": "in hand",
+      "text": "手持"
+    },
+    "0x141568559": {
+      "en": "down",
+      "text": "降下"
+    },
+    "0x14156855e": {
+      "en": "stowed",
+      "text": "已收起"
+    },
+    "0x141568565": {
+      "en": "hook in hand",
+      "text": "手持挂钩"
+    },
+    "0x141568572": {
+      "en": "hook down",
+      "text": "挂钩已放下"
+    },
+    "0x14156857c": {
+      "en": "on",
+      "text": "开"
+    },
+    "0x14156857f": {
+      "en": "extend",
+      "text": "伸出"
+    },
+    "0x141568586": {
+      "en": "retract",
+      "text": "收回"
+    },
+    "0x14156858e": {
+      "en": "hold",
+      "text": "保持"
+    },
+    "0x1415685a6": {
+      "en": "tips, home",
+      "text": "倾翻，归位"
+    },
+    "0x1415685b1": {
+      "en": "swings, home",
+      "text": "摆动，归位"
+    },
+    "0x1415685be": {
+      "en": "lock",
+      "text": "锁定"
+    },
+    "0x1415685c3": {
+      "en": "home to lock",
+      "text": "归位以锁定"
+    },
+    "0x1415685d0": {
+      "en": "out",
+      "text": "伸出"
+    },
+    "0x1415685d4": {
+      "en": "in",
+      "text": "收回"
+    },
+    "0x1415685d7": {
+      "en": "partly in",
+      "text": "部分收回"
+    },
+    "0x1415685e1": {
+      "en": "attached",
+      "text": "已挂载"
+    },
+    "0x1415685ea": {
+      "en": "empty",
+      "text": "空载"
+    },
+    "0x1415685f0": {
+      "en": "up",
+      "text": "升起"
+    },
+    "0x1415685f3": {
+      "en": "lowering",
+      "text": "下降中"
+    },
+    "0x1415685fc": {
+      "en": "rising",
+      "text": "上升中"
+    },
+    "0x141568603": {
+      "en": "lower",
+      "text": "降下"
+    },
+    "0x141568609": {
+      "en": "lift",
+      "text": "升起"
+    },
+    "0x14156860e": {
+      "en": "lip up, gate open %.0f deg",
+      "text": "挡板升起，尾门开 %.0f°"
+    },
+    "0x141568629": {
+      "en": "locked, lip up",
+      "text": "已锁止，挡板升起"
+    },
+    "0x141568638": {
+      "en": "unlock",
+      "text": "解锁"
+    },
+    "0x14156863f": {
+      "en": "lower to detach",
+      "text": "降下以卸离"
+    },
+    "0x14156864f": {
+      "en": "detach",
+      "text": "卸离"
+    },
+    "0x141568656": {
+      "en": "locked",
+      "text": "已锁止"
+    },
+    "0x14156865d": {
+      "en": "open",
+      "text": "打开"
+    },
+    "0x141568662": {
+      "en": "running",
+      "text": "运行中"
+    },
+    "0x14156866a": {
+      "en": "stopped",
+      "text": "已停止"
+    },
+    "0x141568672": {
+      "en": "hydraulics",
+      "text": "液压"
+    },
+    "0x14156867d": {
+      "en": "camera",
+      "text": "视角"
+    },
+    "0x141568687": {
+      "en": "%.1f m/s",
+      "text": "%.1f m/s"
+    },
+    "0x1415686aa": {
+      "en": "pick",
+      "text": "选择"
+    },
+    "0x1415686b7": {
+      "en": "RANGE",
+      "text": "档位"
+    },
+    "0x1415686bd": {
+      "en": "on/off",
+      "text": "开 / 关"
+    },
+    "0x1415686c4": {
+      "en": "FLOAT",
+      "text": "浮动"
+    },
+    "0x1415686d2": {
+      "en": "grips %d%%",
+      "text": "夹紧 %d%%"
+    },
+    "0x1415686dd": {
+      "en": "%d%% closed",
+      "text": "闭合 %d%%"
+    },
+    "0x1415686e9": {
+      "en": "close",
+      "text": "闭合"
+    },
+    "0x1415686ff": {
+      "en": "close/open",
+      "text": "闭合 / 打开"
+    },
+    "0x14156870a": {
+      "en": "THUMB",
+      "text": "拇指夹"
+    },
+    "0x141568717": {
+      "en": "held %.1f m",
+      "text": "保持 %.1f 米"
+    },
+    "0x14156872f": {
+      "en": "offset",
+      "text": "偏移"
+    },
+    "0x141568736": {
+      "en": "AUTO",
+      "text": "自动"
+    },
+    "0x141568743": {
+      "en": "TOOL",
+      "text": "机具"
+    },
+    "0x14156874f": {
+      "en": "%.0f kN  %.0f%%",
+      "text": "%.0f kN  %.0f%%"
+    },
+    "0x14156875f": {
+      "en": "%.1f m out",
+      "text": "放出 %.1f 米"
+    },
+    "0x14156876a": {
+      "en": "%s %.1f m",
+      "text": "%s %.1f 米"
+    },
+    "0x141568774": {
+      "en": "remote out",
+      "text": "遥控器已取出"
+    },
+    "0x14156877f": {
+      "en": "in/out",
+      "text": "收 / 放"
+    },
+    "0x141568786": {
+      "en": "WINCH",
+      "text": "绞盘"
+    },
+    "0x141568794": {
+      "en": "LIGHT",
+      "text": "警示灯"
+    },
+    "0x1415687a2": {
+      "en": "HYDR",
+      "text": "液压"
+    },
+    "0x1415687b1": {
+      "en": "raising",
+      "text": "升起中"
+    },
+    "0x1415687b9": {
+      "en": "to %+.0f deg",
+      "text": "至 %+.0f°"
+    },
+    "0x1415687c6": {
+      "en": "up, back %+.0f",
+      "text": "升起，后倾 %+.0f"
+    },
+    "0x1415687d5": {
+      "en": "%+.0f deg",
+      "text": "%+.0f°"
+    },
+    "0x1415687df": {
+      "en": "up/down",
+      "text": "升 / 降"
+    },
+    "0x1415687e7": {
+      "en": "HITCH",
+      "text": "悬挂"
+    },
+    "0x1415687f5": {
+      "en": "L %.0f  R %.0f deg",
+      "text": "左 %.0f  右 %.0f°"
+    },
+    "0x141568808": {
+      "en": "both",
+      "text": "双侧"
+    },
+    "0x14156881e": {
+      "en": "FLAPS",
+      "text": "侧翼"
+    },
+    "0x141568833": {
+      "en": "L %.2f  R %.2f m",
+      "text": "左 %.2f  右 %.2f 米"
+    },
+    "0x14156884b": {
+      "en": "TINES",
+      "text": "货叉"
+    },
+    "0x14156885d": {
+      "en": "no forks",
+      "text": "无货叉"
+    },
+    "0x141568866": {
+      "en": "tips, %.0f deg",
+      "text": "倾翻，%.0f°"
+    },
+    "0x141568875": {
+      "en": "swings, %.0f deg",
+      "text": "摆动，%.0f°"
+    },
+    "0x14156889d": {
+      "en": "home",
+      "text": "归位"
+    },
+    "0x1415688a2": {
+      "en": "LOCK",
+      "text": "锁止"
+    },
+    "0x1415688bb": {
+      "en": "SLIDE",
+      "text": "滑移"
+    },
+    "0x1415688c9": {
+      "en": "HOOK",
+      "text": "勾臂"
+    },
+    "0x1415688d8": {
+      "en": "AXLE",
+      "text": "车桥"
+    },
+    "0x1415688e4": {
+      "en": "lip rising",
+      "text": "挡板升起中"
+    },
+    "0x1415688ef": {
+      "en": "lip lowering",
+      "text": "挡板降下中"
+    },
+    "0x1415688fc": {
+      "en": "open %.0f deg, chains %.0f",
+      "text": "打开 %.0f°，链条 %.0f"
+    },
+    "0x141568917": {
+      "en": "free, chains %.0f deg",
+      "text": "自由，链条 %.0f°"
+    },
+    "0x14156892d": {
+      "en": "GATE",
+      "text": "尾门"
+    },
+    "0x14156893a": {
+      "en": "no tipper",
+      "text": "无自卸斗"
+    },
+    "0x141568944": {
+      "en": "up %.2f m, %+.0f deg",
+      "text": "升起 %.2f 米，%+.0f°"
+    },
+    "0x141568959": {
+      "en": "down, %+.0f deg",
+      "text": "降下，%+.0f°"
+    },
+    "0x141568969": {
+      "en": "angle",
+      "text": "角度"
+    },
+    "0x14156896f": {
+      "en": "PLOW",
+      "text": "雪铲"
+    },
+    "0x141568992": {
+      "en": "attach",
+      "text": "挂载"
+    },
+    "0x141568999": {
+      "en": "DIFF",
+      "text": "差速锁"
+    },
+    "0x1415689a5": {
+      "en": "belt too tight",
+      "text": "皮带过紧"
+    },
+    "0x1415689b4": {
+      "en": "working",
+      "text": "工作中"
+    },
+    "0x1415689bc": {
+      "en": "folded",
+      "text": "已折叠"
+    },
+    "0x1415689c3": {
+      "en": "%.0f deg folded",
+      "text": "折叠 %.0f°"
+    },
+    "0x1415689d3": {
+      "en": "fold",
+      "text": "折叠"
+    },
+    "0x1415689e8": {
+      "en": "fold/unfold",
+      "text": "折叠 / 展开"
+    },
+    "0x1415689f4": {
+      "en": "unfold",
+      "text": "展开"
+    },
+    "0x1415689fb": {
+      "en": "HEAD",
+      "text": "机头"
+    },
+    "0x141568a07": {
+      "en": "hopper end %+.1f deg",
+      "text": "料斗端 %+.1f°"
+    },
+    "0x141568a2b": {
+      "en": "TILT",
+      "text": "倾斜"
+    },
+    "0x141568a37": {
+      "en": "folded in",
+      "text": "已收折"
+    },
+    "0x141568a41": {
+      "en": "%.0f deg in",
+      "text": "收折 %.0f°"
+    },
+    "0x141568a5c": {
+      "en": "WINGS",
+      "text": "翼板"
+    },
+    "0x141568a6a": {
+      "en": "tight",
+      "text": "已拉紧"
+    },
+    "0x141568a70": {
+      "en": "released %.2f m",
+      "text": "松开 %.2f 米"
+    },
+    "0x141568a80": {
+      "en": "release",
+      "text": "松开"
+    },
+    "0x141568a88": {
+      "en": "release/tighten",
+      "text": "松开 / 拉紧"
+    },
+    "0x141568a98": {
+      "en": "tighten",
+      "text": "拉紧"
+    },
+    "0x141568aa0": {
+      "en": "TENSION",
+      "text": "张紧"
+    },
+    "0x141568ab1": {
+      "en": "BELTS",
+      "text": "皮带"
+    },
+    "0x141568abf": {
+      "en": "switch",
+      "text": "切换"
+    },
+    "0x141568ac6": {
+      "en": "STICK",
+      "text": "摇杆"
+    },
+    "0x141568ad4": {
+      "en": "GRIP",
+      "text": "夹爪"
+    },
+    "0x141569180": {
+      "en": "SAVED AUTOMATICALLY",
+      "text": "已自动保存"
+    },
+    "0x141569194": {
+      "en": "SETTINGS",
+      "text": "设置"
+    },
+    "0x14156919d": {
+      "en": "close",
+      "text": "关闭"
+    },
+    "0x1415691a3": {
+      "en": "GENERAL",
+      "text": "常规"
+    },
+    "0x1415691ab": {
+      "en": "edit",
+      "text": "编辑"
+    },
+    "0x1415691b0": {
+      "en": "Controls",
+      "text": "控制"
+    },
+    "0x1415691b9": {
+      "en": "Fullscreen",
+      "text": "全屏"
+    },
+    "0x1415691c4": {
+      "en": "UI size",
+      "text": "界面缩放"
+    },
+    "0x1415691d1": {
+      "en": "SOUND",
+      "text": "音频"
+    },
+    "0x1415691d7": {
+      "en": "Volume",
+      "text": "总音量"
+    },
+    "0x1415691de": {
+      "en": "Music",
+      "text": "音乐"
+    },
+    "0x1415691e4": {
+      "en": "Ambience",
+      "text": "环境音"
+    },
+    "0x1415691ed": {
+      "en": "reset",
+      "text": "重置"
+    },
+    "0x1415691f3": {
+      "en": "Reset sound",
+      "text": "重置音频"
+    },
+    "0x1415691ff": {
+      "en": "GRAPHICS",
+      "text": "画面"
+    },
+    "0x141569208": {
+      "en": "Graphics",
+      "text": "画质"
+    },
+    "0x141569215": {
+      "en": "Render scale",
+      "text": "渲染分辨率"
+    },
+    "0x141569226": {
+      "en": "Mirrors",
+      "text": "后视镜"
+    },
+    "0x14156922e": {
+      "en": "Half-rate physics",
+      "text": "半频物理模拟"
+    },
+    "0x141569240": {
+      "en": "Experimental physics mode for slower computers. Changing it restarts the game.",
+      "text": "面向低配电脑的实验性物理模式。更改后将重启游戏。"
+    },
+    "0x1415692bc": {
+      "en": "cancel",
+      "text": "取消"
+    },
+    "0x1415692c8": {
+      "en": "Half-rate physics changes with a restart.",
+      "text": "更改半频物理模拟需要重启游戏生效。"
+    },
+    "0x1415692f2": {
+      "en": "RESTART NOW?",
+      "text": "立即重启？"
+    },
+    "0x1415692ff": {
+      "en": "restart",
+      "text": "重启"
+    },
+    "0x14156ac2a": {
+      "en": "Wheel loader",
+      "text": "轮式装载机"
+    },
+    "0x14156ac4e": {
+      "en": "HOLMGREN'S MACHINES",
+      "text": "霍尔姆格伦机械行"
+    },
+    "0x14156ac62": {
+      "en": "PRICE LIST",
+      "text": "价目表"
+    },
+    "0x14156ac70": {
+      "en": "by the hour or to keep; a row turns to its page",
+      "text": "按小时租用或永久购买；点击条目翻至详情页"
+    },
+    "0x14156aca0": {
+      "en": "PER HOUR",
+      "text": "每小时"
+    },
+    "0x14156aca9": {
+      "en": "TO BUY",
+      "text": "购买价"
+    },
+    "0x14156acda": {
+      "en": "%.0f kg",
+      "text": "%.0f 千克"
+    },
+    "0x14156ace2": {
+      "en": "%.1f t",
+      "text": "%.1f 吨"
+    },
+    "0x14156ace9": {
+      "en": "Buy",
+      "text": "购买"
+    },
+    "0x14156aced": {
+      "en": "Hire",
+      "text": "租用"
+    },
+    "0x14156acf2": {
+      "en": "Operating weight",
+      "text": "工作质量"
+    },
+    "0x14156ad03": {
+      "en": "%.0f kW",
+      "text": "%.0f kW"
+    },
+    "0x14156ad0b": {
+      "en": "Engine",
+      "text": "发动机"
+    },
+    "0x14156ad12": {
+      "en": "Equipped",
+      "text": "配置"
+    },
+    "0x14156ad1b": {
+      "en": "HIRE, PER HOUR",
+      "text": "按小时租用"
+    },
+    "0x14156ad30": {
+      "en": "PLANT HIRE & SALES  ·  EST. 1962",
+      "text": "工程机械租赁与销售  ·  始于 1962 年"
+    },
+    "0x14156ad52": {
+      "en": "AUTUMN CATALOGUE 2026",
+      "text": "2026 年秋季产品目录"
+    },
+    "0x14156ad72": {
+      "en": "MACHINES",
+      "text": "台机械"
+    },
+    "0x14156ad7f": {
+      "en": "INSIDE",
+      "text": "目录内览"
+    },
+    "0x14156ad88": {
+      "en": "HIRE IT BY THE HOUR. BUY IT FOR LIFE.",
+      "text": "按时租赁，买断终身。"
+    },
+    "0x14156adb0": {
+      "en": "Every machine delivered to your site: to the yard, the gate or right beside you.",
+      "text": "每台机械均可送货到场：送至料场、大门或直接送到你身旁。"
+    },
+    "0x14156ae08": {
+      "en": "The yard on the north road  ·  open six till six  ·  ask for Erik",
+      "text": "北路机械场  ·  早六点至晚六点营业  ·  请找埃里克"
+    },
+    "0x14156ae4c": {
+      "en": "owned, on every site",
+      "text": "已购买，所有场地可用"
+    },
+    "0x14156ae61": {
+      "en": "to hire, waiting on you",
+      "text": "待租用，等待您的确认"
+    },
+    "0x14156ae79": {
+      "en": "to buy, waiting on you",
+      "text": "待购买，等待您的确认"
+    },
+    "0x14156ae90": {
+      "en": "on hire by the hour",
+      "text": "正在按小时租用中"
+    },
+    "0x14156aea4": {
+      "en": "THE COUNTER",
+      "text": "柜台结账"
+    },
+    "0x14156aeb0": {
+      "en": "YOUR MACHINES",
+      "text": "你的机械"
+    },
+    "0x14156aec0": {
+      "en": "Account 0042  ·  HOLMGREN'S MACHINES",
+      "text": "账户 0042  ·  霍尔姆格伦机械行"
+    },
+    "0x14156aee6": {
+      "en": "In the account",
+      "text": "账户余额"
+    },
+    "0x14156aefe": {
+      "en": "ON HIRE",
+      "text": "租用中"
+    },
+    "0x14156af08": {
+      "en": "A machine bought is paid at the counter, and a machine hired its first hour.",
+      "text": "购买的机械在柜台一次性结清，租用的机械需预付首小时租金。"
+    },
+    "0x14156af55": {
+      "en": "Nothing on order.",
+      "text": "暂无待购清单。"
+    },
+    "0x14156af68": {
+      "en": "Press Hire or Buy on a machine's page.",
+      "text": "请在机械详情页点击“租用”或“购买”。"
+    },
+    "0x14156af8f": {
+      "en": "OWNED",
+      "text": "已拥有"
+    },
+    "0x14156af98": {
+      "en": "short ",
+      "text": "还差 "
+    },
+    "0x14156af9f": {
+      "en": " / h",
+      "text": " / 小时"
+    },
+    "0x14156afa9": {
+      "en": "Confirm",
+      "text": "确认"
+    },
+    "0x14156afb1": {
+      "en": "Cancel",
+      "text": "取消"
+    },
+    "0x14156afb8": {
+      "en": "and %d more",
+      "text": "及另外 %d 项"
+    },
+    "0x14156afc4": {
+      "en": "Open",
+      "text": "翻开"
+    },
+    "0x14156afc9": {
+      "en": "Next",
+      "text": "下一页"
+    },
+    "0x14156afce": {
+      "en": "Previous",
+      "text": "上一页"
+    },
+    "0x14156afd7": {
+      "en": "Back",
+      "text": "返回"
+    },
+    "0x14156bd29": {
+      "en": "ROAD",
+      "text": "道路"
+    },
+    "0x14156bd2e": {
+      "en": "PAD",
+      "text": "平台"
+    },
+    "0x14156bd32": {
+      "en": "%.2f m",
+      "text": "%.2f 米"
+    },
+    "0x14156bd39": {
+      "en": "on grade",
+      "text": "已达标高"
+    },
+    "0x14156bd42": {
+      "en": "cut",
+      "text": "需挖"
+    },
+    "0x14156bd46": {
+      "en": "%s %.2f m",
+      "text": "%s %.2f 米"
+    },
+    "0x14156bd50": {
+      "en": "fill",
+      "text": "需填"
+    },
+    "0x14156bd86": {
+      "en": "done",
+      "text": "完成"
+    },
+    "0x14156bd8b": {
+      "en": "hold to remove",
+      "text": "长按移除"
+    },
+    "0x14156cc64": {
+      "en": "%d · %.1f m/s",
+      "text": "%d · %.1f m/s"
+    },
+    "0x14156cca2": {
+      "en": "%+.0f cm",
+      "text": "%+.0f 厘米"
+    },
+    "0x14156ccab": {
+      "en": "%+.1f cm",
+      "text": "%+.1f 厘米"
+    },
+    "0x1414a5493": {
+      "en": "Save *",
+      "text": "保存 *"
+    },
+    "0x1414a549a": {
+      "en": "Save",
+      "text": "保存"
+    },
+    "0x1414a549f": {
+      "en": "Cancel render",
+      "text": "取消渲染"
+    },
+    "0x1414a54ad": {
+      "en": "Render video",
+      "text": "渲染视频"
+    },
+    "0x1414a54d5": {
+      "en": "File",
+      "text": "文件"
+    },
+    "0x1414a54e0": {
+      "en": "Open...",
+      "text": "打开..."
+    },
+    "0x1414a54ee": {
+      "en": "New from take...",
+      "text": "从录制片段新建..."
+    },
+    "0x1414a5511": {
+      "en": "Save as...",
+      "text": "另存为..."
+    },
+    "0x1414a5526": {
+      "en": "Close",
+      "text": "关闭"
+    },
+    "0x1414a5538": {
+      "en": "Quit",
+      "text": "退出"
+    },
+    "0x1414a5542": {
+      "en": "Edit",
+      "text": "编辑"
+    },
+    "0x1414a554d": {
+      "en": "Undo",
+      "text": "撤销"
+    },
+    "0x1414a5552": {
+      "en": "View",
+      "text": "视图"
+    },
+    "0x1414a5557": {
+      "en": "Free",
+      "text": "自由"
+    },
+    "0x1414a5566": {
+      "en": "Chase",
+      "text": "追尾"
+    },
+    "0x1414a5578": {
+      "en": "Cab",
+      "text": "驾驶室"
+    },
+    "0x1414a5586": {
+      "en": "Through the clip",
+      "text": "跟随剪辑镜头"
+    },
+    "0x1414a55a4": {
+      "en": "Show",
+      "text": "显示"
+    },
+    "0x1414a55b2": {
+      "en": "Hide panels",
+      "text": "隐藏面板"
+    },
+    "0x1414a560f": {
+      "en": "clip tool",
+      "text": "剪辑工具"
+    },
+    "0x1414a56fd": {
+      "en": "timeline",
+      "text": "时间轴"
+    },
+    "0x1414a56ee": {
+      "en": "playing",
+      "text": "播放中"
+    },
+    "0x1414a56f6": {
+      "en": "paused",
+      "text": "已暂停"
+    },
+    "0x1414a578c": {
+      "en": "whole take",
+      "text": "完整片段"
+    },
+    "0x1414a5797": {
+      "en": "zoom all",
+      "text": "缩放全部"
+    },
+    "0x1414a57a0": {
+      "en": "fit range",
+      "text": "适配范围"
+    },
+    "0x1414a57aa": {
+      "en": "zoom range",
+      "text": "缩放范围"
+    }
+  },
+  "table_strings": {
+    "controls": {
+      "0x1414a0dc5": {
+        "en": "TRAVEL",
+        "text": "行驶"
+      },
+      "0x1414a0f9d": {
+        "en": "HYDRAULICS",
+        "text": "液压"
+      },
+      "0x1414a1111": {
+        "en": "SWITCHES",
+        "text": "开关"
+      },
+      "0x1414a1251": {
+        "en": "GRADE HOLD",
+        "text": "标高保持"
+      },
+      "0x1414a171c": {
+        "en": "MENUS",
+        "text": "菜单"
+      },
+      "0x1414a1814": {
+        "en": "CAMERA",
+        "text": "摄像机"
+      },
+      "0x1414a18f5": {
+        "en": "ON FOOT",
+        "text": "步行"
+      },
+      "0x1414a1bbd": {
+        "en": "KEYS",
+        "text": "快捷键"
+      },
+      "0x1414a0dbf": {
+        "en": "Drive",
+        "text": "前进 / 后退"
+      },
+      "0x1414a0df5": {
+        "en": "Steer",
+        "text": "转向"
+      },
+      "0x1414a0e0a": {
+        "en": "Brake / handbrake",
+        "text": "刹车 / 手刹"
+      },
+      "0x1414a0e2c": {
+        "en": "Speed range 1",
+        "text": "速度档位 1"
+      },
+      "0x1414a0e4a": {
+        "en": "Speed range 2",
+        "text": "速度档位 2"
+      },
+      "0x1414a0e68": {
+        "en": "Speed range 3",
+        "text": "速度档位 3"
+      },
+      "0x1414a0e86": {
+        "en": "Speed range 4",
+        "text": "速度档位 4"
+      },
+      "0x1414a0ea4": {
+        "en": "Speed range 5",
+        "text": "速度档位 5"
+      },
+      "0x1414a0ec2": {
+        "en": "Speed range 6",
+        "text": "速度档位 6"
+      },
+      "0x1414a0ee0": {
+        "en": "Speed range 7",
+        "text": "速度档位 7"
+      },
+      "0x1414a0efe": {
+        "en": "Speed range 8",
+        "text": "速度档位 8"
+      },
+      "0x1414a0f1c": {
+        "en": "Speed range 9",
+        "text": "速度档位 9"
+      },
+      "0x1414a0f38": {
+        "en": "Arm",
+        "text": "大臂"
+      },
+      "0x1414a0f40": {
+        "en": "pull back to raise the hooklift's arm, the hauler's bed, the tractor's hitch or front loader",
+        "text": "向后拉以升起勾臂车勾臂、自卸车车厢、拖拉机悬挂或前装载机"
+      },
+      "0x1414a0fb6": {
+        "en": "Curl",
+        "text": "翻斗"
+      },
+      "0x1414a0fc0": {
+        "en": "left slides the hooklift's bed, curls the tractor's front loader",
+        "text": "向左滑动勾臂车车架，或控制拖拉机前装载机收斗"
+      },
+      "0x1414a100d": {
+        "en": "pull back to raise",
+        "text": "向后拉以升起"
+      },
+      "0x1414a102c": {
+        "en": "Bucket",
+        "text": "铲斗"
+      },
+      "0x1414a1033": {
+        "en": "left curls",
+        "text": "向左收斗"
+      },
+      "0x1414a104c": {
+        "en": "Attachment lever",
+        "text": "属具操纵杆"
+      },
+      "0x1414a1060": {
+        "en": "flaps, tines, plow angle, slide",
+        "text": "控制侧翼、货叉、雪铲角度及滑移"
+      },
+      "0x1414a1080": {
+        "en": "Front end",
+        "text": "前端机具"
+      },
+      "0x1414a1090": {
+        "en": "hold to work the front loader or plow",
+        "text": "按住以操作前装载机或推雪铲"
+      },
+      "0x1414a10c9": {
+        "en": "Left side only",
+        "text": "仅左侧"
+      },
+      "0x1414a10d8": {
+        "en": "hold to control only the left flap, tine or tractor fork",
+        "text": "按住以仅控制左侧侧翼、货叉或拖拉机货叉"
+      },
+      "0x1414a112e": {
+        "en": "Right side only",
+        "text": "仅右侧"
+      },
+      "0x1414a114e": {
+        "en": "Rear hydraulics",
+        "text": "后液压"
+      },
+      "0x1414a1160": {
+        "en": "the tractor's outlets, the hooklift's plow, a tipping trailer",
+        "text": "控制拖拉机后液压输出、勾臂车雪铲或自卸拖车"
+      },
+      "0x1414a11ac": {
+        "en": "Lean",
+        "text": "压弯 / 倾斜"
+      },
+      "0x1414a11c0": {
+        "en": "Winch drum",
+        "text": "绞盘卷筒"
+      },
+      "0x1414a11df": {
+        "en": "Attachment",
+        "text": "属具"
+      },
+      "0x1414a11ea": {
+        "en": "hitch, plow, trailer",
+        "text": "悬挂、雪铲、拖车"
+      },
+      "0x1414a120e": {
+        "en": "Speed range",
+        "text": "速度档位"
+      },
+      "0x1414a121a": {
+        "en": "opens the speed range menu",
+        "text": "打开速度档位菜单"
+      },
+      "0x1414a1246": {
+        "en": "Hold grade",
+        "text": "保持标高"
+      },
+      "0x1414a126c": {
+        "en": "Tilt lock",
+        "text": "倾斜锁定"
+      },
+      "0x1414a1278": {
+        "en": "the blade's tilt follows the grade, or stays yours",
+        "text": "推土铲倾斜跟随标高，或保持手动控制"
+      },
+      "0x1414a12bd": {
+        "en": "Hold offset",
+        "text": "标高偏移"
+      },
+      "0x1414a12c9": {
+        "en": "opens the grade offset menu",
+        "text": "打开标高偏移菜单"
+      },
+      "0x1414a12fc": {
+        "en": "Warning light",
+        "text": "警示灯"
+      },
+      "0x1414a1320": {
+        "en": "Rear hydraulics fully up / down",
+        "text": "后液压全升 / 全降"
+      },
+      "0x1414a1355": {
+        "en": "Hitch up / down",
+        "text": "悬挂升 / 降"
+      },
+      "0x1414a1378": {
+        "en": "Diff lock",
+        "text": "差速锁"
+      },
+      "0x1414a139a": {
+        "en": "Attachment lock",
+        "text": "属具锁"
+      },
+      "0x1414a13b0": {
+        "en": "the tractor's front, the hooklift's arm, a loader's bracket",
+        "text": "控制拖拉机前架、勾臂车勾臂或装载机快换架"
+      },
+      "0x1414a1403": {
+        "en": "Tailgate lock",
+        "text": "尾门锁"
+      },
+      "0x1414a1411": {
+        "en": "the tipper's",
+        "text": "控制自卸斗尾门"
+      },
+      "0x1414a1431": {
+        "en": "Lift axle",
+        "text": "提升桥"
+      },
+      "0x1414a1440": {
+        "en": "the hooklift's rear axle up or down",
+        "text": "升降勾臂车的后提升桥"
+      },
+      "0x1414a1473": {
+        "en": "Float",
+        "text": "浮动模式"
+      },
+      "0x1414a1480": {
+        "en": "the plow, the dozer's blade, the feeder's belts on and off",
+        "text": "控制推雪铲、推土机铲刀浮动，或启停给料机皮带"
+      },
+      "0x1414a14cc": {
+        "en": "Respawn",
+        "text": "重置位置"
+      },
+      "0x1414a14e3": {
+        "en": "Throttle",
+        "text": "油门"
+      },
+      "0x1414a14ec": {
+        "en": "one joystick; neutral brakes",
+        "text": "单摇杆模式；归中即刹车"
+      },
+      "0x1414a1520": {
+        "en": "Blade lift",
+        "text": "推土铲升降"
+      },
+      "0x1414a1536": {
+        "en": "Blade tilt",
+        "text": "推土铲倾斜"
+      },
+      "0x1414a1553": {
+        "en": "Blade angle",
+        "text": "推土铲偏转"
+      },
+      "0x1414a1571": {
+        "en": "Blade pitch",
+        "text": "推土铲俯仰"
+      },
+      "0x1414a158e": {
+        "en": "Hold offset down",
+        "text": "标高偏移下调"
+      },
+      "0x1414a15b0": {
+        "en": "Hold offset up",
+        "text": "标高偏移上调"
+      },
+      "0x1414a15d4": {
+        "en": "Left track",
+        "text": "左履带"
+      },
+      "0x1414a15f5": {
+        "en": "Right track",
+        "text": "右履带"
+      },
+      "0x1414a1610": {
+        "en": "Boom",
+        "text": "动臂"
+      },
+      "0x1414a1624": {
+        "en": "Slew",
+        "text": "回转"
+      },
+      "0x1414a1629": {
+        "en": "the feeder's hopper wings",
+        "text": "同时控制给料机料斗侧翼"
+      },
+      "0x1414a1653": {
+        "en": "Stick",
+        "text": "斗杆"
+      },
+      "0x1414a1659": {
+        "en": "the feeder's head fold",
+        "text": "同时控制给料机机头折叠"
+      },
+      "0x1414a1680": {
+        "en": "left curls; the feeder's chassis tilt",
+        "text": "向左收斗；同时控制给料机底盘倾斜"
+      },
+      "0x1414a16b6": {
+        "en": "Thumb",
+        "text": "拇指夹"
+      },
+      "0x1414a16c0": {
+        "en": "push to close, stays where let go; the feeder's take-up",
+        "text": "推动闭合，松开保持；同时控制给料机皮带张紧"
+      },
+      "0x1414a16f8": {
+        "en": "Wheel",
+        "text": "快捷轮盘"
+      },
+      "0x1414a16fe": {
+        "en": "the gamepad's and the sticks'",
+        "text": "手柄与摇杆的快捷轮盘"
+      },
+      "0x1414a172d": {
+        "en": "Map",
+        "text": "地图"
+      },
+      "0x1414a1731": {
+        "en": "opens the site map",
+        "text": "打开场地地图"
+      },
+      "0x1414a1753": {
+        "en": "Minimap zoom",
+        "text": "小地图缩放"
+      },
+      "0x1414a1760": {
+        "en": "where the site has a minimap",
+        "text": "仅在带有小地图的场地生效"
+      },
+      "0x1414a1789": {
+        "en": "Hide or show jobs",
+        "text": "隐藏或显示任务"
+      },
+      "0x1414a17a0": {
+        "en": "the jobs list in the top right corner",
+        "text": "右上角的任务列表"
+      },
+      "0x1414a17d2": {
+        "en": "Grade grid",
+        "text": "标高网格"
+      },
+      "0x1414a17dd": {
+        "en": "shown, or only after a change",
+        "text": "常驻显示，或仅在调整后显示"
+      },
+      "0x1414a17fb": {
+        "en": "Change view",
+        "text": "切换视角"
+      },
+      "0x1414a1807": {
+        "en": "chase or cab",
+        "text": "追尾视角或驾驶室视角"
+      },
+      "0x1414a1830": {
+        "en": "Look behind",
+        "text": "向后看"
+      },
+      "0x1414a1840": {
+        "en": "hold to look behind, tap to put the view back",
+        "text": "按住向后看，轻按恢复视角"
+      },
+      "0x1414a1880": {
+        "en": "Get in or out",
+        "text": "上车 / 下车"
+      },
+      "0x1414a1890": {
+        "en": "a pad's or the sticks' Interact does it too",
+        "text": "手柄或摇杆的“交互”键同样有效"
+      },
+      "0x1414a18cc": {
+        "en": "Interact",
+        "text": "交互"
+      },
+      "0x1414a18d5": {
+        "en": "Debug dump",
+        "text": "调试转储"
+      },
+      "0x1414a18f0": {
+        "en": "Walk",
+        "text": "行走"
+      },
+      "0x1414a190e": {
+        "en": "Strafe",
+        "text": "平移"
+      },
+      "0x1414a1921": {
+        "en": "Jump",
+        "text": "跳跃"
+      },
+      "0x1414a1932": {
+        "en": "Push",
+        "text": "推车"
+      },
+      "0x1414a1938": {
+        "en": "hold and walk into a machine to push it",
+        "text": "按住并走近机械以推动它"
+      },
+      "0x1414a196c": {
+        "en": "Talk",
+        "text": "对话"
+      },
+      "0x1414a197c": {
+        "en": "Use",
+        "text": "使用"
+      },
+      "0x1414a1980": {
+        "en": "places a grade stick",
+        "text": "放置一根标高桩"
+      },
+      "0x1414a19a8": {
+        "en": "tap at a stick to set its height, hold to remove it; a pad's X does both",
+        "text": "轻按标高桩设置高度，长按移除；手柄 X 键兼具两项功能"
+      },
+      "0x1414a1a04": {
+        "en": "Mark height",
+        "text": "调整标高"
+      },
+      "0x1414a1a10": {
+        "en": "up or down in a stick's height mode",
+        "text": "在标高桩高度模式下调高或调低"
+      },
+      "0x1414a1a46": {
+        "en": "Stick mode",
+        "text": "标高桩模式"
+      },
+      "0x1414a1a58": {
+        "en": "road or pad, in a stick's height mode",
+        "text": "在标高桩高度模式下切换道路或平台模式"
+      },
+      "0x1414a1a8c": {
+        "en": "Call the bike",
+        "text": "呼叫摩托"
+      },
+      "0x1414a1a9a": {
+        "en": "or the snowmobile",
+        "text": "或呼叫雪地摩托"
+      },
+      "0x1414a1abc": {
+        "en": "Fire the charges",
+        "text": "引爆炸药"
+      },
+      "0x1414a1ad9": {
+        "en": "Tool belt",
+        "text": "工具腰带"
+      },
+      "0x1414a1ae3": {
+        "en": "opens the tool belt menu",
+        "text": "打开工具腰带菜单"
+      },
+      "0x1414a1b09": {
+        "en": "No tool",
+        "text": "空手"
+      },
+      "0x1414a1b11": {
+        "en": "the hands free",
+        "text": "收起手中工具"
+      },
+      "0x1414a1b2d": {
+        "en": "Grade sticks",
+        "text": "标高桩"
+      },
+      "0x1414a1b47": {
+        "en": "Drill",
+        "text": "电钻"
+      },
+      "0x1414a1b5a": {
+        "en": "Dynamite",
+        "text": "炸药"
+      },
+      "0x1414a1b70": {
+        "en": "Detonator",
+        "text": "起爆器"
+      },
+      "0x1414a1b8c": {
+        "en": "Belt",
+        "text": "腰带"
+      },
+      "0x1414a1bb7": {
+        "en": "Pause",
+        "text": "暂停"
+      },
+      "0x1414a1bcd": {
+        "en": "Tuning",
+        "text": "调校"
+      },
+      "0x1414a1bdf": {
+        "en": "Replay",
+        "text": "回放"
+      },
+      "0x1414a1bef": {
+        "en": "Record take",
+        "text": "录制片段"
+      },
+      "0x1414a1c03": {
+        "en": "Run",
+        "text": "奔跑"
+      }
+    },
+    "free_cam": {
+      "0x141562d58": {
+        "en": "MENUS",
+        "text": "菜单"
+      },
+      "0x141562d5e": {
+        "en": "Esc menu",
+        "text": "Esc 菜单"
+      },
+      "0x141562d71": {
+        "en": "FREE CAMERA",
+        "text": "自由摄像机"
+      },
+      "0x141562d7d": {
+        "en": "Fly",
+        "text": "飞行移动"
+      },
+      "0x141562d86": {
+        "en": "L stick",
+        "text": "左摇杆"
+      },
+      "0x141562d8e": {
+        "en": "Up / down",
+        "text": "上升 / 下降"
+      },
+      "0x141562da6": {
+        "en": "Fast",
+        "text": "加速"
+      },
+      "0x141562db4": {
+        "en": "Faster",
+        "text": "极速"
+      }
+    },
+    "look_around": {
+      "0x141562c58": {
+        "en": "Look around",
+        "text": "环顾四周"
+      },
+      "0x141562c64": {
+        "en": "on foot",
+        "text": "步行时"
+      },
+      "0x141562c70": {
+        "en": "in a truck, the tractor, the bike or the snowmobile",
+        "text": "在卡车、拖拉机、越野摩托或雪地摩托上"
+      },
+      "0x141562ca4": {
+        "en": "in a loader",
+        "text": "在装载机中"
+      },
+      "0x141562cb0": {
+        "en": "in the dozer",
+        "text": "在推土机中"
+      },
+      "0x141562cbd": {
+        "en": "in the excavator",
+        "text": "在挖掘机中"
+      }
+    },
+    "vehicle_tabs": {
+      "0x1414a0950": {
+        "en": "on foot",
+        "text": "步行"
+      },
+      "0x1414a0958": {
+        "en": "loaders",
+        "text": "装载机"
+      },
+      "0x1414a0960": {
+        "en": "hauler",
+        "text": "自卸车"
+      },
+      "0x1414a0967": {
+        "en": "truck",
+        "text": "卡车"
+      },
+      "0x1414a096d": {
+        "en": "hooklift",
+        "text": "勾臂车"
+      },
+      "0x1414a0976": {
+        "en": "tractor",
+        "text": "拖拉机"
+      },
+      "0x1414a097e": {
+        "en": "bandvagn",
+        "text": "履带运输车"
+      },
+      "0x1414a0987": {
+        "en": "dozer",
+        "text": "推土机"
+      },
+      "0x1414a098d": {
+        "en": "excavator",
+        "text": "挖掘机"
+      },
+      "0x1414a0997": {
+        "en": "dirt bike",
+        "text": "越野摩托"
+      },
+      "0x1414a09a1": {
+        "en": "snowmobile",
+        "text": "雪地摩托"
+      },
+      "0x1414a09ac": {
+        "en": "track feeder",
+        "text": "履带给料机"
+      },
+      "0x14149ed10": {
+        "en": "R stick + L hat",
+        "text": "右摇杆 + 左苦力帽"
+      }
+    },
+    "machine_display": {
+      "0x141648820": {
+        "full_en": "dozer",
+        "full": "推土机",
+        "short_en": "dozer",
+        "short": "推土机"
+      },
+      "0x141648840": {
+        "full_en": "medium loader",
+        "full": "中型装载机",
+        "short_en": "loader",
+        "short": "装载机"
+      },
+      "0x141648860": {
+        "full_en": "bandvagn",
+        "full": "履带运输车",
+        "short_en": "bandvagn",
+        "short": "运输车"
+      },
+      "0x141648880": {
+        "full_en": "truck",
+        "full": "卡车",
+        "short_en": "truck",
+        "short": "卡车"
+      },
+      "0x1416488a0": {
+        "full_en": "hauler",
+        "full": "自卸车",
+        "short_en": "hauler",
+        "short": "自卸车"
+      },
+      "0x1416488c0": {
+        "full_en": "dirt bike",
+        "full": "越野摩托",
+        "short_en": "bike",
+        "short": "摩托"
+      },
+      "0x1416488e0": {
+        "full_en": "excavator",
+        "full": "挖掘机",
+        "short_en": "excavator",
+        "short": "挖掘机"
+      },
+      "0x141648900": {
+        "full_en": "snowmobile",
+        "full": "雪地摩托",
+        "short_en": "sled",
+        "short": "雪地车"
+      },
+      "0x141648920": {
+        "full_en": "tractor",
+        "full": "拖拉机",
+        "short_en": "tractor",
+        "short": "拖拉机"
+      },
+      "0x141648940": {
+        "full_en": "hooklift",
+        "full": "勾臂车",
+        "short_en": "hooklift",
+        "short": "勾臂车"
+      },
+      "0x141648960": {
+        "full_en": "large loader",
+        "full": "大型装载机",
+        "short_en": "loader",
+        "short": "装载机"
+      },
+      "0x141648980": {
+        "full_en": "track feeder",
+        "full": "履带给料机",
+        "short_en": "feeder",
+        "short": "给料机"
+      }
+    },
+    "editor": {
+      "Select": "选择",
+      "Sculpt": "雕刻",
+      "Ground": "地表",
+      "Shapes": "形状",
+      "Paint": "绘制",
+      "Water": "水体",
+      "raise": "堆高",
+      "lift": "抬升",
+      "lower": "降低",
+      "paint": "涂刷",
+      "vegetation": "植被",
+      "flatten": "整平",
+      "smooth": "平滑",
+      "pour water": "注水",
+      "water to level": "定高水位",
+      "tunnel": "隧道",
+      "noise": "噪点",
+      "weather": "风化",
+      "erode": "侵蚀",
+      "profile": "剖面",
+      "terrace": "梯田",
+      "clone": "克隆",
+      "peak / valley": "山峰 / 山谷",
+      "paint mask": "绘制遮罩",
+      "stencil": "模板",
+      "spring": "泉眼",
+      "road": "道路",
+      "tree": "树木",
+      "rock": "岩石",
+      "prop": "物件",
+      "spawn": "出生点",
+      "section": "区域",
+      "delete": "删除",
+      "select": "选择",
+      "field": "田地",
+      "thin vegetation": "稀疏植被",
+      "tree brush": "树木笔刷",
+      "places a rectangular block of material on the ground": "在地面上放置一块矩形土石料",
+      "places a ramp rising along Z to the chosen height": "沿 Z 轴放置一道升至所选高度的斜坡",
+      "creates a flat pad at the clicked height, blending into the surrounding terrain": "在点击高度创建一块平坦场地，并与周围地形自然过渡",
+      "creates a circular pond, initially 1 metre above the clicked ground": "创建一个圆形水塘，初始水面高于点击地面 1 米",
+      "adds a grayscale heightmap to the bedrock; black and white map to the low and high settings": "将灰度高度图叠加到基岩上；黑与白分别对应低值与高值设定",
+      "deposits material from an image mask, with material and thickness set per pixel value": "根据图像遮罩堆积土料，按像素值设定材质与厚度",
+      "paints vegetation over a rectangle, using one type or an image mask": "在矩形区域内绘制植被，可使用单一类型或图像遮罩",
+      "creates scattered domes or narrow towers of material within a rectangle": "在矩形区域内生成零散的土丘或窄柱状地形",
+      "scatters trees in a circle, limited by slope and a mask": "在圆形区域内随机分布树木，受坡度和遮罩限制",
+      "thins listed trees inside an outline, leaving stumps and heath": "在轮廓线内疏伐所列树木，保留树桩与荒地植被",
+      "carves a hollow below the clicked ground": "在点击的地面下方挖出一处凹坑",
+      "adds material under the brush; uses the existing surface material unless you choose a fill": "在笔刷下方堆积土料；除非另选填充材质，否则使用当前地表材质",
+      "raises the ground, including its layers, grass and water, without adding material": "整体抬升地面（包括土层、草地和水体），不额外增加土料"
+    },
+    "extra_ui": {
+      "0x141562f80": {
+        "en": "CAMERA",
+        "text": "摄像机"
+      },
+      "0x141562f88": {
+        "en": "TRAVEL",
+        "text": "行驶"
+      },
+      "0x141562f90": {
+        "en": "STEERING RETURN",
+        "text": "转向回正"
+      },
+      "0x141562f98": {
+        "en": "HYDRAULICS",
+        "text": "液压"
+      },
+      "0x141562fa0": {
+        "en": "SWITCHES",
+        "text": "开关"
+      },
+      "0x141562fa8": {
+        "en": "GRADE HOLD",
+        "text": "标高保持"
+      },
+      "0x141562fb0": {
+        "en": "MENUS",
+        "text": "菜单"
+      },
+      "0x141562fb8": {
+        "en": "ON FOOT",
+        "text": "步行"
+      },
+      "0x141562fc0": {
+        "en": "KEYS",
+        "text": "快捷键"
+      },
+      "0x141562fc8": {
+        "en": "FREE CAMERA",
+        "text": "自由摄像机"
+      },
+      "0x1416351c0": {
+        "en": "loading site",
+        "text": "正在加载场地"
+      },
+      "0x1416351c8": {
+        "en": "building roads",
+        "text": "正在生成道路"
+      },
+      "0x1416351d0": {
+        "en": "building terrain",
+        "text": "正在生成地形"
+      },
+      "0x1416351d8": {
+        "en": "placing trees",
+        "text": "正在布置树木"
+      },
+      "0x1416351e0": {
+        "en": "placing buildings",
+        "text": "正在布置建筑"
+      },
+      "0x1416351e8": {
+        "en": "preparing dirt",
+        "text": "正在准备土方"
+      },
+      "0x1416351f0": {
+        "en": "placing machines",
+        "text": "正在布置机械"
+      },
+      "0x1416351f8": {
+        "en": "placing objects",
+        "text": "正在布置物件"
+      },
+      "0x141635200": {
+        "en": "building collisions",
+        "text": "正在构建碰撞体"
+      },
+      "0x141635208": {
+        "en": "settling terrain",
+        "text": "正在稳定地形"
+      },
+      "0x141635210": {
+        "en": "compiling shaders",
+        "text": "正在编译着色器"
+      },
+      "0x141635218": {
+        "en": "receiving the site",
+        "text": "正在接收场地"
+      },
+      "0x141566338": {
+        "en": "SIZE",
+        "text": "尺寸"
+      },
+      "0x141566340": {
+        "en": "SOURCE",
+        "text": "来源"
+      },
+      "0x1415666b0": {
+        "en": "THE GAME'S SITES",
+        "text": "游戏内置场地"
+      }
+    }
+  },
+  "pack_toml": {
+    "shop.toml": [
+      {
+        "old": "section = \"Loaders\"",
+        "new": "section = \"装载机\""
+      },
+      {
+        "old": "section = \"Earthmoving\"",
+        "new": "section = \"土方机械\""
+      },
+      {
+        "old": "section = \"Haulage\"",
+        "new": "section = \"运输车辆\""
+      },
+      {
+        "old": "section = \"Farm\"",
+        "new": "section = \"农用机械\""
+      },
+      {
+        "old": "section = \"Getting about\"",
+        "new": "section = \"代步工具\""
+      },
+      {
+        "old": "name = \"Wheel loader\"",
+        "new": "name = \"轮式装载机\""
+      },
+      {
+        "old": "name = \"Large wheel loader\"",
+        "new": "name = \"大型轮式装载机\""
+      },
+      {
+        "old": "name = \"Crawler dozer\"",
+        "new": "name = \"履带推土机\""
+      },
+      {
+        "old": "name = \"Excavator\"",
+        "new": "name = \"挖掘机\""
+      },
+      {
+        "old": "name = \"Articulated hauler\"",
+        "new": "name = \"铰接式自卸车\""
+      },
+      {
+        "old": "name = \"Hooklift truck\"",
+        "new": "name = \"勾臂车\""
+      },
+      {
+        "old": "name = \"Farm tractor\"",
+        "new": "name = \"农用拖拉机\""
+      },
+      {
+        "old": "name = \"Pickup\"",
+        "new": "name = \"皮卡\""
+      },
+      {
+        "old": "name = \"Tracked carrier\"",
+        "new": "name = \"履带运输车\""
+      },
+      {
+        "old": "name = \"Snowmobile\"",
+        "new": "name = \"雪地摩托\""
+      },
+      {
+        "old": "name = \"Dirt bike\"",
+        "new": "name = \"越野摩托\""
+      },
+      {
+        "old": "spec = \"1.8 m3 bucket\"",
+        "new": "spec = \"1.8 m³ 铲斗\""
+      },
+      {
+        "old": "spec = \"3.8 m3 bucket\"",
+        "new": "spec = \"3.8 m³ 铲斗\""
+      },
+      {
+        "old": "spec = \"3.4 m blade\"",
+        "new": "spec = \"3.4 米推土铲\""
+      },
+      {
+        "old": "spec = \"6.6 m reach\"",
+        "new": "spec = \"6.6 米挖掘半径\""
+      },
+      {
+        "old": "spec = \"12 m3 body\"",
+        "new": "spec = \"12 m³ 货箱\""
+      },
+      {
+        "old": "spec = \"takes every container\"",
+        "new": "spec = \"适配各类箱体\""
+      },
+      {
+        "old": "spec = \"front loader, three point hitch\"",
+        "new": "spec = \"前装载机，三点悬挂\""
+      },
+      {
+        "old": "spec = \"plough mount\"",
+        "new": "spec = \"前置推雪铲挂架\""
+      },
+      {
+        "old": "spec = \"two bodies, it swims\"",
+        "new": "spec = \"双节车身，可涉水浮渡\""
+      },
+      {
+        "old": "spec = \"one seat, one ski each side\"",
+        "new": "spec = \"单人座，双侧滑雪板\""
+      },
+      {
+        "old": "spec = \"two wheels, no excuses\"",
+        "new": "spec = \"两轮越野，无所畏惧\""
+      },
+      {
+        "old": "tagline = \"The site's all-rounder: scoops, carries, ploughs and loads a truck in four passes.\"",
+        "new": "tagline = \"工地多面手：能铲、能运、能清雪，四斗装满一台卡车。\""
+      },
+      {
+        "old": "tagline = \"Twice the bucket, a pin hitch for trailers, and a cab you could live in.\"",
+        "new": "tagline = \"双倍斗容，带拖车牵引销，驾驶室宽敞得像家一样。\""
+      },
+      {
+        "old": "tagline = \"Push, rip and grade. Tracks that float on mud and a blade that tilts as you think it.\"",
+        "new": "tagline = \"推土、松土、整平样样精通。泥地不陷的履带，随心所欲的倾斜推土铲。\""
+      },
+      {
+        "old": "tagline = \"A trench by lunch, a pond by tea. Quick coupler ready.\"",
+        "new": "tagline = \"午饭前挖条沟，下午茶前挖个塘。标配快换接头。\""
+      },
+      {
+        "old": "tagline = \"Six wheels driven, a body that tips in eight seconds and a ride over anything.\"",
+        "new": "tagline = \"六轮驱动，八秒举升卸料，任何烂路如履平地。\""
+      },
+      {
+        "old": "tagline = \"Swap a tipper for a flatrack without leaving the seat.\"",
+        "new": "tagline = \"不下驾驶室就能把自卸斗换成平板架。\""
+      },
+      {
+        "old": "tagline = \"Loader up front, plough behind, and the radio still works.\"",
+        "new": "tagline = \"前有装载斗，后挂耕地犁，收音机还照样响。\""
+      },
+      {
+        "old": "tagline = \"The boss's ride, the plough's mount, the coffee run.\"",
+        "new": "tagline = \"老板座驾，能挂雪铲，还能顺路买咖啡。\""
+      },
+      {
+        "old": "tagline = \"Two bodies, four tracks, and it floats when the creek is higher than you thought.\"",
+        "new": "tagline = \"双节车身、四条履带，溪水比想象中深也能直接浮过去。\""
+      },
+      {
+        "old": "tagline = \"For the morning round of the village and nothing heavier.\"",
+        "new": "tagline = \"清晨巡视村子刚好，别指望它干重活。\""
+      },
+      {
+        "old": "tagline = \"Kick it, ride it, drop it in the ditch. It doesn't mind.\"",
+        "new": "tagline = \"一脚踹响，骑上就走，掉进沟里也皮实得很。\""
+      }
+    ],
+    "key_layouts.toml": [
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"经典\""
+      },
+      {
+        "old": "hint = \"the arrows work the arm and the bucket, the left and right buttons curl, the mouse always looks\"",
+        "new": "hint = \"方向键控制大臂和铲斗，鼠标左右键翻斗，鼠标始终控制视角\""
+      },
+      {
+        "old": "name = \"farm sim\"",
+        "new": "name = \"农场模拟\""
+      },
+      {
+        "old": "hint = \"hold the left button and move the mouse for the arm and the bucket or the blade, the right for the excavator's stick and swing\"",
+        "new": "hint = \"按住鼠标左键移动控制大臂与铲斗或推土铲，按住右键控制挖掘机斗杆与回转\""
+      }
+    ],
+    "pad_layouts.toml": [
+      {
+        "old": "name = \"hold LB\"",
+        "new": "name = \"按住 LB\""
+      },
+      {
+        "old": "hint = \"hold LB and the right stick works the arm, the bucket or the blade\"",
+        "new": "hint = \"按住 LB 时，右摇杆控制大臂、铲斗或推土铲\""
+      },
+      {
+        "old": "name = \"click RS\"",
+        "new": "name = \"按下右摇杆\""
+      },
+      {
+        "old": "hint = \"click the right stick to switch it between the camera and the arm, the bucket or the blade\"",
+        "new": "hint = \"按下右摇杆，在摄像机与大臂、铲斗或推土铲之间切换控制\""
+      },
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"经典\""
+      },
+      {
+        "old": "hint = \"the arm on the triggers and the bucket and the blade's tilt on the shoulders, the left stick driving\"",
+        "new": "hint = \"扳机键控制大臂，肩键控制铲斗与推土铲倾斜，左摇杆控制行驶\""
+      }
+    ],
+    "sites/demo2/demo2.toml": [
+      {
+        "old": "name = \"Flower Hill\"",
+        "new": "name = \"花丘\""
+      },
+      {
+        "old": "byline = \"Demo map\"",
+        "new": "byline = \"试玩地图\""
+      },
+      {
+        "old": "accepts = [\"27d9a082d2382faa\"]",
+        "new": "accepts = [\"27d9a082d2382faa\", \"811034dce06dee68\", \"bc57be2314fd0a38\"]"
+      },
+      {
+        "old": "locked = \"Waiting for parts, estimated arrival dec 4th\"",
+        "new": "locked = \"等待配件中，预计 12 月 4 日到货\""
+      },
+      {
+        "old": "title = \"Sand haul & more\"",
+        "new": "title = \"运沙及其他\""
+      },
+      {
+        "old": "done = \"40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it\"",
+        "new": "done = \"40 吨沙子到位，飞跃河道成功，巨石也上了山顶。漂亮！想继续运沙也随你。\""
+      },
+      {
+        "old": "sheet = \"Sand to the gravel pad, {}\"",
+        "new": "sheet = \"把沙子运到砂石坪，{}\""
+      },
+      {
+        "old": "bill = \"Sand to the gravel pad\"",
+        "new": "bill = \"把沙子运到砂石坪\""
+      },
+      {
+        "old": "sheet = \"Find the truck\"",
+        "new": "sheet = \"找到卡车\""
+      },
+      {
+        "old": "bill = \"Find the truck\"",
+        "new": "bill = \"找到卡车\""
+      },
+      {
+        "old": "sheet = \"Jump the river with the truck\"",
+        "new": "sheet = \"开卡车飞跃河道\""
+      },
+      {
+        "old": "bill = \"Sick jump with the truck\"",
+        "new": "bill = \"卡车酷炫飞跃\""
+      },
+      {
+        "old": "say = \"And when you are done, there is a truck up on the hill. Find it, and get it over the river. Somehow\"",
+        "new": "say = \"干完这些后，山上有辆卡车。找到它，想办法把它弄过河去。\""
+      },
+      {
+        "old": "sheet = \"Get the boulder up on the hill\"",
+        "new": "sheet = \"把巨石搬到山顶上去\""
+      },
+      {
+        "old": "bill = \"Boulder on hill\"",
+        "new": "bill = \"山顶巨石\""
+      },
+      {
+        "old": "text = \"Here is the start area with your machines.\"",
+        "new": "text = \"这里是起始区域，停放着你的机械。\""
+      },
+      {
+        "old": "text = \"There is sand on the far end of this site, and we need it.\"",
+        "new": "text = \"场地另一头有沙子，我们需要把它们运过来。\""
+      },
+      {
+        "old": "text = \"Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand\"",
+        "new": "text = \"把至少 40 吨沙子运到砂石坪，给一位出手阔绰的客户。这可是优质沙。\""
+      }
+    ]
+  }
+}

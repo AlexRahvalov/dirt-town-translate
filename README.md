@@ -1,6 +1,12 @@
-# Dirt Town Demo — Русификатор (Plugin & Patcher)
+# Dirt Town Demo — Мультиязычный плагин локализации (Plugin & Patcher)
 
-Локализация **Dirt Town Demo** (Steam build `ed45b4be7fc6`, Windows x64) на русский язык.
+Локализация **Dirt Town Demo** (Steam build `ed45b4be7fc6`, Windows x64) с поддержкой 6 языков:
+- **English** (`en`, встроенный оригинал)
+- **Русский** (`ru`)
+- **简体中文** (`zh-cn`, системные шрифты `msyh.ttc` / `msyhbd.ttc`)
+- **Español** (`es`)
+- **Deutsch** (`de`)
+- **Português (BR)** (`pt-br`)
 
 ## Вариант 1 (рекомендуемый): Runtime-плагин `version.dll` — без правки файлов игры
 Файлы игры (`dirttown.exe` и `data.pack`) **не модифицируются на диске**:

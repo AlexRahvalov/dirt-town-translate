@@ -1,0 +1,4228 @@
+{
+  "meta": {
+    "code": "es",
+    "name": "Español",
+    "game_build": "ed45b4be7fc6",
+    "version": 1
+  },
+  "inline_literals": {
+    "yes": {
+      "en": "yes",
+      "text": "sí",
+      "max_bytes": 7
+    },
+    "no": {
+      "en": "no",
+      "text": "no",
+      "max_bytes": 7
+    },
+    "bucket": {
+      "en": "bucket",
+      "text": "cazo",
+      "max_bytes": 15
+    },
+    "plow": {
+      "en": "plow",
+      "text": "arado",
+      "max_bytes": 15
+    },
+    "jib": {
+      "en": "jib",
+      "text": "pluma",
+      "max_bytes": 15
+    },
+    "flipper_bucket": {
+      "en": "flipper bucket",
+      "text": "cazo abatible",
+      "max_bytes": 15
+    },
+    "pallet_forks": {
+      "en": "pallet forks",
+      "text": "horquillas",
+      "max_bytes": 15
+    },
+    "respawn_prefix": {
+      "en": "Press ",
+      "text": "Pulsa ",
+      "max_bytes": 60
+    },
+    "respawn_suffix": {
+      "en": " to respawn",
+      "text": " para reaparecer",
+      "max_bytes": 60
+    },
+    "respawn_bind": {
+      "en": "Bind Respawn in Controls",
+      "text": "Asigna Reaparecer en Controles",
+      "max_bytes": 90
+    }
+  },
+  "simd_strings": {
+    "clear_pad_26b": {
+      "en": "clear the pad for the crew",
+      "text": "despeja la zona al equipo",
+      "max_bytes": 26
+    },
+    "seat_37b": {
+      "en": "step out of the seat to take delivery",
+      "text": "baja del asiento para la entrega",
+      "max_bytes": 37
+    },
+    "flat_51b": {
+      "en": "there is no flat ground nearby for the delivery.",
+      "text": "no hay terreno llano cerca para la entrega.",
+      "max_bytes": 51
+    },
+    "dealer_46b": {
+      "en": "the dealer has none of those left on the lot",
+      "text": "al concesionario no le quedan de esos",
+      "max_bytes": 46
+    },
+    "item_31b": {
+      "en": "the item is no longer installed",
+      "text": "artículo ya no instalado",
+      "max_bytes": 31
+    }
+  },
+  "font_redirects": [
+    {
+      "pack_key": "fonts/Roboto-Medium.ttf",
+      "kind": "pack",
+      "target": "fonts/Roboto-Regular.ttf"
+    },
+    {
+      "pack_key": "fonts/Roboto-Black.ttf",
+      "kind": "pack",
+      "target": "fonts/Roboto-Bold.ttf"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Regular.ttf",
+      "kind": "winfont",
+      "target": "cour.ttf"
+    },
+    {
+      "pack_key": "fonts/CourierPrime-Bold.ttf",
+      "kind": "winfont",
+      "target": "courbd.ttf"
+    }
+  ],
+  "graphics_presets": [
+    "bajo",
+    "medio",
+    "alto",
+    "ultra"
+  ],
+  "shop_sections": [
+    "Cargadoras",
+    "Movimiento de tierras",
+    "Transporte",
+    "Agrícola",
+    "Desplazamiento"
+  ],
+  "exe_strings": {
+    "0x14149adde": {
+      "en": "Debug dump",
+      "text": "Volcado de depuración"
+    },
+    "0x14149b5ba": {
+      "en": "the account is short",
+      "text": "no hay saldo suficiente"
+    },
+    "0x14149b5fc": {
+      "en": ", delivered in front of you",
+      "text": ", entregado delante de ti"
+    },
+    "0x14149b698": {
+      "en": "grade grid on",
+      "text": "cuadrícula de nivel act."
+    },
+    "0x14149b6a6": {
+      "en": "grade grid auto",
+      "text": "cuadrícula de nivel auto"
+    },
+    "0x14149b6c1": {
+      "en": "too close to another stick",
+      "text": "demasiado cerca de otra estaca"
+    },
+    "0x14149b6dc": {
+      "en": "range %d of %d, %.1f m/s",
+      "text": "rango %d de %d, %.1f m/s"
+    },
+    "0x14149b6f8": {
+      "en": "arm lock: bring the arm home first",
+      "text": "bloqueo de brazo: recógelo primero"
+    },
+    "0x14149bd1a": {
+      "en": "blade level, %.2f m%s",
+      "text": "nivel de hoja, %.2f m%s"
+    },
+    "0x14149bd30": {
+      "en": "blade on the sticks, %.2f m%s",
+      "text": "hoja en estacas, %.2f m%s"
+    },
+    "0x14149bd50": {
+      "en": "blade tilt locked to the grade",
+      "text": "inclinación de hoja fijada a la rasante"
+    },
+    "0x14149bd6f": {
+      "en": "blade tilt free",
+      "text": "inclinación de hoja libre"
+    },
+    "0x14149be27": {
+      "en": " This session is not saved.",
+      "text": " Esta sesión no se guarda."
+    },
+    "0x14149be43": {
+      "en": "the host is gone",
+      "text": "el anfitrión se ha desconectado"
+    },
+    "0x14149beeb": {
+      "en": "receiving the site, ",
+      "text": "recibiendo la obra, "
+    },
+    "0x14149bf02": {
+      "en": "reconnected to host",
+      "text": "reconectado con el anfitrión"
+    },
+    "0x14149bf59": {
+      "en": "connecting, attempt ",
+      "text": "conectando, intento "
+    },
+    "0x14149bf6e": {
+      "en": ", trying again",
+      "text": ", reintentando"
+    },
+    "0x14149bf7d": {
+      "en": "receiving the site, 0%",
+      "text": "recibiendo la obra, 0%"
+    },
+    "0x14149bf98": {
+      "en": " plugged in · not used. Settings › Controls › Devices assigns it.",
+      "text": " conectado · sin usar. Asígnalo en Ajustes › Controles › Dispositivos."
+    },
+    "0x14149c0af": {
+      "en": "Use",
+      "text": "Usar"
+    },
+    "0x14149c0b3": {
+      "en": "LMB",
+      "text": "BI"
+    },
+    "0x14149c0b7": {
+      "en": "Click",
+      "text": "Clic"
+    },
+    "0x14149c0bd": {
+      "en": "Press ",
+      "text": "Pulsa "
+    },
+    "0x14149c0c4": {
+      "en": "Bind Hold grade in Controls",
+      "text": "Asigna Mantener rasante en Controles"
+    },
+    "0x14149c0e0": {
+      "en": "Bind Grade sticks in Controls",
+      "text": "Asigna Estacas de nivel en Controles"
+    },
+    "0x14149c0fe": {
+      "en": " for the grade sticks",
+      "text": " para las estacas de nivel"
+    },
+    "0x14149c114": {
+      "en": "the host has left",
+      "text": "el anfitrión ha salido"
+    },
+    "0x14149c126": {
+      "en": ", %+.2f m",
+      "text": ", %+.2f m"
+    },
+    "0x14149c130": {
+      "en": "blade free",
+      "text": "hoja libre"
+    },
+    "0x14149c13b": {
+      "en": "blade hold at grade",
+      "text": "hoja en rasante"
+    },
+    "0x14149c14f": {
+      "en": "blade hold %+.2f m",
+      "text": "hoja fijada %+.2f m"
+    },
+    "0x14149c162": {
+      "en": ", %.0f s",
+      "text": ", %.0f s"
+    },
+    "0x14149c16b": {
+      "en": "leave game",
+      "text": "salir de la partida"
+    },
+    "0x14149c178": {
+      "en": "CONNECTION LOST. RECONNECTING...",
+      "text": "CONEXIÓN PERDIDA. RECONECTANDO..."
+    },
+    "0x14149c199": {
+      "en": "back to menu",
+      "text": "volver al menú"
+    },
+    "0x14149c1a6": {
+      "en": "COULD NOT JOIN",
+      "text": "NO SE PUDO UNIR"
+    },
+    "0x14149c1b5": {
+      "en": "ok",
+      "text": "aceptar"
+    },
+    "0x14149c1b8": {
+      "en": "OUT OF ORDER",
+      "text": "FUERA DE SERVICIO"
+    },
+    "0x14149c1c5": {
+      "en": "Stick removed",
+      "text": "Estaca retirada"
+    },
+    "0x14149c1d3": {
+      "en": "All ",
+      "text": "Las "
+    },
+    "0x14149c1d8": {
+      "en": " sticks removed",
+      "text": " estacas retiradas"
+    },
+    "0x14149c1e8": {
+      "en": "join link copied",
+      "text": "enlace de unión copiado"
+    },
+    "0x14149c338": {
+      "en": "updated",
+      "text": "actualizado"
+    },
+    "0x14149c340": {
+      "en": "published",
+      "text": "publicado"
+    },
+    "0x14149c350": {
+      "en": "accept the Workshop agreement on the page Steam opened",
+      "text": "acepta el acuerdo del Workshop en la página de Steam"
+    },
+    "0x14149c598": {
+      "en": "the item is no longer installed",
+      "text": "el artículo ya no está instalado"
+    },
+    "0x14149c5b8": {
+      "en": "the author's update could not be taken",
+      "text": "no se pudo aplicar la actualización del autor"
+    },
+    "0x14149c630": {
+      "en": "A Dirt Town site made in the game's editor.",
+      "text": "Una obra de Dirt Town creada con el editor del juego."
+    },
+    "0x14149c65c": {
+      "en": "could not write ",
+      "text": "no se pudo escribir "
+    },
+    "0x14149c68a": {
+      "en": "could not start the session",
+      "text": "no se pudo iniciar la sesión"
+    },
+    "0x1414d3ba0": {
+      "en": "Pause",
+      "text": "Pausa"
+    },
+    "0x1414d3ba6": {
+      "en": "Esc menu",
+      "text": "Menú Esc"
+    },
+    "0x1414d3baf": {
+      "en": "Map",
+      "text": "Mapa"
+    },
+    "0x1414d3bb3": {
+      "en": "Minimap zoom",
+      "text": "Zoom del minimapa"
+    },
+    "0x1414d3bc0": {
+      "en": "Hide or show jobs",
+      "text": "Mostrar u ocultar trabajos"
+    },
+    "0x1414d3bd2": {
+      "en": "Get in or out",
+      "text": "Subir o bajar"
+    },
+    "0x1414d3be0": {
+      "en": "Interact",
+      "text": "Interactuar"
+    },
+    "0x1414d3be9": {
+      "en": "Fire the charges",
+      "text": "Detonar las cargas"
+    },
+    "0x1414d3bfa": {
+      "en": "Tool belt",
+      "text": "Cinturón de herramientas"
+    },
+    "0x1414d3c04": {
+      "en": "No tool",
+      "text": "Sin herramienta"
+    },
+    "0x1414d3c0c": {
+      "en": "Grade sticks",
+      "text": "Estacas de nivel"
+    },
+    "0x1414d3c19": {
+      "en": "Drill",
+      "text": "Taladro"
+    },
+    "0x1414d3c1f": {
+      "en": "Dynamite",
+      "text": "Dinamita"
+    },
+    "0x1414d3c28": {
+      "en": "Detonator",
+      "text": "Detonador"
+    },
+    "0x1414d3c32": {
+      "en": "Use",
+      "text": "Usar"
+    },
+    "0x1414d3c36": {
+      "en": "Talk",
+      "text": "Hablar"
+    },
+    "0x1414d3c3b": {
+      "en": "Stick",
+      "text": "Estaca"
+    },
+    "0x1414d3c41": {
+      "en": "Call the bike",
+      "text": "Llamar a la moto"
+    },
+    "0x1414d3c4f": {
+      "en": "Attachment",
+      "text": "Implemento"
+    },
+    "0x1414d3c5a": {
+      "en": "Change view",
+      "text": "Cambiar vista"
+    },
+    "0x1414d3c66": {
+      "en": "Float",
+      "text": "Flotante"
+    },
+    "0x1414d3c6c": {
+      "en": "Hold grade",
+      "text": "Mantener rasante"
+    },
+    "0x1414d3c77": {
+      "en": "Tilt lock",
+      "text": "Bloqueo inclinación"
+    },
+    "0x1414d3c81": {
+      "en": "Hold offset",
+      "text": "Desfase de rasante"
+    },
+    "0x1414d3c8d": {
+      "en": "Grade grid",
+      "text": "Cuadrícula de nivel"
+    },
+    "0x1414d3c98": {
+      "en": "Range",
+      "text": "Rango"
+    },
+    "0x1414d3c9e": {
+      "en": "Speed range",
+      "text": "Rango de velocidad"
+    },
+    "0x1414d3caa": {
+      "en": "Warning light",
+      "text": "Baliza luminosa"
+    },
+    "0x1414d3cb8": {
+      "en": "Rear hydraulics",
+      "text": "Hidráulica trasera"
+    },
+    "0x1414d3cc8": {
+      "en": "Hitch up/down",
+      "text": "Subir/bajar enganche"
+    },
+    "0x1414d3cd6": {
+      "en": "Diff lock",
+      "text": "Bloqueo diferencial"
+    },
+    "0x1414d3ce0": {
+      "en": "Attachment lock",
+      "text": "Bloqueo implemento"
+    },
+    "0x1414d3cf0": {
+      "en": "Tailgate lock",
+      "text": "Cierre de compuerta"
+    },
+    "0x1414d3cfe": {
+      "en": "Lift axle",
+      "text": "Eje elevable"
+    },
+    "0x1414d3d08": {
+      "en": "Respawn",
+      "text": "Reaparecer"
+    },
+    "0x1414d3d10": {
+      "en": "Tuning",
+      "text": "Ajuste fino"
+    },
+    "0x1414d3d17": {
+      "en": "Mark",
+      "text": "Marca"
+    },
+    "0x1414d3d1c": {
+      "en": "Replay",
+      "text": "Repetición"
+    },
+    "0x1414d3d23": {
+      "en": "Record take",
+      "text": "Grabar toma"
+    },
+    "0x1414d411d": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x1414d4124": {
+      "en": "N",
+      "text": "N"
+    },
+    "0x141548bc6": {
+      "en": "Off the map. ",
+      "text": "Fuera del mapa. "
+    },
+    "0x141548bd4": {
+      "en": "Engine flooded. ",
+      "text": "Motor ahogado. "
+    },
+    "0x141548c2b": {
+      "en": "Use ",
+      "text": "Usa "
+    },
+    "0x141548c30": {
+      "en": " to push",
+      "text": " para empujar"
+    },
+    "0x141548c67": {
+      "en": "this site has no dealer",
+      "text": "esta obra no tiene concesionario"
+    },
+    "0x141548c80": {
+      "en": "step out of the seat to take delivery",
+      "text": "baja del asiento para recibir la entrega"
+    },
+    "0x141548ca8": {
+      "en": "only the host takes delivery in a session yet",
+      "text": "por ahora solo el anfitrión recibe entregas en sesión"
+    },
+    "0x141548cd8": {
+      "en": "the dealer has none of these left on this site",
+      "text": "al concesionario no le quedan de estos en esta obra"
+    },
+    "0x141548d08": {
+      "en": "there is no flat, dry, clear ground near you for it",
+      "text": "no hay terreno llano, seco y despejado cerca para ello"
+    },
+    "0x141548d67": {
+      "en": " is free",
+      "text": " está libre"
+    },
+    "0x141548d70": {
+      "en": "sled",
+      "text": "motonieve"
+    },
+    "0x14155f1ca": {
+      "en": "  unlock the ",
+      "text": "  desbloquear "
+    },
+    "0x14155f1d8": {
+      "en": "  lock the ",
+      "text": "  bloquear "
+    },
+    "0x14155f1e4": {
+      "en": "bring the shaft to the ",
+      "text": "acerca el eje a "
+    },
+    "0x14155f1fc": {
+      "en": "'s hooks to lock it",
+      "text": " (ganchos) para fijarlo"
+    },
+    "0x14155f210": {
+      "en": "  open the Q-Lock to release the bucket",
+      "text": "  abrir el Q-Lock para soltar el cazo"
+    },
+    "0x14155f238": {
+      "en": "  close the Q-Lock on the bucket",
+      "text": "  cerrar el Q-Lock en el cazo"
+    },
+    "0x14155f260": {
+      "en": "bring the shaft to the bucket's hooks to lock it",
+      "text": "acerca el eje a los ganchos del cazo para fijarlo"
+    },
+    "0x14155f291": {
+      "en": "  ·  nothing inside the loop",
+      "text": "  ·  nada dentro del lazo"
+    },
+    "0x14155f2af": {
+      "en": "  take the ",
+      "text": "  tomar mando de "
+    },
+    "0x14155f2bb": {
+      "en": "'s winch remote",
+      "text": " (cabrestante)"
+    },
+    "0x14155f2d0": {
+      "en": "  return the winch remote  ·  nothing on the line",
+      "text": "  devolver mando del cabrestante  ·  nada en el cable"
+    },
+    "0x14155f303": {
+      "en": "  return the winch remote",
+      "text": "  devolver mando del cabrestante"
+    },
+    "0x14155f31d": {
+      "en": "  shackle to the ",
+      "text": "  grilletear a "
+    },
+    "0x14155f32f": {
+      "en": "'s ",
+      "text": ": "
+    },
+    "0x14155f333": {
+      "en": "  hook the ",
+      "text": "  enganchar cable de "
+    },
+    "0x14155f33f": {
+      "en": "'s line to itself",
+      "text": " a sí mismo"
+    },
+    "0x14155f358": {
+      "en": "'s winch line is fully extended",
+      "text": ": el cable del cabrestante está al máximo"
+    },
+    "0x14155f378": {
+      "en": "  set the hook down",
+      "text": "  dejar el gancho en el suelo"
+    },
+    "0x14155f38c": {
+      "en": "  unhook the ",
+      "text": "  desenganchar cable de "
+    },
+    "0x14155f39a": {
+      "en": "'s line from itself",
+      "text": " de sí mismo"
+    },
+    "0x14155f3ae": {
+      "en": "  unshackle the ",
+      "text": "  soltar grillete de "
+    },
+    "0x14155f3bf": {
+      "en": "'s line",
+      "text": " (cable)"
+    },
+    "0x14155f3c7": {
+      "en": "'s hook",
+      "text": " (gancho)"
+    },
+    "0x14155f3cf": {
+      "en": "  toggle the ",
+      "text": "  alternar en "
+    },
+    "0x14155f3dd": {
+      "en": "'s brake",
+      "text": ": freno"
+    },
+    "0x14155f3e6": {
+      "en": "  set the ",
+      "text": "  activar en "
+    },
+    "0x14155f3f1": {
+      "en": "  put the ",
+      "text": "  poner "
+    },
+    "0x14155f3fc": {
+      "en": " in neutral",
+      "text": " en punto muerto"
+    },
+    "0x141548d75": {
+      "en": "dirt bike",
+      "text": "moto de cross"
+    },
+    "0x141548d7f": {
+      "en": " on this site",
+      "text": " en esta obra"
+    },
+    "0x14154a31a": {
+      "en": "  put the chain away",
+      "text": "  guardar la cadena"
+    },
+    "0x14154a330": {
+      "en": "  set the chain's end down  ·  look at an eye or a bucket to hook it",
+      "text": "  soltar extremo de la cadena  ·  apunta a una argolla o cazo para enganchar"
+    },
+    "0x14154a376": {
+      "en": "  pick the chain's end up",
+      "text": "  coger extremo de la cadena"
+    },
+    "0x14154a390": {
+      "en": "  unhook the chain",
+      "text": "  desenganchar la cadena"
+    },
+    "0x14154f495": {
+      "en": "Click",
+      "text": "Clic"
+    },
+    "0x14154f49b": {
+      "en": "Press J",
+      "text": "Pulsa J"
+    },
+    "0x14154f4a3": {
+      "en": "Press 2 for the grade sticks",
+      "text": "Pulsa 2 para las estacas de nivel"
+    },
+    "0x14154f4c0": {
+      "en": "Press Backspace to respawn",
+      "text": "Pulsa Backspace para reaparecer"
+    },
+    "0x14155a3d9": {
+      "en": "  set its height  ·  hold ",
+      "text": "  ajustar altura  ·  mantén "
+    },
+    "0x14155a3f5": {
+      "en": "  take out the grade sticks",
+      "text": "  sacar las estacas de nivel"
+    },
+    "0x14156063a": {
+      "en": "limit exceeded",
+      "text": "límite superado"
+    },
+    "0x141560650": {
+      "en": "insufficient privilege: a limited account cannot publish",
+      "text": "privilegios insuficientes: una cuenta limitada no puede publicar"
+    },
+    "0x141560689": {
+      "en": "access denied",
+      "text": "acceso denegado"
+    },
+    "0x141560697": {
+      "en": "timeout",
+      "text": "tiempo agotado"
+    },
+    "0x14156069f": {
+      "en": "banned",
+      "text": "bloqueado"
+    },
+    "0x1415606a6": {
+      "en": "not logged on",
+      "text": "sesión no iniciada"
+    },
+    "0x1415606b4": {
+      "en": "fail",
+      "text": "error"
+    },
+    "0x1415606b9": {
+      "en": "invalid parameter",
+      "text": "parámetro no válido"
+    },
+    "0x1415606cb": {
+      "en": "file not found",
+      "text": "archivo no encontrado"
+    },
+    "0x1415606da": {
+      "en": "service unavailable",
+      "text": "servicio no disponible"
+    },
+    "0x141560ba0": {
+      "en": ", the Workshop agreement is not yet accepted",
+      "text": ", aún no se ha aceptado el acuerdo del Workshop"
+    },
+    "0x141561200": {
+      "en": "B  skip",
+      "text": "B  saltar"
+    },
+    "0x141561208": {
+      "en": "A",
+      "text": "A"
+    },
+    "0x14156120a": {
+      "en": "Esc  skip",
+      "text": "Esc  saltar"
+    },
+    "0x141561214": {
+      "en": "Enter",
+      "text": "Intro"
+    },
+    "0x141561220": {
+      "en": "OK",
+      "text": "Aceptar"
+    },
+    "0x141561228": {
+      "en": "Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand",
+      "text": "Lleva al menos 40 toneladas de arena a la explanada de grava para un cliente que paga bien. Es arena de calidad"
+    },
+    "0x14156135e": {
+      "en": "LOCKED",
+      "text": "BLOQ."
+    },
+    "0x141561365": {
+      "en": "NO STICKS",
+      "text": "SIN ESTACAS"
+    },
+    "0x14156136f": {
+      "en": "FREE",
+      "text": "LIBRE"
+    },
+    "0x141561374": {
+      "en": "AUTO",
+      "text": "AUTO"
+    },
+    "0x141561379": {
+      "en": "MAN",
+      "text": "MAN"
+    },
+    "0x14156137d": {
+      "en": "WAIT",
+      "text": "ESPERA"
+    },
+    "0x141561382": {
+      "en": "NO GRADE",
+      "text": "SIN NIVEL"
+    },
+    "0x14156138b": {
+      "en": "TO GRADE",
+      "text": "A RASANTE"
+    },
+    "0x14156139a": {
+      "en": "OFS",
+      "text": "DESF."
+    },
+    "0x1415613a4": {
+      "en": "DEPTH",
+      "text": "PROF."
+    },
+    "0x1415613af": {
+      "en": "REACH",
+      "text": "ALCANCE"
+    },
+    "0x1415616e0": {
+      "en": "X  raise the tipping trailer's drawbar  ·  Z  lower it\nE  put the tractor in neutral",
+      "text": "X  subir la lanza del remolque basculante  ·  Z  bajarla\nE  poner el tractor en punto muerto"
+    },
+    "0x141561738": {
+      "en": "The grade hold keeps the blade on the sticks' grade while the dozer climbs the ramp to the pad.",
+      "text": "Mantener rasante conserva la hoja en la pendiente de las estacas mientras el buldócer sube la rampa hacia la explanada."
+    },
+    "0x141561c2a": {
+      "en": " and ",
+      "text": " y "
+    },
+    "0x141561c34": {
+      "en": "every seat",
+      "text": "todos los asientos"
+    },
+    "0x141561c3f": {
+      "en": "every machine",
+      "text": "todas las máquinas"
+    },
+    "0x141561c4d": {
+      "en": "every wheeled seat",
+      "text": "todos los asientos con ruedas"
+    },
+    "0x141561c60": {
+      "en": "every wheeled machine",
+      "text": "todas las máquinas con ruedas"
+    },
+    "0x141561c78": {
+      "en": "the trucks, the tractor and the bandvagn",
+      "text": "los camiones, el tractor y el bandvagn"
+    },
+    "0x141561ca1": {
+      "en": "the loaders",
+      "text": "las cargadoras"
+    },
+    "0x141561cad": {
+      "en": "the dozer",
+      "text": "el buldócer"
+    },
+    "0x141561cb7": {
+      "en": "the excavator",
+      "text": "la excavadora"
+    },
+    "0x141561cc5": {
+      "en": "the bike and the snowmobile",
+      "text": "la moto y la motonieve"
+    },
+    "0x141561d7c": {
+      "en": "keyboard",
+      "text": "teclado"
+    },
+    "0x141561d85": {
+      "en": "gamepad",
+      "text": "mando"
+    },
+    "0x141561d8d": {
+      "en": "joysticks",
+      "text": "joysticks"
+    },
+    "0x141561e07": {
+      "en": "wheel",
+      "text": "volante"
+    },
+    "0x141561e8a": {
+      "en": "flight stick",
+      "text": "palanca de vuelo"
+    },
+    "0x141561ead": {
+      "en": "a joystick",
+      "text": "un joystick"
+    },
+    "0x141561fb3": {
+      "en": "push up…",
+      "text": "empuja arriba…"
+    },
+    "0x141561fbe": {
+      "en": "push sideways or hat…",
+      "text": "empuja a un lado o cruceta…"
+    },
+    "0x141561fd6": {
+      "en": "push +…",
+      "text": "empuja +…"
+    },
+    "0x141561fe0": {
+      "en": "press…",
+      "text": "pulsa…"
+    },
+    "0x141561fe9": {
+      "en": "push −…",
+      "text": "empuja −…"
+    },
+    "0x141561ff9": {
+      "en": "alt",
+      "text": "alt"
+    },
+    "0x141562008": {
+      "en": "gamepad disconnected",
+      "text": "mando desconectado"
+    },
+    "0x14156201d": {
+      "en": "sticks disconnected",
+      "text": "joysticks desconectados"
+    },
+    "0x141562036": {
+      "en": "reset",
+      "text": "restablecer"
+    },
+    "0x14156203c": {
+      "en": "also bound to ",
+      "text": "también asignado a "
+    },
+    "0x141562059": {
+      "en": "capture on: ",
+      "text": "captura en: "
+    },
+    "0x141562068": {
+      "en": "everything",
+      "text": "todo"
+    },
+    "0x141562073": {
+      "en": "developer",
+      "text": "desarrollador"
+    },
+    "0x14156207d": {
+      "en": "open all###fold_all",
+      "text": "abrir todo###fold_all"
+    },
+    "0x141562091": {
+      "en": "fold all###fold_all",
+      "text": "plegar todo###fold_all"
+    },
+    "0x1415620a5": {
+      "en": " axis rests",
+      "text": " eje en reposo"
+    },
+    "0x1415620b1": {
+      "en": " axes rest",
+      "text": " ejes en reposo"
+    },
+    "0x1415620bc": {
+      "en": "GAMEPAD",
+      "text": "MANDO"
+    },
+    "0x1415620c4": {
+      "en": "GAMEPAD · NOT CONNECTED",
+      "text": "MANDO · NO CONECTADO"
+    },
+    "0x1415620dd": {
+      "en": "JOYSTICKS",
+      "text": "JOYSTICKS"
+    },
+    "0x1415620e7": {
+      "en": "JOYSTICKS · NONE ASSIGNED",
+      "text": "JOYSTICKS · SIN ASIGNAR"
+    },
+    "0x141562108": {
+      "en": "how far back; the scroll wheel in the chase",
+      "text": "qué tan atrás; la rueda del ratón en vista externa"
+    },
+    "0x141562138": {
+      "en": "how far back the camera stands",
+      "text": "a qué distancia se sitúa la cámara"
+    },
+    "0x141562157": {
+      "en": "mouse + shift arrows",
+      "text": "ratón + Mayús flechas"
+    },
+    "0x14156216c": {
+      "en": "shift + arrows",
+      "text": "Mayús + flechas"
+    },
+    "0x14156217b": {
+      "en": "hide 4 to 9",
+      "text": "ocultar 4 a 9"
+    },
+    "0x141562187": {
+      "en": "show 4 to 9",
+      "text": "mostrar 4 a 9"
+    },
+    "0x141562198": {
+      "en": "SELECT A BINDING, THEN USE A KEY, BUTTON OR STICK · × OR DELETE CLEARS · ESC CANCELS",
+      "text": "SELECCIONA UNA ASIGNACIÓN Y USA UNA TECLA, BOTÓN O PALANCA · × O SUPR BORRA · ESC CANCELA"
+    },
+    "0x1415621f0": {
+      "en": "CONTROLS",
+      "text": "CONTROLES"
+    },
+    "0x1415621f9": {
+      "en": "close",
+      "text": "cerrar"
+    },
+    "0x1415621ff": {
+      "en": "SHOWING",
+      "text": "MOSTRANDO"
+    },
+    "0x14156220e": {
+      "en": "reset all controls",
+      "text": "restablecer controles"
+    },
+    "0x141562221": {
+      "en": "%d plugged in",
+      "text": "%d conectado(s)"
+    },
+    "0x14156222f": {
+      "en": "the same in every layout",
+      "text": "igual en todos los perfiles"
+    },
+    "0x141562248": {
+      "en": "own layout",
+      "text": "perfil propio"
+    },
+    "0x141562253": {
+      "en": "Keyboard & mouse · ",
+      "text": "Teclado y ratón · "
+    },
+    "0x14156226f": {
+      "en": "  ·  wheel lock ",
+      "text": "  ·  tope de volante "
+    },
+    "0x141562283": {
+      "en": "DEVICES",
+      "text": "DISPOSITIVOS"
+    },
+    "0x14156228d": {
+      "en": "Keyboard & mouse",
+      "text": "Teclado y ratón"
+    },
+    "0x14156229e": {
+      "en": "axes",
+      "text": "ejes"
+    },
+    "0x1415622a3": {
+      "en": "axis",
+      "text": "eje"
+    },
+    "0x1415622a8": {
+      "en": "buttons",
+      "text": "botones"
+    },
+    "0x1415622b0": {
+      "en": "button",
+      "text": "botón"
+    },
+    "0x1415622b7": {
+      "en": "hats",
+      "text": "crucetas"
+    },
+    "0x1415622bc": {
+      "en": "hat",
+      "text": "cruceta"
+    },
+    "0x1415622c0": {
+      "en": "your own bindings; press a layout to replace them",
+      "text": "tus propias asignaciones; pulsa un perfil para reemplazarlas"
+    },
+    "0x1415622f2": {
+      "en": " · a pick here sets ",
+      "text": " · elegir aquí configura "
+    },
+    "0x141562308": {
+      "en": " alone",
+      "text": " solamente"
+    },
+    "0x14156230f": {
+      "en": "pedals",
+      "text": "pedales"
+    },
+    "0x141562316": {
+      "en": "pedal",
+      "text": "pedal"
+    },
+    "0x14156231c": {
+      "en": " away from centre",
+      "text": " lejos del centro"
+    },
+    "0x14156233a": {
+      "en": "LEFT STICK",
+      "text": "PALANCA IZQ."
+    },
+    "0x141562345": {
+      "en": "RIGHT STICK",
+      "text": "PALANCA DER."
+    },
+    "0x141562351": {
+      "en": "DEAD ZONE",
+      "text": "ZONA MUERTA"
+    },
+    "0x141562370": {
+      "en": "wheel turn to full lock, as a share of its travel",
+      "text": "giro del volante hasta el tope, como parte de su recorrido"
+    },
+    "0x1415623a2": {
+      "en": "Wheel lock",
+      "text": "Tope de volante"
+    },
+    "0x1415623ad": {
+      "en": "wheel lock",
+      "text": "tope de volante"
+    },
+    "0x1415623b8": {
+      "en": "how fast the joystick levers move the rams",
+      "text": "qué tan rápido mueven los cilindros las palancas"
+    },
+    "0x1415623e3": {
+      "en": "Hydraulic speed",
+      "text": "Velocidad hidráulica"
+    },
+    "0x1415623fa": {
+      "en": "hydraulic speed",
+      "text": "velocidad hidráulica"
+    },
+    "0x14156240a": {
+      "en": "KEYBOARD & MOUSE",
+      "text": "TECLADO Y RATÓN"
+    },
+    "0x14156241b": {
+      "en": "CAMERA",
+      "text": "CÁMARA"
+    },
+    "0x141562422": {
+      "en": "STEERING RETURN",
+      "text": "RETORNO DE DIRECCIÓN"
+    },
+    "0x141562432": {
+      "en": "%d settings",
+      "text": "%d ajustes"
+    },
+    "0x141562440": {
+      "en": "returns %s  ·  hold below %.1f m/s  ·  full from %.1f m/s",
+      "text": "retorna %s  ·  mantiene bajo %.1f m/s  ·  total desde %.1f m/s"
+    },
+    "0x14156247c": {
+      "en": "sensitivity %.2f",
+      "text": "sensibilidad %.2f"
+    },
+    "0x14156248d": {
+      "en": "  ·  inverted",
+      "text": "  ·  invertida"
+    },
+    "0x14156249c": {
+      "en": "  ·  distance %d%%",
+      "text": "  ·  distancia %d%%"
+    },
+    "0x1415624b0": {
+      "en": "  ·  cab %d°",
+      "text": "  ·  cabina %d°"
+    },
+    "0x1415624bf": {
+      "en": "  ·  follows the bucket",
+      "text": "  ·  sigue al cazo"
+    },
+    "0x1415624d8": {
+      "en": "  ·  chase on the bucket",
+      "text": "  ·  externa en el cazo"
+    },
+    "0x1415624f4": {
+      "en": "%d control%s",
+      "text": "%d ajuste%s"
+    },
+    "0x141562508": {
+      "en": "the wheel's angle when you let go",
+      "text": "ángulo de las ruedas al soltar el volante"
+    },
+    "0x14156252a": {
+      "en": "Returns",
+      "text": "Retorna"
+    },
+    "0x141562548": {
+      "en": "letting go holds the angle under this",
+      "text": "soltar mantiene el ángulo por debajo de esta velocidad"
+    },
+    "0x14156256e": {
+      "en": "Hold below",
+      "text": "Mantener bajo"
+    },
+    "0x141562579": {
+      "en": "m/s",
+      "text": "m/s"
+    },
+    "0x141562580": {
+      "en": "full straightening from this speed",
+      "text": "enderezado completo a partir de esta velocidad"
+    },
+    "0x1415625a3": {
+      "en": "Return at",
+      "text": "Retorno desde"
+    },
+    "0x1415625ad": {
+      "en": "full locks a second",
+      "text": "topes completos por segundo"
+    },
+    "0x1415625c1": {
+      "en": "Return rate",
+      "text": "Tasa de retorno"
+    },
+    "0x1415625cd": {
+      "en": "/s",
+      "text": "/s"
+    },
+    "0x1415625d0": {
+      "en": "mouse, trackpad and right-stick look",
+      "text": "vista con ratón, panel táctil y palanca derecha"
+    },
+    "0x1415625f5": {
+      "en": "Mouse sensitivity",
+      "text": "Sensibilidad del ratón"
+    },
+    "0x14156260e": {
+      "en": "Invert look",
+      "text": "Invertir vista"
+    },
+    "0x14156261a": {
+      "en": "Camera distance",
+      "text": "Distancia de cámara"
+    },
+    "0x14156262a": {
+      "en": "camera distance",
+      "text": "distancia de cámara"
+    },
+    "0x141562640": {
+      "en": "how wide; the scroll wheel in the cab",
+      "text": "amplitud; la rueda del ratón en cabina"
+    },
+    "0x141562666": {
+      "en": "Cab field of view",
+      "text": "Campo de visión en cabina"
+    },
+    "0x141562680": {
+      "en": "the cab view turns to keep the bucket in sight",
+      "text": "la vista de cabina gira para mantener el cazo visible"
+    },
+    "0x1415626af": {
+      "en": "Cab follows the bucket",
+      "text": "La cabina sigue al cazo"
+    },
+    "0x1415626c8": {
+      "en": "the chase camera turns with the bucket's half, not the cab's",
+      "text": "la cámara externa gira con la mitad del cazo, no la de la cabina"
+    },
+    "0x141562705": {
+      "en": "Chase follows the bucket",
+      "text": "La externa sigue al cazo"
+    },
+    "0x14156271e": {
+      "en": "fixed",
+      "text": "fija"
+    },
+    "0x141562728": {
+      "en": "Speed ranges %d · %d · %d",
+      "text": "Rangos de velocidad %d · %d · %d"
+    },
+    "0x141562744": {
+      "en": "all wheeled",
+      "text": "todos con ruedas"
+    },
+    "0x141562750": {
+      "en": "wheeled machines",
+      "text": "máquinas con ruedas"
+    },
+    "0x141562761": {
+      "en": "trucks and tractor",
+      "text": "camiones y tractor"
+    },
+    "0x141562774": {
+      "en": "bike and snowmobile",
+      "text": "moto y motonieve"
+    },
+    "0x141562901": {
+      "en": "cancel",
+      "text": "cancelar"
+    },
+    "0x141562908": {
+      "en": "Every key, button and stick goes back to the shipped layout.",
+      "text": "Todas las teclas, botones y palancas volverán a la configuración original."
+    },
+    "0x141562945": {
+      "en": "RESET ALL CONTROLS?",
+      "text": "¿RESTABLECER TODOS LOS CONTROLES?"
+    },
+    "0x141562959": {
+      "en": "reset all",
+      "text": "restablecer todo"
+    },
+    "0x141562963": {
+      "en": "The ",
+      "text": "Los "
+    },
+    "0x141562968": {
+      "en": " bindings the layouts set go back to ",
+      "text": " controles del perfil volverán a "
+    },
+    "0x14156298e": {
+      "en": " on ",
+      "text": " en "
+    },
+    "0x141562993": {
+      "en": "; the rest stay.",
+      "text": "; el resto se mantiene."
+    },
+    "0x1415629a4": {
+      "en": "REPLACE YOUR LAYOUT?",
+      "text": "¿REEMPLAZAR TU PERFIL?"
+    },
+    "0x1415629c8": {
+      "en": "replace",
+      "text": "reemplazar"
+    },
+    "0x141563471": {
+      "en": "untitled job",
+      "text": "trabajo sin título"
+    },
+    "0x14156347e": {
+      "en": "TEST DRIVE",
+      "text": "PRUEBA"
+    },
+    "0x141563489": {
+      "en": "DAY SHEET",
+      "text": "PARTE DIARIO"
+    },
+    "0x141563493": {
+      "en": "TICK %d",
+      "text": "TICK %d"
+    },
+    "0x14156349b": {
+      "en": "TICK %d · PAUSED",
+      "text": "TICK %d · EN PAUSA"
+    },
+    "0x1415634ad": {
+      "en": "Back to editor",
+      "text": "Volver al editor"
+    },
+    "0x1415634bc": {
+      "en": "Leave",
+      "text": "Salir"
+    },
+    "0x1415634c2": {
+      "en": "rain/snow",
+      "text": "lluvia/nieve"
+    },
+    "0x1415634cc": {
+      "en": "dry weather",
+      "text": "tiempo seco"
+    },
+    "0x1415634e1": {
+      "en": "JOBS",
+      "text": "TRABAJOS"
+    },
+    "0x1415634e6": {
+      "en": "close",
+      "text": "cerrar"
+    },
+    "0x1415634ec": {
+      "en": "no jobs on this site",
+      "text": "no hay trabajos en esta obra"
+    },
+    "0x141563530": {
+      "en": "test drive changes are not saved",
+      "text": "los cambios de la prueba no se guardan"
+    },
+    "0x141563551": {
+      "en": "GAME",
+      "text": "PARTIDA"
+    },
+    "0x141563556": {
+      "en": "Settings",
+      "text": "Ajustes"
+    },
+    "0x14156355f": {
+      "en": "Jobs",
+      "text": "Trabajos"
+    },
+    "0x141563564": {
+      "en": "Copy join link",
+      "text": "Copiar enlace"
+    },
+    "0x141563573": {
+      "en": "GRADE STICKS",
+      "text": "ESTACAS DE NIVEL"
+    },
+    "0x141563580": {
+      "en": "Remove all",
+      "text": "Quitar todas"
+    },
+    "0x14156358b": {
+      "en": "WEATHER",
+      "text": "CLIMA"
+    },
+    "0x141563598": {
+      "en": "%.1f C, rain %.1f mm/h, snow %.2f m/h",
+      "text": "%.1f C, lluvia %.1f mm/h, nieve %.2f m/h"
+    },
+    "0x1415635be": {
+      "en": "%s: %.0f s remaining",
+      "text": "%s: quedan %.0f s"
+    },
+    "0x1415635d3": {
+      "en": "Open dumps folder",
+      "text": "Abrir carpeta volcados"
+    },
+    "0x141563612": {
+      "en": "LEAVE THE EDITOR?",
+      "text": "¿SALIR DEL EDITOR?"
+    },
+    "0x141563624": {
+      "en": "LEAVE THE GAME?",
+      "text": "¿SALIR DE LA PARTIDA?"
+    },
+    "0x141563638": {
+      "en": "unsaved edits will be backed up",
+      "text": "los cambios sin guardar se respaldarán"
+    },
+    "0x141563658": {
+      "en": "Cancel",
+      "text": "Cancelar"
+    },
+    "0x14156365f": {
+      "en": "Save and leave",
+      "text": "Guardar y salir"
+    },
+    "0x14156366e": {
+      "en": "Remove the stick",
+      "text": "Quitar la estaca"
+    },
+    "0x14156367f": {
+      "en": "Remove %zu sticks",
+      "text": "Quitar %zu estacas"
+    },
+    "0x14156369e": {
+      "en": "REMOVE ALL STICKS?",
+      "text": "¿QUITAR TODAS LAS ESTACAS?"
+    },
+    "0x1415636b1": {
+      "en": "RECOVER UNSAVED EDITS?",
+      "text": "¿RECUPERAR CAMBIOS SIN GUARDAR?"
+    },
+    "0x1415636c8": {
+      "en": "%zu edits autosaved %s; %zu saved",
+      "text": "%zu cambios autoguardados %s; %zu guardados"
+    },
+    "0x1415636ea": {
+      "en": "Discard",
+      "text": "Descartar"
+    },
+    "0x1415636f2": {
+      "en": "Recover",
+      "text": "Recuperar"
+    },
+    "0x141564140": {
+      "en": "player ",
+      "text": "jugador "
+    },
+    "0x141564148": {
+      "en": "lost %d s",
+      "text": "perdido %d s"
+    },
+    "0x141564152": {
+      "en": "lagging %.1f s",
+      "text": "retraso %.1f s"
+    },
+    "0x141564161": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x141564168": {
+      "en": "%.1f km",
+      "text": "%.1f km"
+    },
+    "0x14156418d": {
+      "en": "Balance:",
+      "text": "Saldo:"
+    },
+    "0x141564201": {
+      "en": "Engine flooded. ",
+      "text": "Motor ahogado. "
+    },
+    "0x141564212": {
+      "en": "Off the map. ",
+      "text": "Fuera del mapa. "
+    },
+    "0x141564600": {
+      "en": "loading",
+      "text": "cargando"
+    },
+    "0x141564608": {
+      "en": "waiting for the host",
+      "text": "esperando al anfitrión"
+    },
+    "0x141564630": {
+      "en": "receiving the site",
+      "text": "recibiendo la obra"
+    },
+    "0x14156464b": {
+      "en": "quarry",
+      "text": "cantera"
+    },
+    "0x141564652": {
+      "en": "building terrain",
+      "text": "generando terreno"
+    },
+    "0x141564940": {
+      "en": "PLAYED",
+      "text": "JUGADO"
+    },
+    "0x141564947": {
+      "en": "SAVED",
+      "text": "GUARDADO"
+    },
+    "0x14156494d": {
+      "en": "cancel",
+      "text": "cancelar"
+    },
+    "0x141564a96": {
+      "en": "continue",
+      "text": "continuar"
+    },
+    "0x141564a9f": {
+      "en": "play",
+      "text": "jugar"
+    },
+    "0x141564aa4": {
+      "en": "JOB TICKET — ",
+      "text": "ORDEN DE TRABAJO — "
+    },
+    "0x141564ab4": {
+      "en": "NO. %02zu",
+      "text": "N.º %02zu"
+    },
+    "0x141564aca": {
+      "en": "EDITABLE",
+      "text": "EDITABLE"
+    },
+    "0x141564ad3": {
+      "en": "never",
+      "text": "nunca"
+    },
+    "0x141564add": {
+      "en": "start over",
+      "text": "empezar de nuevo"
+    },
+    "0x141564ae8": {
+      "en": "update",
+      "text": "actualizar"
+    },
+    "0x141564aef": {
+      "en": "update refused: ",
+      "text": "actualización rechazada: "
+    },
+    "0x141564b00": {
+      "en": "update available",
+      "text": "actualización disponible"
+    },
+    "0x141564b11": {
+      "en": "workshop item ",
+      "text": "artículo del Workshop "
+    },
+    "0x141565e81": {
+      "en": "built-in",
+      "text": "integrada"
+    },
+    "0x141565e8a": {
+      "en": "your site",
+      "text": "tu obra"
+    },
+    "0x141565ee7": {
+      "en": "by ",
+      "text": "por "
+    },
+    "0x141565eeb": {
+      "en": "%.1f km",
+      "text": "%.1f km"
+    },
+    "0x141565ef3": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x141565efa": {
+      "en": "%.1f by %.1f km",
+      "text": "%.1f por %.1f km"
+    },
+    "0x141565f0a": {
+      "en": "%.0f by %.0f m",
+      "text": "%.0f por %.0f m"
+    },
+    "0x141565f19": {
+      "en": "just now",
+      "text": "ahora mismo"
+    },
+    "0x141565f22": {
+      "en": "%lld min",
+      "text": "%lld min"
+    },
+    "0x141565f2b": {
+      "en": "%lld h",
+      "text": "%lld h"
+    },
+    "0x141565f32": {
+      "en": "%lld d",
+      "text": "%lld d"
+    },
+    "0x141565f39": {
+      "en": "%d min",
+      "text": "%d min"
+    },
+    "0x141565f40": {
+      "en": "%d h %02d min",
+      "text": "%d h %02d min"
+    },
+    "0x141565f93": {
+      "en": "S",
+      "text": "S"
+    },
+    "0x141565fa2": {
+      "en": "settings",
+      "text": "ajustes"
+    },
+    "0x141565fab": {
+      "en": "START ",
+      "text": "¿REINICIAR "
+    },
+    "0x141565fb2": {
+      "en": " OVER?",
+      "text": "?"
+    },
+    "0x141565fb9": {
+      "en": "UPDATE ",
+      "text": "ACTUALIZAR "
+    },
+    "0x141565fc1": {
+      "en": "SITE REGISTER",
+      "text": "REGISTRO DE OBRAS"
+    },
+    "0x141565fcf": {
+      "en": "%zu SITE%s",
+      "text": "%zu OBRA%s"
+    },
+    "0x141565fe6": {
+      "en": "EARNED",
+      "text": "GANADO"
+    },
+    "0x141565fed": {
+      "en": "OPERATOR: ",
+      "text": "OPERADOR: "
+    },
+    "0x141565ffc": {
+      "en": "OPERATOR:",
+      "text": "OPERADOR:"
+    },
+    "0x141566017": {
+      "en": "YOUR SITES",
+      "text": "TUS OBRAS"
+    },
+    "0x141566022": {
+      "en": "SITE",
+      "text": "OBRA"
+    },
+    "0x141566030": {
+      "en": "WORKSHOP SITES",
+      "text": "OBRAS DEL WORKSHOP"
+    },
+    "0x141566045": {
+      "en": "DEMO",
+      "text": "DEMO"
+    },
+    "0x141566053": {
+      "en": "quit",
+      "text": "salir"
+    },
+    "0x141566058": {
+      "en": "Dirt Town by Skyturns. Third-party notices: THIRD-PARTY-LICENSES.md beside the game.",
+      "text": "Dirt Town por Skyturns. Avisos de terceros: THIRD-PARTY-LICENSES.md junto al juego."
+    },
+    "0x1415660ad": {
+      "en": "2 h",
+      "text": "2 h"
+    },
+    "0x1415660b1": {
+      "en": "3 h 10 min",
+      "text": "3 h 10 min"
+    },
+    "0x141566720": {
+      "en": "%.0f km",
+      "text": "%.0f km"
+    },
+    "0x141566728": {
+      "en": "%.0f m",
+      "text": "%.0f m"
+    },
+    "0x141566751": {
+      "en": "SITE MAP — ",
+      "text": "PLANO DE OBRA — "
+    },
+    "0x14156675f": {
+      "en": "CONTOURS EVERY %g M",
+      "text": "CURVAS CADA %g M"
+    },
+    "0x141566773": {
+      "en": "SITE MAP",
+      "text": "PLANO DE OBRA"
+    },
+    "0x1415667a9": {
+      "en": "close",
+      "text": "cerrar"
+    },
+    "0x1415667b3": {
+      "en": "you",
+      "text": "tú"
+    },
+    "0x1415667b7": {
+      "en": "N",
+      "text": "N"
+    },
+    "0x1415667b9": {
+      "en": "road",
+      "text": "carretera"
+    },
+    "0x1415667be": {
+      "en": "track",
+      "text": "pista"
+    },
+    "0x1415667c4": {
+      "en": "building",
+      "text": "edificio"
+    },
+    "0x1415667cd": {
+      "en": "water",
+      "text": "agua"
+    },
+    "0x1415667d3": {
+      "en": "woods",
+      "text": "bosque"
+    },
+    "0x1415667d9": {
+      "en": "grass",
+      "text": "hierba"
+    },
+    "0x1415667df": {
+      "en": "contour",
+      "text": "curva de nivel"
+    },
+    "0x1415667e7": {
+      "en": "index contour",
+      "text": "curva maestra"
+    },
+    "0x1415667f5": {
+      "en": "job",
+      "text": "trabajo"
+    },
+    "0x14156709f": {
+      "en": "a protected ",
+      "text": "un protegido: "
+    },
+    "0x1415670ac": {
+      "en": " protected ",
+      "text": " protegidos: "
+    },
+    "0x1415670bc": {
+      "en": "Sand for the yard",
+      "text": "Arena para el patio"
+    },
+    "0x1415670d0": {
+      "en": "Bring sand from the pit and tip it in the marked bay by the shed.",
+      "text": "Trae arena de la cantera y descárgala en la celda marcada junto al cobertizo."
+    },
+    "0x141567112": {
+      "en": "The bay is full.",
+      "text": "La celda está llena."
+    },
+    "0x14156712c": {
+      "en": "Cottage lot",
+      "text": "Parcela de la cabaña"
+    },
+    "0x141567138": {
+      "en": "Clear the lot for the cottage. The taped pines are protected: leave them standing.",
+      "text": "Despeja la parcela para la cabaña. Los pinos con cinta están protegidos: déjalos en pie."
+    },
+    "0x14156719c": {
+      "en": "Tower road",
+      "text": "Camino de la torre"
+    },
+    "0x1415671a8": {
+      "en": "Cut a road up to the knob, level the pad there, set the four footings at its stakes and lay the three tower sections east of it.",
+      "text": "Abre un camino hasta la loma, nivela la explanada, coloca las cuatro zapatas en sus estacas y deja las tres secciones de la torre al este."
+    },
+    "0x141567229": {
+      "en": "The tower stands.",
+      "text": "La torre está en pie."
+    },
+    "0x14156727e": {
+      "en": "Level the knob",
+      "text": "Nivela la loma"
+    },
+    "0x1415672a3": {
+      "en": "Stack the sections",
+      "text": "Apila las secciones"
+    },
+    "0x1415672b6": {
+      "en": "Level the knob, {}",
+      "text": "Nivela la loma, {}"
+    },
+    "0x1415672e3": {
+      "en": "Stack the sections, {}",
+      "text": "Apila las secciones, {}"
+    },
+    "0x1415672fa": {
+      "en": "felled",
+      "text": "talado"
+    },
+    "0x141567301": {
+      "en": "tree",
+      "text": "árbol"
+    },
+    "0x141567306": {
+      "en": "moved",
+      "text": "movida"
+    },
+    "0x14156730c": {
+      "en": "stone",
+      "text": "piedra"
+    },
+    "0x141567312": {
+      "en": " and ",
+      "text": " y "
+    },
+    "0x141567318": {
+      "en": "stones",
+      "text": "piedras"
+    },
+    "0x14156731f": {
+      "en": "trees",
+      "text": "árboles"
+    },
+    "0x141567325": {
+      "en": "1 tree left",
+      "text": "queda 1 árbol"
+    },
+    "0x141567331": {
+      "en": "%d trees left",
+      "text": "quedan %d árboles"
+    },
+    "0x14156733f": {
+      "en": "1 stone left",
+      "text": "queda 1 piedra"
+    },
+    "0x14156734c": {
+      "en": "%d stones left",
+      "text": "quedan %d piedras"
+    },
+    "0x14156735e": {
+      "en": "level",
+      "text": "nivelado"
+    },
+    "0x141567364": {
+      "en": "%.0f %% level%s, %d red",
+      "text": "%.0f %% nivelado%s, %d en rojo"
+    },
+    "0x14156737c": {
+      "en": "%.0f %% level%s",
+      "text": "%.0f %% nivelado%s"
+    },
+    "0x14156738c": {
+      "en": "%.0f t",
+      "text": "%.0f t"
+    },
+    "0x141567393": {
+      "en": "%.1f t",
+      "text": "%.1f t"
+    },
+    "0x14156739a": {
+      "en": "%.1f of %.0f t",
+      "text": "%.1f de %.0f t"
+    },
+    "0x1415673a9": {
+      "en": ", one leans %.0f°",
+      "text": ", una inclinada %.0f°"
+    },
+    "0x1415673bc": {
+      "en": ", %d leaning, up to %.0f°",
+      "text": ", %d inclinadas, hasta %.0f°"
+    },
+    "0x1415673d7": {
+      "en": ", one %.1f m off its mark",
+      "text": ", una a %.1f m de su marca"
+    },
+    "0x1415673f1": {
+      "en": "%ld of %zu%s",
+      "text": "%ld de %zu%s"
+    },
+    "0x1415673fe": {
+      "en": "%d of %d",
+      "text": "%d de %d"
+    },
+    "0x141567407": {
+      "en": "cleared",
+      "text": "despejado"
+    },
+    "0x14156740f": {
+      "en": "%d %s, %d %s left",
+      "text": "quedan %d %s, %d %s"
+    },
+    "0x141567421": {
+      "en": "under water",
+      "text": "bajo el agua"
+    },
+    "0x14156742d": {
+      "en": "%.0f %% surrounded",
+      "text": "%.0f %% rodeado"
+    },
+    "0x141567440": {
+      "en": "stripped",
+      "text": "desbrozado"
+    },
+    "0x141567449": {
+      "en": "%.0f %% stripped",
+      "text": "%.0f %% desbrozado"
+    },
+    "0x1415674a7": {
+      "en": "Find the ",
+      "text": "Encuentra "
+    },
+    "0x1415674b1": {
+      "en": " over the ",
+      "text": " sobre "
+    },
+    "0x1415674bc": {
+      "en": " to the ",
+      "text": " hasta "
+    },
+    "0x1415674c5": {
+      "en": ", done",
+      "text": ", hecho"
+    },
+    "0x1415674d1": {
+      "en": "Jobs",
+      "text": "Trabajos"
+    },
+    "0x1415674d6": {
+      "en": "hide the jobs list",
+      "text": "ocultar la lista de trabajos"
+    },
+    "0x1415674e9": {
+      "en": "show the jobs list",
+      "text": "mostrar la lista de trabajos"
+    },
+    "0x1415674fc": {
+      "en": "untitled job",
+      "text": "trabajo sin título"
+    },
+    "0x141567509": {
+      "en": "%s, done",
+      "text": "%s, hecho"
+    },
+    "0x141567527": {
+      "en": "%s: done",
+      "text": "%s: hecho"
+    },
+    "0x141567530": {
+      "en": "fold jobs",
+      "text": "plegar trabajos"
+    },
+    "0x14156753a": {
+      "en": "fine, %s",
+      "text": "multa, %s"
+    },
+    "0x141567549": {
+      "en": "bonus rounds, %.0f",
+      "text": "bonificación, %.0f"
+    },
+    "0x14156755c": {
+      "en": "extra %s, %.1f t",
+      "text": "extra %s, %.1f t"
+    },
+    "0x14156756d": {
+      "en": "diesel",
+      "text": "diésel"
+    },
+    "0x141567574": {
+      "en": "road: not found",
+      "text": "camino: no encontrado"
+    },
+    "0x141567588": {
+      "en": "road %.0f m, avg slope %.0f %%, steepest %.0f %%",
+      "text": "camino %.0f m, pend. media %.0f %%, máx. %.0f %%"
+    },
+    "0x1415675b9": {
+      "en": ", side slope %.0f %%",
+      "text": ", peralte %.0f %%"
+    },
+    "0x1415675ce": {
+      "en": ", starts %.0f m off the pad",
+      "text": ", empieza a %.0f m de la explanada"
+    },
+    "0x1415675ea": {
+      "en": ", %.0f m gap",
+      "text": ", hueco de %.0f m"
+    },
+    "0x1415675f7": {
+      "en": "EARNED",
+      "text": "GANADO"
+    },
+    "0x1415677ee": {
+      "en": "Find the truck",
+      "text": "Encuentra el camión"
+    },
+    "0x14156782d": {
+      "en": "Boulder on hill",
+      "text": "Roca en la colina"
+    },
+    "0x141567878": {
+      "en": "Get the boulder up on the hill",
+      "text": "Sube la roca a la colina"
+    },
+    "0x141567897": {
+      "en": "Sand haul & more",
+      "text": "Acarreo de arena y más"
+    },
+    "0x1415678a8": {
+      "en": "40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it",
+      "text": "40 toneladas entregadas, el río saltado y la roca en la colina. ¡Genial! Sigue acarreando si te apetece"
+    },
+    "0x14156790c": {
+      "en": "MISSION ACCOMPLISHED",
+      "text": "MISIÓN CUMPLIDA"
+    },
+    "0x141567921": {
+      "en": "TASK DONE",
+      "text": "TAREA COMPLETADA"
+    },
+    "0x14156792b": {
+      "en": "TOTAL",
+      "text": "TOTAL"
+    },
+    "0x141567931": {
+      "en": "SO FAR",
+      "text": "HASTA AHORA"
+    },
+    "0x141567938": {
+      "en": " levelled",
+      "text": " nivelado"
+    },
+    "0x141567942": {
+      "en": " levelled in ",
+      "text": " nivelado en "
+    },
+    "0x141567950": {
+      "en": " set, %zu of %zu",
+      "text": " colocadas, %zu de %zu"
+    },
+    "0x141567961": {
+      "en": " %d of %d",
+      "text": " %d de %d"
+    },
+    "0x14156796b": {
+      "en": " cleared",
+      "text": " despejado"
+    },
+    "0x141567974": {
+      "en": " cleared of stones",
+      "text": " despejado de piedras"
+    },
+    "0x141567987": {
+      "en": " stripped of ",
+      "text": " desbrozado de "
+    },
+    "0x141567995": {
+      "en": " made",
+      "text": " hecho"
+    },
+    "0x14156799b": {
+      "en": " filled",
+      "text": " rellenado"
+    },
+    "0x1415679a3": {
+      "en": "found",
+      "text": "encontrado"
+    },
+    "0x1415679a9": {
+      "en": "%.0f t × %g",
+      "text": "%.0f t × %g"
+    },
+    "0x1415679c7": {
+      "en": "fine, ",
+      "text": "multa, "
+    },
+    "0x1415679ce": {
+      "en": "%.1f t × %g",
+      "text": "%.1f t × %g"
+    },
+    "0x1415679db": {
+      "en": "extra ",
+      "text": "extra "
+    },
+    "0x1415679ed": {
+      "en": "%.1f l × %g",
+      "text": "%.1f l × %g"
+    },
+    "0x1415679fa": {
+      "en": "BUCKET & SONS · CONTRACTORS",
+      "text": "BUCKET & SONS · CONTRATISTAS"
+    },
+    "0x141567a17": {
+      "en": "NO. %02zu",
+      "text": "N.º %02zu"
+    },
+    "0x141567a25": {
+      "en": "ON SITE",
+      "text": "EN OBRA"
+    },
+    "0x141567a2d": {
+      "en": "%zu of %zu",
+      "text": "%zu de %zu"
+    },
+    "0x141567a38": {
+      "en": "TASKS",
+      "text": "TAREAS"
+    },
+    "0x141567a3e": {
+      "en": "%d min",
+      "text": "%d min"
+    },
+    "0x141567a45": {
+      "en": "%d h %02d",
+      "text": "%d h %02d"
+    },
+    "0x141567a4f": {
+      "en": "WORK",
+      "text": "TRABAJO"
+    },
+    "0x141567a54": {
+      "en": "FOREMAN",
+      "text": "CAPATAZ"
+    },
+    "0x141567a5c": {
+      "en": "CUSTOMER'S COPY",
+      "text": "COPIA DEL CLIENTE"
+    },
+    "0x141567a6c": {
+      "en": "“",
+      "text": "«"
+    },
+    "0x141567a70": {
+      "en": "”",
+      "text": "»"
+    },
+    "0x141567a81": {
+      "en": "Keep working",
+      "text": "Seguir trabajando"
+    },
+    "0x141567a8e": {
+      "en": "Leave",
+      "text": "Salir"
+    },
+    "0x141567a94": {
+      "en": "Wishlist",
+      "text": "Lista de deseados"
+    },
+    "0x141567ac0": {
+      "en": "The mast stands over the valley.",
+      "text": "El mástil se alza sobre el valle."
+    },
+    "0x141567ae1": {
+      "en": "Quality sand in the bay, {}",
+      "text": "Arena de calidad en la celda, {}"
+    },
+    "0x141567afd": {
+      "en": "Sand delivered, as quoted",
+      "text": "Arena entregada según presupuesto"
+    },
+    "0x141567f47": {
+      "en": "ok",
+      "text": "aceptar"
+    },
+    "0x141567f50": {
+      "en": "Waiting for parts, estimated arrival dec 4th",
+      "text": "Esperando repuestos, llegada estimada el 4 de dic."
+    },
+    "0x141567f7d": {
+      "en": "OUT OF ORDER",
+      "text": "FUERA DE SERVICIO"
+    },
+    "0x141567f8a": {
+      "en": "back to menu",
+      "text": "volver al menú"
+    },
+    "0x141567f98": {
+      "en": "the host's site has 15 machines and this one 10, and the two site files are not the same",
+      "text": "la obra del anfitrión tiene 15 máquinas y esta 10, y los dos archivos de obra no coinciden"
+    },
+    "0x141567ff1": {
+      "en": "COULD NOT JOIN",
+      "text": "NO SE PUDO UNIR"
+    },
+    "0x141568516": {
+      "en": "plow",
+      "text": "arado"
+    },
+    "0x14156851b": {
+      "en": "off",
+      "text": "apagado"
+    },
+    "0x14156851f": {
+      "en": "blade",
+      "text": "hoja"
+    },
+    "0x141568525": {
+      "en": "ready",
+      "text": "listo"
+    },
+    "0x14156852b": {
+      "en": "level",
+      "text": "nivel"
+    },
+    "0x141568531": {
+      "en": "free tilt",
+      "text": "inclin. libre"
+    },
+    "0x14156853b": {
+      "en": "lock tilt",
+      "text": "bloq. inclin."
+    },
+    "0x141568545": {
+      "en": "bucket",
+      "text": "cazo"
+    },
+    "0x14156854c": {
+      "en": "none",
+      "text": "ninguno"
+    },
+    "0x141568551": {
+      "en": "in hand",
+      "text": "en mano"
+    },
+    "0x141568559": {
+      "en": "down",
+      "text": "abajo"
+    },
+    "0x14156855e": {
+      "en": "stowed",
+      "text": "recogido"
+    },
+    "0x141568565": {
+      "en": "hook in hand",
+      "text": "gancho en mano"
+    },
+    "0x141568572": {
+      "en": "hook down",
+      "text": "gancho abajo"
+    },
+    "0x14156857c": {
+      "en": "on",
+      "text": "enc."
+    },
+    "0x14156857f": {
+      "en": "extend",
+      "text": "extender"
+    },
+    "0x141568586": {
+      "en": "retract",
+      "text": "retraer"
+    },
+    "0x14156858e": {
+      "en": "hold",
+      "text": "fijar"
+    },
+    "0x1415685a6": {
+      "en": "tips, home",
+      "text": "bascula, recogido"
+    },
+    "0x1415685b1": {
+      "en": "swings, home",
+      "text": "gira, recogido"
+    },
+    "0x1415685be": {
+      "en": "lock",
+      "text": "bloquear"
+    },
+    "0x1415685c3": {
+      "en": "home to lock",
+      "text": "recoger p/ bloq."
+    },
+    "0x1415685d0": {
+      "en": "out",
+      "text": "fuera"
+    },
+    "0x1415685d4": {
+      "en": "in",
+      "text": "dentro"
+    },
+    "0x1415685d7": {
+      "en": "partly in",
+      "text": "parcial"
+    },
+    "0x1415685e1": {
+      "en": "attached",
+      "text": "acoplado"
+    },
+    "0x1415685ea": {
+      "en": "empty",
+      "text": "vacío"
+    },
+    "0x1415685f0": {
+      "en": "up",
+      "text": "arriba"
+    },
+    "0x1415685f3": {
+      "en": "lowering",
+      "text": "bajando"
+    },
+    "0x1415685fc": {
+      "en": "rising",
+      "text": "subiendo"
+    },
+    "0x141568603": {
+      "en": "lower",
+      "text": "bajar"
+    },
+    "0x141568609": {
+      "en": "lift",
+      "text": "subir"
+    },
+    "0x14156860e": {
+      "en": "lip up, gate open %.0f deg",
+      "text": "labio arriba, comp. %.0f°"
+    },
+    "0x141568629": {
+      "en": "locked, lip up",
+      "text": "bloq., labio arriba"
+    },
+    "0x141568638": {
+      "en": "unlock",
+      "text": "desbloquear"
+    },
+    "0x14156863f": {
+      "en": "lower to detach",
+      "text": "bajar p/ soltar"
+    },
+    "0x14156864f": {
+      "en": "detach",
+      "text": "desacoplar"
+    },
+    "0x141568656": {
+      "en": "locked",
+      "text": "bloqueado"
+    },
+    "0x14156865d": {
+      "en": "open",
+      "text": "abierto"
+    },
+    "0x141568662": {
+      "en": "running",
+      "text": "en marcha"
+    },
+    "0x14156866a": {
+      "en": "stopped",
+      "text": "parado"
+    },
+    "0x141568672": {
+      "en": "hydraulics",
+      "text": "hidráulica"
+    },
+    "0x14156867d": {
+      "en": "camera",
+      "text": "cámara"
+    },
+    "0x141568687": {
+      "en": "%.1f m/s",
+      "text": "%.1f m/s"
+    },
+    "0x1415686aa": {
+      "en": "pick",
+      "text": "elegir"
+    },
+    "0x1415686b7": {
+      "en": "RANGE",
+      "text": "RANGO"
+    },
+    "0x1415686bd": {
+      "en": "on/off",
+      "text": "enc./apag."
+    },
+    "0x1415686c4": {
+      "en": "FLOAT",
+      "text": "FLOT."
+    },
+    "0x1415686d2": {
+      "en": "grips %d%%",
+      "text": "agarre %d%%"
+    },
+    "0x1415686dd": {
+      "en": "%d%% closed",
+      "text": "%d%% cerrado"
+    },
+    "0x1415686e9": {
+      "en": "close",
+      "text": "cerrar"
+    },
+    "0x1415686ff": {
+      "en": "close/open",
+      "text": "cerrar/abrir"
+    },
+    "0x14156870a": {
+      "en": "THUMB",
+      "text": "PINZA"
+    },
+    "0x141568717": {
+      "en": "held %.1f m",
+      "text": "fijado %.1f m"
+    },
+    "0x14156872f": {
+      "en": "offset",
+      "text": "desfase"
+    },
+    "0x141568736": {
+      "en": "AUTO",
+      "text": "AUTO"
+    },
+    "0x141568743": {
+      "en": "TOOL",
+      "text": "IMPLEM."
+    },
+    "0x14156874f": {
+      "en": "%.0f kN  %.0f%%",
+      "text": "%.0f kN  %.0f%%"
+    },
+    "0x14156875f": {
+      "en": "%.1f m out",
+      "text": "%.1f m fuera"
+    },
+    "0x14156876a": {
+      "en": "%s %.1f m",
+      "text": "%s %.1f m"
+    },
+    "0x141568774": {
+      "en": "remote out",
+      "text": "mando fuera"
+    },
+    "0x14156877f": {
+      "en": "in/out",
+      "text": "rec./sol."
+    },
+    "0x141568786": {
+      "en": "WINCH",
+      "text": "CABR."
+    },
+    "0x141568794": {
+      "en": "LIGHT",
+      "text": "BALIZA"
+    },
+    "0x1415687a2": {
+      "en": "HYDR",
+      "text": "HIDR."
+    },
+    "0x1415687b1": {
+      "en": "raising",
+      "text": "elevando"
+    },
+    "0x1415687b9": {
+      "en": "to %+.0f deg",
+      "text": "a %+.0f°"
+    },
+    "0x1415687c6": {
+      "en": "up, back %+.0f",
+      "text": "arriba, atrás %+.0f"
+    },
+    "0x1415687d5": {
+      "en": "%+.0f deg",
+      "text": "%+.0f°"
+    },
+    "0x1415687df": {
+      "en": "up/down",
+      "text": "sub./baj."
+    },
+    "0x1415687e7": {
+      "en": "HITCH",
+      "text": "ENG."
+    },
+    "0x1415687f5": {
+      "en": "L %.0f  R %.0f deg",
+      "text": "I %.0f  D %.0f°"
+    },
+    "0x141568808": {
+      "en": "both",
+      "text": "ambos"
+    },
+    "0x14156881e": {
+      "en": "FLAPS",
+      "text": "ALETAS"
+    },
+    "0x141568833": {
+      "en": "L %.2f  R %.2f m",
+      "text": "I %.2f  D %.2f m"
+    },
+    "0x14156884b": {
+      "en": "TINES",
+      "text": "UÑAS"
+    },
+    "0x14156885d": {
+      "en": "no forks",
+      "text": "sin horquillas"
+    },
+    "0x141568866": {
+      "en": "tips, %.0f deg",
+      "text": "bascula, %.0f°"
+    },
+    "0x141568875": {
+      "en": "swings, %.0f deg",
+      "text": "gira, %.0f°"
+    },
+    "0x14156889d": {
+      "en": "home",
+      "text": "inicio"
+    },
+    "0x1415688a2": {
+      "en": "LOCK",
+      "text": "BLOQ."
+    },
+    "0x1415688bb": {
+      "en": "SLIDE",
+      "text": "DESL."
+    },
+    "0x1415688c9": {
+      "en": "HOOK",
+      "text": "GANCHO"
+    },
+    "0x1415688d8": {
+      "en": "AXLE",
+      "text": "EJE"
+    },
+    "0x1415688e4": {
+      "en": "lip rising",
+      "text": "labio subiendo"
+    },
+    "0x1415688ef": {
+      "en": "lip lowering",
+      "text": "labio bajando"
+    },
+    "0x1415688fc": {
+      "en": "open %.0f deg, chains %.0f",
+      "text": "abierto %.0f°, cadenas %.0f"
+    },
+    "0x141568917": {
+      "en": "free, chains %.0f deg",
+      "text": "libre, cadenas %.0f°"
+    },
+    "0x14156892d": {
+      "en": "GATE",
+      "text": "COMP."
+    },
+    "0x14156893a": {
+      "en": "no tipper",
+      "text": "sin volquete"
+    },
+    "0x141568944": {
+      "en": "up %.2f m, %+.0f deg",
+      "text": "arriba %.2f m, %+.0f°"
+    },
+    "0x141568959": {
+      "en": "down, %+.0f deg",
+      "text": "abajo, %+.0f°"
+    },
+    "0x141568969": {
+      "en": "angle",
+      "text": "ángulo"
+    },
+    "0x14156896f": {
+      "en": "PLOW",
+      "text": "ARADO"
+    },
+    "0x141568992": {
+      "en": "attach",
+      "text": "acoplar"
+    },
+    "0x141568999": {
+      "en": "DIFF",
+      "text": "DIF."
+    },
+    "0x1415689a5": {
+      "en": "belt too tight",
+      "text": "cinta muy tensa"
+    },
+    "0x1415689b4": {
+      "en": "working",
+      "text": "trabajando"
+    },
+    "0x1415689bc": {
+      "en": "folded",
+      "text": "plegado"
+    },
+    "0x1415689c3": {
+      "en": "%.0f deg folded",
+      "text": "%.0f° plegado"
+    },
+    "0x1415689d3": {
+      "en": "fold",
+      "text": "plegar"
+    },
+    "0x1415689e8": {
+      "en": "fold/unfold",
+      "text": "plegar/despl."
+    },
+    "0x1415689f4": {
+      "en": "unfold",
+      "text": "desplegar"
+    },
+    "0x1415689fb": {
+      "en": "HEAD",
+      "text": "CABEZAL"
+    },
+    "0x141568a07": {
+      "en": "hopper end %+.1f deg",
+      "text": "tolva %+.1f°"
+    },
+    "0x141568a2b": {
+      "en": "TILT",
+      "text": "INCL."
+    },
+    "0x141568a37": {
+      "en": "folded in",
+      "text": "plegadas"
+    },
+    "0x141568a41": {
+      "en": "%.0f deg in",
+      "text": "%.0f° dentro"
+    },
+    "0x141568a5c": {
+      "en": "WINGS",
+      "text": "ALAS"
+    },
+    "0x141568a6a": {
+      "en": "tight",
+      "text": "tensa"
+    },
+    "0x141568a70": {
+      "en": "released %.2f m",
+      "text": "suelta %.2f m"
+    },
+    "0x141568a80": {
+      "en": "release",
+      "text": "soltar"
+    },
+    "0x141568a88": {
+      "en": "release/tighten",
+      "text": "soltar/tensar"
+    },
+    "0x141568a98": {
+      "en": "tighten",
+      "text": "tensar"
+    },
+    "0x141568aa0": {
+      "en": "TENSION",
+      "text": "TENSIÓN"
+    },
+    "0x141568ab1": {
+      "en": "BELTS",
+      "text": "CINTAS"
+    },
+    "0x141568abf": {
+      "en": "switch",
+      "text": "cambiar"
+    },
+    "0x141568ac6": {
+      "en": "STICK",
+      "text": "PALANCA"
+    },
+    "0x141568ad4": {
+      "en": "GRIP",
+      "text": "AGARRE"
+    },
+    "0x141569180": {
+      "en": "SAVED AUTOMATICALLY",
+      "text": "GUARDADO AUTOMÁTICAMENTE"
+    },
+    "0x141569194": {
+      "en": "SETTINGS",
+      "text": "AJUSTES"
+    },
+    "0x14156919d": {
+      "en": "close",
+      "text": "cerrar"
+    },
+    "0x1415691a3": {
+      "en": "GENERAL",
+      "text": "GENERAL"
+    },
+    "0x1415691ab": {
+      "en": "edit",
+      "text": "editar"
+    },
+    "0x1415691b0": {
+      "en": "Controls",
+      "text": "Controles"
+    },
+    "0x1415691b9": {
+      "en": "Fullscreen",
+      "text": "Pantalla completa"
+    },
+    "0x1415691c4": {
+      "en": "UI size",
+      "text": "Tamaño de interfaz"
+    },
+    "0x1415691d1": {
+      "en": "SOUND",
+      "text": "SONIDO"
+    },
+    "0x1415691d7": {
+      "en": "Volume",
+      "text": "Volumen"
+    },
+    "0x1415691de": {
+      "en": "Music",
+      "text": "Música"
+    },
+    "0x1415691e4": {
+      "en": "Ambience",
+      "text": "Ambiente"
+    },
+    "0x1415691ed": {
+      "en": "reset",
+      "text": "restablecer"
+    },
+    "0x1415691f3": {
+      "en": "Reset sound",
+      "text": "Restablecer sonido"
+    },
+    "0x1415691ff": {
+      "en": "GRAPHICS",
+      "text": "GRÁFICOS"
+    },
+    "0x141569208": {
+      "en": "Graphics",
+      "text": "Gráficos"
+    },
+    "0x141569215": {
+      "en": "Render scale",
+      "text": "Escala de renderizado"
+    },
+    "0x141569226": {
+      "en": "Mirrors",
+      "text": "Espejos"
+    },
+    "0x14156922e": {
+      "en": "Half-rate physics",
+      "text": "Física a media tasa"
+    },
+    "0x141569240": {
+      "en": "Experimental physics mode for slower computers. Changing it restarts the game.",
+      "text": "Modo de física experimental para equipos más lentos. Cambiarlo reinicia el juego."
+    },
+    "0x1415692bc": {
+      "en": "cancel",
+      "text": "cancelar"
+    },
+    "0x1415692c8": {
+      "en": "Half-rate physics changes with a restart.",
+      "text": "La física a media tasa se aplica al reiniciar."
+    },
+    "0x1415692f2": {
+      "en": "RESTART NOW?",
+      "text": "¿REINICIAR AHORA?"
+    },
+    "0x1415692ff": {
+      "en": "restart",
+      "text": "reiniciar"
+    },
+    "0x14156ac2a": {
+      "en": "Wheel loader",
+      "text": "Cargadora de ruedas"
+    },
+    "0x14156ac4e": {
+      "en": "HOLMGREN'S MACHINES",
+      "text": "MAQUINARIA HOLMGREN"
+    },
+    "0x14156ac62": {
+      "en": "PRICE LIST",
+      "text": "LISTA DE PRECIOS"
+    },
+    "0x14156ac70": {
+      "en": "by the hour or to keep; a row turns to its page",
+      "text": "por horas o en propiedad; pulsa una fila para ver su ficha"
+    },
+    "0x14156aca0": {
+      "en": "PER HOUR",
+      "text": "POR HORA"
+    },
+    "0x14156aca9": {
+      "en": "TO BUY",
+      "text": "COMPRA"
+    },
+    "0x14156acda": {
+      "en": "%.0f kg",
+      "text": "%.0f kg"
+    },
+    "0x14156ace2": {
+      "en": "%.1f t",
+      "text": "%.1f t"
+    },
+    "0x14156ace9": {
+      "en": "Buy",
+      "text": "Comprar"
+    },
+    "0x14156aced": {
+      "en": "Hire",
+      "text": "Alquilar"
+    },
+    "0x14156acf2": {
+      "en": "Operating weight",
+      "text": "Peso operativo"
+    },
+    "0x14156ad03": {
+      "en": "%.0f kW",
+      "text": "%.0f kW"
+    },
+    "0x14156ad0b": {
+      "en": "Engine",
+      "text": "Motor"
+    },
+    "0x14156ad12": {
+      "en": "Equipped",
+      "text": "Equipamiento"
+    },
+    "0x14156ad1b": {
+      "en": "HIRE, PER HOUR",
+      "text": "ALQUILER POR HORA"
+    },
+    "0x14156ad30": {
+      "en": "PLANT HIRE & SALES  ·  EST. 1962",
+      "text": "ALQUILER Y VENTA DE MAQUINARIA  ·  DESDE 1962"
+    },
+    "0x14156ad52": {
+      "en": "AUTUMN CATALOGUE 2026",
+      "text": "CATÁLOGO DE OTOÑO 2026"
+    },
+    "0x14156ad72": {
+      "en": "MACHINES",
+      "text": "MÁQUINAS"
+    },
+    "0x14156ad7f": {
+      "en": "INSIDE",
+      "text": "EN EL INTERIOR"
+    },
+    "0x14156ad88": {
+      "en": "HIRE IT BY THE HOUR. BUY IT FOR LIFE.",
+      "text": "ALQUÍLALA POR HORAS. CÓMPRALA PARA SIEMPRE."
+    },
+    "0x14156adb0": {
+      "en": "Every machine delivered to your site: to the yard, the gate or right beside you.",
+      "text": "Todas las máquinas se entregan en tu obra: en el patio, la entrada o junto a ti."
+    },
+    "0x14156ae08": {
+      "en": "The yard on the north road  ·  open six till six  ·  ask for Erik",
+      "text": "El patio de la carretera norte  ·  abierto de seis a seis  ·  pregunta por Erik"
+    },
+    "0x14156ae4c": {
+      "en": "owned, on every site",
+      "text": "en propiedad, en toda obra"
+    },
+    "0x14156ae61": {
+      "en": "to hire, waiting on you",
+      "text": "en alquiler, esperándote"
+    },
+    "0x14156ae79": {
+      "en": "to buy, waiting on you",
+      "text": "para comprar, esperándote"
+    },
+    "0x14156ae90": {
+      "en": "on hire by the hour",
+      "text": "alquilada por horas"
+    },
+    "0x14156aea4": {
+      "en": "THE COUNTER",
+      "text": "EL MOSTRADOR"
+    },
+    "0x14156aeb0": {
+      "en": "YOUR MACHINES",
+      "text": "TUS MÁQUINAS"
+    },
+    "0x14156aec0": {
+      "en": "Account 0042  ·  HOLMGREN'S MACHINES",
+      "text": "Cuenta 0042  ·  MAQUINARIA HOLMGREN"
+    },
+    "0x14156aee6": {
+      "en": "In the account",
+      "text": "En la cuenta"
+    },
+    "0x14156aefe": {
+      "en": "ON HIRE",
+      "text": "ALQUILADAS"
+    },
+    "0x14156af08": {
+      "en": "A machine bought is paid at the counter, and a machine hired its first hour.",
+      "text": "Una máquina comprada se paga en mostrador, y una alquilada su primera hora."
+    },
+    "0x14156af55": {
+      "en": "Nothing on order.",
+      "text": "Nada en pedido."
+    },
+    "0x14156af68": {
+      "en": "Press Hire or Buy on a machine's page.",
+      "text": "Pulsa Alquilar o Comprar en la ficha de una máquina."
+    },
+    "0x14156af8f": {
+      "en": "OWNED",
+      "text": "EN PROPIEDAD"
+    },
+    "0x14156af98": {
+      "en": "short ",
+      "text": "faltan "
+    },
+    "0x14156af9f": {
+      "en": " / h",
+      "text": " / h"
+    },
+    "0x14156afa9": {
+      "en": "Confirm",
+      "text": "Confirmar"
+    },
+    "0x14156afb1": {
+      "en": "Cancel",
+      "text": "Cancelar"
+    },
+    "0x14156afb8": {
+      "en": "and %d more",
+      "text": "y %d más"
+    },
+    "0x14156afc4": {
+      "en": "Open",
+      "text": "Abrir"
+    },
+    "0x14156afc9": {
+      "en": "Next",
+      "text": "Siguiente"
+    },
+    "0x14156afce": {
+      "en": "Previous",
+      "text": "Anterior"
+    },
+    "0x14156afd7": {
+      "en": "Back",
+      "text": "Atrás"
+    },
+    "0x14156bd29": {
+      "en": "ROAD",
+      "text": "CAMINO"
+    },
+    "0x14156bd2e": {
+      "en": "PAD",
+      "text": "EXPLAN."
+    },
+    "0x14156bd32": {
+      "en": "%.2f m",
+      "text": "%.2f m"
+    },
+    "0x14156bd39": {
+      "en": "on grade",
+      "text": "en rasante"
+    },
+    "0x14156bd42": {
+      "en": "cut",
+      "text": "desmonte"
+    },
+    "0x14156bd46": {
+      "en": "%s %.2f m",
+      "text": "%s %.2f m"
+    },
+    "0x14156bd50": {
+      "en": "fill",
+      "text": "terraplén"
+    },
+    "0x14156bd86": {
+      "en": "done",
+      "text": "hecho"
+    },
+    "0x14156bd8b": {
+      "en": "hold to remove",
+      "text": "mantén para quitar"
+    },
+    "0x14156cc64": {
+      "en": "%d · %.1f m/s",
+      "text": "%d · %.1f m/s"
+    },
+    "0x14156cca2": {
+      "en": "%+.0f cm",
+      "text": "%+.0f cm"
+    },
+    "0x14156ccab": {
+      "en": "%+.1f cm",
+      "text": "%+.1f cm"
+    },
+    "0x1414a5493": {
+      "en": "Save *",
+      "text": "Guardar *"
+    },
+    "0x1414a549a": {
+      "en": "Save",
+      "text": "Guardar"
+    },
+    "0x1414a549f": {
+      "en": "Cancel render",
+      "text": "Cancelar render"
+    },
+    "0x1414a54ad": {
+      "en": "Render video",
+      "text": "Renderizar vídeo"
+    },
+    "0x1414a54d5": {
+      "en": "File",
+      "text": "Archivo"
+    },
+    "0x1414a54e0": {
+      "en": "Open...",
+      "text": "Abrir..."
+    },
+    "0x1414a54ee": {
+      "en": "New from take...",
+      "text": "Nuevo desde toma..."
+    },
+    "0x1414a5511": {
+      "en": "Save as...",
+      "text": "Guardar como..."
+    },
+    "0x1414a5526": {
+      "en": "Close",
+      "text": "Cerrar"
+    },
+    "0x1414a5538": {
+      "en": "Quit",
+      "text": "Salir"
+    },
+    "0x1414a5542": {
+      "en": "Edit",
+      "text": "Editar"
+    },
+    "0x1414a554d": {
+      "en": "Undo",
+      "text": "Deshacer"
+    },
+    "0x1414a5552": {
+      "en": "View",
+      "text": "Ver"
+    },
+    "0x1414a5557": {
+      "en": "Free",
+      "text": "Libre"
+    },
+    "0x1414a5566": {
+      "en": "Chase",
+      "text": "Externa"
+    },
+    "0x1414a5578": {
+      "en": "Cab",
+      "text": "Cabina"
+    },
+    "0x1414a5586": {
+      "en": "Through the clip",
+      "text": "A través del clip"
+    },
+    "0x1414a55a4": {
+      "en": "Show",
+      "text": "Mostrar"
+    },
+    "0x1414a55b2": {
+      "en": "Hide panels",
+      "text": "Ocultar paneles"
+    },
+    "0x1414a560f": {
+      "en": "clip tool",
+      "text": "herramienta de clip"
+    },
+    "0x1414a56fd": {
+      "en": "timeline",
+      "text": "línea de tiempo"
+    },
+    "0x1414a56ee": {
+      "en": "playing",
+      "text": "reproduciendo"
+    },
+    "0x1414a56f6": {
+      "en": "paused",
+      "text": "en pausa"
+    },
+    "0x1414a578c": {
+      "en": "whole take",
+      "text": "toma completa"
+    },
+    "0x1414a5797": {
+      "en": "zoom all",
+      "text": "ver todo"
+    },
+    "0x1414a57a0": {
+      "en": "fit range",
+      "text": "ajustar rango"
+    },
+    "0x1414a57aa": {
+      "en": "zoom range",
+      "text": "zoom al rango"
+    }
+  },
+  "table_strings": {
+    "controls": {
+      "0x1414a0dc5": {
+        "en": "TRAVEL",
+        "text": "DESPLAZAMIENTO"
+      },
+      "0x1414a0f9d": {
+        "en": "HYDRAULICS",
+        "text": "HIDRÁULICA"
+      },
+      "0x1414a1111": {
+        "en": "SWITCHES",
+        "text": "INTERRUPTORES"
+      },
+      "0x1414a1251": {
+        "en": "GRADE HOLD",
+        "text": "MANTENER RASANTE"
+      },
+      "0x1414a171c": {
+        "en": "MENUS",
+        "text": "MENÚS"
+      },
+      "0x1414a1814": {
+        "en": "CAMERA",
+        "text": "CÁMARA"
+      },
+      "0x1414a18f5": {
+        "en": "ON FOOT",
+        "text": "A PIE"
+      },
+      "0x1414a1bbd": {
+        "en": "KEYS",
+        "text": "TECLAS"
+      },
+      "0x1414a0dbf": {
+        "en": "Drive",
+        "text": "Conducir"
+      },
+      "0x1414a0df5": {
+        "en": "Steer",
+        "text": "Girar"
+      },
+      "0x1414a0e0a": {
+        "en": "Brake / handbrake",
+        "text": "Freno / freno de mano"
+      },
+      "0x1414a0e2c": {
+        "en": "Speed range 1",
+        "text": "Rango de velocidad 1"
+      },
+      "0x1414a0e4a": {
+        "en": "Speed range 2",
+        "text": "Rango de velocidad 2"
+      },
+      "0x1414a0e68": {
+        "en": "Speed range 3",
+        "text": "Rango de velocidad 3"
+      },
+      "0x1414a0e86": {
+        "en": "Speed range 4",
+        "text": "Rango de velocidad 4"
+      },
+      "0x1414a0ea4": {
+        "en": "Speed range 5",
+        "text": "Rango de velocidad 5"
+      },
+      "0x1414a0ec2": {
+        "en": "Speed range 6",
+        "text": "Rango de velocidad 6"
+      },
+      "0x1414a0ee0": {
+        "en": "Speed range 7",
+        "text": "Rango de velocidad 7"
+      },
+      "0x1414a0efe": {
+        "en": "Speed range 8",
+        "text": "Rango de velocidad 8"
+      },
+      "0x1414a0f1c": {
+        "en": "Speed range 9",
+        "text": "Rango de velocidad 9"
+      },
+      "0x1414a0f38": {
+        "en": "Arm",
+        "text": "Brazo"
+      },
+      "0x1414a0f40": {
+        "en": "pull back to raise the hooklift's arm, the hauler's bed, the tractor's hitch or front loader",
+        "text": "tira hacia atrás para elevar el brazo de gancho, la caja del dúmper, el enganche o la pala frontal del tractor"
+      },
+      "0x1414a0fb6": {
+        "en": "Curl",
+        "text": "Volteo"
+      },
+      "0x1414a0fc0": {
+        "en": "left slides the hooklift's bed, curls the tractor's front loader",
+        "text": "izquierda desliza la caja del camión de gancho o voltea la pala frontal del tractor"
+      },
+      "0x1414a100d": {
+        "en": "pull back to raise",
+        "text": "tira hacia atrás para subir"
+      },
+      "0x1414a102c": {
+        "en": "Bucket",
+        "text": "Cazo"
+      },
+      "0x1414a1033": {
+        "en": "left curls",
+        "text": "izquierda recoge"
+      },
+      "0x1414a104c": {
+        "en": "Attachment lever",
+        "text": "Palanca de implemento"
+      },
+      "0x1414a1060": {
+        "en": "flaps, tines, plow angle, slide",
+        "text": "aletas, uñas, ángulo del arado, deslizamiento"
+      },
+      "0x1414a1080": {
+        "en": "Front end",
+        "text": "Parte frontal"
+      },
+      "0x1414a1090": {
+        "en": "hold to work the front loader or plow",
+        "text": "mantén para manejar la pala frontal o el arado"
+      },
+      "0x1414a10c9": {
+        "en": "Left side only",
+        "text": "Solo lado izquierdo"
+      },
+      "0x1414a10d8": {
+        "en": "hold to control only the left flap, tine or tractor fork",
+        "text": "mantén para controlar solo la aleta, uña u horquilla izquierda"
+      },
+      "0x1414a112e": {
+        "en": "Right side only",
+        "text": "Solo lado derecho"
+      },
+      "0x1414a114e": {
+        "en": "Rear hydraulics",
+        "text": "Hidráulica trasera"
+      },
+      "0x1414a1160": {
+        "en": "the tractor's outlets, the hooklift's plow, a tipping trailer",
+        "text": "tomas del tractor, arado del camión de gancho, remolque basculante"
+      },
+      "0x1414a11ac": {
+        "en": "Lean",
+        "text": "Inclinar"
+      },
+      "0x1414a11c0": {
+        "en": "Winch drum",
+        "text": "Tambor del cabrestante"
+      },
+      "0x1414a11df": {
+        "en": "Attachment",
+        "text": "Implemento"
+      },
+      "0x1414a11ea": {
+        "en": "hitch, plow, trailer",
+        "text": "enganche, arado, remolque"
+      },
+      "0x1414a120e": {
+        "en": "Speed range",
+        "text": "Rango de velocidad"
+      },
+      "0x1414a121a": {
+        "en": "opens the speed range menu",
+        "text": "abre el menú de rangos de velocidad"
+      },
+      "0x1414a1246": {
+        "en": "Hold grade",
+        "text": "Mantener rasante"
+      },
+      "0x1414a126c": {
+        "en": "Tilt lock",
+        "text": "Bloqueo de inclinación"
+      },
+      "0x1414a1278": {
+        "en": "the blade's tilt follows the grade, or stays yours",
+        "text": "la inclinación de la hoja sigue la rasante o queda bajo tu control"
+      },
+      "0x1414a12bd": {
+        "en": "Hold offset",
+        "text": "Desfase de rasante"
+      },
+      "0x1414a12c9": {
+        "en": "opens the grade offset menu",
+        "text": "abre el menú de desfase de rasante"
+      },
+      "0x1414a12fc": {
+        "en": "Warning light",
+        "text": "Baliza luminosa"
+      },
+      "0x1414a1320": {
+        "en": "Rear hydraulics fully up / down",
+        "text": "Hidráulica trasera arriba / abajo del todo"
+      },
+      "0x1414a1355": {
+        "en": "Hitch up / down",
+        "text": "Subir / bajar enganche"
+      },
+      "0x1414a1378": {
+        "en": "Diff lock",
+        "text": "Bloqueo diferencial"
+      },
+      "0x1414a139a": {
+        "en": "Attachment lock",
+        "text": "Bloqueo de implemento"
+      },
+      "0x1414a13b0": {
+        "en": "the tractor's front, the hooklift's arm, a loader's bracket",
+        "text": "el frontal del tractor, el brazo de gancho, el acoplamiento de la cargadora"
+      },
+      "0x1414a1403": {
+        "en": "Tailgate lock",
+        "text": "Cierre de compuerta"
+      },
+      "0x1414a1411": {
+        "en": "the tipper's",
+        "text": "la del volquete"
+      },
+      "0x1414a1431": {
+        "en": "Lift axle",
+        "text": "Eje elevable"
+      },
+      "0x1414a1440": {
+        "en": "the hooklift's rear axle up or down",
+        "text": "sube o baja el eje trasero del camión de gancho"
+      },
+      "0x1414a1473": {
+        "en": "Float",
+        "text": "Flotante"
+      },
+      "0x1414a1480": {
+        "en": "the plow, the dozer's blade, the feeder's belts on and off",
+        "text": "el arado, la hoja del buldócer, enciende y apaga las cintas del alimentador"
+      },
+      "0x1414a14cc": {
+        "en": "Respawn",
+        "text": "Reaparecer"
+      },
+      "0x1414a14e3": {
+        "en": "Throttle",
+        "text": "Acelerador"
+      },
+      "0x1414a14ec": {
+        "en": "one joystick; neutral brakes",
+        "text": "un joystick; punto muerto frena"
+      },
+      "0x1414a1520": {
+        "en": "Blade lift",
+        "text": "Elevación de hoja"
+      },
+      "0x1414a1536": {
+        "en": "Blade tilt",
+        "text": "Inclinación de hoja"
+      },
+      "0x1414a1553": {
+        "en": "Blade angle",
+        "text": "Ángulo de hoja"
+      },
+      "0x1414a1571": {
+        "en": "Blade pitch",
+        "text": "Cabeceo de hoja"
+      },
+      "0x1414a158e": {
+        "en": "Hold offset down",
+        "text": "Bajar desfase"
+      },
+      "0x1414a15b0": {
+        "en": "Hold offset up",
+        "text": "Subir desfase"
+      },
+      "0x1414a15d4": {
+        "en": "Left track",
+        "text": "Oruga izquierda"
+      },
+      "0x1414a15f5": {
+        "en": "Right track",
+        "text": "Oruga derecha"
+      },
+      "0x1414a1610": {
+        "en": "Boom",
+        "text": "Pluma"
+      },
+      "0x1414a1624": {
+        "en": "Slew",
+        "text": "Giro"
+      },
+      "0x1414a1629": {
+        "en": "the feeder's hopper wings",
+        "text": "las alas de la tolva del alimentador"
+      },
+      "0x1414a1653": {
+        "en": "Stick",
+        "text": "Brazo"
+      },
+      "0x1414a1659": {
+        "en": "the feeder's head fold",
+        "text": "el plegado del cabezal del alimentador"
+      },
+      "0x1414a1680": {
+        "en": "left curls; the feeder's chassis tilt",
+        "text": "izquierda recoge; inclinación del chasis del alimentador"
+      },
+      "0x1414a16b6": {
+        "en": "Thumb",
+        "text": "Pinza"
+      },
+      "0x1414a16c0": {
+        "en": "push to close, stays where let go; the feeder's take-up",
+        "text": "empuja para cerrar, se queda donde sueltes; tensor del alimentador"
+      },
+      "0x1414a16f8": {
+        "en": "Wheel",
+        "text": "Ruleta"
+      },
+      "0x1414a16fe": {
+        "en": "the gamepad's and the sticks'",
+        "text": "la del mando y los joysticks"
+      },
+      "0x1414a172d": {
+        "en": "Map",
+        "text": "Mapa"
+      },
+      "0x1414a1731": {
+        "en": "opens the site map",
+        "text": "abre el plano de la obra"
+      },
+      "0x1414a1753": {
+        "en": "Minimap zoom",
+        "text": "Zoom del minimapa"
+      },
+      "0x1414a1760": {
+        "en": "where the site has a minimap",
+        "text": "cuando la obra tiene minimapa"
+      },
+      "0x1414a1789": {
+        "en": "Hide or show jobs",
+        "text": "Mostrar u ocultar trabajos"
+      },
+      "0x1414a17a0": {
+        "en": "the jobs list in the top right corner",
+        "text": "la lista de trabajos en la esquina superior derecha"
+      },
+      "0x1414a17d2": {
+        "en": "Grade grid",
+        "text": "Cuadrícula de nivel"
+      },
+      "0x1414a17dd": {
+        "en": "shown, or only after a change",
+        "text": "visible siempre, o solo tras un cambio"
+      },
+      "0x1414a17fb": {
+        "en": "Change view",
+        "text": "Cambiar vista"
+      },
+      "0x1414a1807": {
+        "en": "chase or cab",
+        "text": "externa o cabina"
+      },
+      "0x1414a1830": {
+        "en": "Look behind",
+        "text": "Mirar atrás"
+      },
+      "0x1414a1840": {
+        "en": "hold to look behind, tap to put the view back",
+        "text": "mantén para mirar atrás, pulsa para devolver la vista"
+      },
+      "0x1414a1880": {
+        "en": "Get in or out",
+        "text": "Subir o bajar"
+      },
+      "0x1414a1890": {
+        "en": "a pad's or the sticks' Interact does it too",
+        "text": "Interactuar en el mando o joysticks también sirve"
+      },
+      "0x1414a18cc": {
+        "en": "Interact",
+        "text": "Interactuar"
+      },
+      "0x1414a18d5": {
+        "en": "Debug dump",
+        "text": "Volcado de depuración"
+      },
+      "0x1414a18f0": {
+        "en": "Walk",
+        "text": "Caminar"
+      },
+      "0x1414a190e": {
+        "en": "Strafe",
+        "text": "Desplazamiento lateral"
+      },
+      "0x1414a1921": {
+        "en": "Jump",
+        "text": "Saltar"
+      },
+      "0x1414a1932": {
+        "en": "Push",
+        "text": "Empujar"
+      },
+      "0x1414a1938": {
+        "en": "hold and walk into a machine to push it",
+        "text": "mantén y camina contra una máquina para empujarla"
+      },
+      "0x1414a196c": {
+        "en": "Talk",
+        "text": "Hablar"
+      },
+      "0x1414a197c": {
+        "en": "Use",
+        "text": "Usar"
+      },
+      "0x1414a1980": {
+        "en": "places a grade stick",
+        "text": "coloca una estaca de nivel"
+      },
+      "0x1414a19a8": {
+        "en": "tap at a stick to set its height, hold to remove it; a pad's X does both",
+        "text": "toca en una estaca para fijar su altura, mantén para quitarla; X del mando hace ambas"
+      },
+      "0x1414a1a04": {
+        "en": "Mark height",
+        "text": "Altura de marca"
+      },
+      "0x1414a1a10": {
+        "en": "up or down in a stick's height mode",
+        "text": "sube o baja en el modo de altura de una estaca"
+      },
+      "0x1414a1a46": {
+        "en": "Stick mode",
+        "text": "Modo de estaca"
+      },
+      "0x1414a1a58": {
+        "en": "road or pad, in a stick's height mode",
+        "text": "camino o explanada, en el modo de altura de una estaca"
+      },
+      "0x1414a1a8c": {
+        "en": "Call the bike",
+        "text": "Llamar a la moto"
+      },
+      "0x1414a1a9a": {
+        "en": "or the snowmobile",
+        "text": "o a la motonieve"
+      },
+      "0x1414a1abc": {
+        "en": "Fire the charges",
+        "text": "Detonar las cargas"
+      },
+      "0x1414a1ad9": {
+        "en": "Tool belt",
+        "text": "Cinturón de herramientas"
+      },
+      "0x1414a1ae3": {
+        "en": "opens the tool belt menu",
+        "text": "abre el menú del cinturón de herramientas"
+      },
+      "0x1414a1b09": {
+        "en": "No tool",
+        "text": "Sin herramienta"
+      },
+      "0x1414a1b11": {
+        "en": "the hands free",
+        "text": "manos libres"
+      },
+      "0x1414a1b2d": {
+        "en": "Grade sticks",
+        "text": "Estacas de nivel"
+      },
+      "0x1414a1b47": {
+        "en": "Drill",
+        "text": "Taladro"
+      },
+      "0x1414a1b5a": {
+        "en": "Dynamite",
+        "text": "Dinamita"
+      },
+      "0x1414a1b70": {
+        "en": "Detonator",
+        "text": "Detonador"
+      },
+      "0x1414a1b8c": {
+        "en": "Belt",
+        "text": "Cinturón"
+      },
+      "0x1414a1bb7": {
+        "en": "Pause",
+        "text": "Pausa"
+      },
+      "0x1414a1bcd": {
+        "en": "Tuning",
+        "text": "Ajuste fino"
+      },
+      "0x1414a1bdf": {
+        "en": "Replay",
+        "text": "Repetición"
+      },
+      "0x1414a1bef": {
+        "en": "Record take",
+        "text": "Grabar toma"
+      },
+      "0x1414a1c03": {
+        "en": "Run",
+        "text": "Correr"
+      }
+    },
+    "free_cam": {
+      "0x141562d58": {
+        "en": "MENUS",
+        "text": "MENÚS"
+      },
+      "0x141562d5e": {
+        "en": "Esc menu",
+        "text": "Menú Esc"
+      },
+      "0x141562d71": {
+        "en": "FREE CAMERA",
+        "text": "CÁMARA LIBRE"
+      },
+      "0x141562d7d": {
+        "en": "Fly",
+        "text": "Volar"
+      },
+      "0x141562d86": {
+        "en": "L stick",
+        "text": "Palanca I"
+      },
+      "0x141562d8e": {
+        "en": "Up / down",
+        "text": "Subir / bajar"
+      },
+      "0x141562da6": {
+        "en": "Fast",
+        "text": "Rápido"
+      },
+      "0x141562db4": {
+        "en": "Faster",
+        "text": "Más rápido"
+      }
+    },
+    "look_around": {
+      "0x141562c58": {
+        "en": "Look around",
+        "text": "Mirar alrededor"
+      },
+      "0x141562c64": {
+        "en": "on foot",
+        "text": "a pie"
+      },
+      "0x141562c70": {
+        "en": "in a truck, the tractor, the bike or the snowmobile",
+        "text": "en un camión, el tractor, la moto o la motonieve"
+      },
+      "0x141562ca4": {
+        "en": "in a loader",
+        "text": "en una cargadora"
+      },
+      "0x141562cb0": {
+        "en": "in the dozer",
+        "text": "en el buldócer"
+      },
+      "0x141562cbd": {
+        "en": "in the excavator",
+        "text": "en la excavadora"
+      }
+    },
+    "vehicle_tabs": {
+      "0x1414a0950": {
+        "en": "on foot",
+        "text": "a pie"
+      },
+      "0x1414a0958": {
+        "en": "loaders",
+        "text": "cargadoras"
+      },
+      "0x1414a0960": {
+        "en": "hauler",
+        "text": "dúmper"
+      },
+      "0x1414a0967": {
+        "en": "truck",
+        "text": "camión"
+      },
+      "0x1414a096d": {
+        "en": "hooklift",
+        "text": "camión gancho"
+      },
+      "0x1414a0976": {
+        "en": "tractor",
+        "text": "tractor"
+      },
+      "0x1414a097e": {
+        "en": "bandvagn",
+        "text": "bandvagn"
+      },
+      "0x1414a0987": {
+        "en": "dozer",
+        "text": "buldócer"
+      },
+      "0x1414a098d": {
+        "en": "excavator",
+        "text": "excavadora"
+      },
+      "0x1414a0997": {
+        "en": "dirt bike",
+        "text": "moto de cross"
+      },
+      "0x1414a09a1": {
+        "en": "snowmobile",
+        "text": "motonieve"
+      },
+      "0x1414a09ac": {
+        "en": "track feeder",
+        "text": "alimentador"
+      },
+      "0x14149ed10": {
+        "en": "R stick + L hat",
+        "text": "Palanca D + cruceta I"
+      }
+    },
+    "machine_display": {
+      "0x141648820": {
+        "full_en": "dozer",
+        "full": "buldócer",
+        "short_en": "dozer",
+        "short": "buldócer"
+      },
+      "0x141648840": {
+        "full_en": "medium loader",
+        "full": "cargadora mediana",
+        "short_en": "loader",
+        "short": "cargadora"
+      },
+      "0x141648860": {
+        "full_en": "bandvagn",
+        "full": "bandvagn",
+        "short_en": "bandvagn",
+        "short": "bandvagn"
+      },
+      "0x141648880": {
+        "full_en": "truck",
+        "full": "camión",
+        "short_en": "truck",
+        "short": "camión"
+      },
+      "0x1416488a0": {
+        "full_en": "hauler",
+        "full": "dúmper",
+        "short_en": "hauler",
+        "short": "dúmper"
+      },
+      "0x1416488c0": {
+        "full_en": "dirt bike",
+        "full": "moto de cross",
+        "short_en": "bike",
+        "short": "moto"
+      },
+      "0x1416488e0": {
+        "full_en": "excavator",
+        "full": "excavadora",
+        "short_en": "excavator",
+        "short": "excavadora"
+      },
+      "0x141648900": {
+        "full_en": "snowmobile",
+        "full": "motonieve",
+        "short_en": "sled",
+        "short": "motonieve"
+      },
+      "0x141648920": {
+        "full_en": "tractor",
+        "full": "tractor",
+        "short_en": "tractor",
+        "short": "tractor"
+      },
+      "0x141648940": {
+        "full_en": "hooklift",
+        "full": "camión de gancho",
+        "short_en": "hooklift",
+        "short": "camión gancho"
+      },
+      "0x141648960": {
+        "full_en": "large loader",
+        "full": "cargadora grande",
+        "short_en": "loader",
+        "short": "cargadora"
+      },
+      "0x141648980": {
+        "full_en": "track feeder",
+        "full": "alimentador de orugas",
+        "short_en": "feeder",
+        "short": "alimentador"
+      }
+    },
+    "editor": {
+      "Select": "Seleccionar",
+      "Sculpt": "Esculpir",
+      "Ground": "Terreno",
+      "Shapes": "Formas",
+      "Paint": "Pintar",
+      "Water": "Agua",
+      "raise": "elevar",
+      "lift": "levantar",
+      "lower": "bajar",
+      "paint": "pintar",
+      "vegetation": "vegetación",
+      "flatten": "aplanar",
+      "smooth": "suavizar",
+      "pour water": "verter agua",
+      "water to level": "agua a nivel",
+      "tunnel": "túnel",
+      "noise": "ruido",
+      "weather": "erosionar",
+      "erode": "erosión",
+      "profile": "perfil",
+      "terrace": "terraza",
+      "clone": "clonar",
+      "peak / valley": "pico / valle",
+      "paint mask": "pintar máscara",
+      "stencil": "plantilla",
+      "spring": "manantial",
+      "road": "camino",
+      "tree": "árbol",
+      "rock": "roca",
+      "prop": "objeto",
+      "spawn": "aparición",
+      "section": "sección",
+      "delete": "eliminar",
+      "select": "seleccionar",
+      "field": "campo",
+      "thin vegetation": "aclarar vegetación",
+      "tree brush": "pincel de árboles",
+      "places a rectangular block of material on the ground": "coloca un bloque rectangular de material sobre el terreno",
+      "places a ramp rising along Z to the chosen height": "coloca una rampa que sube a lo largo de Z hasta la altura elegida",
+      "creates a flat pad at the clicked height, blending into the surrounding terrain": "crea una explanada plana a la altura seleccionada, fundiéndola con el terreno",
+      "creates a circular pond, initially 1 metre above the clicked ground": "crea un estanque circular, inicialmente a 1 metro sobre el terreno marcado",
+      "adds a grayscale heightmap to the bedrock; black and white map to the low and high settings": "añade un mapa de alturas en escala de grises a la roca madre; negro y blanco corresponden a los valores bajo y alto",
+      "deposits material from an image mask, with material and thickness set per pixel value": "deposita material según una máscara de imagen, definiendo material y grosor por valor de píxel",
+      "paints vegetation over a rectangle, using one type or an image mask": "pinta vegetación en un rectángulo usando un tipo o una máscara de imagen",
+      "creates scattered domes or narrow towers of material within a rectangle": "crea domos dispersos o torres estrechas de material dentro de un rectángulo",
+      "scatters trees in a circle, limited by slope and a mask": "dispersa árboles en un círculo, limitados por la pendiente y una máscara",
+      "thins listed trees inside an outline, leaving stumps and heath": "aclara los árboles indicados dentro de un contorno, dejando tocones y brezo",
+      "carves a hollow below the clicked ground": "excava una hondonada por debajo del terreno marcado",
+      "adds material under the brush; uses the existing surface material unless you choose a fill": "añade material bajo el pincel; usa el material superficial existente salvo que elijas un relleno",
+      "raises the ground, including its layers, grass and water, without adding material": "eleva el terreno, incluidas sus capas, hierba y agua, sin añadir material"
+    },
+    "extra_ui": {
+      "0x141562f80": {
+        "en": "CAMERA",
+        "text": "CÁMARA"
+      },
+      "0x141562f88": {
+        "en": "TRAVEL",
+        "text": "DESPLAZAMIENTO"
+      },
+      "0x141562f90": {
+        "en": "STEERING RETURN",
+        "text": "RETORNO DE DIRECCIÓN"
+      },
+      "0x141562f98": {
+        "en": "HYDRAULICS",
+        "text": "HIDRÁULICA"
+      },
+      "0x141562fa0": {
+        "en": "SWITCHES",
+        "text": "INTERRUPTORES"
+      },
+      "0x141562fa8": {
+        "en": "GRADE HOLD",
+        "text": "MANTENER RASANTE"
+      },
+      "0x141562fb0": {
+        "en": "MENUS",
+        "text": "MENÚS"
+      },
+      "0x141562fb8": {
+        "en": "ON FOOT",
+        "text": "A PIE"
+      },
+      "0x141562fc0": {
+        "en": "KEYS",
+        "text": "TECLAS"
+      },
+      "0x141562fc8": {
+        "en": "FREE CAMERA",
+        "text": "CÁMARA LIBRE"
+      },
+      "0x1416351c0": {
+        "en": "loading site",
+        "text": "cargando obra"
+      },
+      "0x1416351c8": {
+        "en": "building roads",
+        "text": "construyendo caminos"
+      },
+      "0x1416351d0": {
+        "en": "building terrain",
+        "text": "generando terreno"
+      },
+      "0x1416351d8": {
+        "en": "placing trees",
+        "text": "colocando árboles"
+      },
+      "0x1416351e0": {
+        "en": "placing buildings",
+        "text": "colocando edificios"
+      },
+      "0x1416351e8": {
+        "en": "preparing dirt",
+        "text": "preparando tierra"
+      },
+      "0x1416351f0": {
+        "en": "placing machines",
+        "text": "colocando máquinas"
+      },
+      "0x1416351f8": {
+        "en": "placing objects",
+        "text": "colocando objetos"
+      },
+      "0x141635200": {
+        "en": "building collisions",
+        "text": "generando colisiones"
+      },
+      "0x141635208": {
+        "en": "settling terrain",
+        "text": "asentando terreno"
+      },
+      "0x141635210": {
+        "en": "compiling shaders",
+        "text": "compilando sombreadores"
+      },
+      "0x141635218": {
+        "en": "receiving the site",
+        "text": "recibiendo la obra"
+      },
+      "0x141566338": {
+        "en": "SIZE",
+        "text": "TAMAÑO"
+      },
+      "0x141566340": {
+        "en": "SOURCE",
+        "text": "ORIGEN"
+      },
+      "0x1415666b0": {
+        "en": "THE GAME'S SITES",
+        "text": "OBRAS DEL JUEGO"
+      }
+    }
+  },
+  "pack_toml": {
+    "shop.toml": [
+      {
+        "old": "section = \"Loaders\"",
+        "new": "section = \"Cargadoras\""
+      },
+      {
+        "old": "section = \"Earthmoving\"",
+        "new": "section = \"Movimiento de tierras\""
+      },
+      {
+        "old": "section = \"Haulage\"",
+        "new": "section = \"Transporte\""
+      },
+      {
+        "old": "section = \"Farm\"",
+        "new": "section = \"Agrícola\""
+      },
+      {
+        "old": "section = \"Getting about\"",
+        "new": "section = \"Desplazamiento\""
+      },
+      {
+        "old": "name = \"Wheel loader\"",
+        "new": "name = \"Cargadora de ruedas\""
+      },
+      {
+        "old": "name = \"Large wheel loader\"",
+        "new": "name = \"Cargadora de ruedas grande\""
+      },
+      {
+        "old": "name = \"Crawler dozer\"",
+        "new": "name = \"Buldócer de orugas\""
+      },
+      {
+        "old": "name = \"Excavator\"",
+        "new": "name = \"Excavadora\""
+      },
+      {
+        "old": "name = \"Articulated hauler\"",
+        "new": "name = \"Dúmper articulado\""
+      },
+      {
+        "old": "name = \"Hooklift truck\"",
+        "new": "name = \"Camión de gancho\""
+      },
+      {
+        "old": "name = \"Farm tractor\"",
+        "new": "name = \"Tractor agrícola\""
+      },
+      {
+        "old": "name = \"Pickup\"",
+        "new": "name = \"Camioneta\""
+      },
+      {
+        "old": "name = \"Tracked carrier\"",
+        "new": "name = \"Transporte de orugas\""
+      },
+      {
+        "old": "name = \"Snowmobile\"",
+        "new": "name = \"Motonieve\""
+      },
+      {
+        "old": "name = \"Dirt bike\"",
+        "new": "name = \"Moto de cross\""
+      },
+      {
+        "old": "spec = \"1.8 m3 bucket\"",
+        "new": "spec = \"cazo de 1,8 m3\""
+      },
+      {
+        "old": "spec = \"3.8 m3 bucket\"",
+        "new": "spec = \"cazo de 3,8 m3\""
+      },
+      {
+        "old": "spec = \"3.4 m blade\"",
+        "new": "spec = \"hoja de 3,4 m\""
+      },
+      {
+        "old": "spec = \"6.6 m reach\"",
+        "new": "spec = \"alcance de 6,6 m\""
+      },
+      {
+        "old": "spec = \"12 m3 body\"",
+        "new": "spec = \"caja de 12 m3\""
+      },
+      {
+        "old": "spec = \"takes every container\"",
+        "new": "spec = \"admite cualquier contenedor\""
+      },
+      {
+        "old": "spec = \"front loader, three point hitch\"",
+        "new": "spec = \"pala frontal, enganche tripuntal\""
+      },
+      {
+        "old": "spec = \"plough mount\"",
+        "new": "spec = \"soporte para arado\""
+      },
+      {
+        "old": "spec = \"two bodies, it swims\"",
+        "new": "spec = \"dos cuerpos, es anfibio\""
+      },
+      {
+        "old": "spec = \"one seat, one ski each side\"",
+        "new": "spec = \"un asiento, un esquí por lado\""
+      },
+      {
+        "old": "spec = \"two wheels, no excuses\"",
+        "new": "spec = \"dos ruedas, sin excusas\""
+      },
+      {
+        "old": "tagline = \"The site's all-rounder: scoops, carries, ploughs and loads a truck in four passes.\"",
+        "new": "tagline = \"La todoterreno de la obra: carga, transporta, quita nieve y llena un camión en cuatro pasadas.\""
+      },
+      {
+        "old": "tagline = \"Twice the bucket, a pin hitch for trailers, and a cab you could live in.\"",
+        "new": "tagline = \"El doble de cazo, enganche de bulón para remolques y una cabina para vivir en ella.\""
+      },
+      {
+        "old": "tagline = \"Push, rip and grade. Tracks that float on mud and a blade that tilts as you think it.\"",
+        "new": "tagline = \"Empuja, escarifica y nivela. Orugas que flotan en el barro y una hoja que responde al instante.\""
+      },
+      {
+        "old": "tagline = \"A trench by lunch, a pond by tea. Quick coupler ready.\"",
+        "new": "tagline = \"Una zanja antes de comer, un estanque para la merienda. Lista para acoplamiento rápido.\""
+      },
+      {
+        "old": "tagline = \"Six wheels driven, a body that tips in eight seconds and a ride over anything.\"",
+        "new": "tagline = \"Seis ruedas motrices, una caja que bascula en ocho segundos y paso por cualquier terreno.\""
+      },
+      {
+        "old": "tagline = \"Swap a tipper for a flatrack without leaving the seat.\"",
+        "new": "tagline = \"Cambia un volquete por una plataforma sin bajar del asiento.\""
+      },
+      {
+        "old": "tagline = \"Loader up front, plough behind, and the radio still works.\"",
+        "new": "tagline = \"Pala delante, arado detrás y la radio todavía funciona.\""
+      },
+      {
+        "old": "tagline = \"The boss's ride, the plough's mount, the coffee run.\"",
+        "new": "tagline = \"El coche del jefe, el soporte del arado y el recado del café.\""
+      },
+      {
+        "old": "tagline = \"Two bodies, four tracks, and it floats when the creek is higher than you thought.\"",
+        "new": "tagline = \"Dos cuerpos, cuatro orugas, y flota cuando el arroyo baja más crecido de lo que pensabas.\""
+      },
+      {
+        "old": "tagline = \"For the morning round of the village and nothing heavier.\"",
+        "new": "tagline = \"Para la ronda matutina por el pueblo y nada más pesado.\""
+      },
+      {
+        "old": "tagline = \"Kick it, ride it, drop it in the ditch. It doesn't mind.\"",
+        "new": "tagline = \"Arráncala a patada, condúcela, tírala a la cuneta. Le da igual.\""
+      }
+    ],
+    "key_layouts.toml": [
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"clásico\""
+      },
+      {
+        "old": "hint = \"the arrows work the arm and the bucket, the left and right buttons curl, the mouse always looks\"",
+        "new": "hint = \"las flechas mueven el brazo y el cazo, los botones izquierdo y derecho voltean, el ratón siempre mira\""
+      },
+      {
+        "old": "name = \"farm sim\"",
+        "new": "name = \"sim agrícola\""
+      },
+      {
+        "old": "hint = \"hold the left button and move the mouse for the arm and the bucket or the blade, the right for the excavator's stick and swing\"",
+        "new": "hint = \"mantén el botón izquierdo y mueve el ratón para el brazo y el cazo o la hoja; el derecho para el brazo y giro de la excavadora\""
+      }
+    ],
+    "pad_layouts.toml": [
+      {
+        "old": "name = \"hold LB\"",
+        "new": "name = \"mantener LB\""
+      },
+      {
+        "old": "hint = \"hold LB and the right stick works the arm, the bucket or the blade\"",
+        "new": "hint = \"mantén LB y la palanca derecha controla el brazo, el cazo o la hoja\""
+      },
+      {
+        "old": "name = \"click RS\"",
+        "new": "name = \"pulsar RS\""
+      },
+      {
+        "old": "hint = \"click the right stick to switch it between the camera and the arm, the bucket or the blade\"",
+        "new": "hint = \"pulsa la palanca derecha para alternar entre la cámara y el brazo, el cazo o la hoja\""
+      },
+      {
+        "old": "name = \"classic\"",
+        "new": "name = \"clásico\""
+      },
+      {
+        "old": "hint = \"the arm on the triggers and the bucket and the blade's tilt on the shoulders, the left stick driving\"",
+        "new": "hint = \"el brazo en los gatillos y el cazo o la inclinación de la hoja en los botones superiores; la palanca izquierda conduce\""
+      }
+    ],
+    "sites/demo2/demo2.toml": [
+      {
+        "old": "name = \"Flower Hill\"",
+        "new": "name = \"Colina de las Flores\""
+      },
+      {
+        "old": "byline = \"Demo map\"",
+        "new": "byline = \"Mapa de demostración\""
+      },
+      {
+        "old": "accepts = [\"27d9a082d2382faa\"]",
+        "new": "accepts = [\"27d9a082d2382faa\", \"811034dce06dee68\", \"bc57be2314fd0a38\"]"
+      },
+      {
+        "old": "locked = \"Waiting for parts, estimated arrival dec 4th\"",
+        "new": "locked = \"Esperando repuestos, llegada estimada el 4 de dic.\""
+      },
+      {
+        "old": "title = \"Sand haul & more\"",
+        "new": "title = \"Acarreo de arena y más\""
+      },
+      {
+        "old": "done = \"40 tonnes in, the river jumped and the boulder on the hill. Score. Keep hauling if you feel like it\"",
+        "new": "done = \"40 toneladas entregadas, el río saltado y la roca en la colina. ¡Genial! Sigue acarreando si te apetece\""
+      },
+      {
+        "old": "sheet = \"Sand to the gravel pad, {}\"",
+        "new": "sheet = \"Arena a la explanada de grava, {}\""
+      },
+      {
+        "old": "bill = \"Sand to the gravel pad\"",
+        "new": "bill = \"Arena a la explanada de grava\""
+      },
+      {
+        "old": "sheet = \"Find the truck\"",
+        "new": "sheet = \"Encuentra el camión\""
+      },
+      {
+        "old": "bill = \"Find the truck\"",
+        "new": "bill = \"Encuentra el camión\""
+      },
+      {
+        "old": "sheet = \"Jump the river with the truck\"",
+        "new": "sheet = \"Salta el río con el camión\""
+      },
+      {
+        "old": "bill = \"Sick jump with the truck\"",
+        "new": "bill = \"Salto espectacular con el camión\""
+      },
+      {
+        "old": "say = \"And when you are done, there is a truck up on the hill. Find it, and get it over the river. Somehow\"",
+        "new": "say = \"Y cuando termines, hay un camión arriba en la colina. Encuéntralo y pásalo al otro lado del río. Como sea\""
+      },
+      {
+        "old": "sheet = \"Get the boulder up on the hill\"",
+        "new": "sheet = \"Sube la roca a la colina\""
+      },
+      {
+        "old": "bill = \"Boulder on hill\"",
+        "new": "bill = \"Roca en la colina\""
+      },
+      {
+        "old": "text = \"Here is the start area with your machines.\"",
+        "new": "text = \"Aquí está la zona de inicio con tus máquinas.\""
+      },
+      {
+        "old": "text = \"There is sand on the far end of this site, and we need it.\"",
+        "new": "text = \"Hay arena al otro extremo de esta obra y la necesitamos.\""
+      },
+      {
+        "old": "text = \"Get at least 40 tonnes of sand to the gravel pad, for a well paying customer. This is quality sand\"",
+        "new": "text = \"Lleva al menos 40 toneladas de arena a la explanada de grava para un cliente que paga bien. Es arena de calidad\""
+      }
+    ]
+  }
+}
